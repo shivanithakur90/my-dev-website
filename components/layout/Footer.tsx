@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1550px] px-6 pb-12 pt-[230px] sm:px-8 lg:px-12 lg:pt-[250px] xl:px-16">
+      <div className="container relative z-10 pb-12 pt-[230px] lg:pt-[250px]">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
           {footerColumns.map((column) => (
             <div key={column.title}>

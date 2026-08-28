@@ -230,7 +230,7 @@ export default function RecentBuildsSection() {
 
   return (
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
+      <div className="container">
         {/* Header */}
         <div className="max-w-[700px]">
           {/* Badge */}

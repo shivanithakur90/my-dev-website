@@ -120,7 +120,7 @@ export default function HowItWorksSection() {
       {/* Bottom Soft Background */}
       <div className="pointer-events-none absolute bottom-[-180px] left-1/2 h-[420px] w-[1100px] -translate-x-1/2 rounded-full bg-[#f1eaff] blur-[100px]" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 sm:px-8 lg:px-10">
+      <div className="container relative z-10">
         {/* Top Content */}
         <div className="mx-auto max-w-[760px] text-center">
           {/* Badge */}

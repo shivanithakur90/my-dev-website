@@ -22,7 +22,7 @@ export default function WhyNowSection() {
 
   return (
     <section className="w-full bg-[#fbf9ff] py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8 lg:px-10">
+      <div className="container">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16">
           {/* LEFT CONTENT */}
           <div>
