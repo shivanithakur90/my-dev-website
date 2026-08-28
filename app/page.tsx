@@ -3,6 +3,7 @@ import WhatWeDoSection from "@/components/home/WhatWeDoSection";
 import WhyNowSection from "@/components/home/WhyNowSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
 import RecentBuilds from "@/components/home/RecentBuilds";
+import FaqSection from "@/components/home/FaqSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <WhyNowSection />
       <HowItWorksSection />
       <RecentBuilds />
+      <FaqSection />
       <StackCtaSection />
     </main>
   );
