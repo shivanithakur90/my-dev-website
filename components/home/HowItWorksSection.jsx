@@ -116,7 +116,7 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+    <section className="relative w-full overflow-hidden bg-white py-6 sm:py-8 lg:py-10">
       {/* Bottom Soft Background */}
       <div className="pointer-events-none absolute bottom-[-180px] left-1/2 h-[420px] w-[1100px] -translate-x-1/2 rounded-full bg-[#f1eaff] blur-[100px]" />
 

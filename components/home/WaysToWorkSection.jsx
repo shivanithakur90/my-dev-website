@@ -74,7 +74,7 @@ function CardIcon({ index }) {
 
 export default function WaysToWorkSection() {
   return (
-    <section className="w-full bg-[#fbfaff] pb-10 pt-16 sm:pb-12 sm:pt-20 lg:pb-14 lg:pt-24">
+    <section className="w-full bg-[#fbfaff] py-6 sm:py-8 lg:py-10">
       <div className="container">
         <div className="mx-auto max-w-[850px] text-center">
           <div className="inline-flex items-center gap-2 rounded-lg border border-[#e7e7e7] bg-white px-3.5 py-2 text-[12px] font-medium uppercase tracking-[0.06em] text-[#242424] shadow-[0_8px_25px_rgba(0,0,0,0.05)]">

@@ -9,7 +9,7 @@ export default function RecentBuildsSection() {
       title: "Speed CSM & Engagement Platform",
       category: "Customer Success",
       description: "Customer Success console + wallet-native reward games",
-      image: "/images/recent-builds/speed-dashboard.png",
+      image: "/recnet-build-imae.webp",
       icon: "chat",
     },
     {
@@ -17,7 +17,7 @@ export default function RecentBuildsSection() {
       category: "FinTech",
       description:
         "Automated deposit protection, validation and monitoring workflows.",
-      image: "/images/recent-builds/bank-deposit.png",
+      image: "/recnet-build-imae.webp",
       icon: "shield",
     },
     {
@@ -25,7 +25,7 @@ export default function RecentBuildsSection() {
       category: "Compliance",
       description:
         "Real-time compliance and transaction monitoring for financial operations.",
-      image: "/images/recent-builds/compliance.png",
+      image: "/recnet-build-imae.webp",
       icon: "gauge",
     },
     {
@@ -33,7 +33,7 @@ export default function RecentBuildsSection() {
       category: "Payments",
       description:
         "A unified console to manage card deposits, exceptions and approvals.",
-      image: "/images/recent-builds/card-deposit.png",
+      image: "/recnet-build-imae.webp",
       icon: "card",
     },
     {
@@ -41,7 +41,7 @@ export default function RecentBuildsSection() {
       category: "Operations",
       description:
         "Cash deposit workflows with tracking, approvals and reconciliation.",
-      image: "/images/recent-builds/cash-deposit.png",
+      image: "/recnet-build-imae.webp",
       icon: "cash",
     },
     {
@@ -49,7 +49,7 @@ export default function RecentBuildsSection() {
       category: "Finance",
       description:
         "Daily automated reconciliation across transactions and deposit sources.",
-      image: "/images/recent-builds/reconciliation.png",
+      image: "/recnet-build-imae.webp",
       icon: "database",
     },
   ];
@@ -229,7 +229,7 @@ export default function RecentBuildsSection() {
   };
 
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
+    <section className="w-full bg-white py-6 sm:py-8 lg:py-10">
       <div className="container">
         {/* Header */}
         <div className="max-w-[700px]">
@@ -397,13 +397,13 @@ export default function RecentBuildsSection() {
             <div className="pointer-events-none absolute inset-8 rounded-[40px] bg-[#e8e5ff] blur-[70px]" />
 
             <div className="relative overflow-hidden rounded-[18px] border border-[#e9e9e9] bg-[#f8f8f8] p-[7px] shadow-[0_14px_45px_rgba(30,30,50,0.16)]">
-              <div className="relative aspect-[1.55/1] w-full overflow-hidden rounded-[13px] bg-white">
+              <div className="relative aspect-[1600/942] w-full overflow-hidden rounded-[13px] bg-white">
                 <Image
                   key={activeBuild.image}
                   src={activeBuild.image}
                   alt={activeBuild.title}
                   fill
-                  className="object-cover object-top transition-opacity duration-500"
+                  className="object-contain transition-opacity duration-500"
                   sizes="(max-width: 1024px) 100vw, 70vw"
                 />
               </div>

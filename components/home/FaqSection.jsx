@@ -35,7 +35,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
+    <section className="w-full bg-white py-6 sm:py-8 lg:py-10">
       <div className="container grid gap-12 lg:grid-cols-[0.55fr_1fr] lg:gap-20">
         <div className="lg:pt-1">
           <div className="inline-flex items-center gap-2 rounded-lg border border-[#e7e7e7] bg-white px-3.5 py-2 text-[13px] font-medium text-[#242424] shadow-[0_8px_25px_rgba(0,0,0,0.06)]">

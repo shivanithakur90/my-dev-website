@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function StackCtaSection() {
   return (
-    <section className="w-full bg-white py-14 sm:py-16 lg:py-20">
+    <section className="w-full bg-white pb-12 pt-6 sm:pb-16 sm:pt-8 lg:pb-20 lg:pt-10">
       <div className="container">
         <div className="relative isolate flex min-h-[400px] items-center justify-center overflow-hidden rounded-[36px] bg-[#f7f7fb] px-5 py-16 sm:min-h-[440px] sm:px-10 lg:min-h-[460px]">
           <div className="pointer-events-none absolute -bottom-48 -left-32 -z-10 h-[520px] w-[470px] rounded-full bg-[#3c2ce8] opacity-90 blur-[75px]" />

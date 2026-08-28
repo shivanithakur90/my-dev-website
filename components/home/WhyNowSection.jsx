@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhyNowSection() {
   const points = [
     {
@@ -21,7 +23,7 @@ export default function WhyNowSection() {
   ];
 
   return (
-    <section className="w-full bg-[#fbf9ff] py-16 sm:py-20 lg:py-24">
+    <section className="w-full bg-[#fbf9ff] py-6 sm:py-8 lg:py-10">
       <div className="container">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16">
           {/* LEFT CONTENT */}
@@ -96,23 +98,25 @@ export default function WhyNowSection() {
               {/* Image Area */}
               <div className="relative min-h-[440px] overflow-hidden bg-gradient-to-b from-[#e2e4ff] to-[#efefff] sm:min-h-[500px]">
                 {/* Person Info */}
-                <div className="absolute left-6 top-6 z-10">
+                <div className="absolute left-5 top-5 z-10 rounded-lg border border-white/70 bg-white/90 px-3.5 py-3 shadow-[0_6px_20px_rgba(0,0,0,0.10)] backdrop-blur-sm sm:left-6 sm:top-6">
                   <p className="text-[12px] font-semibold text-[#242424]">
-                    Dharmesh Shah
+                    Sachin Dhamija
                   </p>
 
                   <p className="mt-1 text-[11px] leading-[1.4] text-[#5b5b5b]">
-                    Co-Founder & CTO,
+                    CEO,
                     <br />
-                    HubSpot
+                    OpenXcell
                   </p>
                 </div>
 
                 {/* Person Image */}
-                <img
-                  src="/images/why-now-person.png"
-                  alt="Business leader"
-                  className="absolute bottom-0 left-1/2 h-[88%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
+                <Image
+                  src="/Dharmesh Shah.jpg"
+                  alt="Sachin Dhamija, CEO of OpenXcell"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
 
