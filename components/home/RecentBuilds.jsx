@@ -229,7 +229,7 @@ export default function RecentBuildsSection() {
   };
 
   return (
-    <section className="w-full bg-white py-6 sm:py-8 lg:py-10">
+    <section className="w-full bg-white pb-0 pt-[50px] md:py-[50px]">
       <div className="container">
         {/* Header */}
         <div className="max-w-[700px]">
@@ -281,7 +281,7 @@ export default function RecentBuildsSection() {
         </div>
 
         {/* Main Content */}
-        <div className="mt-14 grid grid-cols-1 items-start gap-10 lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[380px_minmax(0,1fr)] xl:gap-10">
+        <div className="mt-8 grid grid-cols-1 items-start gap-10 md:mt-14 lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[380px_minmax(0,1fr)] xl:gap-10">
           {/* LEFT */}
           <div className="w-full">
             {builds.map((build, index) => {
@@ -300,7 +300,7 @@ export default function RecentBuildsSection() {
                 >
                   <div
                     className={`relative flex gap-3 py-5 transition-all duration-300 ${
-                      active ? "pb-6 pt-0" : ""
+                      active ? "pb-6" : ""
                     }`}
                   >
                     {/* Icon */}

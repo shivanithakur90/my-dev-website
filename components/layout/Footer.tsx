@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container pb-12 pt-6 sm:pt-8 lg:pt-10">
+      <div className="container py-[50px]">
         <div className="grid grid-cols-1 gap-0 sm:grid-cols-2 sm:gap-12 lg:grid-cols-5 lg:gap-10">
           {footerColumns.map((column) => (
             <div key={column.title}>
@@ -104,7 +104,7 @@ export default function Footer() {
               >
                 {column.title}
                 <span
-                  className={`text-lg transition-transform duration-200 ${
+                  className={`flex h-5 w-5 items-center justify-center text-[0px] transition-transform duration-200 after:block after:h-2 after:w-2 after:rotate-45 after:border-b-2 after:border-r-2 after:border-[#ff4d00] after:content-[''] ${
                     openColumn === column.title ? "rotate-180" : ""
                   }`}
                 >

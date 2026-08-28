@@ -74,7 +74,7 @@ function CardIcon({ index }) {
 
 export default function WaysToWorkSection() {
   return (
-    <section className="w-full bg-[#fbfaff] py-6 sm:py-8 lg:py-10">
+    <section className="w-full bg-[#fbfaff] pb-0 pt-[50px] md:py-[50px]">
       <div className="container">
         <div className="mx-auto max-w-[850px] text-center">
           <div className="inline-flex items-center gap-2 rounded-lg border border-[#e7e7e7] bg-white px-3.5 py-2 text-[12px] font-medium uppercase tracking-[0.06em] text-[#242424] shadow-[0_8px_25px_rgba(0,0,0,0.05)]">
@@ -82,7 +82,7 @@ export default function WaysToWorkSection() {
             Three ways to work with us
           </div>
 
-          <h2 className="mt-6 text-[34px] font-semibold leading-[1.08] tracking-[-1.4px] text-[#171717] sm:text-[42px] lg:text-[52px] lg:tracking-[-2px]">
+          <h2 className="mt-6 text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
             Pick the engagement shape that fits
           </h2>
 

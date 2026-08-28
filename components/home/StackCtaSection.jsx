@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function StackCtaSection() {
   return (
-    <section className="w-full bg-white pb-12 pt-6 sm:pb-16 sm:pt-8 lg:pb-20 lg:pt-10">
+    <section className="w-full bg-white pb-[50px] pt-[50px] md:pb-[100px]">
       <div className="container">
         <div className="relative isolate flex min-h-[400px] items-center justify-center overflow-hidden rounded-[36px] bg-[#f7f7fb] px-5 py-16 sm:min-h-[440px] sm:px-10 lg:min-h-[460px]">
           <div className="pointer-events-none absolute -bottom-48 -left-32 -z-10 h-[520px] w-[470px] rounded-full bg-[#3c2ce8] opacity-90 blur-[75px]" />
@@ -12,7 +12,7 @@ export default function StackCtaSection() {
           <div className="pointer-events-none absolute right-[17%] top-12 -z-10 h-[260px] w-[340px] rounded-full bg-white opacity-90 blur-[65px]" />
 
           <div className="relative z-10 mx-auto max-w-[900px] text-center">
-            <h2 className="text-[32px] font-semibold leading-[1.08] tracking-[-1.2px] text-[#171717] sm:text-[40px] lg:text-[52px] lg:tracking-[-2px]">
+            <h2 className="text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
               Don&apos;t see your stack?
             </h2>
 

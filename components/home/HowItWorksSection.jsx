@@ -116,7 +116,7 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white py-6 sm:py-8 lg:py-10">
+    <section className="relative w-full overflow-hidden bg-white pb-[50px] pt-[50px] md:py-[50px]">
       {/* Bottom Soft Background */}
       <div className="pointer-events-none absolute bottom-[-180px] left-1/2 h-[420px] w-[1100px] -translate-x-1/2 rounded-full bg-[#f1eaff] blur-[100px]" />
 
@@ -207,7 +207,7 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Process Card */}
-        <div className="mx-auto mt-14 w-full max-w-[1000px] rounded-[18px] border border-[#ececec] bg-white px-5 py-7 shadow-[0_8px_25px_rgba(40,30,70,0.10)] sm:px-8 sm:py-8 lg:mt-16 lg:px-10">
+        <div className="mx-auto mt-14 w-full max-w-[1000px] rounded-[18px] border border-[#ececec] bg-white px-5 pb-4 pt-7 shadow-[0_8px_25px_rgba(40,30,70,0.10)] sm:px-8 sm:py-8 lg:mt-16 lg:px-10">
           {/* Desktop Connecting Line */}
           <div className="relative hidden md:block">
             <div className="absolute left-[16.5%] right-[16.5%] top-[17px] h-px bg-[#1484ff]" />
