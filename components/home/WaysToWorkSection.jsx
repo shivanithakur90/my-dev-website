@@ -12,6 +12,7 @@ const engagementOptions = [
     ring: "shadow-[inset_0_0_0_8px_#d5f3ee]",
     iconBg: "bg-[#e4f5fa]",
     iconColor: "text-[#00a9e8]",
+    background: "bg-[#f7fcfd]",
   },
   {
     title: "Internal tools, custom-built",
@@ -24,6 +25,7 @@ const engagementOptions = [
     ring: "shadow-[inset_0_0_0_8px_#e0e6ff]",
     iconBg: "bg-[#eaf0ff]",
     iconColor: "text-[#5585ff]",
+    background: "bg-[#f8faff]",
   },
   {
     title: "Embedded engineering.",
@@ -36,6 +38,7 @@ const engagementOptions = [
     ring: "shadow-[inset_0_0_0_8px_#f0daf8]",
     iconBg: "bg-[#f5eafd]",
     iconColor: "text-[#ad51ee]",
+    background: "bg-[#fdf9ff]",
   },
 ];
 
@@ -94,7 +97,7 @@ export default function WaysToWorkSection() {
           {engagementOptions.map((option, index) => (
             <article
               key={option.title}
-              className={`flex min-h-[570px] flex-col rounded-[30px] border-[8px] bg-white/70 p-7 sm:p-8 ${option.border} ${option.ring}`}
+              className={`flex min-h-[630px] flex-col rounded-[30px] border-[8px] p-6 sm:p-7 ${option.background} ${option.border} ${option.ring}`}
             >
               <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${option.iconBg} ${option.iconColor}`}>
                 <CardIcon index={index} />
@@ -103,27 +106,27 @@ export default function WaysToWorkSection() {
               <h3 className="mt-4 text-[17px] font-semibold text-[#202020]">
                 {option.title}
               </h3>
-              <p className="mt-3 min-h-[108px] text-[14px] leading-[1.55] text-[#3f3f3f] sm:text-[15px]">
+              <p className="mt-3 min-h-[112px] text-[15px] leading-[1.55] text-[#3f3f3f] sm:text-[16px]">
                 {option.description}
               </p>
 
               <div className="border-t border-[#e8e8e8] pt-4">
-                <p className="text-[15px] text-[#666]">Best for</p>
-                <p className="mt-2 text-[15px] font-semibold leading-[1.35] text-[#242424]">
+                <p className="text-[16px] text-[#666]">Best for</p>
+                <p className="mt-2 text-[16px] font-semibold leading-[1.35] text-[#242424]">
                   {option.bestFor}
                 </p>
               </div>
 
               <div className="mt-7">
-                <p className="text-[15px] text-[#666]">Length</p>
-                <p className="mt-2 text-[15px] font-semibold text-[#242424]">
+                <p className="text-[16px] text-[#666]">Length</p>
+                <p className="mt-2 text-[16px] font-semibold text-[#242424]">
                   {option.length}
                 </p>
               </div>
 
               <div className="mt-6">
-                <p className="text-[15px] text-[#666]">Output</p>
-                <p className="mt-2 text-[15px] font-semibold leading-[1.35] text-[#242424]">
+                <p className="text-[16px] text-[#666]">Output</p>
+                <p className="mt-2 text-[16px] font-semibold leading-[1.35] text-[#242424]">
                   {option.output}
                 </p>
               </div>
