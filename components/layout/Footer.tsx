@@ -68,7 +68,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#080808] text-white">
 
-      <div className="pointer-events-none absolute left-0 top-[-20px] w-full overflow-hidden">
+      <div className="hidden">
         <div className="footer-marquee flex w-max whitespace-nowrap">
           <span className="shrink-0 pr-16 text-[100px] font-semibold uppercase leading-none tracking-[-5px] text-white/[0.12] sm:text-[130px] lg:text-[165px] xl:text-[190px]">
             Innovative Company · For · Innovative Company · For ·
@@ -83,20 +83,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container relative z-10 pb-12 pt-[230px] lg:pt-[250px]">
+      <div className="container pb-12 pt-14 sm:pt-16 lg:pt-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="mb-5 border-b border-white/20 pb-3 text-[17px] font-semibold uppercase text-[#ff4d00]">
+              <h3 className="mb-4 border-b border-white/20 pb-3 text-[14px] font-semibold uppercase text-[#ff4d00]">
                 {column.title}
               </h3>
 
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="inline-block text-[16px] leading-[1.45] text-white transition-all duration-300 hover:translate-x-1 hover:text-[#ff4d00]"
+                      className="inline-block text-[14px] leading-[1.45] text-white transition-all duration-300 hover:translate-x-1 hover:text-[#ff4d00]"
                     >
                       {link.label}
                     </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col gap-5 border-t border-white/15 pt-7 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-5 border-t border-white/15 pt-6 text-[13px] text-white/60 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} My Dev Website. All rights reserved.
           </p>
