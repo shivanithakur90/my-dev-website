@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const footerColumns = [
   {
@@ -65,6 +68,8 @@ const footerColumns = [
 ];
 
 export default function Footer() {
+  const [openColumn, setOpenColumn] = useState<string | null>(null);
+
   return (
     <footer className="relative overflow-hidden bg-[#080808] text-white">
 
@@ -84,14 +89,38 @@ export default function Footer() {
       </div>
 
       <div className="container pb-12 pt-14 sm:pt-16 lg:pt-20">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
+        <div className="grid grid-cols-1 gap-0 sm:grid-cols-2 sm:gap-12 lg:grid-cols-5 lg:gap-10">
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="mb-4 border-b border-white/20 pb-3 text-[14px] font-semibold uppercase text-[#ff4d00]">
+              <button
+                type="button"
+                className="flex w-full items-center justify-between border-b border-white/20 py-4 text-left text-[14px] font-semibold uppercase text-[#ff4d00] sm:hidden"
+                aria-expanded={openColumn === column.title}
+                onClick={() =>
+                  setOpenColumn(
+                    openColumn === column.title ? null : column.title,
+                  )
+                }
+              >
+                {column.title}
+                <span
+                  className={`text-lg transition-transform duration-200 ${
+                    openColumn === column.title ? "rotate-180" : ""
+                  }`}
+                >
+                  ⌄
+                </span>
+              </button>
+
+              <h3 className="mb-4 hidden border-b border-white/20 pb-3 text-[14px] font-semibold uppercase text-[#ff4d00] sm:block">
                 {column.title}
               </h3>
 
-              <ul className="space-y-3">
+              <ul
+                className={`space-y-3 pb-4 pt-4 sm:block sm:p-0 ${
+                  openColumn === column.title ? "block" : "hidden"
+                }`}
+              >
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <Link
