@@ -294,17 +294,17 @@ export default function Header() {
               Our work
             </Link>
 
-            <Link
-              href="/contact"
-              className="mt-5 flex w-fit items-center gap-3 rounded-xl bg-[#ff5708] py-2 pl-4 pr-2 text-[15px] font-semibold text-white"
-              onClick={() => setMenuOpen(false)}
-            >
-              Get a quote
+         <Link
+        href="/contact"
+        className="mt-5 flex w-fit items-center gap-3 rounded-xl bg-[#ff5708] py-2 pl-4 pr-2 text-[15px] font-semibold text-white"
+        onClick={() => setMenuOpen(false)}
+      >
+        Get a quote
 
-              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#ff5708]">
-                →
-              </span>
-            </Link>
+        <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#ff5708]">
+          →
+        </span>
+      </Link>
           </nav>
         </div>
       )}
