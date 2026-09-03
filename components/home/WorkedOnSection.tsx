@@ -92,10 +92,10 @@ export default function WorkedOnSection({
 
           <Link
             href={ctaHref}
-            className="group flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#ff4d00] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#e64500]"
+            className="group flex w-fit shrink-0 items-center gap-3 rounded-xl border border-[#ff5708] bg-[#ff5708] py-1.5 pl-4 pr-1.5 text-[14px] font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-[#ff5708]"
           >
             {ctaLabel}
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
+            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#ff5708] transition-colors duration-300 group-hover:bg-[#ff5708] group-hover:text-white">
               <ArrowIcon />
             </span>
           </Link>
