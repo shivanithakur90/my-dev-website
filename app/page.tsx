@@ -16,28 +16,28 @@ const workedOnProjects = [
     url: "https://us.usm.com",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/usm-project.jpg",
+    image: "/AI CRM.avif",
   },
   {
     title: "Sohnne",
     url: "https://sohnne.com",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/sohnne-project.jpg",
+    image: "/Client Portal.avif",
   },
   {
     title: "Module Canada",
     url: "https://modulecanada.com",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/module-canada.jpg",
+    image: "/Membership & events.avif",
   },
   {
     title: "Rastah",
     url: "https://row.rastah.co",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/rastah-project.jpg",
+    image: "/Property management.avif",
   },
 ];
 
