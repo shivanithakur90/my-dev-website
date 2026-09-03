@@ -44,24 +44,44 @@ const workedOnProjects = [
 export default function Home() {
   return (
     <main>
-      <HeroBanner />
-      <WhatWeDoSection />
+      <div data-aos="fade-up">
+        <HeroBanner />
+      </div>
+      <div data-aos="fade-up">
+        <WhatWeDoSection />
+      </div>
       {/* <WhyNowSection /> */}
-      <WorkedOnSection
-        eyebrow="My Work"
-        title="Websites I've Worked On"
-        description="A selection of live projects I've worked on using Shopify, Liquid and modern frontend development."
-        ctaLabel="View All Projects"
-        ctaHref="/services"
-        projects={workedOnProjects}
-      />
-      <HowItWorksSection />
-      <RecentBuilds />
-      <CustomTemplatesSection />
-      <WaysToWorkSection />
-      <ComparisonSection />
-      <FaqSection />
-      <StackCtaSection />
+      <div data-aos="fade-up">
+        <WorkedOnSection
+          eyebrow="My Work"
+          title="Websites I've Worked On"
+          description="A selection of live projects I've worked on using Shopify, Liquid and modern frontend development."
+          ctaLabel="View All Projects"
+          ctaHref="/services"
+          projects={workedOnProjects}
+        />
+      </div>
+      <div data-aos="fade-up">
+        <HowItWorksSection />
+      </div>
+      <div data-aos="fade-up">
+        <RecentBuilds />
+      </div>
+      <div data-aos="fade-up">
+        <CustomTemplatesSection />
+      </div>
+      <div data-aos="fade-up">
+        <WaysToWorkSection />
+      </div>
+      <div data-aos="fade-up">
+        <ComparisonSection />
+      </div>
+      <div data-aos="fade-up">
+        <FaqSection />
+      </div>
+      <div data-aos="fade-up">
+        <StackCtaSection />
+      </div>
     </main>
   );
 }

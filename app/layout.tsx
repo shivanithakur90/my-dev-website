@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AosProvider from "@/components/AosProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <Header />
-        {children}
+        <AosProvider>{children}</AosProvider>
         <Footer />
       </body>
     </html>
