@@ -93,11 +93,11 @@ export default function WaysToWorkSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:mt-16 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:mt-12 lg:mt-16 lg:grid-cols-3 lg:gap-6">
           {engagementOptions.map((option, index) => (
             <article
               key={option.title}
-              className={`flex min-h-[600px] flex-col rounded-[30px] border-[8px] p-6 sm:p-7 ${option.background} ${option.border} ${option.ring}`}
+              className={`flex flex-col rounded-[30px] border-[8px] p-5 sm:min-h-[600px] sm:p-7 ${option.background} ${option.border} ${option.ring}`}
             >
               <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${option.iconBg} ${option.iconColor}`}>
                 <CardIcon index={index} />
@@ -133,7 +133,7 @@ export default function WaysToWorkSection() {
 
               <Link
                 href="/contact"
-                className="mt-auto flex min-h-[52px] items-center justify-center gap-4 rounded-xl border border-[#ff5708] px-4 text-[14px] font-semibold text-[#ff5708] transition-colors duration-300 hover:bg-[#ff5708] hover:text-white"
+                className="mt-8 flex min-h-[52px] items-center justify-center gap-4 rounded-xl border border-[#ff5708] px-4 text-[14px] font-semibold text-[#ff5708] transition-colors duration-300 hover:bg-[#ff5708] hover:text-white sm:mt-auto"
               >
                 Request a project quote
                 <span aria-hidden="true">→</span>
