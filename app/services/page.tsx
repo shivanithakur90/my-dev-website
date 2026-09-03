@@ -138,7 +138,7 @@ function ExternalIcon() {
   );
 }
 
-function ServiceIcon({ type }) {
+function ServiceIcon({ type }: { type: string }) {
   if (type === "code") {
     return (
       <svg
@@ -238,7 +238,12 @@ function ServiceIcon({ type }) {
           strokeLinejoin="round"
         />
 
-        <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
+        <circle
+          cx="16.5"
+          cy="7.5"
+          r="1.5"
+          fill="currentColor"
+        />
       </svg>
     );
   }
@@ -287,7 +292,7 @@ function ServiceIcon({ type }) {
   );
 }
 
-function getIconClasses(index) {
+function getIconClasses(index: number) {
   if (index === 0) {
     return "bg-[#eeebff] text-[#5439ff]";
   }
@@ -611,7 +616,7 @@ export default function ServicesPage() {
               className="group flex w-fit items-center gap-5 rounded-[14px] bg-[#ff4a08] px-6 py-3.5 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1"
             >
               Get a quote
- 
+
               <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-[#ff4a08]">
                 <ArrowIcon />
               </span>
