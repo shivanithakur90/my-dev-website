@@ -12,7 +12,7 @@ export default function StackCtaSection() {
           <div className="pointer-events-none absolute right-[17%] top-12 -z-10 h-[260px] w-[340px] rounded-full bg-white opacity-90 blur-[65px]" />
 
           <div className="relative z-10 mx-auto max-w-[900px] text-center">
-            <h2 className="text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
+            <h2 className="text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
               Don&apos;t see your stack?
             </h2>
 

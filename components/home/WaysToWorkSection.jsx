@@ -82,7 +82,7 @@ export default function WaysToWorkSection() {
             Three ways to work with us
           </div>
 
-          <h2 className="mt-6 text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
+          <h2 className="mt-6 text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
             Pick the engagement shape that fits
           </h2>
 

@@ -53,7 +53,7 @@ export default function ComparisonSection() {
             How we&apos;re different
           </div>
 
-          <h2 className="mt-6 text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
+          <h2 className="mt-6 text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
             OpenXcell vs. the alternatives
           </h2>
 

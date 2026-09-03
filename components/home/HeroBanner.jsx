@@ -52,7 +52,7 @@ export default function HeroBanner() {
             </div>
 
             {/* Heading */}
-            <h1 className="mx-auto max-w-[1080px] text-[38px] font-semibold leading-[1.08] tracking-[-1.5px] text-white sm:text-[46px] md:text-[56px] md:tracking-[-2px] lg:text-[68px] lg:tracking-[-3px]">
+            <h1 className="mx-auto max-w-[1080px] text-[30px] font-semibold leading-[1.08] tracking-[-1.5px] text-white sm:text-[46px] md:text-[56px] md:tracking-[-2px] lg:text-[68px] lg:tracking-[-3px]">
               The business apps your team needs,
 
               <span className="mt-2 block text-[#fff000]">

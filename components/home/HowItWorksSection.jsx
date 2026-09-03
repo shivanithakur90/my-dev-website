@@ -164,7 +164,7 @@ export default function HowItWorksSection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px]">
+          <h2 className="text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px]">
             No prompting,
             <span className="block">No debugging. Just results.</span>
           </h2>

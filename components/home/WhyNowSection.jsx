@@ -52,7 +52,7 @@ export default function WhyNowSection() {
             </div>
 
             {/* Heading */}
-            <h2 className="max-w-[580px] text-[38px] font-semibold leading-[1.1] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px]">
+            <h2 className="max-w-[580px] text-[30px] font-semibold leading-[1.1] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px]">
               Why custom software
               <span className="block">finally makes sense for</span>
               <span className="block">mid-market</span>

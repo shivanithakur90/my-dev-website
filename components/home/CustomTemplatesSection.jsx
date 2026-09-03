@@ -40,7 +40,7 @@ export default function CustomTemplatesSection() {
             <span className="text-[#ff5708]">▣</span>
             Custom templates
           </div>
-          <h2 className="mt-6 text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
+          <h2 className="mt-6 text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
             Custom Examples for Preview
           </h2>
           <p className="mx-auto mt-5 max-w-[760px] text-[15px] leading-[1.55] text-[#656565] sm:text-[17px]">
