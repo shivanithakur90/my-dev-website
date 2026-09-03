@@ -2,32 +2,60 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "USM Modular Furniture",
-    url: "https://us.usm.com",
+    title: "Dr. Sheth's",
+    url: "https://www.drsheths.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/usm-project.jpg",
+    image: "/drsheths.webp",
   },
   {
-    title: "Sohnne",
-    url: "https://sohnne.com",
+    title: "Memorize Your Life",
+    url: "https://memorizeyourlife.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/sohnne-project.jpg",
+    image: "/memorize-banner.webp",
   },
   {
-    title: "Module Canada",
-    url: "https://modulecanada.com",
+    title: "Craft Home Decor",
+    url: "https://crafthomedecor.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/module-canada.jpg",
+    image: "/craft-home-decor.webp",
   },
   {
-    title: "Rastah",
-    url: "https://row.rastah.co",
+    title: "Prana Beauty",
+    url: "https://www.pranabeauty.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/images/rastah-project.jpg",
+    image: "/prana-beauty.webp",
+  },
+  {
+    title: "Banana Republic",
+    url: "https://bananarepublic.gap.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/bananarepublic.avif",
+  },
+  {
+    title: "Shoppers Stop",
+    url: "https://www.shoppersstop.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/shoppersstop.avif",
+  },
+  {
+    title: "Superkicks",
+    url: "https://www.superkicks.in/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/superkicks.jpg",
+  },
+  {
+    title: "Aachho",
+    url: "https://www.aachho.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/aachho.webp",
   },
 ];
 
@@ -444,7 +472,7 @@ export default function ServicesPage() {
             </Link>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {projects.map((project) => (
               <a
                 key={project.title}

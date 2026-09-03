@@ -39,6 +39,34 @@ const workedOnProjects = [
     tech: "Liquid",
     image: "/prana-beauty.webp",
   },
+  {
+    title: "Banana Republic",
+    url: "https://bananarepublic.gap.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/bananarepublic.avif",
+  },
+  {
+    title: "Shoppers Stop",
+    url: "https://www.shoppersstop.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/shoppersstop.avif",
+  },
+  {
+    title: "Superkicks",
+    url: "https://www.superkicks.in/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/superkicks.jpg",
+  },
+  {
+    title: "Aachho",
+    url: "https://www.aachho.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/aachho.webp",
+  },
 ];
 
 export default function Home() {
