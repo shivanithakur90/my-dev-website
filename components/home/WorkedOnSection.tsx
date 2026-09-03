@@ -1,12 +1,5 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/pagination";
 
 export type WorkedOnProject = {
   title: string;
@@ -108,35 +101,15 @@ export default function WorkedOnSection({
           </Link>
         </div>
 
-        <Swiper
-          className="worked-on-swiper"
-          modules={[Autoplay, Pagination]}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          pagination={{ clickable: true }}
-          spaceBetween={12}
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-          }}
-        >
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((project) => (
-            <SwiperSlide key={project.title} className="h-auto pb-10">
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group overflow-hidden rounded-[14px] border border-[#dedede] bg-white shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
-              >
+            <a
+              key={project.title}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group overflow-hidden rounded-[14px] border border-[#dedede] bg-white shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
+            >
               <div className="relative aspect-[2048/1223] overflow-hidden rounded-t-[14px] bg-[#f1f1f6]">
                 <Image
                   src={project.image}
@@ -168,10 +141,9 @@ export default function WorkedOnSection({
                   </span>
                 </div>
               </div>
-              </a>
-            </SwiperSlide>
+            </a>
           ))}
-        </Swiper>
+        </div>
       </div>
     </section>
   );

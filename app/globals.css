@@ -38,37 +38,6 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
-.worked-on-swiper {
-  padding-bottom: 2.5rem;
-}
-
-.worked-on-swiper .swiper-pagination {
-  bottom: 0;
-}
-
-.worked-on-swiper .swiper-pagination-bullet {
-  width: 7px;
-  height: 7px;
-  background: #d8d8df;
-  opacity: 1;
-}
-
-.worked-on-swiper .swiper-pagination-bullet-active {
-  width: 20px;
-  border-radius: 999px;
-  background: #ff5708;
-}
-
-@media (min-width: 1024px) {
-  .worked-on-swiper {
-    padding-bottom: 0;
-  }
-
-  .worked-on-swiper .swiper-pagination {
-    display: none;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   [data-aos] {
     opacity: 1 !important;
