@@ -12,34 +12,6 @@ import StackCtaSection from "@/components/home/StackCtaSection";
 
 const workedOnProjects = [
   {
-    title: "USM Modular Furniture",
-    url: "https://us.usm.com",
-    category: "Shopify",
-    tech: "Liquid",
-    image: "/AI CRM.avif",
-  },
-  {
-    title: "Sohnne",
-    url: "https://sohnne.com",
-    category: "Shopify",
-    tech: "Liquid",
-    image: "/Client Portal.avif",
-  },
-  {
-    title: "Module Canada",
-    url: "https://modulecanada.com",
-    category: "Shopify",
-    tech: "Liquid",
-    image: "/Membership & events.avif",
-  },
-  {
-    title: "Rastah",
-    url: "https://row.rastah.co",
-    category: "Shopify",
-    tech: "Liquid",
-    image: "/Property management.avif",
-  },
-  {
     title: "Dr. Sheth's",
     url: "https://www.drsheths.com/",
     category: "Shopify",
@@ -66,6 +38,34 @@ const workedOnProjects = [
     category: "Shopify",
     tech: "Liquid",
     image: "/Recruitment Agency Portal.avif",
+  },
+  {
+    title: "USM Modular Furniture",
+    url: "https://us.usm.com",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/AI CRM.avif",
+  },
+  {
+    title: "Sohnne",
+    url: "https://sohnne.com",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/Client Portal.avif",
+  },
+  {
+    title: "Module Canada",
+    url: "https://modulecanada.com",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/Membership & events.avif",
+  },
+  {
+    title: "Rastah",
+    url: "https://row.rastah.co",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/Property management.avif",
   },
 ];
 
