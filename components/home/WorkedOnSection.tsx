@@ -72,7 +72,7 @@ export default function WorkedOnSection({
 
           <Link
             href={ctaHref}
-            className="group flex w-fit shrink-0 items-center gap-3 rounded-full border border-[#3d3df2] px-6 py-3 text-sm font-semibold text-[#3333e8] transition duration-300 hover:bg-[#3333e8] hover:text-white"
+            className="group flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#ff4d00] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#e64500]"
           >
             {ctaLabel}
             <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -88,7 +88,7 @@ export default function WorkedOnSection({
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_20px_55px_rgba(20,20,60,0.12)]"
+              className="rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)]"
             >
               <div className="relative aspect-[5/3] rounded-t-[20px] bg-[#f1f1f6]">
                 <Image
