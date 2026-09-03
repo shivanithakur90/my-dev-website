@@ -46,13 +46,13 @@ export default function Home() {
     <main>
       <HeroBanner />
       <WhatWeDoSection />
-      <WhyNowSection />
+      {/* <WhyNowSection /> */}
       <WorkedOnSection
         eyebrow="My Work"
         title="Websites I've Worked On"
         description="A selection of live projects I've worked on using Shopify, Liquid and modern frontend development."
         ctaLabel="View All Projects"
-        ctaHref="/portfolio"
+        ctaHref="/services"
         projects={workedOnProjects}
       />
       <HowItWorksSection />
