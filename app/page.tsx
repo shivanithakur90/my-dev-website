@@ -39,6 +39,34 @@ const workedOnProjects = [
     tech: "Liquid",
     image: "/Property management.avif",
   },
+  {
+    title: "Dr. Sheth's",
+    url: "https://www.drsheths.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/Partner Portal.avif",
+  },
+  {
+    title: "Memorize Your Life",
+    url: "https://memorizeyourlife.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/Employee Directory.avif",
+  },
+  {
+    title: "Craft Home Decor",
+    url: "https://crafthomedecor.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/Vendor Management.avif",
+  },
+  {
+    title: "Prana Beauty",
+    url: "https://www.pranabeauty.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/Recruitment Agency Portal.avif",
+  },
 ];
 
 export default function Home() {
