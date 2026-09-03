@@ -16,28 +16,28 @@ const workedOnProjects = [
     url: "https://www.drsheths.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/Partner Portal.avif",
+    image: "/drsheths.webp",
   },
   {
     title: "Memorize Your Life",
     url: "https://memorizeyourlife.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/Employee Directory.avif",
+    image: "/memorize-banner.webp",
   },
   {
     title: "Craft Home Decor",
     url: "https://crafthomedecor.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/Vendor Management.avif",
+    image: "/craft-home-decor.webp",
   },
   {
     title: "Prana Beauty",
     url: "https://www.pranabeauty.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/Recruitment Agency Portal.avif",
+    image: "/prana-beauty.webp",
   },
 ];
 
