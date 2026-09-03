@@ -135,9 +135,9 @@ export default function WorkedOnSection({
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group overflow-hidden rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
+                className="group overflow-hidden rounded-[14px] border border-[#dedede] bg-white shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
               >
-              <div className="relative aspect-[2048/1223] overflow-hidden rounded-t-[20px] bg-[#f1f1f6]">
+              <div className="relative aspect-[2048/1223] overflow-hidden rounded-t-[14px] bg-[#f1f1f6]">
                 <Image
                   src={project.image}
                   alt={project.title}
