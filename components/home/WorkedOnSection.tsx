@@ -108,7 +108,7 @@ export default function WorkedOnSection({
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)]"
+              className="group rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
             >
               <div className="relative aspect-[2048/1223] rounded-t-[20px] bg-[#f1f1f6]">
                 <Image
@@ -124,11 +124,13 @@ export default function WorkedOnSection({
                 <h3 className="text-[17px] font-semibold text-[#15151d]">
                   {project.title}
                 </h3>
-                <div className="mt-2 flex items-center gap-1.5 text-sm font-medium text-[#3434ef]">
-                  <span className="max-w-[190px] truncate">
+                <div className="group/link mt-2 flex w-fit items-center gap-1.5 text-sm font-medium text-[#3434ef] transition-colors duration-300 hover:text-[#e64500]">
+                  <span className="max-w-[190px] truncate transition-[text-decoration] duration-300 group-hover/link:underline group-hover/link:underline-offset-4">
                     {project.url.replace("https://", "")}
                   </span>
-                  <ExternalIcon />
+                  <span className="transition-transform duration-300 group-hover/link:translate-x-1">
+                    <ExternalIcon />
+                  </span>
                 </div>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <span className="rounded-md bg-[#f4f4f7] px-3 py-1.5 text-xs font-medium text-[#444]">
