@@ -90,13 +90,13 @@ export default function WorkedOnSection({
               rel="noopener noreferrer"
               className="rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)]"
             >
-              <div className="relative aspect-[5/3] rounded-t-[20px] bg-[#f1f1f6]">
+              <div className="relative aspect-[2048/1223] rounded-t-[20px] bg-[#f1f1f6]">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
               </div>
 
