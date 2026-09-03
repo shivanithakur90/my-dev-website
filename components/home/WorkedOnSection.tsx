@@ -1,5 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 export type WorkedOnProject = {
   title: string;
@@ -101,15 +108,31 @@ export default function WorkedOnSection({
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+        <Swiper
+          className="worked-on-swiper"
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={12}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+        >
           {projects.map((project) => (
-            <a
-              key={project.title}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group overflow-hidden rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
-            >
+            <SwiperSlide key={project.title} className="h-auto pb-10">
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group overflow-hidden rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
+              >
               <div className="relative aspect-[2048/1223] overflow-hidden rounded-t-[20px] bg-[#f1f1f6]">
                 <Image
                   src={project.image}
@@ -141,9 +164,10 @@ export default function WorkedOnSection({
                   </span>
                 </div>
               </div>
-            </a>
+              </a>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
