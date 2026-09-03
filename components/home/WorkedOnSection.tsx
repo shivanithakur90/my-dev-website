@@ -119,7 +119,7 @@ export default function WorkedOnSection({
           spaceBetween={12}
           slidesPerView={1}
           breakpoints={{
-            640: {
+            768: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
