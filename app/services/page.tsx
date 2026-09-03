@@ -483,7 +483,7 @@ export default function ServicesPage() {
               >
                 {/* Project Image */}
 
-                <div className="relative aspect-[1.45/1] overflow-hidden bg-[#f1f1f6]">
+                <div className="relative aspect-[1.45/1] overflow-hidden rounded-t-[20px] bg-[#f1f1f6]">
                   <img
                     src={project.image}
                     alt={project.title}

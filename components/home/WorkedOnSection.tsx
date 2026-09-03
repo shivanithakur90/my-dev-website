@@ -110,7 +110,7 @@ export default function WorkedOnSection({
               rel="noopener noreferrer"
               className="group overflow-hidden rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)] transition-colors duration-300 hover:border-[#ff5708] hover:bg-[#fffaf7]"
             >
-              <div className="relative aspect-[2048/1223] rounded-t-[20px] bg-[#f1f1f6]">
+              <div className="relative aspect-[2048/1223] overflow-hidden rounded-t-[20px] bg-[#f1f1f6]">
                 <Image
                   src={project.image}
                   alt={project.title}
