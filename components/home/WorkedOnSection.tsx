@@ -55,24 +55,24 @@ export default function WorkedOnSection({
   projects,
 }: WorkedOnSectionProps) {
   return (
-    <section className="relative z-20 bg-white px-5 py-20 md:px-8 lg:py-24">
-      <div className="mx-auto max-w-[1320px]">
-        <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#3038ef]">
+    <section className="w-full bg-white pb-0 pt-[50px] md:py-[50px]">
+      <div className="container">
+        <div className="mb-8 flex flex-col gap-5 md:mb-14 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-[700px]">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#343434]">
               {eyebrow}
             </p>
-            <h2 className="text-3xl font-semibold tracking-[-0.035em] md:text-[46px]">
+            <h2 className="text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px]">
               {title}
             </h2>
-            <p className="mt-3 max-w-[650px] text-[15px] leading-7 text-[#6b6b74] md:text-base">
+            <p className="mt-4 max-w-[640px] text-[14px] leading-[1.6] text-[#626262] sm:text-[15px]">
               {description}
             </p>
           </div>
 
           <Link
             href={ctaHref}
-            className="group flex w-fit items-center gap-3 rounded-full border border-[#3d3df2] px-6 py-3 text-sm font-semibold text-[#3333e8] transition duration-300 hover:bg-[#3333e8] hover:text-white"
+            className="group flex w-fit shrink-0 items-center gap-3 rounded-full border border-[#3d3df2] px-6 py-3 text-sm font-semibold text-[#3333e8] transition duration-300 hover:bg-[#3333e8] hover:text-white"
           >
             {ctaLabel}
             <span className="transition-transform duration-300 group-hover:translate-x-1">
