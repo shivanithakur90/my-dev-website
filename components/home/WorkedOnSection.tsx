@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -110,7 +110,11 @@ export default function WorkedOnSection({
 
         <Swiper
           className="worked-on-swiper"
-          modules={[Pagination]}
+          modules={[Autoplay, Pagination]}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           pagination={{ clickable: true }}
           spaceBetween={12}
           slidesPerView={1}
