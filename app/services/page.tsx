@@ -172,11 +172,11 @@ export default function ServicesPage() {
       {/* ================= FINAL CTA ================= */}
 
       <section
-        className="bg-white px-5 py-20 md:px-8 lg:py-24"
+        className="bg-white px-5 pb-[50px] pt-0 md:px-8"
         data-aos="fade-up"
       >
         <div
-          className="relative mx-auto max-w-[1320px] overflow-hidden rounded-[28px] px-6 py-16 md:px-12 lg:px-16 lg:py-20"
+          className="relative mx-auto max-w-[1320px] overflow-hidden rounded-[28px] px-6 py-12 md:px-12 lg:px-16 lg:py-16"
           style={{
             background:
               "linear-gradient(120deg, #2036e9 0%, #742c8d 48%, #d62a34 75%, #f0440b 100%)",

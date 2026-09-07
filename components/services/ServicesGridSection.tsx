@@ -12,9 +12,9 @@ const services = [
 ] as const;
 
 const themeClasses = {
-  green: { card: "from-[#f7fffb] via-white to-white", icon: "bg-[#e5f8eb] text-[#39b75e]", tag: "bg-[#ebf9ef] text-[#168542]" },
+  green: { card: "from-[#f8fced] via-white to-white", icon: "bg-[#eef7dc] text-[#78a83f]", tag: "bg-[#f0f8e3] text-[#527d2c]" },
   blue: { card: "from-[#f7fbff] via-white to-white", icon: "bg-[#e4f2ff] text-[#2175d9]", tag: "bg-[#eaf4ff] text-[#1965bf]" },
-  pink: { card: "from-[#fff9fc] via-white to-white", icon: "bg-[#ffe5f0] text-[#f53687]", tag: "bg-[#fff0f6] text-[#dd3476]" },
+  pink: { card: "from-[#f5fcff] via-white to-white", icon: "bg-[#e4f9ff] text-[#149eca]", tag: "bg-[#eafaff] text-[#087ea4]" },
   purple: { card: "from-[#faf9ff] via-white to-white", icon: "bg-[#eee9ff] text-[#6738f5]", tag: "bg-[#f2eeff] text-[#6337df]" },
   orange: { card: "from-[#fffaf5] via-white to-white", icon: "bg-[#fff0df] text-[#ff5708]", tag: "bg-[#fff3e6] text-[#d87308]" },
   mint: { card: "from-[#f7fffb] via-white to-white", icon: "bg-[#e1f9ef] text-[#08a96b]", tag: "bg-[#eafaf3] text-[#0b8c5b]" },
@@ -39,14 +39,14 @@ function ServiceIcon({ type }: { type: string }) {
 
 export default function ServicesGridSection() {
   return (
-    <section className="relative overflow-hidden bg-[#fbfbff] py-[50px]" data-aos="fade-up">
-      <div className="pointer-events-none absolute -left-[250px] -top-[160px] h-[600px] w-[600px] rounded-full bg-[#fff0e8] blur-[30px]" />
-      <div className="pointer-events-none absolute -right-[250px] top-10 h-[580px] w-[580px] rounded-full bg-[#f4edff] blur-[30px]" />
+    <section className="relative overflow-hidden bg-[#fbfdfb] py-[50px]" data-aos="fade-up">
+      <div className="pointer-events-none absolute -left-[250px] -top-[160px] h-[600px] w-[600px] rounded-full bg-[#e5f7eb] blur-[30px]" />
+      <div className="pointer-events-none absolute -right-[250px] top-10 h-[580px] w-[580px] rounded-full bg-[#f0f8e8] blur-[30px]" />
 
       <div className="container relative">
         <div className="mx-auto mb-12 max-w-[760px] text-center">
           <div className="inline-flex items-center gap-2 rounded-lg border border-[#e7e7e7] bg-white px-3.5 py-2 text-[12px] font-medium uppercase tracking-[0.06em] text-[#242424] shadow-[0_8px_25px_rgba(0,0,0,0.05)]">
-            <span className="text-[#ff5708]">✦</span>
+            <span className="text-[#78a83f]">✦</span>
             Our Services
           </div>
           <h2 className="mt-6 text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px] lg:tracking-[-2px]">
@@ -61,7 +61,7 @@ export default function ServicesGridSection() {
           {services.map((service) => {
             const colors = themeClasses[service.theme];
             return (
-              <article key={service.number} className={`group relative flex min-h-[350px] flex-col rounded-[24px] border border-[#e4e6f1] bg-gradient-to-br ${colors.card} p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_65px_rgba(31,35,80,0.10)] sm:p-7`}>
+              <article key={service.number} className={`group relative flex min-h-[350px] flex-col rounded-[24px] border border-[#e4e6f1] bg-gradient-to-br ${colors.card} p-6 transition-shadow duration-300 hover:shadow-[0_25px_65px_rgba(31,35,80,0.10)] sm:p-7`}>
                 <span className="absolute right-7 top-7 text-[12px] font-semibold tracking-[0.08em] text-[#969bb0]">{service.number}</span>
                 <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-[18px] ${colors.icon}`}><ServiceIcon type={service.icon} /></div>
                 <h3 className="pr-8 text-[20px] font-semibold tracking-[-0.03em] text-[#171717] sm:text-[22px]">{service.title}</h3>
@@ -70,7 +70,7 @@ export default function ServicesGridSection() {
                   {service.tags.map((tag) => <span key={tag} className={`rounded-full px-3.5 py-2 text-[11px] font-medium sm:text-[12px] ${colors.tag}`}>{tag}</span>)}
                 </div>
                 <div className="mt-auto pt-8">
-                  <Link href="/contact" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#ff5708] transition-all duration-300 group-hover:gap-4 hover:underline hover:underline-offset-4">
+                  <Link href="/contact" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#5e8e3e] transition-all duration-300 group-hover:gap-4 hover:underline hover:underline-offset-4">
                     Learn More <ArrowIcon />
                   </Link>
                 </div>
