@@ -2,6 +2,18 @@ import Link from "next/link";
 import WorkedOnSection from "@/components/home/WorkedOnSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 
+import {
+  SiShopify,
+  SiWordpress,
+  SiReact,
+} from "react-icons/si";
+
+import {
+  FaCode,
+  FaLink,
+  FaPenNib,
+} from "react-icons/fa6";
+
 const projects = [
   {
     title: "G Shot Health & Wellness",
@@ -123,7 +135,12 @@ const services = [
     title: "Shopify Development",
     description:
       "High-converting Shopify stores built with custom Liquid development, flexible sections and a smooth shopping experience.",
-    tags: ["Liquid", "Shopify 2.0", "Custom Themes", "App Integration"],
+    tags: [
+      "Liquid",
+      "Shopify 2.0",
+      "Custom Themes",
+      "App Integration",
+    ],
     icon: "shopify",
     theme: "green",
     href: "/contact",
@@ -133,7 +150,12 @@ const services = [
     title: "WordPress & WooCommerce",
     description:
       "Fast, responsive WordPress websites and WooCommerce stores tailored around your brand, products and business goals.",
-    tags: ["WordPress", "WooCommerce", "Elementor", "Custom CSS"],
+    tags: [
+      "WordPress",
+      "WooCommerce",
+      "Elementor",
+      "Custom CSS",
+    ],
     icon: "wordpress",
     theme: "blue",
     href: "/contact",
@@ -143,7 +165,12 @@ const services = [
     title: "React & Next.js Development",
     description:
       "Modern websites and web applications built with React and Next.js for performance, scalability and a polished user experience.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    tags: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
     icon: "react",
     theme: "pink",
     href: "/contact",
@@ -153,7 +180,12 @@ const services = [
     title: "Custom Web Development",
     description:
       "Custom web solutions for businesses that need more than a standard website, including dashboards, portals and dynamic functionality.",
-    tags: ["JavaScript", "Node.js", "APIs", "Database"],
+    tags: [
+      "JavaScript",
+      "Node.js",
+      "APIs",
+      "Database",
+    ],
     icon: "code",
     theme: "purple",
     href: "/contact",
@@ -163,7 +195,12 @@ const services = [
     title: "API & App Integrations",
     description:
       "Connect your store or website with payment systems, CRMs, shipping tools and third-party platforms through reliable integrations.",
-    tags: ["REST API", "GraphQL", "Webhooks", "Automation"],
+    tags: [
+      "REST API",
+      "GraphQL",
+      "Webhooks",
+      "Automation",
+    ],
     icon: "integration",
     theme: "orange",
     href: "/contact",
@@ -173,7 +210,12 @@ const services = [
     title: "UI/UX & Web Design",
     description:
       "User-focused interfaces that are modern, clean and conversion-driven for eCommerce stores and web applications.",
-    tags: ["Figma", "UI/UX Design", "Responsive", "Branding"],
+    tags: [
+      "Figma",
+      "UI/UX Design",
+      "Responsive",
+      "Branding",
+    ],
     icon: "design",
     theme: "mint",
     href: "/contact",
@@ -189,34 +231,39 @@ const themeClasses: Record<
   }
 > = {
   green: {
-    card: "from-[#f5fff9] via-white to-white",
-    icon: "bg-[#dcf8e8] text-[#16a34a]",
-    tag: "bg-[#e9f9ef] text-[#168542]",
+    card: "from-[#f7fffb] via-white to-white",
+    icon: "bg-[#e5f8eb] text-[#39b75e]",
+    tag: "bg-[#ebf9ef] text-[#168542]",
   },
+
   blue: {
-    card: "from-[#f5faff] via-white to-white",
-    icon: "bg-[#e1f2ff] text-[#1689e8]",
-    tag: "bg-[#eaf6ff] text-[#1174c5]",
+    card: "from-[#f7fbff] via-white to-white",
+    icon: "bg-[#e4f2ff] text-[#2175d9]",
+    tag: "bg-[#eaf4ff] text-[#1965bf]",
   },
+
   pink: {
-    card: "from-[#fff7fb] via-white to-white",
-    icon: "bg-[#ffe5ef] text-[#ec3d81]",
-    tag: "bg-[#fff0f5] text-[#d93474]",
+    card: "from-[#fff9fc] via-white to-white",
+    icon: "bg-[#ffe5f0] text-[#f53687]",
+    tag: "bg-[#fff0f6] text-[#dd3476]",
   },
+
   purple: {
-    card: "from-[#faf7ff] via-white to-white",
-    icon: "bg-[#eee8ff] text-[#6338f2]",
-    tag: "bg-[#f1edff] text-[#5a36dc]",
+    card: "from-[#faf9ff] via-white to-white",
+    icon: "bg-[#eee9ff] text-[#6738f5]",
+    tag: "bg-[#f2eeff] text-[#6337df]",
   },
+
   orange: {
-    card: "from-[#fff9f3] via-white to-white",
-    icon: "bg-[#ffeed9] text-[#f28b13]",
-    tag: "bg-[#fff2e4] text-[#d9790b]",
+    card: "from-[#fffaf5] via-white to-white",
+    icon: "bg-[#fff0df] text-[#ff870b]",
+    tag: "bg-[#fff3e6] text-[#d87308]",
   },
+
   mint: {
-    card: "from-[#f4fffa] via-white to-white",
-    icon: "bg-[#ddf9ed] text-[#12a86d]",
-    tag: "bg-[#e9fbf3] text-[#0d9560]",
+    card: "from-[#f7fffb] via-white to-white",
+    icon: "bg-[#e1f9ef] text-[#08a96b]",
+    tag: "bg-[#eafaf3] text-[#0b8c5b]",
   },
 };
 
@@ -240,182 +287,43 @@ function ArrowIcon() {
   );
 }
 
-function ServiceIcon({ type }: { type: string }) {
+function ServiceIcon({
+  type,
+}: {
+  type: string;
+}) {
   if (type === "shopify") {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-8 w-8"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M7 8.5L8.4 5.3C8.8 4.4 9.7 3.8 10.7 3.8H13.3C14.3 3.8 15.2 4.4 15.6 5.3L17 8.5"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M5 8.5H19L18 20H6L5 8.5Z"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="M9.5 12.3C10.6 11.4 13.3 11.5 14.3 12.5C15.5 13.8 13.6 14.4 12.2 14.7C10.8 15 9.2 15.6 10 17C10.8 18.4 13.8 18.3 15 17.3"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-        />
-      </svg>
+      <SiShopify className="h-9 w-9" />
     );
   }
 
   if (type === "wordpress") {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-8 w-8"
-        fill="none"
-        aria-hidden="true"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="9"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        />
-
-        <path
-          d="M6.5 8.5L10 17M10 8.5L13.5 17M8 8.5H11M13 8.5H15.5M14 17L17.5 8.5"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <SiWordpress className="h-9 w-9" />
     );
   }
 
   if (type === "react") {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-8 w-8"
-        fill="none"
-        aria-hidden="true"
-      >
-        <circle cx="12" cy="12" r="1.8" fill="currentColor" />
-
-        <ellipse
-          cx="12"
-          cy="12"
-          rx="9"
-          ry="3.8"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-
-        <ellipse
-          cx="12"
-          cy="12"
-          rx="9"
-          ry="3.8"
-          transform="rotate(60 12 12)"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-
-        <ellipse
-          cx="12"
-          cy="12"
-          rx="9"
-          ry="3.8"
-          transform="rotate(120 12 12)"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-      </svg>
+      <SiReact className="h-9 w-9" />
     );
   }
 
   if (type === "code") {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-8 w-8"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M8 8L4 12L8 16M16 8L20 12L16 16M14 5L10 19"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <FaCode className="h-8 w-8" />
     );
   }
 
   if (type === "integration") {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-8 w-8"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M9 15L15 9"
-          stroke="currentColor"
-          strokeWidth="1.9"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M7.5 17.5L5.5 19.5C4 21 1.6 21 0.1 19.5C-1.4 18 -1.4 15.6 0.1 14.1L4.1 10.1C5.6 8.6 8 8.6 9.5 10.1"
-          transform="translate(3 -3)"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M16.5 6.5L18.5 4.5C20 3 22.4 3 23.9 4.5C25.4 6 25.4 8.4 23.9 9.9L19.9 13.9C18.4 15.4 16 15.4 14.5 13.9"
-          transform="translate(-3 3)"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-      </svg>
+      <FaLink className="h-8 w-8" />
     );
   }
 
   return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-8 w-8"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M5 18C8.5 17.2 11.5 14.7 15.2 10.7L19.5 6L18 4.5L13.3 8.8C9.3 12.5 6.8 15.5 6 19L5 18Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-
-      <path
-        d="M8 16L5 13L3 18L8 16Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <FaPenNib className="h-8 w-8" />
   );
 }
 
@@ -432,7 +340,10 @@ export default function ServicesPage() {
 
       {/* ================= MY WORK ================= */}
 
-      <div id="portfolio" data-aos="fade-up">
+      <div
+        id="portfolio"
+        data-aos="fade-up"
+      >
         <WorkedOnSection
           eyebrow="My Work"
           title="Websites I've Worked On"
@@ -465,19 +376,21 @@ export default function ServicesPage() {
 
             <h2 className="text-[40px] font-semibold leading-[1.03] tracking-[-0.05em] text-[#090b17] sm:text-[48px] md:text-[58px] lg:text-[66px]">
               Digital Solutions for
+
               <span className="block bg-gradient-to-r from-[#3f55ff] via-[#9053df] to-[#ec4e8d] bg-clip-text text-transparent">
                 Modern Brands
               </span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-[760px] text-[15px] leading-[1.7] text-[#676b7c] sm:text-[16px] md:text-[18px]">
-              From eCommerce to custom web applications, we help businesses
-              build, scale and succeed with modern technology and clean,
-              high-performance digital solutions.
+              From eCommerce to custom web applications, we help
+              businesses build, scale and succeed with modern
+              technology and clean, high-performance digital
+              solutions.
             </p>
           </div>
 
-          {/* ================= LEFT DECORATION ================= */}
+          {/* ================= LEFT TEXT ================= */}
 
           <div className="pointer-events-none absolute left-0 top-[55px] hidden -rotate-6 text-[#aaa7ff] xl:block">
             <p className="font-serif text-[25px] italic leading-[1.05]">
@@ -503,7 +416,7 @@ export default function ServicesPage() {
             </svg>
           </div>
 
-          {/* ================= RIGHT DECORATION ================= */}
+          {/* ================= RIGHT TEXT ================= */}
 
           <div className="pointer-events-none absolute right-3 top-[55px] hidden rotate-3 text-[#aaa7ff] xl:block">
             <p className="font-serif text-[24px] italic leading-[1.1]">
@@ -531,7 +444,8 @@ export default function ServicesPage() {
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => {
-              const colors = themeClasses[service.theme];
+              const colors =
+                themeClasses[service.theme];
 
               return (
                 <article
@@ -539,28 +453,35 @@ export default function ServicesPage() {
                   className={`group relative flex min-h-[360px] flex-col rounded-[25px] border border-[#e4e6f1] bg-gradient-to-br ${colors.card} p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_65px_rgba(31,35,80,0.10)] sm:p-7 lg:p-8`}
                 >
                   {/* Number */}
-                  <span className="absolute right-7 top-7 text-[12px] font-semibold tracking-[0.08em] text-[#84899a]">
+
+                  <span className="absolute right-7 top-7 text-[12px] font-semibold tracking-[0.08em] text-[#969bb0]">
                     {service.number}
                   </span>
 
                   {/* Icon */}
+
                   <div
-                    className={`mb-6 flex h-[68px] w-[68px] items-center justify-center rounded-[19px] ${colors.icon}`}
+                    className={`mb-6 flex h-[64px] w-[64px] items-center justify-center rounded-[18px] ${colors.icon}`}
                   >
-                    <ServiceIcon type={service.icon} />
+                    <ServiceIcon
+                      type={service.icon}
+                    />
                   </div>
 
                   {/* Title */}
+
                   <h3 className="pr-8 text-[21px] font-semibold tracking-[-0.03em] text-[#080b15] sm:text-[23px]">
                     {service.title}
                   </h3>
 
                   {/* Description */}
+
                   <p className="mt-3 text-[14px] leading-[1.7] text-[#656a7b] sm:text-[15px]">
                     {service.description}
                   </p>
 
                   {/* Tags */}
+
                   <div className="mt-6 flex flex-wrap gap-2">
                     {service.tags.map((tag) => (
                       <span
@@ -573,12 +494,14 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Learn More */}
+
                   <div className="mt-auto pt-8">
                     <Link
                       href={service.href}
                       className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3442ff] transition-all duration-300 group-hover:gap-4"
                     >
                       Learn More
+
                       <ArrowIcon />
                     </Link>
                   </div>
@@ -603,11 +526,13 @@ export default function ServicesPage() {
           }}
         >
           {/* Glow */}
+
           <div className="absolute -right-20 -top-40 h-[400px] w-[400px] rounded-full bg-white/15 blur-[100px]" />
 
           <div className="absolute -bottom-40 left-[20%] h-[350px] w-[350px] rounded-full bg-[#868fff]/20 blur-[100px]" />
 
           {/* Content */}
+
           <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.15em] text-white/70">
@@ -621,8 +546,10 @@ export default function ServicesPage() {
               </h2>
 
               <p className="mt-5 max-w-[620px] text-[15px] leading-7 text-white/75 md:text-base">
-                Tell us about your project and let&apos;s create a fast,
-                scalable and high-performing digital experience together.
+                Tell us about your project and
+                let&apos;s create a fast, scalable and
+                high-performing digital experience
+                together.
               </p>
             </div>
 
