@@ -1,61 +1,62 @@
 import Link from "next/link";
+import WorkedOnSection from "@/components/home/WorkedOnSection";
 
 const projects = [
   {
-    title: "Dr. Sheth's",
-    url: "https://www.drsheths.com/",
+    title: "G Shot Health & Wellness",
+    url: "https://gshotdrink.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/drsheths.webp",
+    image: "/13.webp",
   },
   {
-    title: "Memorize Your Life",
-    url: "https://memorizeyourlife.com/",
+    title: "Seek & Swoon Blankets",
+    url: "https://www.seekandswoon.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/memorize-banner.webp",
+    image: "/website_hero_2160x1080_15.webp",
   },
   {
-    title: "Craft Home Decor",
-    url: "https://crafthomedecor.com/",
+    title: "NutriPaw Pet Wellness",
+    url: "https://nutri-paw.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/craft-home-decor.webp",
+    image: "/all-itch-immunity-treats-933888.webp",
   },
   {
-    title: "Prana Beauty",
-    url: "https://www.pranabeauty.com/",
+    title: "Wooven Club Fashion",
+    url: "https://www.woovenclub.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/prana-beauty.webp",
+    image: "/women-image.webp",
   },
   {
-    title: "Banana Republic",
-    url: "https://bananarepublic.gap.com/",
+    title: "Smaints Functional Mushrooms",
+    url: "https://smaints.de/en",
     category: "Shopify",
     tech: "Liquid",
-    image: "/bananarepublic.avif",
+    image: "/banner-desktop.webp",
   },
   {
-    title: "Shoppers Stop",
+    title: "LootBloc Gaming Merch",
+    url: "https://lootbloc.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/game-banner-img.webp",
+  },
+  {
+    title: "Rastah Contemporary Fashion",
+    url: "https://row.rastah.co/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/fashion-banner.webp",
+  },
+  {
+    title: "Shoppers Stop Fashion & Lifestyle",
     url: "https://www.shoppersstop.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/shoppersstop.avif",
-  },
-  {
-    title: "Superkicks",
-    url: "https://www.superkicks.in/",
-    category: "Shopify",
-    tech: "Liquid",
-    image: "/superkicks.jpg",
-  },
-  {
-    title: "Aachho",
-    url: "https://www.aachho.com/",
-    category: "Shopify",
-    tech: "Liquid",
-    image: "/aachho.webp",
+    image: "/banner-beauty'.avif",
   },
 ];
 
@@ -266,12 +267,7 @@ function ServiceIcon({ type }: { type: string }) {
           strokeLinejoin="round"
         />
 
-        <circle
-          cx="16.5"
-          cy="7.5"
-          r="1.5"
-          fill="currentColor"
-        />
+        <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
       </svg>
     );
   }
@@ -350,7 +346,6 @@ export default function ServicesPage() {
       {/* ================= HERO ================= */}
 
       <section className="relative min-h-[720px] overflow-hidden">
-        {/* Main Gradient */}
         <div
           className="absolute inset-0"
           style={{
@@ -359,7 +354,6 @@ export default function ServicesPage() {
           }}
         />
 
-        {/* Bottom White Fade */}
         <div
           className="absolute inset-x-0 bottom-0 h-[46%]"
           style={{
@@ -368,21 +362,15 @@ export default function ServicesPage() {
           }}
         />
 
-        {/* Left Glow */}
         <div className="absolute -bottom-40 -left-28 h-[520px] w-[520px] rounded-full bg-[#a5afff]/40 blur-[100px]" />
 
-        {/* Right Glow */}
         <div className="absolute -bottom-40 -right-20 h-[560px] w-[560px] rounded-full bg-[#ffc3b3]/50 blur-[110px]" />
 
-        {/* Decorative Circles */}
         <div className="absolute right-[7%] top-[14%] h-[340px] w-[340px] rounded-full border border-white/10" />
 
         <div className="absolute right-[10%] top-[18%] h-[250px] w-[250px] rounded-full border border-white/10" />
 
-        {/* Hero Content */}
         <div className="relative z-10 mx-auto flex min-h-[720px] max-w-[1320px] flex-col items-center justify-center px-5 pb-28 pt-24 text-center md:px-8">
-          {/* Chips */}
-
           <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
             <div className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#27232b] shadow-sm md:text-base">
               <span className="mr-2 text-[#ff4b18]">✦</span>
@@ -394,8 +382,6 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Heading */}
-
           <h1 className="max-w-[1180px] text-[44px] font-semibold leading-[1.08] tracking-[-0.045em] text-white sm:text-[56px] md:text-[68px] lg:text-[76px]">
             Digital solutions your
             <br className="hidden md:block" />
@@ -405,15 +391,11 @@ export default function ServicesPage() {
             </span>
           </h1>
 
-          {/* Description */}
-
           <p className="mt-9 max-w-[1000px] text-[16px] leading-[1.7] text-white/95 sm:text-[17px] md:text-[20px]">
             We build modern websites, custom applications, Shopify experiences,
             intelligent automation and scalable digital products that help
             businesses innovate, automate and grow online.
           </p>
-
-          {/* CTA Buttons */}
 
           <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
             <Link
@@ -437,99 +419,26 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ================= PORTFOLIO ================= */}
+      {/* ================= MY WORK ================= */}
 
-      <section
-        id="portfolio"
-        className="relative z-20 bg-white px-5 py-20 md:px-8 lg:py-24"
-      >
-        <div className="mx-auto max-w-[1320px]">
-          <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#3038ef]">
-                My Work
-              </p>
-
-              <h2 className="text-3xl font-semibold tracking-[-0.035em] md:text-[46px]">
-                Websites I&apos;ve Worked On
-              </h2>
-
-              <p className="mt-3 max-w-[650px] text-[15px] leading-7 text-[#6b6b74] md:text-base">
-                A selection of live projects I&apos;ve worked on using Shopify,
-                Liquid and modern frontend development.
-              </p>
-            </div>
-
-            <Link
-              href="/portfolio"
-              className="group flex w-fit items-center gap-3 rounded-full border border-[#3d3df2] px-6 py-3 text-sm font-semibold text-[#3333e8] transition duration-300 hover:bg-[#3333e8] hover:text-white"
-            >
-              View All Projects
-
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                <ArrowIcon />
-              </span>
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
-            {projects.map((project) => (
-              <a
-                key={project.title}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group overflow-hidden rounded-[20px] border border-[#ececf2] bg-white shadow-[0_12px_35px_rgba(20,20,60,0.06)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_20px_55px_rgba(20,20,60,0.12)]"
-              >
-                {/* Project Image */}
-
-                <div className="relative aspect-[1.45/1] overflow-hidden rounded-t-[20px] bg-[#f1f1f6]">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
-                  />
-
-                  <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/[0.04]" />
-                </div>
-
-                {/* Content */}
-
-                <div className="p-5">
-                  <h3 className="text-[17px] font-semibold text-[#15151d]">
-                    {project.title}
-                  </h3>
-
-                  <div className="mt-2 flex items-center gap-1.5 text-sm font-medium text-[#3434ef]">
-                    <span className="max-w-[190px] truncate">
-                      {project.url.replace("https://", "")}
-                    </span>
-
-                    <ExternalIcon />
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="rounded-md bg-[#f4f4f7] px-3 py-1.5 text-xs font-medium text-[#444]">
-                      {project.category}
-                    </span>
-
-                    <span className="rounded-md bg-[#f4f4f7] px-3 py-1.5 text-xs font-medium text-[#444]">
-                      {project.tech}
-                    </span>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div id="portfolio" data-aos="fade-up">
+        <WorkedOnSection
+          eyebrow="My Work"
+          title="Websites I've Worked On"
+          description="A selection of live projects I've worked on using Shopify, Liquid and modern frontend development."
+          ctaLabel="View All Projects"
+          ctaHref="/portfolio"
+          projects={projects}
+        />
+      </div>
 
       {/* ================= SERVICES ================= */}
 
-      <section className="bg-[#fafafe] px-5 py-20 md:px-8 lg:py-28">
+      <section
+        className="bg-[#fafafe] px-5 py-20 md:px-8 lg:py-28"
+        data-aos="fade-up"
+      >
         <div className="mx-auto max-w-[1320px]">
-          {/* Heading */}
-
           <div className="mx-auto mb-14 max-w-[760px] text-center">
             <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#3038ef]">
               Our Services
@@ -545,16 +454,12 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Service Cards */}
-
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <div
                 key={service.title}
                 className="group rounded-[22px] border border-[#e8e8ef] bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(34,34,90,0.09)] md:p-8"
               >
-                {/* Icon */}
-
                 <div
                   className={`mb-7 flex h-[58px] w-[58px] items-center justify-center rounded-[17px] ${getIconClasses(
                     index
@@ -563,25 +468,17 @@ export default function ServicesPage() {
                   <ServiceIcon type={service.icon} />
                 </div>
 
-                {/* Number */}
-
                 <div className="mb-2 text-xs font-semibold text-[#9999a2]">
                   {service.number}
                 </div>
-
-                {/* Title */}
 
                 <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-[#14141c]">
                   {service.title}
                 </h3>
 
-                {/* Description */}
-
                 <p className="mt-3 min-h-[84px] text-[15px] leading-[1.7] text-[#64646e]">
                   {service.description}
                 </p>
-
-                {/* Work Link */}
 
                 <a
                   href={service.workLink}
@@ -605,7 +502,10 @@ export default function ServicesPage() {
 
       {/* ================= FINAL CTA ================= */}
 
-      <section className="bg-white px-5 py-20 md:px-8 lg:py-24">
+      <section
+        className="bg-white px-5 py-20 md:px-8 lg:py-24"
+        data-aos="fade-up"
+      >
         <div
           className="relative mx-auto max-w-[1320px] overflow-hidden rounded-[28px] px-6 py-16 md:px-12 lg:px-16 lg:py-20"
           style={{
@@ -613,13 +513,9 @@ export default function ServicesPage() {
               "linear-gradient(120deg, #2036e9 0%, #742c8d 48%, #d62a34 75%, #f0440b 100%)",
           }}
         >
-          {/* Glow */}
-
           <div className="absolute -right-20 -top-40 h-[400px] w-[400px] rounded-full bg-white/15 blur-[100px]" />
 
           <div className="absolute -bottom-40 left-[20%] h-[350px] w-[350px] rounded-full bg-[#868fff]/20 blur-[100px]" />
-
-          {/* Content */}
 
           <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div>
