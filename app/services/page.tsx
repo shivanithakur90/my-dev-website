@@ -120,53 +120,105 @@ const projects = [
 const services = [
   {
     number: "01",
-    title: "Custom Application Development",
+    title: "Shopify Development",
     description:
-      "We build scalable, secure, and high-performance web applications tailored to your business requirements.",
-    workLink: "https://us.usm.com",
-    icon: "code",
+      "High-converting Shopify stores built with custom Liquid development, flexible sections and a smooth shopping experience.",
+    tags: ["Liquid", "Shopify 2.0", "Custom Themes", "App Integration"],
+    icon: "shopify",
+    theme: "green",
+    href: "/contact",
   },
   {
     number: "02",
-    title: "AI & Intelligent Automation",
+    title: "WordPress & WooCommerce",
     description:
-      "Automate repetitive processes and unlock new opportunities with intelligent AI-powered solutions.",
-    workLink: "https://sohnne.com",
-    icon: "ai",
+      "Fast, responsive WordPress websites and WooCommerce stores tailored around your brand, products and business goals.",
+    tags: ["WordPress", "WooCommerce", "Elementor", "Custom CSS"],
+    icon: "wordpress",
+    theme: "blue",
+    href: "/contact",
   },
   {
     number: "03",
-    title: "Systems Integration & APIs",
+    title: "React & Next.js Development",
     description:
-      "Connect platforms, services and business tools with reliable APIs and seamless third-party integrations.",
-    workLink: "https://modulecanada.com",
-    icon: "link",
+      "Modern websites and web applications built with React and Next.js for performance, scalability and a polished user experience.",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    icon: "react",
+    theme: "pink",
+    href: "/contact",
   },
   {
     number: "04",
-    title: "Product Engineering",
+    title: "Custom Web Development",
     description:
-      "From concept to launch, we build scalable, reliable and user-focused digital products.",
-    workLink: "https://row.rastah.co",
-    icon: "rocket",
+      "Custom web solutions for businesses that need more than a standard website, including dashboards, portals and dynamic functionality.",
+    tags: ["JavaScript", "Node.js", "APIs", "Database"],
+    icon: "code",
+    theme: "purple",
+    href: "/contact",
   },
   {
     number: "05",
-    title: "Cloud, DevOps & Security",
+    title: "API & App Integrations",
     description:
-      "Build modern infrastructure with deployment automation, monitoring and enterprise-ready security.",
-    workLink: "https://us.usm.com",
-    icon: "cloud",
+      "Connect your store or website with payment systems, CRMs, shipping tools and third-party platforms through reliable integrations.",
+    tags: ["REST API", "GraphQL", "Webhooks", "Automation"],
+    icon: "integration",
+    theme: "orange",
+    href: "/contact",
   },
   {
     number: "06",
-    title: "Web Development",
+    title: "UI/UX & Web Design",
     description:
-      "Modern, responsive and SEO-friendly websites focused on performance, usability and conversions.",
-    workLink: "https://sohnne.com",
-    icon: "web",
+      "User-focused interfaces that are modern, clean and conversion-driven for eCommerce stores and web applications.",
+    tags: ["Figma", "UI/UX Design", "Responsive", "Branding"],
+    icon: "design",
+    theme: "mint",
+    href: "/contact",
   },
 ];
+
+const themeClasses: Record<
+  string,
+  {
+    card: string;
+    icon: string;
+    tag: string;
+  }
+> = {
+  green: {
+    card: "from-[#f5fff9] via-white to-white",
+    icon: "bg-[#dcf8e8] text-[#16a34a]",
+    tag: "bg-[#e9f9ef] text-[#168542]",
+  },
+  blue: {
+    card: "from-[#f5faff] via-white to-white",
+    icon: "bg-[#e1f2ff] text-[#1689e8]",
+    tag: "bg-[#eaf6ff] text-[#1174c5]",
+  },
+  pink: {
+    card: "from-[#fff7fb] via-white to-white",
+    icon: "bg-[#ffe5ef] text-[#ec3d81]",
+    tag: "bg-[#fff0f5] text-[#d93474]",
+  },
+  purple: {
+    card: "from-[#faf7ff] via-white to-white",
+    icon: "bg-[#eee8ff] text-[#6338f2]",
+    tag: "bg-[#f1edff] text-[#5a36dc]",
+  },
+  orange: {
+    card: "from-[#fff9f3] via-white to-white",
+    icon: "bg-[#ffeed9] text-[#f28b13]",
+    tag: "bg-[#fff2e4] text-[#d9790b]",
+  },
+  mint: {
+    card: "from-[#f4fffa] via-white to-white",
+    icon: "bg-[#ddf9ed] text-[#12a86d]",
+    tag: "bg-[#e9fbf3] text-[#0d9560]",
+  },
+};
 
 function ArrowIcon() {
   return (
@@ -188,54 +240,118 @@ function ArrowIcon() {
   );
 }
 
-function ExternalIcon() {
-  return (
-    <svg
-      width="15"
-      height="15"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M14 5H19V10"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      <path
-        d="M10 14L19 5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      <path
-        d="M19 14V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5H10"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function ServiceIcon({ type }: { type: string }) {
+  if (type === "shopify") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-8 w-8"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M7 8.5L8.4 5.3C8.8 4.4 9.7 3.8 10.7 3.8H13.3C14.3 3.8 15.2 4.4 15.6 5.3L17 8.5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+
+        <path
+          d="M5 8.5H19L18 20H6L5 8.5Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M9.5 12.3C10.6 11.4 13.3 11.5 14.3 12.5C15.5 13.8 13.6 14.4 12.2 14.7C10.8 15 9.2 15.6 10 17C10.8 18.4 13.8 18.3 15 17.3"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "wordpress") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-8 w-8"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="9"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+
+        <path
+          d="M6.5 8.5L10 17M10 8.5L13.5 17M8 8.5H11M13 8.5H15.5M14 17L17.5 8.5"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "react") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-8 w-8"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+
+        <ellipse
+          cx="12"
+          cy="12"
+          rx="9"
+          ry="3.8"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+
+        <ellipse
+          cx="12"
+          cy="12"
+          rx="9"
+          ry="3.8"
+          transform="rotate(60 12 12)"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+
+        <ellipse
+          cx="12"
+          cy="12"
+          rx="9"
+          ry="3.8"
+          transform="rotate(120 12 12)"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+      </svg>
+    );
+  }
+
   if (type === "code") {
     return (
       <svg
-        width="27"
-        height="27"
         viewBox="0 0 24 24"
+        className="h-8 w-8"
         fill="none"
         aria-hidden="true"
       >
         <path
-          d="M8 9L5 12L8 15M16 9L19 12L16 15M14 5L10 19"
+          d="M8 8L4 12L8 16M16 8L20 12L16 16M14 5L10 19"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
@@ -245,101 +361,32 @@ function ServiceIcon({ type }: { type: string }) {
     );
   }
 
-  if (type === "ai") {
+  if (type === "integration") {
     return (
       <svg
-        width="27"
-        height="27"
         viewBox="0 0 24 24"
+        className="h-8 w-8"
         fill="none"
         aria-hidden="true"
       >
-        <rect
-          x="5"
-          y="7"
-          width="14"
-          height="11"
-          rx="3"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        />
-
         <path
-          d="M9 12H9.01M15 12H15.01M9 16H15M12 4V7M3 11H5M19 11H21"
+          d="M9 15L15 9"
           stroke="currentColor"
-          strokeWidth="1.8"
+          strokeWidth="1.9"
           strokeLinecap="round"
         />
-      </svg>
-    );
-  }
 
-  if (type === "link") {
-    return (
-      <svg
-        width="27"
-        height="27"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
         <path
-          d="M10 13C11.1046 14.1046 12.8954 14.1046 14 13L17 10C18.1046 8.89543 18.1046 7.10457 17 6C15.8954 4.89543 14.1046 4.89543 13 6L11.5 7.5"
+          d="M7.5 17.5L5.5 19.5C4 21 1.6 21 0.1 19.5C-1.4 18 -1.4 15.6 0.1 14.1L4.1 10.1C5.6 8.6 8 8.6 9.5 10.1"
+          transform="translate(3 -3)"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
         />
 
         <path
-          d="M14 11C12.8954 9.89543 11.1046 9.89543 10 11L7 14C5.89543 15.1046 5.89543 16.8954 7 18C8.10457 19.1046 9.89543 19.1046 11 18L12.5 16.5"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-      </svg>
-    );
-  }
-
-  if (type === "rocket") {
-    return (
-      <svg
-        width="27"
-        height="27"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M14 5C16.5 3 19 3 21 3C21 5 21 7.5 19 10L14 15L9 10L14 5Z"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="M9 10L5 11L3 15L9 14M14 15L13 21L9 19L10 15"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-
-        <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
-      </svg>
-    );
-  }
-
-  if (type === "cloud") {
-    return (
-      <svg
-        width="27"
-        height="27"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M7 18H17C19.2091 18 21 16.2091 21 14C21 11.7909 19.2091 10 17 10C16.8377 10 16.6777 10.0097 16.5205 10.0285C15.7112 7.67501 13.4805 6 10.8571 6C7.54344 6 4.85714 8.68629 4.85714 12C3.27804 12.4861 2 13.9518 2 15.7143C2 17.5289 3.47106 19 5.28571 19"
+          d="M16.5 6.5L18.5 4.5C20 3 22.4 3 23.9 4.5C25.4 6 25.4 8.4 23.9 9.9L19.9 13.9C18.4 15.4 16 15.4 14.5 13.9"
+          transform="translate(-3 3)"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
@@ -350,51 +397,26 @@ function ServiceIcon({ type }: { type: string }) {
 
   return (
     <svg
-      width="27"
-      height="27"
       viewBox="0 0 24 24"
+      className="h-8 w-8"
       fill="none"
       aria-hidden="true"
     >
-      <circle
-        cx="12"
-        cy="12"
-        r="9"
+      <path
+        d="M5 18C8.5 17.2 11.5 14.7 15.2 10.7L19.5 6L18 4.5L13.3 8.8C9.3 12.5 6.8 15.5 6 19L5 18Z"
         stroke="currentColor"
         strokeWidth="1.8"
+        strokeLinejoin="round"
       />
 
       <path
-        d="M3 12H21M12 3C14 5.5 15 8.5 15 12C15 15.5 14 18.5 12 21M12 3C10 5.5 9 8.5 9 12C9 15.5 10 18.5 12 21"
+        d="M8 16L5 13L3 18L8 16Z"
         stroke="currentColor"
         strokeWidth="1.8"
+        strokeLinejoin="round"
       />
     </svg>
   );
-}
-
-function getIconClasses(index: number) {
-  if (index === 0) {
-    return "bg-[#eeebff] text-[#5439ff]";
-  }
-
-  if (index === 1) {
-    return "bg-[#ffe9f0] text-[#ff3d79]";
-  }
-
-  if (index === 2) {
-    return "bg-[#e9f5ff] text-[#149dff]";
-  }
-
-  if (index === 3) {
-    return "bg-[#e7fbef] text-[#13c66b]";
-  }
-
-  if (index === 4) {
-    return "bg-[#fff3dd] text-[#f1a500]";
-  }
-
-  return "bg-[#f0e9ff] text-[#6938ff]";
 }
 
 export default function ServicesPage() {
@@ -424,67 +446,145 @@ export default function ServicesPage() {
       {/* ================= SERVICES ================= */}
 
       <section
-        className="bg-[#fafafe] px-5 py-20 md:px-8 lg:py-28"
+        className="relative overflow-hidden bg-[#fbfbff] px-5 py-20 md:px-8 lg:py-28"
         data-aos="fade-up"
       >
-        <div className="mx-auto max-w-[1320px]">
-          <div className="mx-auto mb-14 max-w-[760px] text-center">
-            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#3038ef]">
+        {/* Background Glow Left */}
+        <div className="pointer-events-none absolute -left-[250px] -top-[160px] h-[600px] w-[600px] rounded-full bg-[#eeeeff] blur-[25px]" />
+
+        {/* Background Glow Right */}
+        <div className="pointer-events-none absolute -right-[250px] top-[40px] h-[580px] w-[580px] rounded-full bg-[#faeefe] blur-[30px]" />
+
+        <div className="relative mx-auto max-w-[1320px]">
+          {/* ================= HEADING ================= */}
+
+          <div className="relative mx-auto mb-14 max-w-[920px] text-center md:mb-16">
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.18em] text-[#3844ff]">
               Our Services
             </p>
 
-            <h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-[52px]">
-              What We Do
+            <h2 className="text-[40px] font-semibold leading-[1.03] tracking-[-0.05em] text-[#090b17] sm:text-[48px] md:text-[58px] lg:text-[66px]">
+              Digital Solutions for
+              <span className="block bg-gradient-to-r from-[#3f55ff] via-[#9053df] to-[#ec4e8d] bg-clip-text text-transparent">
+                Modern Brands
+              </span>
             </h2>
 
-            <p className="mx-auto mt-4 max-w-[680px] text-[16px] leading-7 text-[#686873]">
-              End-to-end digital solutions designed to solve real business
-              problems and deliver measurable results.
+            <p className="mx-auto mt-6 max-w-[760px] text-[15px] leading-[1.7] text-[#676b7c] sm:text-[16px] md:text-[18px]">
+              From eCommerce to custom web applications, we help businesses
+              build, scale and succeed with modern technology and clean,
+              high-performance digital solutions.
             </p>
           </div>
 
+          {/* ================= LEFT DECORATION ================= */}
+
+          <div className="pointer-events-none absolute left-0 top-[55px] hidden -rotate-6 text-[#aaa7ff] xl:block">
+            <p className="font-serif text-[25px] italic leading-[1.05]">
+              Build
+              <br />
+              Better
+              <br />
+              Together
+            </p>
+
+            <svg
+              className="ml-14 mt-2 h-14 w-14"
+              viewBox="0 0 60 60"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 5C32 11 40 27 38 50M38 50L31 40M38 50L47 40"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+
+          {/* ================= RIGHT DECORATION ================= */}
+
+          <div className="pointer-events-none absolute right-3 top-[55px] hidden rotate-3 text-[#aaa7ff] xl:block">
+            <p className="font-serif text-[24px] italic leading-[1.1]">
+              Ideas into
+              <br />
+              Impact
+            </p>
+
+            <svg
+              className="ml-14 mt-2 h-14 w-14"
+              viewBox="0 0 60 60"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 5C33 11 42 27 40 50M40 50L32 40M40 50L48 39"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+
+          {/* ================= SERVICE CARDS ================= */}
+
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
-              <div
-                key={service.title}
-                className="group rounded-[22px] border border-[#e8e8ef] bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(34,34,90,0.09)] md:p-8"
-              >
-                <div
-                  className={`mb-7 flex h-[58px] w-[58px] items-center justify-center rounded-[17px] ${getIconClasses(
-                    index
-                  )}`}
+            {services.map((service) => {
+              const colors = themeClasses[service.theme];
+
+              return (
+                <article
+                  key={service.number}
+                  className={`group relative flex min-h-[360px] flex-col rounded-[25px] border border-[#e4e6f1] bg-gradient-to-br ${colors.card} p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_65px_rgba(31,35,80,0.10)] sm:p-7 lg:p-8`}
                 >
-                  <ServiceIcon type={service.icon} />
-                </div>
-
-                <div className="mb-2 text-xs font-semibold text-[#9999a2]">
-                  {service.number}
-                </div>
-
-                <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-[#14141c]">
-                  {service.title}
-                </h3>
-
-                <p className="mt-3 min-h-[84px] text-[15px] leading-[1.7] text-[#64646e]">
-                  {service.description}
-                </p>
-
-                <a
-                  href={service.workLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-7 inline-flex items-center gap-3 text-[14px] font-semibold text-[#3535ed]"
-                >
-                  View My Work
-
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    <ArrowIcon />
+                  {/* Number */}
+                  <span className="absolute right-7 top-7 text-[12px] font-semibold tracking-[0.08em] text-[#84899a]">
+                    {service.number}
                   </span>
 
-                  <ExternalIcon />
-                </a>
-              </div>
-            ))}
+                  {/* Icon */}
+                  <div
+                    className={`mb-6 flex h-[68px] w-[68px] items-center justify-center rounded-[19px] ${colors.icon}`}
+                  >
+                    <ServiceIcon type={service.icon} />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="pr-8 text-[21px] font-semibold tracking-[-0.03em] text-[#080b15] sm:text-[23px]">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-3 text-[14px] leading-[1.7] text-[#656a7b] sm:text-[15px]">
+                    {service.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className={`rounded-full px-3.5 py-2 text-[11px] font-medium sm:text-[12px] ${colors.tag}`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Learn More */}
+                  <div className="mt-auto pt-8">
+                    <Link
+                      href={service.href}
+                      className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3442ff] transition-all duration-300 group-hover:gap-4"
+                    >
+                      Learn More
+                      <ArrowIcon />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -502,10 +602,12 @@ export default function ServicesPage() {
               "linear-gradient(120deg, #2036e9 0%, #742c8d 48%, #d62a34 75%, #f0440b 100%)",
           }}
         >
+          {/* Glow */}
           <div className="absolute -right-20 -top-40 h-[400px] w-[400px] rounded-full bg-white/15 blur-[100px]" />
 
           <div className="absolute -bottom-40 left-[20%] h-[350px] w-[350px] rounded-full bg-[#868fff]/20 blur-[100px]" />
 
+          {/* Content */}
           <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.15em] text-white/70">
