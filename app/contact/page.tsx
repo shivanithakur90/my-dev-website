@@ -2,7 +2,14 @@
 
 import { FormEvent, useState } from "react";
 import Select from "react-select";
+import type { StylesConfig } from "react-select";
 import ReactCountryFlag from "react-country-flag";
+import {
+  getCountries,
+  getCountryCallingCode,
+  isValidPhoneNumber,
+  type CountryCode,
+} from "libphonenumber-js";
 import ContactStatsSection from "@/components/home/ContactStatsSection";
 import RoutedBuilderSection from "@/components/home/RoutedBuilderSection";
 import ContactFaqSection from "@/components/home/ContactFaqSection";
@@ -10,255 +17,31 @@ import ContactLastCtaSection from "@/components/home/ContactLastCtaSection";
 type CountryOption = {
   value: string;
   label: string;
-  code: string;
+  code: CountryCode;
   dialCode: string;
 };
 
-const countries: CountryOption[] = [
-  {
-    value: "India",
-    label: "India",
-    code: "IN",
-    dialCode: "+91",
-  },
-  {
-    value: "United States",
-    label: "United States",
-    code: "US",
-    dialCode: "+1",
-  },
-  {
-    value: "United Kingdom",
-    label: "United Kingdom",
-    code: "GB",
-    dialCode: "+44",
-  },
-  {
-    value: "Canada",
-    label: "Canada",
-    code: "CA",
-    dialCode: "+1",
-  },
-  {
-    value: "Australia",
-    label: "Australia",
-    code: "AU",
-    dialCode: "+61",
-  },
-  {
-    value: "United Arab Emirates",
-    label: "United Arab Emirates",
-    code: "AE",
-    dialCode: "+971",
-  },
-  {
-    value: "Germany",
-    label: "Germany",
-    code: "DE",
-    dialCode: "+49",
-  },
-  {
-    value: "France",
-    label: "France",
-    code: "FR",
-    dialCode: "+33",
-  },
-  {
-    value: "Italy",
-    label: "Italy",
-    code: "IT",
-    dialCode: "+39",
-  },
-  {
-    value: "Spain",
-    label: "Spain",
-    code: "ES",
-    dialCode: "+34",
-  },
-  {
-    value: "Netherlands",
-    label: "Netherlands",
-    code: "NL",
-    dialCode: "+31",
-  },
-  {
-    value: "Belgium",
-    label: "Belgium",
-    code: "BE",
-    dialCode: "+32",
-  },
-  {
-    value: "Switzerland",
-    label: "Switzerland",
-    code: "CH",
-    dialCode: "+41",
-  },
-  {
-    value: "Austria",
-    label: "Austria",
-    code: "AT",
-    dialCode: "+43",
-  },
-  {
-    value: "Sweden",
-    label: "Sweden",
-    code: "SE",
-    dialCode: "+46",
-  },
-  {
-    value: "Norway",
-    label: "Norway",
-    code: "NO",
-    dialCode: "+47",
-  },
-  {
-    value: "Denmark",
-    label: "Denmark",
-    code: "DK",
-    dialCode: "+45",
-  },
-  {
-    value: "Finland",
-    label: "Finland",
-    code: "FI",
-    dialCode: "+358",
-  },
-  {
-    value: "Ireland",
-    label: "Ireland",
-    code: "IE",
-    dialCode: "+353",
-  },
-  {
-    value: "Portugal",
-    label: "Portugal",
-    code: "PT",
-    dialCode: "+351",
-  },
-  {
-    value: "Poland",
-    label: "Poland",
-    code: "PL",
-    dialCode: "+48",
-  },
-  {
-    value: "New Zealand",
-    label: "New Zealand",
-    code: "NZ",
-    dialCode: "+64",
-  },
-  {
-    value: "Singapore",
-    label: "Singapore",
-    code: "SG",
-    dialCode: "+65",
-  },
-  {
-    value: "Malaysia",
-    label: "Malaysia",
-    code: "MY",
-    dialCode: "+60",
-  },
-  {
-    value: "Indonesia",
-    label: "Indonesia",
-    code: "ID",
-    dialCode: "+62",
-  },
-  {
-    value: "Thailand",
-    label: "Thailand",
-    code: "TH",
-    dialCode: "+66",
-  },
-  {
-    value: "Philippines",
-    label: "Philippines",
-    code: "PH",
-    dialCode: "+63",
-  },
-  {
-    value: "Japan",
-    label: "Japan",
-    code: "JP",
-    dialCode: "+81",
-  },
-  {
-    value: "South Korea",
-    label: "South Korea",
-    code: "KR",
-    dialCode: "+82",
-  },
-  {
-    value: "China",
-    label: "China",
-    code: "CN",
-    dialCode: "+86",
-  },
-  {
-    value: "Hong Kong",
-    label: "Hong Kong",
-    code: "HK",
-    dialCode: "+852",
-  },
-  {
-    value: "Saudi Arabia",
-    label: "Saudi Arabia",
-    code: "SA",
-    dialCode: "+966",
-  },
-  {
-    value: "Qatar",
-    label: "Qatar",
-    code: "QA",
-    dialCode: "+974",
-  },
-  {
-    value: "Kuwait",
-    label: "Kuwait",
-    code: "KW",
-    dialCode: "+965",
-  },
-  {
-    value: "Oman",
-    label: "Oman",
-    code: "OM",
-    dialCode: "+968",
-  },
-  {
-    value: "Bahrain",
-    label: "Bahrain",
-    code: "BH",
-    dialCode: "+973",
-  },
-  {
-    value: "South Africa",
-    label: "South Africa",
-    code: "ZA",
-    dialCode: "+27",
-  },
-  {
-    value: "Brazil",
-    label: "Brazil",
-    code: "BR",
-    dialCode: "+55",
-  },
-  {
-    value: "Mexico",
-    label: "Mexico",
-    code: "MX",
-    dialCode: "+52",
-  },
-  {
-    value: "Argentina",
-    label: "Argentina",
-    code: "AR",
-    dialCode: "+54",
-  },
-];
+const countryDisplayNames = new Intl.DisplayNames(["en"], { type: "region" });
 
-const countrySelectStyles = {
-  control: (base: any, state: any) => ({
+const countries: CountryOption[] = getCountries()
+  .map((code) => {
+    const label = countryDisplayNames.of(code) || code;
+
+    return {
+      value: label,
+      label,
+      code,
+      dialCode: `+${getCountryCallingCode(code)}`,
+    };
+  })
+  .sort((a, b) => {
+    if (a.code === "IN") return -1;
+    if (b.code === "IN") return 1;
+    return a.label.localeCompare(b.label);
+  });
+
+const countrySelectStyles: StylesConfig<CountryOption, false> = {
+  control: (base, state) => ({
     ...base,
     minHeight: "48px",
     height: "48px",
@@ -273,13 +56,13 @@ const countrySelectStyles = {
     },
   }),
 
-  valueContainer: (base: any) => ({
+  valueContainer: (base) => ({
     ...base,
     height: "48px",
     padding: "0 14px",
   }),
 
-  indicatorsContainer: (base: any) => ({
+  indicatorsContainer: (base) => ({
     ...base,
     height: "48px",
   }),
@@ -288,34 +71,34 @@ const countrySelectStyles = {
     display: "none",
   }),
 
-  dropdownIndicator: (base: any) => ({
+  dropdownIndicator: (base) => ({
     ...base,
     color: "#555",
     padding: "8px",
   }),
 
-  singleValue: (base: any) => ({
+  singleValue: (base) => ({
     ...base,
     color: "#222222",
-    fontSize: "14px",
+    fontSize: "13px",
   }),
 
-  menu: (base: any) => ({
+  menu: (base) => ({
     ...base,
     zIndex: 99999,
     marginTop: "4px",
   }),
 
-  menuPortal: (base: any) => ({
+  menuPortal: (base) => ({
     ...base,
     zIndex: 99999,
   }),
 
-  option: (base: any, state: any) => ({
+  option: (base, state) => ({
     ...base,
     display: "flex",
     alignItems: "center",
-    fontSize: "14px",
+    fontSize: "13px",
     cursor: "pointer",
     backgroundColor: state.isSelected
       ? "#eef4ff"
@@ -334,6 +117,8 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+  const [phone, setPhone] = useState("");
+  const [phoneError, setPhoneError] = useState("");
 
   const [selectedCountry, setSelectedCountry] =
     useState<CountryOption>(countries[0]);
@@ -349,6 +134,15 @@ export default function ContactPage() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const submittedPhone = String(formData.get("phone") || "").trim();
+
+    if (!isValidPhoneNumber(submittedPhone, selectedCountry.code)) {
+      setLoading(false);
+      setPhoneError(`Enter a valid phone number for ${selectedCountry.label}.`);
+      return;
+    }
+
+    setPhoneError("");
 
     try {
       const response = await fetch("/api/contact", {
@@ -371,6 +165,7 @@ export default function ContactPage() {
       );
 
       form.reset();
+      setPhone("");
       setSelectedCountry(countries[0]);
     } catch (error) {
       setSuccess(false);
@@ -400,7 +195,7 @@ export default function ContactPage() {
         <div className="pt-2 text-white lg:pt-3">
           {/* Heading */}
           <div className="max-w-[570px]">
-            <h1 className="text-[40px] font-semibold leading-[1.12] tracking-[-2px] sm:text-[48px] lg:text-[54px] xl:text-[58px]">
+            <h1 className="text-[32px] font-semibold leading-[1.12] tracking-[-1.5px] sm:text-[40px] lg:text-[46px] xl:text-[50px]">
               Tell us what needs to
               <br className="hidden sm:block" />
               work. Quote in 48
@@ -408,7 +203,7 @@ export default function ContactPage() {
               hours.
             </h1>
 
-            <p className="mt-6 max-w-[560px] text-[14px] leading-[1.65] text-white/90 sm:text-[15px]">
+            <p className="mt-6 max-w-[560px] text-[13px] leading-[1.65] text-white/90 sm:text-[14px]">
               Share the workflow, bottleneck, or idea — we&apos;ll route it
               to the right forward-deployed engineer. No long sales loop:
               a scoping call, then a fixed-price proposal in writing.
@@ -424,7 +219,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <h3 className="text-[14px] font-semibold leading-5 sm:text-[15px]">
+                <h3 className="text-[13px] font-semibold leading-5 sm:text-[14px]">
                   We reply within one business day
                 </h3>
 
@@ -443,7 +238,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <h3 className="text-[14px] font-semibold leading-5 sm:text-[15px]">
+                <h3 className="text-[13px] font-semibold leading-5 sm:text-[14px]">
                   30-minute scoping call
                 </h3>
 
@@ -462,7 +257,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <h3 className="text-[14px] font-semibold leading-5 sm:text-[15px]">
+                <h3 className="text-[13px] font-semibold leading-5 sm:text-[14px]">
                   Fixed-price quote in 48 hours
                 </h3>
 
@@ -477,12 +272,12 @@ export default function ContactPage() {
 
           {/* Testimonial */}
           <div className="mt-6 max-w-[590px] rounded-[8px] bg-white px-5 py-5 text-[#202020] shadow-[0_12px_30px_rgba(0,0,0,0.14)]">
-            <p className="text-[16px] font-semibold leading-[1.35] sm:text-[17px]">
+            <p className="text-[14px] font-semibold leading-[1.35] sm:text-[15px]">
               “We spent months trying to build a portal ourselves. Our FDE
               had it running in five days.”
             </p>
 
-            <p className="mt-2 text-[9px] leading-4 text-[#737373] sm:text-[10px]">
+            <p className="mt-2 text-[11px] leading-4 text-[#737373] sm:text-[12px]">
               Jay Patel · Co-founder &amp; CEO, Speed
             </p>
           </div>
@@ -523,11 +318,11 @@ export default function ContactPage() {
                 Email
               </div>
 
-              <p className="mt-2 text-[12px] font-medium text-[#ff5008] sm:text-[13px]">
+              <p className="mt-2 text-[14px] font-medium text-[#ff5008]">
                 sales@openxcell.com
               </p>
 
-              <p className="mt-1 text-[9px] leading-4 text-[#767676]">
+              <p className="mt-1 text-[11px] leading-4 text-[#767676]">
                 Fastest routing is still the form.
               </p>
             </a>
@@ -556,11 +351,11 @@ export default function ContactPage() {
                 Phone
               </div>
 
-              <p className="mt-2 text-[12px] font-medium text-[#ff5008] sm:text-[13px]">
+              <p className="mt-2 text-[14px] font-medium text-[#ff5008]">
                 +1 888 777 4629
               </p>
 
-              <p className="mt-1 text-[9px] leading-4 text-[#767676]">
+              <p className="mt-1 text-[11px] leading-4 text-[#767676]">
                 US business hours.
               </p>
             </a>
@@ -592,7 +387,7 @@ export default function ContactPage() {
                 US Office
               </div>
 
-              <p className="mt-2 text-[11px] font-medium leading-[1.5] text-[#ff5008] sm:text-[12px]">
+              <p className="mt-2 text-[13px] font-medium leading-[1.5] text-[#ff5008]">
                 304 S. Jones Blvd #520, Las
                 <br />
                 Vegas, NV 89107
@@ -626,7 +421,7 @@ export default function ContactPage() {
                 India Office
               </div>
 
-              <p className="mt-2 text-[11px] font-medium leading-[1.5] text-[#ff5008] sm:text-[12px]">
+              <p className="mt-2 text-[13px] font-medium leading-[1.5] text-[#ff5008]">
                 12th Floor, Capital One, Ambli
                 <br />
                 Road, Ahmedabad 380058
@@ -642,13 +437,13 @@ export default function ContactPage() {
           <div className="rounded-[20px] bg-white px-6 py-9 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:px-10 md:px-12 md:py-12">
             {/* Heading */}
             <div className="mb-6">
-              <h2 className="max-w-[560px] text-[38px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#202020] sm:text-[44px] md:text-[48px]">
+              <h2 className="max-w-[560px] text-[30px] font-semibold leading-[1.08] tracking-[-1.4px] text-[#202020] sm:text-[36px] md:text-[40px]">
                 Get your fixed-price
                 <br />
                 quote
               </h2>
 
-              <p className="mt-5 text-[14px] leading-6 text-[#555555]">
+              <p className="mt-5 text-[13px] leading-6 text-[#555555]">
                 Takes 2 minutes. We reply within one business day.
               </p>
             </div>
@@ -661,7 +456,7 @@ export default function ContactPage() {
                   name="firstName"
                   placeholder="First Name*"
                   required
-                  className="h-[48px] w-full rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[14px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5]"
+                  className="h-[48px] w-full rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[13px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5]"
                 />
 
                 {/* Last Name */}
@@ -670,7 +465,7 @@ export default function ContactPage() {
                   name="lastName"
                   placeholder="Last Name*"
                   required
-                  className="h-[48px] w-full rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[14px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5]"
+                  className="h-[48px] w-full rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[13px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5]"
                 />
 
                 {/* Email */}
@@ -679,14 +474,14 @@ export default function ContactPage() {
                   name="email"
                   placeholder="Email Address*"
                   required
-                  className="h-[48px] w-full rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[14px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5]"
+                  className="h-[48px] w-full rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[13px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5]"
                 />
 
                 {/* Budget */}
                 <select
                   name="budget"
                   defaultValue=""
-                  className="h-[48px] w-full cursor-pointer rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[14px] text-[#777777] outline-none focus:border-[#6ba5e5]"
+                  className="h-[48px] w-full cursor-pointer rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 text-[13px] text-[#777777] outline-none focus:border-[#6ba5e5]"
                 >
                   <option value="" disabled>
                     Budget
@@ -721,6 +516,7 @@ export default function ContactPage() {
                     onChange={(option) => {
                       if (option) {
                         setSelectedCountry(option);
+                        setPhoneError("");
                       }
                     }}
                     isSearchable
@@ -760,6 +556,12 @@ export default function ContactPage() {
                     name="countryCode"
                     value={selectedCountry.dialCode}
                   />
+
+                  <input
+                    type="hidden"
+                    name="countryIsoCode"
+                    value={selectedCountry.code}
+                  />
                 </div>
 
                 {/* PHONE */}
@@ -775,7 +577,7 @@ export default function ContactPage() {
                       }}
                     />
 
-                    <span className="text-[14px] font-medium text-[#34495e]">
+                    <span className="text-[13px] font-medium text-[#34495e]">
                       {selectedCountry.dialCode}
                     </span>
                   </div>
@@ -785,9 +587,28 @@ export default function ContactPage() {
                     name="phone"
                     placeholder="Phone Number*"
                     required
-                    className="h-full min-w-0 flex-1 bg-transparent px-4 text-[14px] text-[#222222] outline-none placeholder:text-[#b9b9b9]"
+                    inputMode="tel"
+                    autoComplete="tel-national"
+                    value={phone}
+                    onChange={(event) => {
+                      setPhone(event.target.value.replace(/[^0-9()\-\s]/g, ""));
+                      setPhoneError("");
+                    }}
+                    aria-invalid={Boolean(phoneError)}
+                    aria-describedby="phone-error"
+                    className="h-full min-w-0 flex-1 bg-transparent px-4 text-[13px] text-[#222222] outline-none placeholder:text-[#b9b9b9]"
                   />
                 </div>
+
+                {phoneError && (
+                  <p
+                    id="phone-error"
+                    className="-mt-3 text-[12px] font-medium text-red-600 sm:col-start-2"
+                    role="alert"
+                  >
+                    {phoneError}
+                  </p>
+                )}
 
                 {/* Description */}
                 <textarea
@@ -795,7 +616,7 @@ export default function ContactPage() {
                   rows={4}
                   placeholder="Project Description*"
                   required
-                  className="min-h-[100px] w-full resize-y rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 py-3 text-[14px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5] sm:col-span-2"
+                  className="min-h-[100px] w-full resize-y rounded-[3px] border border-[#c8d5e3] bg-[#f7f9fb] px-4 py-3 text-[13px] text-[#222222] outline-none placeholder:text-[#b9b9b9] focus:border-[#6ba5e5] sm:col-span-2"
                 />
 
                 {/* File */}
@@ -804,7 +625,7 @@ export default function ContactPage() {
                     type="file"
                     name="files"
                     multiple
-                    className="block w-full cursor-pointer text-[14px] text-[#34495e] file:mr-1 file:cursor-pointer file:border file:border-[#777777] file:bg-[#f3f3f3] file:px-2 file:py-1 file:text-[14px] file:text-black"
+                    className="block w-full cursor-pointer text-[13px] text-[#34495e] file:mr-1 file:cursor-pointer file:border file:border-[#777777] file:bg-[#f3f3f3] file:px-2 file:py-1 file:text-[13px] file:text-black"
                   />
                 </div>
               </div>
@@ -812,7 +633,7 @@ export default function ContactPage() {
               {/* Success / Error */}
               {message && (
                 <div
-                  className={`mt-6 rounded-[5px] px-4 py-3 text-[14px] ${
+                  className={`mt-6 rounded-[5px] px-4 py-3 text-[13px] ${
                     success
                       ? "bg-green-50 text-green-700"
                       : "bg-red-50 text-red-600"
@@ -829,7 +650,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-9 flex min-h-[44px] items-center justify-center rounded-[3px] bg-[#ff5508] px-6 text-[16px] font-semibold text-white transition hover:bg-[#eb4800] disabled:cursor-not-allowed disabled:opacity-60"
+                className="mt-9 flex min-h-[44px] items-center justify-center rounded-[3px] bg-[#ff5508] px-6 text-[14px] font-semibold text-white transition hover:bg-[#eb4800] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {loading ? "Sending..." : "Submit"}
               </button>

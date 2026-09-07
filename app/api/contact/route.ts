@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import {
+  isSupportedCountry,
+  isValidPhoneNumber,
+  type CountryCode,
+} from "libphonenumber-js";
 
 export const runtime = "nodejs";
 
@@ -31,6 +36,10 @@ export async function POST(request: Request) {
     const countryCode = String(
       formData.get("countryCode") || ""
     ).trim();
+
+    const countryIsoCode = String(
+      formData.get("countryIsoCode") || ""
+    ).trim().toUpperCase();
 
     const phone = String(
       formData.get("phone") || ""
@@ -64,6 +73,21 @@ export async function POST(request: Request) {
         {
           success: false,
           message: "Please fill all required fields.",
+        },
+        {
+          status: 400,
+        }
+      );
+    }
+
+    if (
+      !isSupportedCountry(countryIsoCode) ||
+      !isValidPhoneNumber(phone, countryIsoCode as CountryCode)
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Please enter a valid phone number for the selected country.",
         },
         {
           status: 400,
