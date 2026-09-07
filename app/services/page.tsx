@@ -69,7 +69,7 @@ const projects = [
     url: "https://www.shoppersstop.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/banner-beauty.avif",
+    image: "/Handbags_web.avif",
   },
   {
     title: "Dr. Sheth's",
