@@ -58,6 +58,63 @@ const projects = [
     tech: "Liquid",
     image: "/banner-beauty'.avif",
   },
+  {
+    title: "Dr. Sheth's",
+    url: "https://www.drsheths.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/drsheths.webp",
+  },
+  {
+    title: "Memorize Your Life",
+    url: "https://memorizeyourlife.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/memorize-banner.webp",
+  },
+  {
+    title: "Craft Home Decor",
+    url: "https://crafthomedecor.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/craft-home-decor.webp",
+  },
+  {
+    title: "Prana Beauty",
+    url: "https://www.pranabeauty.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/prana-beauty.webp",
+  },
+  {
+    title: "Banana Republic",
+    url: "https://bananarepublic.gap.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/bananarepublic.avif",
+  },
+  {
+    title: "Shoppers Stop",
+    url: "https://www.shoppersstop.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/shoppersstop.avif",
+  },
+  {
+    title: "Superkicks",
+    url: "https://www.superkicks.in/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/superkicks.jpg",
+  },
+  {
+    title: "Aachho",
+    url: "https://www.aachho.com/",
+    category: "Shopify",
+    tech: "Liquid",
+    image: "/aachho.webp",
+  },
+
 ];
 
 const services = [
