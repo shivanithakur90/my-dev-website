@@ -1,5 +1,6 @@
 import Link from "next/link";
 import WorkedOnSection from "@/components/home/WorkedOnSection";
+import PageHeroBanner from "@/components/common/PageHeroBanner";
 
 const projects = [
   {
@@ -56,7 +57,7 @@ const projects = [
     url: "https://www.shoppersstop.com/",
     category: "Shopify",
     tech: "Liquid",
-    image: "/banner-beauty'.avif",
+    image: "/banner-beauty.avif",
   },
   {
     title: "Dr. Sheth's",
@@ -114,7 +115,6 @@ const projects = [
     tech: "Liquid",
     image: "/aachho.webp",
   },
-
 ];
 
 const services = [
@@ -402,79 +402,11 @@ export default function ServicesPage() {
     <main className="overflow-hidden bg-white text-[#10101b]">
       {/* ================= HERO ================= */}
 
-      <section className="relative min-h-[720px] overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(118deg, #2036e9 0%, #3730c9 18%, #762887 45%, #bd2539 71%, #ed3612 100%)",
-          }}
-        />
-
-        <div
-          className="absolute inset-x-0 bottom-0 h-[46%]"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,225,225,0.18) 35%, rgba(255,255,255,0.96) 100%)",
-          }}
-        />
-
-        <div className="absolute -bottom-40 -left-28 h-[520px] w-[520px] rounded-full bg-[#a5afff]/40 blur-[100px]" />
-
-        <div className="absolute -bottom-40 -right-20 h-[560px] w-[560px] rounded-full bg-[#ffc3b3]/50 blur-[110px]" />
-
-        <div className="absolute right-[7%] top-[14%] h-[340px] w-[340px] rounded-full border border-white/10" />
-
-        <div className="absolute right-[10%] top-[18%] h-[250px] w-[250px] rounded-full border border-white/10" />
-
-        <div className="relative z-10 mx-auto flex min-h-[720px] max-w-[1320px] flex-col items-center justify-center px-5 pb-28 pt-24 text-center md:px-8">
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
-            <div className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#27232b] shadow-sm md:text-base">
-              <span className="mr-2 text-[#ff4b18]">✦</span>
-              Digital Engineering
-            </div>
-
-            <div className="rounded-full bg-white/20 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md md:text-base">
-              Modern Web Solutions
-            </div>
-          </div>
-
-          <h1 className="max-w-[1180px] text-[44px] font-semibold leading-[1.08] tracking-[-0.045em] text-white sm:text-[56px] md:text-[68px] lg:text-[76px]">
-            Digital solutions your
-            <br className="hidden md:block" />
-            business needs,
-            <span className="block text-[#ffe500]">
-              built and integrated for you.
-            </span>
-          </h1>
-
-          <p className="mt-9 max-w-[1000px] text-[16px] leading-[1.7] text-white/95 sm:text-[17px] md:text-[20px]">
-            We build modern websites, custom applications, Shopify experiences,
-            intelligent automation and scalable digital products that help
-            businesses innovate, automate and grow online.
-          </p>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
-            <Link
-              href="/contact"
-              className="group flex min-h-[62px] items-center gap-6 rounded-[14px] bg-[#ff4b0a] px-7 py-3 text-[16px] font-semibold text-white shadow-[0_15px_40px_rgba(255,68,0,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#f14200]"
-            >
-              Request a quote
-
-              <span className="flex h-10 w-10 items-center justify-center rounded-[9px] bg-white text-[#ff4b0a]">
-                <ArrowIcon />
-              </span>
-            </Link>
-
-            <a
-              href="#portfolio"
-              className="flex min-h-[62px] items-center justify-center rounded-[14px] bg-white px-8 py-3 text-[16px] font-semibold text-[#151515] shadow-sm transition duration-300 hover:-translate-y-1 hover:bg-[#f5f5f5]"
-            >
-              See what I&apos;ve built
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHeroBanner
+        eyebrow="Our Services"
+        title="Services."
+        description="Modern digital solutions built around your business — from Shopify development and custom applications to automation, integrations, and scalable web experiences."
+      />
 
       {/* ================= MY WORK ================= */}
 
