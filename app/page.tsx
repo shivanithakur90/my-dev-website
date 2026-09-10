@@ -81,9 +81,9 @@ export default function Home() {
       <div data-aos="fade-up">
         <WhatWeDoSection />
       </div>
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <WhyNowSection />
-      </div>
+      </div> */}
       <div data-aos="fade-up">
         <WorkedOnSection
           eyebrow="My Work"
