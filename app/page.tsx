@@ -9,6 +9,9 @@ import WaysToWorkSection from "@/components/home/WaysToWorkSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import FaqSection from "@/components/home/FaqSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import ToolsSection from "@/components/home/ToolsSection";
+import CommitmentsSection from "@/components/home/CommitmentsSection";
 
 const workedOnProjects = [
   {
@@ -78,7 +81,9 @@ export default function Home() {
       <div data-aos="fade-up">
         <WhatWeDoSection />
       </div>
-      {/* <WhyNowSection /> */}
+      <div data-aos="fade-up">
+        <WhyNowSection />
+      </div>
       <div data-aos="fade-up">
         <WorkedOnSection
           eyebrow="My Work"
@@ -96,10 +101,19 @@ export default function Home() {
         <RecentBuilds />
       </div>
       <div data-aos="fade-up">
+        <TestimonialsSection />
+      </div>
+      <div data-aos="fade-up">
+        <ToolsSection />
+      </div>
+      <div data-aos="fade-up">
         <CustomTemplatesSection />
       </div>
       <div data-aos="fade-up">
         <WaysToWorkSection />
+      </div>
+      <div data-aos="fade-up">
+        <CommitmentsSection />
       </div>
       <div data-aos="fade-up">
         <ComparisonSection />
