@@ -81,13 +81,13 @@ export default function Header() {
       className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         isScrolled
           ? "border-[#eeeeee] bg-white/95 text-[#111111] shadow-[0_2px_12px_rgba(0,0,0,0.06)] backdrop-blur-xl"
-          : "border-white/30 bg-[#e1d4ea]/80 text-[#111111] backdrop-blur-xl"
+          : "border-white/15 bg-[linear-gradient(110deg,#1736e8_0%,#4129b9_28%,#9b1f57_57%,#d42a1f_78%,#ef3b00_100%)] text-white"
       }`}
     >
       <div className="container flex h-[72px] items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
           <span
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-black"
+            className={`flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-300 ${isScrolled ? "bg-black" : "bg-white"}`}
           >
             <svg
               width="22"
@@ -96,10 +96,10 @@ export default function Header() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M13.5 13.5L4 3L7.8 15.2L13.5 13.5Z" fill="white" />
-              <path d="M13.5 13.5L23 3L19.2 15.2L13.5 13.5Z" fill="white" />
-              <path d="M13.5 13.5L4 24L16 19.5L13.5 13.5Z" fill="white" />
-              <path d="M13.5 13.5L23 24L11 19.5L13.5 13.5Z" fill="white" />
+              <path d="M13.5 13.5L4 3L7.8 15.2L13.5 13.5Z" fill={isScrolled ? "white" : "#2743E8"} />
+              <path d="M13.5 13.5L23 3L19.2 15.2L13.5 13.5Z" fill={isScrolled ? "white" : "#2743E8"} />
+              <path d="M13.5 13.5L4 24L16 19.5L13.5 13.5Z" fill={isScrolled ? "white" : "#2743E8"} />
+              <path d="M13.5 13.5L23 24L11 19.5L13.5 13.5Z" fill={isScrolled ? "white" : "#2743E8"} />
             </svg>
           </span>
 
@@ -278,7 +278,7 @@ export default function Header() {
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
           className={`flex h-11 w-11 items-center justify-center rounded-lg border lg:hidden ${
-            "border-black/20"
+            isScrolled ? "border-black/20" : "border-white/30"
           }`}
           aria-label="Toggle menu"
         >
