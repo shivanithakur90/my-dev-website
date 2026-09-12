@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+
+export const metadata: Metadata = {
+  title: "Fleet Dispatch",
+  description:
+    "Build a fleet dispatch platform to manage orders, trucks, drivers, routes, load status, delivery progress, and fleet activity.",
+};
 
 export default function FleetDispatchPage() {
   return (

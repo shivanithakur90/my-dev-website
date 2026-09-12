@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+
+export const metadata: Metadata = {
+  title: "Employee Hub",
+  description:
+    "Create a custom employee hub for team data, workflows, operations, requests, dashboards, and internal business processes.",
+};
 
 export default function CustomSoftwarePlatformsPage() {
   return (

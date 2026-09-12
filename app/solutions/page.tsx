@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import OverviewPage from "@/components/common/OverviewPage";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+
+export const metadata: Metadata = {
+  title: "Solutions",
+  description:
+    "Custom software solutions for client portals, content workspaces, automation, dashboards, workflows, and connected business systems.",
+};
 
 
 export default function SolutionsPage() {

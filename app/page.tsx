@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import HeroBanner from "@/components/home/HeroBanner";
 import WhatWeDoSection from "@/components/home/WhatWeDoSection";
 import WhyNowSection from "@/components/home/WhyNowSection";
@@ -12,6 +13,12 @@ import StackCtaSection from "@/components/home/StackCtaSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ToolsSection from "@/components/home/ToolsSection";
 import CommitmentsSection from "@/components/home/CommitmentsSection";
+
+export const metadata: Metadata = {
+  title: "Custom Business Apps & AI Automation",
+  description:
+    "Build custom portals, internal tools, dashboards, AI workflows, and SaaS integrations with forward-deployed engineers.",
+};
 
 const workedOnProjects = [
   {

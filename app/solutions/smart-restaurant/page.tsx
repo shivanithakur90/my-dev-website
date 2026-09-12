@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+
+export const metadata: Metadata = {
+  title: "Smart Restaurant",
+  description:
+    "Run restaurant tables, orders, reservations, menu items, billing, delivery, and daily operations from one connected platform.",
+};
 
 export default function SmartRestaurantPage() {
   return (

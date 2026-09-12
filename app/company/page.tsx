@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import OverviewPage from "@/components/common/OverviewPage";
+
+export const metadata: Metadata = {
+  title: "Company",
+  description:
+    "Meet the product-minded Openxcell team building custom software, automation, dashboards, and integrations with clear ownership.",
+};
 
 const cards = [
   { eyebrow: "Company", title: "About OpenXcell", description: "A product-minded engineering team focused on useful software, measurable outcomes, and clear ownership.", accent: "orange" as const },

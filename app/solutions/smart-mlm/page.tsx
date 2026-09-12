@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+
+export const metadata: Metadata = {
+  title: "Smart MLM",
+  description:
+    "Build a smart MLM management platform for members, referrals, teams, commissions, wallets, payouts, orders, and network growth.",
+};
 
 export default function SmartMLMPage() {
   return (

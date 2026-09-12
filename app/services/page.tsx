@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import WorkedOnSection from "@/components/home/WorkedOnSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import ServicesGridSection from "@/components/services/ServicesGridSection";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Explore Openxcell services for Shopify development, WordPress, React, Next.js, custom web apps, API integrations, and UI/UX design.",
+};
 
 const projects = [
   {

@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+
+export const metadata: Metadata = {
+  title: "Content Management",
+  description:
+    "Build a custom content management platform for articles, insights, categories, portfolios, case studies, drafts, and publishing workflows.",
+};
 
 export default function ContentManagementPage() {
   return (

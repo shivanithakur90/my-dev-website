@@ -42,6 +42,29 @@ const solutionsMenu = [
 },
 ];
 
+const industriesMenu = [
+  {
+    name: "Fintech & Financial Services",
+    description: "Spot risk and fraud before it becomes a problem.",
+    href: "/industries/fintech-financial-services",
+  },
+  {
+    name: "E-commerce & Retail",
+    description: "Recommend the right product to the right customer, automatically.",
+    href: "/industries/e-commerce-retail",
+  },
+  {
+    name: "Healthcare",
+    description: "Free up staff time by automating routine patient workflows.",
+    href: "/industries/healthcare",
+  },
+  {
+    name: "Manufacturing & Distribution",
+    description: "Forecast demand and avoid costly downtime.",
+    href: "/industries/manufacturing-distribution",
+  },
+];
+
 const mobileNavItems = [
   {
     label: "Services",
@@ -66,20 +89,7 @@ const mobileNavItems = [
   },
   {
     label: "Industries",
-    links: [
-      {
-        name: "Healthcare",
-        href: "/industries",
-      },
-      {
-        name: "Fintech",
-        href: "/industries",
-      },
-      {
-        name: "Retail",
-        href: "/industries",
-      },
-    ],
+    links: industriesMenu,
   },
   {
     label: "Company",
@@ -332,13 +342,116 @@ export default function Header() {
           </div>
 
           {/* Industries */}
-          <Link
-            href="/industries"
-            className="flex items-center gap-2 text-[15px] font-medium transition-opacity hover:opacity-80"
-          >
-            Industries
-            <ChevronDown />
-          </Link>
+          <div className="group relative">
+            <Link
+              href="/industries"
+              className="flex items-center gap-2 text-[15px] font-medium transition-opacity hover:opacity-80"
+            >
+              Industries
+
+              <span className="transition-transform duration-300 group-hover:rotate-180">
+                <ChevronDown />
+              </span>
+            </Link>
+
+            <div
+              className="
+                invisible
+                absolute
+                left-1/2
+                top-full
+                z-[999]
+                -translate-x-1/2
+                translate-y-3
+                pt-5
+                opacity-0
+                transition-all
+                duration-300
+                group-hover:visible
+                group-hover:translate-y-0
+                group-hover:opacity-100
+              "
+            >
+              <div
+                className="
+                  w-[430px]
+                  max-h-[calc(100vh-110px)]
+                  overflow-y-auto
+                  rounded-[20px]
+                  border
+                  border-black/5
+                  bg-white
+                  p-6
+                  text-[#111111]
+                  shadow-[0_25px_70px_rgba(0,0,0,0.18)]
+                "
+              >
+                <div className="grid grid-cols-1 gap-3">
+                  {industriesMenu.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="
+                        group/item
+                        flex
+                        items-start
+                        gap-4
+                        rounded-[16px]
+                        p-3
+                        transition-all
+                        duration-300
+                        hover:bg-[#fff7f3]
+                      "
+                    >
+                      <span
+                        className="
+                          flex
+                          h-[46px]
+                          w-[46px]
+                          shrink-0
+                          items-center
+                          justify-center
+                          rounded-[11px]
+                          bg-[#ffebe2]
+                          text-[#ff4e0a]
+                        "
+                      >
+                        <IndustryIcon name={item.name} />
+                      </span>
+
+                      <span className="flex flex-1 items-start justify-between gap-4">
+                        <span>
+                          <span className="block text-[17px] font-semibold leading-[1.25] text-[#111111]">
+                            {item.name}
+                          </span>
+
+                          <span className="mt-1.5 block max-w-[270px] text-[14px] leading-[1.45] text-[#626262]">
+                            {item.description}
+                          </span>
+                        </span>
+
+                        <span
+                          className="
+                            mt-1
+                            -translate-x-1
+                            text-[20px]
+                            text-[#ff4e0a]
+                            opacity-0
+                            transition-all
+                            duration-300
+                            group-hover/item:translate-x-0
+                            group-hover/item:opacity-100
+                          "
+                        >
+                          -&gt;
+                        </span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Company */}
           <Link
@@ -468,32 +581,36 @@ export default function Header() {
                             setOpenAccordion(null);
                           }}
                           className={`rounded-xl ${
-                            item.label === "Solutions"
+                            item.label === "Solutions" ||
+                            item.label === "Industries"
                               ? "bg-white p-3 text-[#111111]"
                               : isScrolled
                               ? "px-4 py-3 text-black/70 hover:bg-black/5"
                               : "px-4 py-3 text-white/80 hover:bg-white/10"
                           }`}
                         >
-                          {item.label === "Solutions" ? (
+                          {item.label === "Solutions" ||
+                          item.label === "Industries" ? (
                             <span className="flex items-start gap-3">
                               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-[#ffebe2] text-[#ff4e0a]">
-                              {link.name === "Employee Hub" ? (
-                                <EmployeeHubIcon />
-                              ) : link.name === "Smart Restaurant" ? (
-                                <SmartRestaurantIcon />
-                              ) : link.name === "Fleet Dispatch" ? (
-                                <FleetDispatchIcon />
-                              ) : link.name === "Content Management" ? (
-                                <ContentManagementIcon />
-                              ) : link.name === "Smart MLM" ? (
-                                <SmartMLMIcon />
-                              ) : link.name === "MealOps Vendory" ? (
-                                <MealOpsVendoryIcon />
-                              ) : (
-                                <EmployeeHubIcon />
-                              )}
-                             </span>
+                                {item.label === "Industries" ? (
+                                  <IndustryIcon name={link.name} />
+                                ) : link.name === "Employee Hub" ? (
+                                  <EmployeeHubIcon />
+                                ) : link.name === "Smart Restaurant" ? (
+                                  <SmartRestaurantIcon />
+                                ) : link.name === "Fleet Dispatch" ? (
+                                  <FleetDispatchIcon />
+                                ) : link.name === "Content Management" ? (
+                                  <ContentManagementIcon />
+                                ) : link.name === "Smart MLM" ? (
+                                  <SmartMLMIcon />
+                                ) : link.name === "MealOps Vendory" ? (
+                                  <MealOpsVendoryIcon />
+                                ) : (
+                                  <EmployeeHubIcon />
+                                )}
+                              </span>
 
                               <span>
                                 <span className="block text-[15px] font-semibold">
@@ -900,6 +1017,46 @@ function MealOpsVendoryIcon() {
         strokeWidth="1.4"
         strokeLinecap="round"
       />
+    </svg>
+  );
+}
+
+function IndustryIcon({ name }: { name: string }) {
+  if (name === "E-commerce & Retail") {
+    return (
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 5H6.2L8.1 15.2H18.2L20 8H7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="9.5" cy="19" r="1.6" stroke="currentColor" strokeWidth="1.7" />
+        <circle cx="17" cy="19" r="1.6" stroke="currentColor" strokeWidth="1.7" />
+      </svg>
+    );
+  }
+
+  if (name === "Healthcare") {
+    return (
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 20S5 15.9 5 9.8C5 7.3 6.7 5.5 9 5.5C10.3 5.5 11.3 6.1 12 7.1C12.7 6.1 13.7 5.5 15 5.5C17.3 5.5 19 7.3 19 9.8C19 15.9 12 20 12 20Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M8 12H10.4L11.6 9.8L13.2 14.2L14.5 12H16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (name === "Manufacturing & Distribution") {
+    return (
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 19V10.5L9 13V10.5L14 13V8L20 11V19H4Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M8 19V16M12 19V16M16 19V16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M16 8V5H19V10.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M4 20H20" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      <path d="M6 20V10H10V20M14 20V10H18V20" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+      <path d="M4 10L12 5L20 10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 13H9M15 13H16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
     </svg>
   );
 }

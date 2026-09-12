@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import OverviewPage from "@/components/common/OverviewPage";
+
+export const metadata: Metadata = {
+  title: "Industries",
+  description:
+    "Custom software for fintech, healthcare, e-commerce, retail, manufacturing, SaaS, real estate, and operations teams.",
+};
 
 const cards = [
   { eyebrow: "Industry", title: "Healthcare", description: "Secure workflows for patient operations, provider teams, learning, reporting, and compliance.", accent: "blue" as const },

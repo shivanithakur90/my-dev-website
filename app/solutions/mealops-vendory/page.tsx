@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+
+export const metadata: Metadata = {
+  title: "MealOps Vendory",
+  description:
+    "Manage food vendors, purchasing, ingredients, inventory, recipes, purchase orders, invoices, and food operations from one platform.",
+};
 
 export default function MealOpsVendoryPage() {
   return (
