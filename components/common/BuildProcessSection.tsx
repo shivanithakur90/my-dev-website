@@ -53,7 +53,7 @@ export default function BuildProcessSection({
   return (
     <div className="container">
     <section className={`bg-[#fff] py-[50px] ${className}`}>
-      <div className="relative mx-auto max-w-full overflow-hidden rounded-[30px] bg-[#0e0e11]  py-[50px] md:py-[60px] lg:py-[70px]">
+      <div className="relative mx-auto max-w-full overflow-hidden rounded-[30px] bg-[#0e0e11] px-5 py-[70px] sm:px-8 md:px-12 md:py-[85px] lg:px-12">
         
         {/* Grid Background */}
         <div
