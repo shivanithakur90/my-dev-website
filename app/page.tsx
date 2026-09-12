@@ -74,7 +74,7 @@ const workedOnProjects = [
 
 export default function Home() {
   return (
-    <main>
+    <main >
       <div data-aos="fade-up">
         <HeroBanner />
       </div>

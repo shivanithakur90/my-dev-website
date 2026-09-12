@@ -82,7 +82,7 @@ export default function WorkedOnSection({
                 {eyebrow}
               </span>
             </div>
-            <h2 className="text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[46px] lg:text-[52px]">
+            <h2 className="text-[30px] font-semibold leading-[1.08] tracking-[-1.8px] text-[#171717] sm:text-[35px] lg:text-[45px]">
               {title}
             </h2>
             <p className="mt-4 max-w-[640px] text-[14px] leading-[1.6] text-[#626262] sm:text-[15px]">

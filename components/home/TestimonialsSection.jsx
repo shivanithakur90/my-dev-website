@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
           <span className="inline-flex rounded-lg border border-black/10 bg-white px-4 py-2 text-[12px] font-semibold uppercase tracking-[.16em] text-[#4b4650]">
             Client stories
           </span>
-          <h2 className="mt-6 text-[30px] font-semibold leading-[1.08] tracking-[-1.5px] text-[#171717] md:text-[48px]">
+          <h2 className="mt-6 text-[30px] font-semibold leading-[1.08] tracking-[-1.5px] text-[#171717] md:text-[45px]">
             Trusted by teams that expect results.
           </h2>
         </div>
