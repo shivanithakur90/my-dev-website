@@ -103,18 +103,18 @@ export default function Home() {
       <div data-aos="fade-up">
         <TestimonialsSection />
       </div>
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <ToolsSection />
-      </div>
+      </div> */}
       <div data-aos="fade-up">
         <CustomTemplatesSection />
       </div>
       <div data-aos="fade-up">
         <WaysToWorkSection />
       </div>
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <CommitmentsSection />
-      </div>
+      </div> */}
       <div data-aos="fade-up">
         <ComparisonSection />
       </div>
