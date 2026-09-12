@@ -4,47 +4,41 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const solutionsMenu = [
-  {
-    name: "Digital Transformation",
-    description:
-      "Modernize your business with smarter digital systems and workflows.",
-    href: "/solutions/digital-transformation",
-  },
-  {
-    name: "Business Automation",
-    description:
-      "Automate repetitive tasks and connect your business workflows.",
-    href: "/solutions/business-automation",
-  },
-  {
-    name: "AI & Intelligent Systems",
-    description:
-      "Build AI-powered systems that automate decisions and everyday business tasks.",
-    href: "/solutions/ai-intelligent-systems",
-  },
-  {
-  name: "Data & Analytics",
+{
+  name: "Employee Hub",
   description:
-    "Turn business data into clear dashboards, reports, and actionable insights.",
-  href: "/solutions/data-analytics",
+    "Manage your team, employee information, workflows, and internal operations from one connected hub.",
+  href: "/solutions/employee-hub",
 },
 {
-  name: "System Integration",
+  name: "Smart Restaurant",
   description:
-    "Connect your apps, platforms, and business systems into one seamless workflow.",
-  href: "/solutions/system-integration",
+    "Manage orders, tables, reservations, menu items, billing, and restaurant operations from one smart platform.",
+  href: "/solutions/smart-restaurant",
+},
+ {
+  name: "Fleet Dispatch",
+  description:
+    "Manage dispatch orders, trucks, drivers, loads, routes, and fleet activity from one connected platform.",
+  href: "/solutions/fleet-dispatch",
+},
+ {
+  name: "Content Management",
+  description:
+    "Create, organize, publish, and manage digital content from one flexible platform.",
+  href: "/solutions/content-management",
 },
 {
-  name: "Customer Experience",
+  name: "Smart MLM",
   description:
-    "Build seamless digital experiences that make every customer interaction faster, easier, and more personal.",
-  href: "/solutions/customer-experience",
+    "Manage members, referrals, commissions, teams, payouts, and network growth from one connected MLM platform.",
+  href: "/solutions/smart-mlm",
 },
 {
-  name: "Custom Software Platforms",
+  name: "MealOps Vendory",
   description:
-    "Build scalable web platforms and internal tools designed around your unique business needs.",
-  href: "/solutions/custom-software-platforms",
+    "Manage vendors, purchasing, inventory, ingredients, orders, and food operations from one connected platform.",
+  href: "/solutions/mealops-vendory",
 },
 ];
 
@@ -268,21 +262,21 @@ export default function Header() {
                           text-[#ff4e0a]
                         "
                       >
-                     {item.name === "Business Automation" ? (
-  <BusinessAutomationIcon />
-) : item.name === "AI & Intelligent Systems" ? (
-  <AiSystemsIcon />
-) : item.name === "Data & Analytics" ? (
-  <DataAnalyticsIcon />
-) : item.name === "System Integration" ? (
-  <SystemIntegrationIcon />
-) : item.name === "Customer Experience" ? (
-  <CustomerExperienceIcon />
-) : item.name === "Custom Software Platforms" ? (
-  <CustomSoftwarePlatformsIcon />
-) : (
-  <DigitalIcon />
-)}
+                  {item.name === "Employee Hub" ? (
+                              <EmployeeHubIcon />
+                            ) : item.name === "Smart Restaurant" ? (
+                              <SmartRestaurantIcon />
+                            ) : item.name === "Fleet Dispatch" ? (
+                              <FleetDispatchIcon />
+                            ) : item.name === "Content Management" ? (
+                              <ContentManagementIcon />
+                            ) : item.name === "Smart MLM" ? (
+                              <SmartMLMIcon />
+                            ) : item.name === "MealOps Vendory" ? (
+                              <MealOpsVendoryIcon />
+                            ) : (
+                              <EmployeeHubIcon />
+                            )}
                       </span>
 
                       {/* Content */}
@@ -412,7 +406,7 @@ export default function Header() {
       <div
         className={`overflow-hidden transition-all duration-300 lg:hidden ${
           menuOpen
-            ? "max-h-[900px] opacity-100"
+            ? "max-h-[2000px] opacity-100"
             : "max-h-0 opacity-0"
         }`}
       >
@@ -484,22 +478,22 @@ export default function Header() {
                           {item.label === "Solutions" ? (
                             <span className="flex items-start gap-3">
                               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-[#ffebe2] text-[#ff4e0a]">
-                               {link.name === "Business Automation" ? (
-                                    <BusinessAutomationIcon />
-                                  ) : link.name === "AI & Intelligent Systems" ? (
-                                    <AiSystemsIcon />
-                                  ) : link.name === "Data & Analytics" ? (
-                                    <DataAnalyticsIcon />
-                                  ) : link.name === "System Integration" ? (
-                                    <SystemIntegrationIcon />
-                                  ) : link.name === "Customer Experience" ? (
-                                    <CustomerExperienceIcon />
-                                  ) : link.name === "Custom Software Platforms" ? (
-                                    <CustomSoftwarePlatformsIcon />
-                                  ) : (
-                                    <DigitalIcon />
-                                  )}
-                              </span>
+                              {link.name === "Employee Hub" ? (
+                                <EmployeeHubIcon />
+                              ) : link.name === "Smart Restaurant" ? (
+                                <SmartRestaurantIcon />
+                              ) : link.name === "Fleet Dispatch" ? (
+                                <FleetDispatchIcon />
+                              ) : link.name === "Content Management" ? (
+                                <ContentManagementIcon />
+                              ) : link.name === "Smart MLM" ? (
+                                <SmartMLMIcon />
+                              ) : link.name === "MealOps Vendory" ? (
+                                <MealOpsVendoryIcon />
+                              ) : (
+                                <EmployeeHubIcon />
+                              )}
+                             </span>
 
                               <span>
                                 <span className="block text-[15px] font-semibold">
@@ -568,99 +562,7 @@ export default function Header() {
   );
 }
 
-function DigitalIcon() {
-  return (
-    <svg
-      width="23"
-      height="23"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="3"
-        width="7"
-        height="7"
-        rx="1"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <rect
-        x="14"
-        y="3"
-        width="7"
-        height="7"
-        rx="1"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <rect
-        x="3"
-        y="14"
-        width="7"
-        height="7"
-        rx="1"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <path
-        d="M17.5 13.5V21M13.5 17.5H21"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function BusinessAutomationIcon() {
-  return (
-    <svg
-      width="23"
-      height="23"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <circle
-        cx="6"
-        cy="12"
-        r="2.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <circle
-        cx="18"
-        cy="6"
-        r="2.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <circle
-        cx="18"
-        cy="18"
-        r="2.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <path
-        d="M8.5 11L15.5 7M8.5 13L15.5 17"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function AiSystemsIcon() {
+function EmployeeHubIcon() {
   return (
     <svg
       width="23"
@@ -671,171 +573,6 @@ function AiSystemsIcon() {
     >
       <circle
         cx="12"
-        cy="12"
-        r="3"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <circle
-        cx="5"
-        cy="6"
-        r="2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <circle
-        cx="19"
-        cy="6"
-        r="2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <circle
-        cx="5"
-        cy="18"
-        r="2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <circle
-        cx="19"
-        cy="18"
-        r="2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <path
-        d="M7 7.2L9.7 9.8M17 7.2L14.3 9.8M7 16.8L9.7 14.2M17 16.8L14.3 14.2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-function DataAnalyticsIcon() {
-  return (
-    <svg
-      width="23"
-      height="23"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M4 20V13"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M9 20V9"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M14 20V5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M19 20V11"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M3 20H21"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-function SystemIntegrationIcon() {
-  return (
-    <svg
-      width="23"
-      height="23"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="4"
-        width="6"
-        height="6"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <rect
-        x="15"
-        y="14"
-        width="6"
-        height="6"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <path
-        d="M9 7H13C16 7 18 9 18 12V14"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M15 17H11C8 17 6 15 6 12V10"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M16 12L18 14L20 12"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      <path
-        d="M8 12L6 10L4 12"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-function CustomerExperienceIcon() {
-  return (
-    <svg
-      width="23"
-      height="23"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <circle
-        cx="9"
         cy="8"
         r="3"
         stroke="currentColor"
@@ -843,22 +580,143 @@ function CustomerExperienceIcon() {
       />
 
       <path
-        d="M4 19C4.8 15.8 6.6 14 9 14C11.4 14 13.2 15.8 14 19"
+        d="M6.5 19C7.2 15.8 9.1 14 12 14C14.9 14 16.8 15.8 17.5 19"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <circle
+        cx="5"
+        cy="10"
+        r="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <circle
+        cx="19"
+        cy="10"
+        r="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M2.5 18C2.9 15.8 4.1 14.5 6 14.2"
         stroke="currentColor"
         strokeWidth="1.7"
         strokeLinecap="round"
       />
 
       <path
-        d="M15.5 7.5H20.5V12.5H18L16 14V12.5H15.5V7.5Z"
+        d="M21.5 18C21.1 15.8 19.9 14.5 18 14.2"
         stroke="currentColor"
         strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function SmartRestaurantIcon() {
+  return (
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M7 3V10C7 11.7 8.3 13 10 13V21"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M4 3V8"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M10 3V8"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M17 3C15.3 3 14 4.3 14 6V12C14 13.1 14.9 14 16 14H18V21"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>
   );
 }
-function CustomSoftwarePlatformsIcon() {
+
+function FleetDispatchIcon() {
+  return (
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 6H14V16H3V6Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M14 9H18L21 12V16H14V9Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+
+      <circle
+        cx="7"
+        cy="18"
+        r="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <circle
+        cx="18"
+        cy="18"
+        r="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M5 10H11"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M7 8L5 10L7 12"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+function ContentManagementIcon() {
   return (
     <svg
       width="23"
@@ -868,49 +726,178 @@ function CustomSoftwarePlatformsIcon() {
       aria-hidden="true"
     >
       <rect
-        x="3"
-        y="4"
-        width="8"
-        height="6"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <rect
-        x="13"
-        y="4"
-        width="8"
-        height="6"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <rect
-        x="3"
-        y="14"
-        width="8"
-        height="6"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <rect
-        x="13"
-        y="14"
-        width="8"
-        height="6"
-        rx="1.5"
+        x="4"
+        y="3"
+        width="16"
+        height="18"
+        rx="2"
         stroke="currentColor"
         strokeWidth="1.7"
       />
 
       <path
-        d="M7 10V14M17 10V14M11 7H13M11 17H13"
+        d="M8 8H16"
         stroke="currentColor"
         strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M8 12H13"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M8 16H11"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M14.5 16.5L18.5 12.5L20 14L16 18H14.5V16.5Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+function SmartMLMIcon() {
+  return (
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle
+        cx="12"
+        cy="5"
+        r="2.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <circle
+        cx="6"
+        cy="17"
+        r="2.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <circle
+        cx="18"
+        cy="17"
+        r="2.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M12 7.5V11"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M12 11L6 14.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M12 11L18 14.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M3.5 21C3.9 19.3 4.8 18.5 6 18.5C7.2 18.5 8.1 19.3 8.5 21"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M15.5 21C15.9 19.3 16.8 18.5 18 18.5C19.2 18.5 20.1 19.3 20.5 21"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+function MealOpsVendoryIcon() {
+  return (
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      {/* Store / supplier */}
+      <path
+        d="M4 9L6 4H18L20 9"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M5 9V20H19V9"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M3.5 9C3.5 10.4 4.5 11.5 6 11.5C7.5 11.5 8.5 10.4 8.5 9"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M8.5 9C8.5 10.4 9.5 11.5 11 11.5C12.5 11.5 13.5 10.4 13.5 9"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M13.5 9C13.5 10.4 14.5 11.5 16 11.5C17.5 11.5 18.5 10.4 18.5 9"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      {/* Invoice */}
+      <rect
+        x="10"
+        y="13"
+        width="6"
+        height="7"
+        rx="1"
+        fill="white"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+
+      <path
+        d="M12 15.5H14.5M12 18H14"
+        stroke="currentColor"
+        strokeWidth="1.4"
         strokeLinecap="round"
       />
     </svg>
