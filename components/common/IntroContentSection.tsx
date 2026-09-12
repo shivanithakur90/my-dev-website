@@ -57,7 +57,7 @@ export default function IntroContentSection({
       {/* Bottom subtle gradient */}
       {showBottomGradient && (
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[70px]"
+          className="pointer-events-none absolute inset-x-0 bottom-0 "
           style={{
             background:
               "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(240,245,255,0.65) 50%, rgba(232,241,255,0.9) 100%)",

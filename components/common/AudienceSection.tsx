@@ -83,7 +83,7 @@ export default function AudienceSection({
   return (
     <div className="container">
         <section
-        className={`relative overflow-hidden bg-white py-[50px] md:py-[70px] lg:py-[80px] ${className}`}>
+        className={`relative overflow-hidden bg-white py-[0px] md:py-[0px] lg:py-[0px] ${className}`}>
         <div className="relative z-10">
             {/* Header */}
             {(eyebrow || title) && (
@@ -160,8 +160,7 @@ export default function AudienceSection({
             )}
         </div>
 
-        {/* Bottom subtle section color */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[70px] bg-[#f5faff]" />
+        
         </section>
     </div>
   );
