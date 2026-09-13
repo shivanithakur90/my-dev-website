@@ -103,7 +103,7 @@ export default function AudienceSection({
 
                 {/* Heading */}
                 {title && (
-                <h2 className="max-w-[900px] text-[34px] font-semibold leading-[1.08] tracking-[-0.045em] text-[#171717] sm:text-[30px] md:text-[38px] lg:text-[40px]">
+                <h2 className="max-w-[900px] text-[30px] font-semibold leading-[1.08] tracking-[-0.045em] text-[#171717] sm:text-[30px] md:text-[38px] lg:text-[40px]">
                     {title}
                 </h2>
                 )}
