@@ -31,7 +31,7 @@ export default function HeroBanner() {
         <div className="pointer-events-none absolute -bottom-[15%] -right-[10%] hidden h-[550px] w-[700px] rounded-full bg-white/95 blur-[100px] md:block" />
 
         {/* Main Container */}
-        <div className="container relative z-10 flex min-h-[680px] flex-col justify-start py-[50px] md:min-h-[800px] md:justify-between md:pb-7 md:pt-24">
+        <div className="container relative z-10 flex min-h-[600px] sm:min-h-[600px] md:min-h-[680px] lg:min-h-[680px] flex-col justify-start py-[50px] md:min-h-[800px] md:justify-between md:pb-7 md:pt-24">
           {/* Hero Content */}
           <div className="mx-auto w-full max-w-[1150px] text-center">
             {/* Badge */}
