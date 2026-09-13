@@ -3,6 +3,39 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+const servicesMenu = [
+  {
+    name: "Custom App Development",
+    description: "Custom coded application for your special use case",
+    href: "/services/custom-application-development",
+  },
+  {
+    name: "Forward-Deployed Engineers",
+    description: "A senior engineer embedded with your team",
+    href: "/services/forward-deployed-engineers",
+  },
+  {
+    name: "AI & Automation",
+    description: "Custom pipelines for your specific needs",
+    href: "/services/ai-automation",
+  },
+  {
+    name: "Product Engineering",
+    description: "From idea to launched product, fast",
+    href: "/services/product-engineering",
+  },
+  {
+    name: "Cloud, DevOps & Security",
+    description: "Deploy, scale, and secure — done right",
+    href: "/services/cloud-devops-security",
+  },
+  {
+    name: "System Integration",
+    description: "Connect all of your tools",
+    href: "/services/api-development",
+  },
+];
+
 const solutionsMenu = [
 {
   name: "Employee Hub",
@@ -68,20 +101,7 @@ const industriesMenu = [
 const mobileNavItems = [
   {
     label: "Services",
-    links: [
-      {
-        name: "Custom applications",
-        href: "/services",
-      },
-      {
-        name: "AI automation",
-        href: "/services",
-      },
-      {
-        name: "Product engineering",
-        href: "/services",
-      },
-    ],
+    links: servicesMenu,
   },
   {
     label: "Solutions",
@@ -142,7 +162,7 @@ export default function Header() {
           : "border-white/15 bg-[linear-gradient(110deg,#1736e8_0%,#4129b9_28%,#9b1f57_57%,#d42a1f_78%,#ef3b00_100%)] text-white"
       }`}
     >
-      <div className="container mx-auto flex h-[78px] items-center justify-between px-5 md:px-6 lg:px-8">
+      <div className="container mx-auto flex h-[68px] items-center justify-between px-5 md:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
           <span
@@ -187,19 +207,131 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 lg:flex">
           {/* Services */}
-          <Link
-            href="/services"
-            className="flex items-center gap-2 text-[15px] font-medium transition-opacity hover:opacity-80"
-          >
-            Services
-            <ChevronDown />
-          </Link>
+          <div className="group relative">
+            <Link
+              href="/services"
+              className={`flex items-center gap-2 rounded-[10px] px-3.5 py-2 text-[17px] font-medium transition-all duration-300 ${
+                isScrolled
+                  ? "group-hover:bg-[#e9e9e9]"
+                  : "group-hover:bg-white/90 group-hover:text-[#111111]"
+              }`}
+            >
+              Services
+
+              <span className="transition-transform duration-300 group-hover:rotate-180">
+                <ChevronDown />
+              </span>
+            </Link>
+
+            <div
+              className="
+                invisible
+                absolute
+                left-[-210px]
+                top-full
+                z-[999]
+                pointer-events-none
+                translate-y-3
+                pt-0
+                opacity-0
+                transition-all
+                duration-300
+                group-hover:pointer-events-auto
+                group-hover:visible
+                group-hover:translate-y-0
+                group-hover:opacity-100
+              "
+            >
+              <div
+                className="
+                  w-[625px]
+                  max-h-[calc(100vh-110px)]
+                  overflow-y-auto
+                  rounded-[16px]
+                  border
+                  border-black/5
+                  bg-white
+                  text-[#111111]
+                  shadow-[0_22px_55px_rgba(0,0,0,0.13)]
+                "
+              >
+                <div className="grid grid-cols-2 gap-x-10 gap-y-7 px-8 pb-7 pt-8">
+                  {servicesMenu.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="
+                        group/item
+                        flex
+                        items-start
+                        gap-3.5
+                        rounded-[12px]
+                        p-2
+                        transition-all
+                        duration-300
+                        hover:bg-[#fff7f3]
+                      "
+                    >
+                      <span
+                        className="
+                          flex
+                          h-[36px]
+                          w-[36px]
+                          shrink-0
+                          items-center
+                          justify-center
+                          rounded-[8px]
+                          bg-[#ffebe2]
+                          text-[#ff4e0a]
+                        "
+                      >
+                        <ServiceIcon name={item.name} />
+                      </span>
+
+                      <span className="flex flex-1 items-start justify-between gap-2">
+                        <span>
+                          <span className="block text-[16px] font-semibold leading-[1.22] text-[#111111] transition-colors duration-300 group-hover/item:text-[#ff4e0a]">
+                            {item.name}
+                          </span>
+
+                          <span className="mt-1 block max-w-[235px] text-[14px] leading-[1.25] text-[#626262]">
+                            {item.description}
+                          </span>
+                        </span>
+
+                        <SubMenuArrow className="mt-0.5" />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+
+                <div className="border-t border-[#eeeeee] px-5 pb-5 pt-4">
+                  <div className="grid grid-cols-[1fr_180px] items-center gap-4 rounded-[8px] bg-[linear-gradient(90deg,#ff9568_0%,#ff4e0a_100%)] px-4 py-3.5 text-[#111111]">
+                    <span className="text-[16px] font-semibold">
+                      Looking for something else?
+                    </span>
+
+                    <Link
+                      href="/contact"
+                      className="rounded-[11px] bg-white px-6 py-3 text-center text-[15px] font-semibold transition-colors hover:bg-[#fff4ef]"
+                    >
+                      Talk to sales
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Solutions */}
           <div className="group relative">
             <Link
               href="/solutions"
-              className="flex items-center gap-2 text-[15px] font-medium transition-opacity hover:opacity-80"
+              className={`flex items-center gap-2 rounded-[10px] px-3.5 py-2 text-[17px] font-medium transition-all duration-300 ${
+                isScrolled
+                  ? "group-hover:bg-[#e9e9e9]"
+                  : "group-hover:bg-white/90 group-hover:text-[#111111]"
+              }`}
             >
               Solutions
 
@@ -216,12 +348,14 @@ export default function Header() {
                 left-1/2
                 top-full
                 z-[999]
+                pointer-events-none
                 -translate-x-1/2
                 translate-y-3
                 pt-5
                 opacity-0
                 transition-all
                 duration-300
+                group-hover:pointer-events-auto
                 group-hover:visible
                 group-hover:translate-y-0
                 group-hover:opacity-100
@@ -318,21 +452,7 @@ export default function Header() {
                           </span>
                         </span>
 
-                        <span
-                          className="
-                            mt-1
-                            -translate-x-1
-                            text-[20px]
-                            text-[#ff4e0a]
-                            opacity-0
-                            transition-all
-                            duration-300
-                            group-hover/item:translate-x-0
-                            group-hover/item:opacity-100
-                          "
-                        >
-                          →
-                        </span>
+                        <SubMenuArrow className="mt-1" />
                       </span>
                     </Link>
                   ))}
@@ -345,7 +465,11 @@ export default function Header() {
           <div className="group relative">
             <Link
               href="/industries"
-              className="flex items-center gap-2 text-[15px] font-medium transition-opacity hover:opacity-80"
+              className={`flex items-center gap-2 rounded-[10px] px-3.5 py-2 text-[17px] font-medium transition-all duration-300 ${
+                isScrolled
+                  ? "group-hover:bg-[#e9e9e9]"
+                  : "group-hover:bg-white/90 group-hover:text-[#111111]"
+              }`}
             >
               Industries
 
@@ -361,12 +485,14 @@ export default function Header() {
                 left-1/2
                 top-full
                 z-[999]
+                pointer-events-none
                 -translate-x-1/2
                 translate-y-3
                 pt-5
                 opacity-0
                 transition-all
                 duration-300
+                group-hover:pointer-events-auto
                 group-hover:visible
                 group-hover:translate-y-0
                 group-hover:opacity-100
@@ -430,21 +556,7 @@ export default function Header() {
                           </span>
                         </span>
 
-                        <span
-                          className="
-                            mt-1
-                            -translate-x-1
-                            text-[20px]
-                            text-[#ff4e0a]
-                            opacity-0
-                            transition-all
-                            duration-300
-                            group-hover/item:translate-x-0
-                            group-hover/item:opacity-100
-                          "
-                        >
-                          -&gt;
-                        </span>
+                        <SubMenuArrow className="mt-1" />
                       </span>
                     </Link>
                   ))}
@@ -456,7 +568,11 @@ export default function Header() {
           {/* Company */}
           <Link
             href="/company"
-            className="flex items-center gap-2 text-[15px] font-medium transition-opacity hover:opacity-80"
+            className={`flex items-center gap-2 rounded-[10px] px-3.5 py-2 text-[17px] font-medium transition-all duration-300 ${
+              isScrolled
+                ? "hover:bg-[#e9e9e9]"
+                : "hover:bg-white/90 hover:text-[#111111]"
+            }`}
           >
             Company
             <ChevronDown />
@@ -465,7 +581,11 @@ export default function Header() {
           {/* Our Work */}
           <Link
             href="/our-work"
-            className="text-[15px] font-medium transition-opacity hover:opacity-80"
+            className={`rounded-[10px] px-3.5 py-2 text-[17px] font-medium transition-all duration-300 ${
+              isScrolled
+                ? "hover:bg-[#e9e9e9]"
+                : "hover:bg-white/90 hover:text-[#111111]"
+            }`}
           >
             Our work
           </Link>
@@ -581,6 +701,7 @@ export default function Header() {
                             setOpenAccordion(null);
                           }}
                           className={`rounded-xl ${
+                            item.label === "Services" ||
                             item.label === "Solutions" ||
                             item.label === "Industries"
                               ? "bg-white p-3 text-[#111111]"
@@ -589,11 +710,14 @@ export default function Header() {
                               : "px-4 py-3 text-white/80 hover:bg-white/10"
                           }`}
                         >
-                          {item.label === "Solutions" ||
+                          {item.label === "Services" ||
+                          item.label === "Solutions" ||
                           item.label === "Industries" ? (
                             <span className="flex items-start gap-3">
                               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-[#ffebe2] text-[#ff4e0a]">
-                                {item.label === "Industries" ? (
+                                {item.label === "Services" ? (
+                                  <ServiceIcon name={link.name} />
+                                ) : item.label === "Industries" ? (
                                   <IndustryIcon name={link.name} />
                                 ) : link.name === "Employee Hub" ? (
                                   <EmployeeHubIcon />
@@ -676,6 +800,90 @@ export default function Header() {
         </div>
       </div>
     </header>
+  );
+}
+
+function ServiceIcon({ name }: { name: string }) {
+  if (name === "Forward-Deployed Engineers") {
+    return (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M4.8 19C5.6 15.6 7.7 13.8 11 13.8C14.3 13.8 16.4 15.6 17.2 19" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M17.5 7.5C19.1 8.1 20.2 9.6 20.2 11.4C20.2 13.1 19.2 14.6 17.8 15.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (name === "AI & Automation") {
+    return (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="6" cy="12" r="2" stroke="currentColor" strokeWidth="1.7" />
+        <circle cx="18" cy="6" r="2" stroke="currentColor" strokeWidth="1.7" />
+        <circle cx="18" cy="18" r="2" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M8 11.2L16.2 6.8M8 12.8L16.2 17.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (name === "Product Engineering") {
+    return (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M13.5 4.5C16.7 4.9 19.1 7.3 19.5 10.5L14 16L8 10L13.5 4.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M8 10L5.5 11L4.5 15.5L9 14.5M14 16L13 20.5L17.5 19.5L18.5 17" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="15" cy="9" r="1.4" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (name === "Cloud, DevOps & Security") {
+    return (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M7.2 18H17.2C19.3 18 21 16.4 21 14.3C21 12.5 19.7 11 18 10.7C17.5 7.9 15.1 6 12.2 6C9.8 6 7.7 7.4 6.8 9.5C4.7 9.7 3 11.5 3 13.7C3 16.1 4.9 18 7.2 18Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9.5 13.3L11.3 15.1L15 11.4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (name === "System Integration") {
+    return (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="4" y="5" width="6" height="6" rx="1.5" stroke="currentColor" strokeWidth="1.7" />
+        <rect x="14" y="13" width="6" height="6" rx="1.5" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M10 8H13.5C15.4 8 17 9.6 17 11.5V13M14 16H10.5C8.6 16 7 14.4 7 12.5V11" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M8 9L5 12L8 15" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 9L19 12L16 15" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M13.5 6.5L10.5 17.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function SubMenuArrow({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`-translate-x-1 text-[#ff4e0a] opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:opacity-100 ${className}`}
+      aria-hidden="true"
+    >
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M5 12H19M19 12L13 6M19 12L13 18"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
   );
 }
 

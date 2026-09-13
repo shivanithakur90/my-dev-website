@@ -221,7 +221,7 @@ export default function FintechFinancialServicesPage() {
             {
               title: "Cloud, DevOps & Security",
               image: "/cloud-dev.avif",
-              href: "/services/cloud-devops",
+              href: "/services/cloud-devops-security",
               ctaLabel: "Explore",
             },
           ]}
