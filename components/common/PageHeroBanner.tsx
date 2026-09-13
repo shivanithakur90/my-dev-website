@@ -147,7 +147,7 @@ export default function PageHeroBanner({
         </div>
 
         {/* Heading */}
-        <h1 className="max-w-full text-[36px] font-semibold leading-[1.05] tracking-[-0.055em] text-[#17171b] sm:text-[42px] md:text-[50px] lg:text-[58px]">
+        <h1 className="max-w-[970px] text-[30px] font-semibold leading-[1.05] tracking-[-0.055em] text-[#17171b] sm:text-[42px] md:text-[50px] lg:text-[50px]">
           {title}
         </h1>
 

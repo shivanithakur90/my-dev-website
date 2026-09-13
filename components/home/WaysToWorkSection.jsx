@@ -76,7 +76,7 @@ export default function WaysToWorkSection() {
   return (
     <section className="w-full bg-[#fbfaff] pb-0 pt-[50px] md:py-[50px]">
       <div className="container">
-        <div className="mx-auto max-w-[850px] text-center">
+        <div className="mx-auto max-w-full text-center">
           <div className="inline-flex items-center gap-2 rounded-lg border border-[#e7e7e7] bg-white px-3.5 py-2 text-[12px] font-medium uppercase tracking-[0.06em] text-[#242424] shadow-[0_8px_25px_rgba(0,0,0,0.05)]">
             <span className="text-[#ff5708]">▣</span>
             Three ways to work with us
