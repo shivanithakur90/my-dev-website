@@ -14,7 +14,7 @@ export default function HeroBanner() {
 
   return (
     <>
-      <section className="relative min-h-[680px] w-full overflow-hidden bg-[linear-gradient(180deg,#3520a8_0%,#8d236f_42%,#d36c8c_72%,#efd7e3_100%)] md:min-h-[800px] md:bg-gradient-to-b md:from-[#2637e6] md:via-[#ba406e] md:to-white">
+      <section className="relative min-h-[600px] sm:min-h-[600px] md:min-h-[680px] lg:min-h-[680px] w-full overflow-hidden bg-[linear-gradient(180deg,#3520a8_0%,#8d236f_42%,#d36c8c_72%,#efd7e3_100%)] md:min-h-[800px] md:bg-gradient-to-b md:from-[#2637e6] md:via-[#ba406e] md:to-white">
         {/* Background Gradient Effects */}
         <div className="pointer-events-none absolute -left-[10%] top-[-20%] hidden h-[650px] w-[700px] rounded-full bg-[#1538ff] blur-[100px] md:block" />
 
@@ -61,7 +61,7 @@ export default function HeroBanner() {
             </h1>
 
             {/* Description */}
-            <p className="mx-auto mt-[50px] max-w-[950px] text-[15px] font-medium leading-[1.55] text-white md:mt-8 md:text-[17px] lg:text-[18px]">
+            <p className="mx-auto mt-[30px] lg:mt-[50px] max-w-[950px] text-[15px] font-medium leading-[1.55] text-white md:mt-8 md:text-[17px] lg:text-[18px]">
               OpenXcell builds the business apps your team needs — custom
               portals, internal CRMs, ops dashboards, KYC workflows, support
               cockpits — and integrates them with the SaaS you already use.

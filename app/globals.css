@@ -25,6 +25,9 @@
     transform: translateX(-50%);
   }
 }
+[data-aos^="fade"][data-aos^="fade"]{
+  opacity:1 !important;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

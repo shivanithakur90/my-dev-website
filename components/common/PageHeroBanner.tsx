@@ -158,11 +158,11 @@ export default function PageHeroBanner({
 
         {/* Dynamic Buttons */}
         {hasButtons && (
-          <div className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
+          <div className="mt-8 grid w-full max-w-[580px] grid-cols-2  gap-2 lg:gap-3 sm:flex sm:w-auto sm:max-w-none sm:flex-row">
             {hasPrimaryButton && (
               <Link
                 href={primaryButtonHref!}
-                className="group flex min-h-[50px] w-full max-w-[280px] items-center justify-between gap-4 rounded-xl bg-[#ff4d00] py-[5px] pl-5 pr-[6px] text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,77,0,0.3)] sm:w-auto"
+                className="group flex min-h-[50px] w-full items-center justify-between gap-2 md:gap-3 rounded-xl bg-[#ff4d00] py-[5px] pl-4 pr-[6px] text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,77,0,0.3)] sm:w-auto sm:pl-5"
               >
                 <span>{primaryButtonText}</span>
 
@@ -175,7 +175,7 @@ export default function PageHeroBanner({
             {hasSecondaryButton && (
               <Link
                 href={secondaryButtonHref!}
-                className="flex min-h-[50px] w-full max-w-[280px] items-center justify-center rounded-xl bg-white px-5 text-sm font-semibold text-[#171717] transition duration-300 hover:-translate-y-0.5 hover:bg-[#f4f4f4] sm:w-auto"
+                className="flex min-h-[50px] w-full items-center justify-center rounded-xl bg-white px-3 text-center text-sm font-semibold text-[#171717] transition duration-300 hover:-translate-y-0.5 hover:bg-[#f4f4f4] sm:w-auto sm:px-5"
               >
                 {secondaryButtonText}
               </Link>
