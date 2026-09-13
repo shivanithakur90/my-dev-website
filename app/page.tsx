@@ -79,6 +79,104 @@ const workedOnProjects = [
   },
 ];
 
+const homeFaqs = [
+  {
+    question: "Do we own the code at the end?",
+    answer:
+      "Yes. Once the engagement is complete, your team owns the source code and all agreed project deliverables.",
+  },
+  {
+    question: "What if our SaaS vendor changes its API?",
+    answer:
+      "We build integrations to be maintainable and can update the connection when your vendor changes its API or authentication requirements.",
+  },
+  {
+    question: "How is this different from a contractor or traditional dev shop?",
+    answer:
+      "We work as a product-focused extension of your team, combining discovery, design, engineering, and long-term technical ownership.",
+  },
+  {
+    question: "What's the smallest engagement you take?",
+    answer:
+      "We can begin with a focused discovery or a small, clearly defined build before expanding into a larger engagement.",
+  },
+  {
+    question: "Do you replace our SaaS, or just sit on top?",
+    answer:
+      "Usually we connect and extend the tools you already use, but we can also replace specific workflows when that is the better option.",
+  },
+];
+
+const comparisonRows = [
+  {
+    feature: "Time to working software",
+    openxcell: "Week 1",
+    traditional: "2–3 months",
+    diy: "Hours, but limited",
+    inHouse: "3–6 months to hire",
+  },
+  {
+    feature: "Tool selection",
+    openxcell: "Best-fit, multi-tool",
+    traditional: "Hand-coded only",
+    diy: "Locked to one tool",
+    inHouse: "You decide",
+  },
+  {
+    feature: "You own it",
+    openxcell: "Yes — fully",
+    traditional: "Yes",
+    diy: "Vendor dependent",
+    inHouse: "Yes",
+  },
+  {
+    feature: "Approach",
+    openxcell: "Deep, multi-SaaS",
+    traditional: "From scratch",
+    diy: "Tool-limited",
+    inHouse: "You teach them",
+  },
+  {
+    feature: "Pricing",
+    openxcell: "Fixed scope",
+    traditional: "T&M, creep risk",
+    diy: "Subscription",
+    inHouse: "Salaries + overhead",
+  },
+  {
+    feature: "SaaS integration depth",
+    openxcell: "AI-native FDE",
+    traditional: "Usually",
+    diy: "Locked to tool",
+    inHouse: "Varies",
+  },
+];
+
+const comparisonColumns = [
+  {
+    key: "feature",
+    label: "Features",
+    widthClassName: "w-[24%]",
+  },
+  {
+    key: "openxcell",
+    label: "OpenXcell",
+    highlighted: true,
+  },
+  {
+    key: "traditional",
+    label: "Traditional Dev Shop",
+  },
+  {
+    key: "diy",
+    label: "DIY, single tools",
+  },
+  {
+    key: "inHouse",
+    label: "Hire in-house",
+  },
+];
+
 export default function Home() {
   return (
     <main >
@@ -123,10 +221,32 @@ export default function Home() {
         <CommitmentsSection />
       </div> */}
       <div data-aos="fade-up">
-        <ComparisonSection />
+        <ComparisonSection
+          eyebrow="How we're different"
+          eyebrowIcon="⑂"
+          title="OpenXcell vs. the alternatives"
+          description="An AI-native, forward-deployed, results-driven approach — versus the three other options most mid-market companies consider."
+          columns={comparisonColumns}
+          rows={comparisonRows}
+          sectionClassName="pb-0 pt-[50px] md:py-[50px]"
+        />
       </div>
       <div data-aos="fade-up">
-        <FaqSection />
+        <FaqSection
+          eyebrow="FAQ"
+          title={
+            <>
+              Common
+              <br />
+              Questions.
+            </>
+          }
+          description="The things mid-market buyers ask before booking a call."
+          ctaLabel="Contact Sales"
+          ctaHref="/contact"
+          faqs={homeFaqs}
+          sectionClassName="pb-0 pt-[50px] md:py-[50px]"
+        />
       </div>
       <div data-aos="fade-up">
         <StackCtaSection />
