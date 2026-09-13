@@ -1,21 +1,21 @@
 export const projects = [
   {
-    title: "SST Employee Hub",
+    title: "Speed CSM & Engagement Platform",
     description:
-      "A self-service employee portal for attendance, leave management, payslips, company policies, and internal announcements in one dashboard.",
-    tags: ["HRMS", "Employee Portal"],
-    image: "/ERP-1.png",
-    imageBackground: "bg-[#9d92ff]",
-    href: "/our-work/bank-deposit-guardian",
+      "Internal CS console plus wallet-native engagement games that pay real sats to eligible users.",
+    tags: ["Speed", "Customer Success"],
+    image: "/recnet-build-imae.webp",
+    imageBackground: "bg-[#8da9ff]",
+    href: "/our-work/speed-csm-engagement-platform",
   },
   {
-    title: "Smart Restaurant POS Platform",
+    title: "Bank Deposit Guardian",
     description:
-      "A modern point-of-sale workspace for managing menu items, table orders, reservations, billing, payments, and daily restaurant operations.",
-    tags: ["FoodTech", "Restaurant Management"],
-    image: "/erp-5.png",
-    imageBackground: "bg-[#b6c1cd]",
-    href: "/our-work/ctms",
+      "Real-time monitoring, alerting & analytics for bank virtual-account deposits.",
+    tags: ["Speed", "Fintech"],
+    image: "/AI CRM.avif",
+    imageBackground: "bg-[#9d92ff]",
+    href: "/our-work/bank-deposit-guardian",
   },
   {
     title: "Fleet Dispatch Management Platform",
@@ -54,4 +54,3 @@ export const projects = [
     href: "/our-work/case-operations-console",
   },
 ];
-

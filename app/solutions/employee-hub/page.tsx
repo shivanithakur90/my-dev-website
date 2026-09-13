@@ -11,6 +11,40 @@ export const metadata: Metadata = {
     "Create a custom employee hub for team data, workflows, operations, requests, dashboards, and internal business processes.",
 };
 
+const caseStudies = [
+  {
+    title: "ContentFlow Studio",
+    description:
+      "A centralized editorial workspace for managing articles, insights, portfolios, case studies, drafts, and team activity.",
+    image: "/erp-4.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/content-management",
+    ctaLabel: "View case study",
+    tags: [
+      "SaaS",
+      "Content Management",
+      "Dashboard",
+    ],
+  },
+
+  {
+    title: "Smart MLM & Commission Management Platform",
+    description:
+      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
+    image: "/erp-7.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/smart-mlm",
+    ctaLabel: "View case study",
+    tags: [
+      "Network Marketing",
+      "Dashboard",
+      "Affiliate Management",
+    ],
+  },
+];
+
 export default function CustomSoftwarePlatformsPage() {
   return (
     <div>
@@ -118,6 +152,17 @@ export default function CustomSoftwarePlatformsPage() {
         ]}
       />
 
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pb-0"
+      />
+
       {/* BUILD PROCESS */}
       <BuildProcessSection
         eyebrow="HOW WE BUILD IT"
@@ -140,16 +185,6 @@ export default function CustomSoftwarePlatformsPage() {
               "As your business grows, new modules, users, locations, integrations, and workflows can be added without rebuilding everything.",
           },
         ]}
-      />
-
-      {/* CASE STUDIES */}
-      <WorkShowcaseSection
-        eyebrow="CASE STUDIES"
-        title="Real interfaces, built on real SaaS"
-        showFilters={false}
-        showFinalCta={false}
-        limit={2}
-        className="pt-0"
       />
     </div>
   );

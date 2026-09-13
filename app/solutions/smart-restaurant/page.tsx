@@ -3,12 +3,48 @@ import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 
 export const metadata: Metadata = {
   title: "Smart Restaurant",
   description:
     "Run restaurant tables, orders, reservations, menu items, billing, delivery, and daily operations from one connected platform.",
 };
+
+
+const caseStudies = [
+  {
+    title: "ContentFlow Studio",
+    description:
+      "A centralized editorial workspace for managing articles, insights, portfolios, case studies, drafts, and team activity.",
+    image: "/erp-4.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/content-management",
+    ctaLabel: "View case study",
+    tags: [
+      "SaaS",
+      "Content Management",
+      "Dashboard",
+    ],
+  },
+
+  {
+    title: "Smart MLM & Commission Management Platform",
+    description:
+      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
+    image: "/erp-7.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/smart-mlm",
+    ctaLabel: "View case study",
+    tags: [
+      "Network Marketing",
+      "Dashboard",
+      "Affiliate Management",
+    ],
+  },
+];
 
 export default function SmartRestaurantPage() {
   return (
@@ -101,6 +137,17 @@ export default function SmartRestaurantPage() {
               "Standardize menu, billing, reporting, and restaurant operations across multiple branches from one scalable platform.",
           },
         ]}
+      />
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pb-0"
       />
 
       {/* HOW WE BUILD IT */}
