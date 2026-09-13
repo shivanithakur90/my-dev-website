@@ -14,32 +14,32 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    title: "ContentFlow Studio",
+    title: "MealOps Vendor Invoice Management Platform",
     description:
-      "A centralized editorial workspace for managing articles, insights, portfolios, case studies, drafts, and team activity.",
-    image: "/erp-4.png",
+      "A streamlined kitchen operations platform for managing vendor invoices, purchase orders, inventory records, and supplier approvals from one centralized workspace.",
+    image: "/erp-6.png",
     imageAlt: "ContentFlow Studio dashboard",
     imageBackground: "bg-[#3b2116]",
-    href: "/solutions/content-management",
+    href: "/solutions/mealops-vendory",
     ctaLabel: "View case study",
     tags: [
-      "SaaS",
-      "Content Management",
+      "FoodTech",
+      "Kitchen Operations",
       "Dashboard",
     ],
   },
 
   {
-    title: "Smart MLM & Commission Management Platform",
+    title: "Fleet Dispatch Management Platform",
     description:
-      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
-    image: "/erp-7.png",
+      "A centralized workspace for dispatch orders, fleet tracking, load management, and real-time delivery operations.",
+    image: "/erp-3.png",
     imageAlt: "Finance operations dashboard",
     imageBackground: "bg-[#fff3eb]",
-    href: "/solutions/smart-mlm",
+    href: "/solutions/fleet-dispatch",
     ctaLabel: "View case study",
     tags: [
-      "Network Marketing",
+      "Logistics",
       "Dashboard",
       "Affiliate Management",
     ],

@@ -3,12 +3,49 @@ import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 
 export const metadata: Metadata = {
   title: "Fleet Dispatch",
   description:
     "Build a fleet dispatch platform to manage orders, trucks, drivers, routes, load status, delivery progress, and fleet activity.",
 };
+
+
+const caseStudies = [
+  {
+    title: "SST Employee Hub",
+    description:
+      "A self-service employee portal for attendance, leave management, payslips, company policies, and internal announcements in one dashboard.",
+    image: "/erp-1.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/employee-hub",
+    ctaLabel: "View case study",
+    tags: [
+      "Employee Portal",
+      "HRMS",
+      "Dashboard",
+    ],
+  },
+
+  {
+    title: "Smart MLM & Commission Management Platform",
+    description:
+      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
+    image: "/erp-7.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/smart-mlm",
+    ctaLabel: "View case study",
+    tags: [
+      "Affiliate Management",
+      "Dashboard",
+      "Network Marketing",
+    ],
+  },
+];
+
 
 export default function FleetDispatchPage() {
   return (
@@ -102,6 +139,17 @@ export default function FleetDispatchPage() {
               "Scale drivers, trucks, routes, dispatch orders, and delivery volume without relying on spreadsheets or disconnected systems.",
           },
         ]}
+      />
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pb-0"
       />
 
       {/* HOW WE BUILD IT */}
