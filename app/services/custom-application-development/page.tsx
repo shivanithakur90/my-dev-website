@@ -1,4 +1,5 @@
 import CustomApplicationCoverageSection from "@/components/common/CustomApplicationCoverageSection";
+import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import WhatWeBuildSection from "@/components/common/WhatWeBuildSection";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
@@ -60,6 +61,7 @@ export default function CustomApplicationDevelopmentPage() {
             secondaryButtonHref="/our-work"
           />
         <CustomApplicationCoverageSection />
+
         <WorkShowcaseSection
           eyebrow="CASE STUDIES"
           title="Real interfaces, built on real SaaS"
@@ -69,6 +71,34 @@ export default function CustomApplicationDevelopmentPage() {
           showFinalCta={false}
           limit={2}
           className="!pt-0"
+        />
+        <HowWeDeliverSection
+          eyebrow="HOW WE DELIVER"
+          title="Built fast. Deployed right. Scales with you."
+          description="AI-native delivery is the speed. Proper engineering is the reason it lasts."
+          image="/how-we-delivery.avif"
+          cards={[
+            {
+              title: "Discover & Assess",
+              description:
+                "An FDE embeds, maps your SaaS, and finds the friction. Build plan and fixed quote by the end of week one.",
+            },
+            {
+              title: "Build & Integrate",
+              description:
+                "AI-native build, picking the right tools, wired into your existing stack and data. Working software in week one.",
+            },
+            {
+              title: "Deploy & Scale",
+              description:
+                "Production infrastructure, security, and monitoring. Engineered to scale — not a prototype that breaks under real load.",
+            },
+            {
+              title: "Hand Over & Own",
+              description:
+                "Full code ownership, documented, in your accounts. Run it yourself or keep an FDE on retainer.",
+            },
+          ]}
         />
         <WhatWeBuildSection
         eyebrow="WHAT WE BUILD"
