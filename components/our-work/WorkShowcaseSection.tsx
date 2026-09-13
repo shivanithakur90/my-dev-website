@@ -4,78 +4,150 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-import { projects } from "./projects";
+import { projects as allProjects } from "./projects";
 
-export default function WorkShowcaseSection() {
+type WorkShowcaseSectionProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  showFilters?: boolean;
+  showFinalCta?: boolean;
+  limit?: number;
+  className?: string;
+};
+
+function CaseStudiesIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect
+        x="4"
+        y="5"
+        width="16"
+        height="14"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+      <path
+        d="M8 4V8M16 4V8M4 10H20"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export default function WorkShowcaseSection({
+  eyebrow,
+  title,
+  description,
+  showFilters = true,
+  showFinalCta = true,
+  limit,
+  className = "",
+}: WorkShowcaseSectionProps) {
   const [search, setSearch] = useState("");
   const [industry, setIndustry] = useState("All");
 
   const industries = [
     "All",
-    ...Array.from(new Set(projects.flatMap((project) => project.tags))).sort(),
+    ...Array.from(new Set(allProjects.flatMap((project) => project.tags))).sort(),
   ];
 
-  const filteredProjects = projects.filter((project) => {
+  const filteredProjects = allProjects.filter((project) => {
     const query = search.trim().toLowerCase();
     const matchesSearch =
+      !showFilters ||
       !query ||
       project.title.toLowerCase().includes(query) ||
       project.description.toLowerCase().includes(query) ||
       project.tags.some((tag) => tag.toLowerCase().includes(query));
     const matchesIndustry =
+      !showFilters ||
       industry === "All" || project.tags.includes(industry);
 
     return matchesSearch && matchesIndustry;
   });
 
+  const displayedProjects =
+    typeof limit === "number" ? filteredProjects.slice(0, limit) : filteredProjects;
+
   return (
-    <section className="bg-white py-[50px]">
+    <section className={`bg-white py-[50px] ${className}`}>
       <div className="container">
-        <div className="mb-10 grid gap-4 rounded-[18px] border border-[#e5e5e5] bg-[#fafafa] p-4 sm:grid-cols-[1fr_260px_auto] sm:items-end sm:p-5">
-          <label className="block">
-            <span className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.08em] text-[#5c5c5c]">
-              Search
-            </span>
-            <input
-              type="search"
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search case studies..."
-              className="h-12 w-full rounded-[10px] border border-[#dcdcdc] bg-white px-4 text-[14px] text-[#202020] outline-none transition placeholder:text-[#969696] focus:border-[#ff5708]"
-            />
-          </label>
+        {(eyebrow || title || description) && (
+          <div className="mx-auto mb-12 max-w-[1040px] text-center">
+            {eyebrow && (
+              <div className="inline-flex items-center gap-2 rounded-[8px] border border-[#e9e9e9] bg-white px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#2b2b2b] shadow-[0_12px_35px_rgba(30,25,45,0.06)]">
+                <span className="text-[#ff5708]">
+                  <CaseStudiesIcon />
+                </span>
+                {eyebrow}
+              </div>
+            )}
 
-          <label className="block">
-            <span className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.08em] text-[#5c5c5c]">
-              Industry
-            </span>
-            <select
-              value={industry}
-              onChange={(event) => setIndustry(event.target.value)}
-              className="h-12 w-full cursor-pointer rounded-[10px] border border-[#dcdcdc] bg-white px-4 text-[14px] text-[#202020] outline-none transition focus:border-[#ff5708]"
+            {title && (
+              <h2 className="mx-auto mt-6 max-w-[1000px] text-[34px] font-semibold leading-[1.05] tracking-[-0.055em] text-[#171717] sm:text-[44px] md:text-[54px]">
+                {title}
+              </h2>
+            )}
+
+            {description && (
+              <p className="mx-auto mt-5 max-w-[760px] text-[16px] leading-[1.6] text-[#5d5d5d] sm:text-[18px]">
+                {description}
+              </p>
+            )}
+          </div>
+        )}
+
+        {showFilters && (
+          <div className="mb-10 grid gap-4 rounded-[18px] border border-[#e5e5e5] bg-[#fafafa] p-4 sm:grid-cols-[1fr_260px_auto] sm:items-end sm:p-5">
+            <label className="block">
+              <span className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.08em] text-[#5c5c5c]">
+                Search
+              </span>
+              <input
+                type="search"
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                placeholder="Search case studies..."
+                className="h-12 w-full rounded-[10px] border border-[#dcdcdc] bg-white px-4 text-[14px] text-[#202020] outline-none transition placeholder:text-[#969696] focus:border-[#ff5708]"
+              />
+            </label>
+
+            <label className="block">
+              <span className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.08em] text-[#5c5c5c]">
+                Industry
+              </span>
+              <select
+                value={industry}
+                onChange={(event) => setIndustry(event.target.value)}
+                className="h-12 w-full cursor-pointer rounded-[10px] border border-[#dcdcdc] bg-white px-4 text-[14px] text-[#202020] outline-none transition focus:border-[#ff5708]"
+              >
+                {industries.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <button
+              type="button"
+              onClick={() => {
+                setSearch("");
+                setIndustry("All");
+              }}
+              className="h-12 rounded-[10px] border border-[#ff5708] px-5 text-[14px] font-semibold text-[#ff5708] transition-colors hover:bg-[#ff5708] hover:text-white"
             >
-              {industries.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          <button
-            type="button"
-            onClick={() => {
-              setSearch("");
-              setIndustry("All");
-            }}
-            className="h-12 rounded-[10px] border border-[#ff5708] px-5 text-[14px] font-semibold text-[#ff5708] transition-colors hover:bg-[#ff5708] hover:text-white"
-          >
-            Clear
-          </button>
-        </div>
+              Clear
+            </button>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-9">
-          {filteredProjects.map((project) => (
+          {displayedProjects.map((project) => (
             <article
               key={project.title}
               className="flex h-full flex-col rounded-[26px] border border-[#dedede] bg-white p-4 shadow-[0_5px_10px_rgba(0,0,0,0.12)] sm:p-5"
@@ -125,7 +197,7 @@ export default function WorkShowcaseSection() {
           ))}
         </div>
 
-        {filteredProjects.length === 0 && (
+        {displayedProjects.length === 0 && (
           <div className="rounded-[20px] border border-dashed border-[#d6d6d6] px-5 py-16 text-center">
             <h2 className="text-[24px] font-semibold text-[#171717]">
               No case studies found.
@@ -136,6 +208,7 @@ export default function WorkShowcaseSection() {
           </div>
         )}
 
+        {showFinalCta && (
         <div className="mt-[50px] overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#273ee9_0%,#652596_45%,#c2264c_72%,#f0440b_100%)] px-6 py-12 text-center text-white sm:px-10 lg:py-16">
           <h2 className="text-[30px] font-semibold leading-[1.08] tracking-[-1.4px] sm:text-[42px]">
             Have a project like these?
@@ -153,6 +226,7 @@ export default function WorkShowcaseSection() {
             </span>
           </Link>
         </div>
+        )}
       </div>
     </section>
   );

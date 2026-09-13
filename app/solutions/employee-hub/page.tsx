@@ -3,6 +3,7 @@ import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 
 export const metadata: Metadata = {
   title: "Employee Hub",
@@ -22,7 +23,7 @@ export default function CustomSoftwarePlatformsPage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* INTRO SECTION */}
@@ -139,6 +140,16 @@ export default function CustomSoftwarePlatformsPage() {
               "As your business grows, new modules, users, locations, integrations, and workflows can be added without rebuilding everything.",
           },
         ]}
+      />
+
+      {/* CASE STUDIES */}
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pt-0"
       />
     </div>
   );
