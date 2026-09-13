@@ -156,7 +156,7 @@ export default function CustomApplicationDevelopmentPage() {
           description="An AI-native, forward-deployed, results-driven approach — versus the three other options most mid-market companies consider."
           columns={comparisonColumns}
           rows={comparisonRows}
-          sectionClassName="pt-0 pb-[50px] md:py-[50px]"
+          sectionClassName="pt-0 pb-[50px] md:pb-[50px]"
         />
         <WorkShowcaseSection
           eyebrow="CASE STUDIES"
