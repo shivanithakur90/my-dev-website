@@ -271,7 +271,7 @@ export default function WorkShowcaseSection({
 
         {/* Projects */}
         {displayedProjects.length > 0 && (
-          <div className="mx-auto grid max-w-full  grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-2">
             {displayedProjects.map(
               (project, index) => (
                 <article
@@ -372,7 +372,7 @@ export default function WorkShowcaseSection({
 
         {/* Final CTA */}
         {showFinalCta && finalCta && (
-          <div className="my-[50px] overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#273ee9_0%,#652596_45%,#c2264c_72%,#f0440b_100%)] px-6 py-12 text-center text-white sm:px-10 lg:py-16">
+          <div className="mt-[50px] overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#273ee9_0%,#652596_45%,#c2264c_72%,#f0440b_100%)] px-6 py-12 text-center text-white sm:px-10 lg:py-16">
             <h2 className="text-[30px] font-semibold leading-[1.08] tracking-[-1.4px] sm:text-[42px]">
               {finalCta.title}
             </h2>
