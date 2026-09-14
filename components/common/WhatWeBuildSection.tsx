@@ -53,7 +53,7 @@ export default function WhatWeBuildSection({
             sm:px-8
             sm:py-[70px]
             md:px-12
-            lg:min-h-[540px]
+            lg:min-h-[400px]
             lg:px-[80px]
             lg:py-[65px]
           "
