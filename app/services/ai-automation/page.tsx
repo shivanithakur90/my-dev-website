@@ -1,6 +1,8 @@
+import BuiltWithOnSection from "@/components/common/BuiltWithOnSection";
 import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import ProblemSection from "@/components/common/ProblemSection";
+import TrustedAiSection from "@/components/common/TrustedAiSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import FaqSection from "@/components/home/FaqSection";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
@@ -93,32 +95,32 @@ const comparisonColumns = [
   },
   {
     key: "traditional",
-    label: "Staff- Aug Contractor",
+    label: "Traditional Dev Shop",
   },
   {
     key: "diy",
-    label: "Full Time Hire",
+    label: "DIY, single tools",
   },
 ];
 
 const comparisonRows = [
   {
-    feature: "Time to productive",
-    openxcell: "Days",
-    traditional: "Weeks (with mgmt)",
-    diy: "3–6 months to hire",
+    feature: "Time to working software",
+    openxcell: "Week 1",
+    traditional: "2-3 months",
+    diy: "Hours, but limited ",
   },
   {
-    feature: "Unit of work",
-    openxcell: "Outcomes",
-    traditional: "Tickets",
-    diy: "Outcomes",
+    feature: "Production-ready & scalable",
+    openxcell: "Deep, multi-SaaS",
+    traditional: "From Scratch",
+    diy: "Tool-limited",
   },
   {
-    feature: "Breadth",
-    openxcell: "Whole-solution",
-    traditional: "Single stack",
-    diy: "Single role",
+    feature: "You own the code",
+    openxcell: "Yes — engineered",
+    traditional: "Variable",
+    diy: "Breaks at scale",
   },
   {
     feature: "Built on your SaaS",
@@ -185,6 +187,99 @@ export default function AiAutomationPage() {
               "We measure what it removes,  tune accuracy, and widen  autonomy as trust grows.",
             },
           ]}
+        />
+
+        <TrustedAiSection
+          eyebrow="BUILT TO BE TRUSTED"
+          title="AI you can actually let loose safely."
+          description="The reason most AI projects stall isn't capability. It's trust."
+          secondaryDescription="We build automation that earns it."
+          items={[
+            {
+              title: "Human-in-the-loop by default",
+              description:
+                "AI drafts and proposes; your team approves before anything goes out or changes. You decide how much autonomy to grant, and dial it up as trust builds.",
+            },
+            {
+              title: "Grounded in your data",
+              description:
+                "Answers come from your knowledge base, docs, and records — not the open internet. Less hallucination, more accuracy, every source traceable.",
+            },
+            {
+              title: "Audited and owned",
+              description:
+                "Every AI action is logged and reviewable. The system runs in your infrastructure, on your accounts — your data never leaves your control.",
+            },
+          ]}
+        />
+
+        <BuiltWithOnSection
+          eyebrow="BUILT WITH & BUILT ON"
+          title="Built with & Built on your SaaS"
+          description="So your people tab-switch between tools, export to spreadsheets, and work around software that doesn’t quite fit."
+          leftGroup={{
+            title: "Built with",
+            description:
+              "Frontier models and the right framework for the job.",
+            items: [
+              {
+                label: "Claude",
+                icon: <span className="text-[#df7045]">✳</span>,
+              },
+              {
+                label: "n8n",
+                image: "/n8n.svg",
+                icon: <span className="text-[#ff4f64]">⌁</span>,
+              },
+              {
+                label: "Open AI",
+                image: "/open-ai.svg",
+                icon: <span className="text-black">◉</span>,
+              },
+              {
+                label: "RAG/Vector DBs",
+                image: "/rag.svg",
+                icon: <span>🗄️</span>,
+              },
+              {
+                label: "Custom Agent",
+                icon: <span className="text-[#ff5708]">⚙</span>,
+              },
+            ],
+          }}
+          rightGroup={{
+            title: "Built on",
+            description:
+              "Connected to where your work and knowledge already live.",
+            items: [
+              {
+                label: "Intercom",
+                image: "/itercom.png",
+                icon: <span className="text-[#12253f]">▥</span>,
+              },
+              {
+                label: "HubSpot",
+                image: "/hubspot.svg",
+                icon: <span className="text-[#ff5c35]">⌯</span>,
+              },
+              {
+                label: "Notion",
+                image: "/notion.svg",
+                icon: <span className="text-black">N</span>,
+              },
+              {
+                label: "Slack",
+                image: "/slack.svg",
+                icon: <span>✣</span>,
+              },
+              {
+                label: "Your Docs",
+                image: "/doc.svg",
+                icon: <span className="text-[#4285f4]">▤</span>,
+              },
+            ],
+          }}
+          moreLabel="+more"
         />
 
         <WorkShowcaseSection
