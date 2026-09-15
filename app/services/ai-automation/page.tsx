@@ -1,5 +1,10 @@
 import BuiltWithOnSection from "@/components/common/BuiltWithOnSection";
-import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
+import HowWeDeliverSection, {
+  BuildIntegrateIcon,
+  DeployScaleIcon,
+  DiscoverIcon,
+  HandOverIcon,
+} from "@/components/common/HowWeDeliverSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import ProblemSection from "@/components/common/ProblemSection";
 import TrustedAiSection from "@/components/common/TrustedAiSection";
@@ -168,21 +173,25 @@ export default function AiAutomationPage() {
           cards={[
             {
               title: "Find the work",
+              icon: <DiscoverIcon />,
               description:
               "We sit with your team and identify  the repetitive, high-volume work  AI can take over.",
             },
             {
               title: "Train on your data",
+              icon: <BuildIntegrateIcon />,
               description:
               "We build the agent or automation,  grounded in your knowledge base  and connected to your tools.",
             },
             {
               title: "Deploy guardrails",
+              icon: <DeployScaleIcon />,
               description:
               "Human-in-the-loop, logging, and  safety checks. Live in production,  not a sandbox.",
             },
             {
               title: "Tune & expand",
+              icon: <HandOverIcon />,
               description:
               "We measure what it removes,  tune accuracy, and widen  autonomy as trust grows.",
             },

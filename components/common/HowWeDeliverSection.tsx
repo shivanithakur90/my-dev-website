@@ -179,7 +179,7 @@ function DeliverBadgeIcon() {
    Discover & Assess
 ========================= */
 
-function DiscoverIcon() {
+export function DiscoverIcon() {
   return (
     <svg
       width="21"
@@ -235,7 +235,7 @@ function DiscoverIcon() {
    Build & Integrate
 ========================= */
 
-function BuildIntegrateIcon() {
+export function BuildIntegrateIcon() {
   return (
     <svg
       width="21"
@@ -320,7 +320,7 @@ function BuildIntegrateIcon() {
    Deploy & Scale
 ========================= */
 
-function DeployScaleIcon() {
+export function DeployScaleIcon() {
   return (
     <svg
       width="21"
@@ -383,7 +383,7 @@ function DeployScaleIcon() {
    Hand Over & Own
 ========================= */
 
-function HandOverIcon() {
+export function HandOverIcon() {
   return (
     <svg
       width="21"

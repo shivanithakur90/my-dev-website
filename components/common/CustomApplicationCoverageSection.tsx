@@ -1,14 +1,23 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type CoverageItem = {
+export type CoverageItem = {
   title: string;
   description: string;
   href: string;
   icon: ReactNode;
 };
 
-const coverageItems: CoverageItem[] = [
+type CustomApplicationCoverageSectionProps = {
+  eyebrow?: string;
+  eyebrowIcon?: ReactNode;
+  title?: ReactNode;
+  items?: CoverageItem[];
+  ctaLabel?: string;
+  className?: string;
+};
+
+const defaultCoverageItems: CoverageItem[] = [
   {
     title: "Web applications",
     description:
@@ -53,30 +62,41 @@ const coverageItems: CoverageItem[] = [
   },
 ];
 
-export default function CustomApplicationCoverageSection() {
+export default function CustomApplicationCoverageSection({
+  eyebrow = "What's included",
+  eyebrowIcon = <IncludedIcon />,
+  title = "What custom application development covers.",
+  items = defaultCoverageItems,
+  ctaLabel = "Learn more",
+  className = "",
+}: CustomApplicationCoverageSectionProps) {
   return (
-    <section className="border-t border-[#eeeeee] bg-white py-[70px] sm:py-[80px] lg:py-[100px]">
+    <section className={`border-t border-[#eeeeee] bg-white py-[70px] sm:py-[80px] lg:py-[100px] ${className}`}>
       <div className="container mx-auto px-5 md:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-full text-center">
-          <div className="inline-flex items-center gap-2 rounded-[8px] border border-[#e8e8e8] bg-white px-4 py-2 shadow-[0_14px_40px_rgba(30,25,45,0.07)]">
-            <span className="text-[#ff5708]">
-              <IncludedIcon />
-            </span>
+          {eyebrow && (
+            <div className="inline-flex items-center gap-2 rounded-[8px] border border-[#e8e8e8] bg-white px-4 py-2 shadow-[0_14px_40px_rgba(30,25,45,0.07)]">
+              {eyebrowIcon && (
+                <span className="text-[#ff5708]">
+                  {eyebrowIcon}
+                </span>
+              )}
 
-            <span className="text-[12px] font-semibold uppercase tracking-[0.11em] text-[#373737]">
-              What&apos;s included
-            </span>
-          </div>
+              <span className="text-[12px] font-semibold uppercase tracking-[0.11em] text-[#373737]">
+                {eyebrow}
+              </span>
+            </div>
+          )}
 
           <h2 className="mx-auto mt-7 max-w-[780px] text-[30px] font-semibold leading-[1.05] tracking-[-0.045em] text-[#171717] sm:text-[44px] md:text-[50px] lg:text-[54px]">
-            What custom application development covers.
+            {title}
           </h2>
         </div>
 
         {/* Cards */}
         <div className="mx-auto mt-[58px] grid max-w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {coverageItems.map((item) => (
+          {items.map((item) => (
             <article
               key={item.title}
               className="
@@ -120,7 +140,7 @@ export default function CustomApplicationCoverageSection() {
                 href={item.href}
                 className="mt-auto inline-flex w-fit items-center gap-2 pt-0 text-[14px] font-medium text-[#202020] transition-all group-hover:gap-3"
               >
-                Learn more
+                {ctaLabel}
 
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   <ArrowIcon />
@@ -136,7 +156,7 @@ export default function CustomApplicationCoverageSection() {
 
 /* ---------------- ICONS ---------------- */
 
-function IncludedIcon() {
+export function IncludedIcon() {
   return (
     <svg
       width="16"
@@ -165,7 +185,7 @@ function IncludedIcon() {
   );
 }
 
-function WebAppIcon() {
+export function WebAppIcon() {
   return (
     <svg
       width="38"
@@ -207,7 +227,7 @@ function WebAppIcon() {
   );
 }
 
-function DashboardIcon() {
+export function DashboardIcon() {
   return (
     <svg
       width="38"
@@ -241,7 +261,7 @@ function DashboardIcon() {
   );
 }
 
-function PortalIcon() {
+export function PortalIcon() {
   return (
     <svg
       width="38"
@@ -276,7 +296,7 @@ function PortalIcon() {
   );
 }
 
-function AdminIcon() {
+export function AdminIcon() {
   return (
     <svg
       width="38"
@@ -323,7 +343,7 @@ function AdminIcon() {
   );
 }
 
-function MobileIcon() {
+export function MobileIcon() {
   return (
     <svg
       width="38"
@@ -351,7 +371,7 @@ function MobileIcon() {
   );
 }
 
-function WorkflowIcon() {
+export function WorkflowIcon() {
   return (
     <svg
       width="38"

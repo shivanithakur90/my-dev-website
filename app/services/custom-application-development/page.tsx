@@ -1,5 +1,17 @@
-import CustomApplicationCoverageSection from "@/components/common/CustomApplicationCoverageSection";
-import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
+import CustomApplicationCoverageSection, {
+  AdminIcon,
+  DashboardIcon,
+  MobileIcon,
+  PortalIcon,
+  WebAppIcon,
+  WorkflowIcon,
+} from "@/components/common/CustomApplicationCoverageSection";
+import HowWeDeliverSection, {
+  BuildIntegrateIcon,
+  DeployScaleIcon,
+  DiscoverIcon,
+  HandOverIcon,
+} from "@/components/common/HowWeDeliverSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import ProblemSection from "@/components/common/ProblemSection";
 import WhatWeBuildSection from "@/components/common/WhatWeBuildSection";
@@ -128,6 +140,51 @@ const comparisonRows = [
   },
 ];
 
+const customApplicationCoverageItems = [
+  {
+    title: "Web applications",
+    description:
+      "Full custom web apps — internal or customer-facing — built around your workflows.",
+    href: "/services/custom-application-development",
+    icon: <WebAppIcon />,
+  },
+  {
+    title: "Dashboards & reporting",
+    description:
+      "Live operational dashboards pulling data from across your stack.",
+    href: "/services/custom-application-development",
+    icon: <DashboardIcon />,
+  },
+  {
+    title: "Client & customer portals",
+    description:
+      "Secure, branded portals connected to your CRM, storage, and billing.",
+    href: "/services/custom-application-development",
+    icon: <PortalIcon />,
+  },
+  {
+    title: "Internal tools & admin panels",
+    description:
+      "Ops consoles, approval flows, and admin interfaces that run your business in one screen.",
+    href: "/services/custom-application-development",
+    icon: <AdminIcon />,
+  },
+  {
+    title: "Mobile applications",
+    description:
+      "iOS and Android apps, including companion apps connected to your web platforms.",
+    href: "/services/custom-application-development",
+    icon: <MobileIcon />,
+  },
+  {
+    title: "Workflow applications",
+    description:
+      "Apps that automate and manage multi-step business processes from start to finish.",
+    href: "/services/custom-application-development",
+    icon: <WorkflowIcon />,
+  },
+];
+
 
 export default function CustomApplicationDevelopmentPage() {
   return (
@@ -148,7 +205,12 @@ export default function CustomApplicationDevelopmentPage() {
           image="/the-problem.webp"
           imageAlt="Financial internal tools illustration"
         />
-        <CustomApplicationCoverageSection />
+        <CustomApplicationCoverageSection
+          eyebrow="WHAT'S INCLUDED"
+          title="What custom application development covers."
+          items={customApplicationCoverageItems}
+          ctaLabel="Explore service"
+        />
         <ComparisonSection
           eyebrow="HOW WE'RE DIFFERENT"
           eyebrowIcon="⑂"
@@ -176,21 +238,25 @@ export default function CustomApplicationDevelopmentPage() {
           cards={[
             {
               title: "Discover & Assess",
+              icon: <DiscoverIcon />,
               description:
                 "An FDE embeds, maps your SaaS, and finds the friction. Build plan and fixed quote by the end of week one.",
             },
             {
               title: "Build & Integrate",
+              icon: <BuildIntegrateIcon />,
               description:
                 "AI-native build, picking the right tools, wired into your existing stack and data. Working software in week one.",
             },
             {
               title: "Deploy & Scale",
+              icon: <DeployScaleIcon />,
               description:
                 "Production infrastructure, security, and monitoring. Engineered to scale — not a prototype that breaks under real load.",
             },
             {
               title: "Hand Over & Own",
+              icon: <HandOverIcon />,
               description:
                 "Full code ownership, documented, in your accounts. Run it yourself or keep an FDE on retainer.",
             },
