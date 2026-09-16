@@ -911,16 +911,16 @@ export default function CloudDevopsSecurityPage() {
         moreLabel="+more"
       />
       <FaqSection
-              eyebrow="FAQ"
-              title={
-                <> Common <br /> Questions. </>
-              }
-              description="Specific to cloud, DevOps & security."
-              ctaLabel="Contact Sales"
-              ctaHref="/contact"
-              faqs={customApplicationFaqs}
-              sectionClassName="py-[50px] sm:py-[50px] lg:py-[80px] "
-            />
+        eyebrow="FAQ"
+        title={
+          <> Common <br /> Questions. </>
+        }
+        description="Specific to cloud, DevOps & security."
+        ctaLabel="Contact Sales"
+        ctaHref="/contact"
+        faqs={customApplicationFaqs}
+        sectionClassName="py-[50px] sm:py-[50px] lg:py-[80px] "
+      />
     </main>
   );
 }
