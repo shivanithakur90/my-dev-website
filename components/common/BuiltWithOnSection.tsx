@@ -26,6 +26,7 @@ type BuiltWithOnSectionProps = {
 
   icon?: ReactNode;
   className?: string;
+  paddingClassName?: string;
 };
 
 export default function BuiltWithOnSection({
@@ -41,9 +42,12 @@ export default function BuiltWithOnSection({
   icon,
 
   className = "",
+  paddingClassName = "pb-[50px] sm:pb-[50px] lg:pb-[110px]",
 }: BuiltWithOnSectionProps) {
   return (
-    <section className={`relative overflow-hidden bg-white pb-[50px] sm:pb-[50px] lg:pb-[110px] ${className}`}>
+    <section
+      className={`relative overflow-hidden bg-white ${paddingClassName} ${className}`}
+    >
       {/* Soft glow */}
         <div className="container">
         <div className="pointer-events-none absolute left-1/2 top-[70px] h-[360px] w-full -translate-x-1/2 rounded-full bg-[#efe4ff] opacity-60 blur-[120px]" />

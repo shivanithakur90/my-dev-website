@@ -226,6 +226,7 @@ export default function AiAutomationPage() {
           eyebrow="BUILT WITH & BUILT ON"
           title="Built with & Built on your SaaS"
           description="So your people tab-switch between tools, export to spreadsheets, and work around software that doesn’t quite fit."
+          paddingClassName="pb-[50px] sm:pb-[50px] lg:pb-[110px]"
           leftGroup={{
             title: "Built with",
             description:

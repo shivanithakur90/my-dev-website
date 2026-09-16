@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ServiceDetailPage from "@/components/common/ServiceDetailPage";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import ProblemSection from "@/components/common/ProblemSection";
 import CustomApplicationCoverageSection from "@/components/common/CustomApplicationCoverageSection";
@@ -8,6 +7,8 @@ import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
 import TrustedAiSection from "@/components/common/TrustedAiSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
+import BuiltWithOnSection from "@/components/common/BuiltWithOnSection";
+import FaqSection from "@/components/home/FaqSection";
 
 export const metadata: Metadata = {
   title: "Product Engineering Services",
@@ -34,18 +35,18 @@ const caseStudies = [
   },
 
   {
-    title: "Smart MLM & Commission Management Platform",
+    title: "Fleet Dispatch Management Platform",
     description:
-      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
-    image: "/erp-7.png",
+      "A centralized workspace for dispatch orders, fleet tracking, load management, and real-time delivery operations.",
+    image: "/erp-3.png",
     imageAlt: "Finance operations dashboard",
     imageBackground: "bg-[#fff3eb]",
     href: "/solutions/smart-mlm",
     ctaLabel: "View case study",
     tags: [
-      "Network Marketing",
+      "SaaS",
       "Dashboard",
-      "Affiliate Management",
+      "Logistics",
     ],
   },
 ];
@@ -74,25 +75,31 @@ const comparisonColumns = [
 
 const comparisonRows = [
   {
-    feature: "Time to working software",
-    openxcell: "Week 1",
-    traditional: "2-3 months",
-    diy: "Hours, but limited ",
+    feature: "Time to launch",
+    openxcell: "4–8 weeks",
+    traditional: "4–9 months",
+    diy: "Fast, but fragile ",
   },
   {
-    feature: "Production-ready & scalable",
-    openxcell: "Deep, multi-SaaS",
-    traditional: "From Scratch",
-    diy: "Tool-limited",
+    feature: "Production-grade",
+    openxcell: "From day one",
+    traditional: "Eventually",
+    diy: "Rarely",
   },
   {
-    feature: "You own the code",
-    openxcell: "Yes — engineered",
+    feature: "Survives scale",
+    openxcell: "Engineered to",
     traditional: "Variable",
-    diy: "Breaks at scale",
+    diy: "Breaks early",
   },
   {
-    feature: "Built on your SaaS",
+    feature: "Passes due diligence",
+    openxcell: "Yes — clean & owned",
+    traditional: "Usually",
+    diy: "Risky",
+  },
+  {
+    feature: "You own it",
     openxcell: "Fully",
     traditional: "Usually",
     diy: "Locked to tool",
@@ -189,35 +196,39 @@ function ProductDeliverIcon({
     case "scope":
       return (
         <svg {...sharedProps}>
-          <rect x="5" y="4" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.7" />
-          <path d="M8 8H16M8 12H13" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-          <path d="M15 16L18 19" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-          <circle cx="13" cy="14" r="3" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M9 18H15" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path d="M10 21H14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path d="M8 10.5C8 8.3 9.8 6.5 12 6.5C14.2 6.5 16 8.3 16 10.5C16 12 15.2 13.1 14.1 14.1C13.4 14.7 13.2 15.3 13.1 16H10.9C10.8 15.3 10.6 14.7 9.9 14.1C8.8 13.1 8 12 8 10.5Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+          <path d="M12 3.5V4.8M5.7 6.2L6.7 7.2M18.3 6.2L17.3 7.2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
       );
     case "build":
       return (
         <svg {...sharedProps}>
-          <path d="M7 8L3 12L7 16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M17 8L21 12L17 16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M14 5L10 19" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+          <path d="M12 5V19" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <circle cx="12" cy="5" r="2" stroke="currentColor" strokeWidth="1.6" />
+          <circle cx="6" cy="16" r="2" stroke="currentColor" strokeWidth="1.6" />
+          <circle cx="18" cy="16" r="2" stroke="currentColor" strokeWidth="1.6" />
+          <path d="M12 10C12 13 6 13 6 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path d="M12 10C12 13 18 13 18 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
       );
     case "launch":
       return (
         <svg {...sharedProps}>
-          <path d="M13 4C16 5 18 7.5 19 11L14 16L8 10L13 4Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
-          <path d="M8 10L5 11L4 15L9 14M14 16L13 21L17 20L18 17" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M14.5 8.5H14.51" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M12 4.5L18 7V11.5C18 15.2 15.6 18.4 12 19.5C8.4 18.4 6 15.2 6 11.5V7L12 4.5Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+          <path d="M12 9V15" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path d="M9 12H15" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
       );
     case "iterate":
       return (
         <svg {...sharedProps}>
-          <path d="M17 7H9.5C7 7 5 9 5 11.5C5 12.5 5.3 13.4 5.9 14.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-          <path d="M14 4L17 7L14 10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M7 17H14.5C17 17 19 15 19 12.5C19 11.5 18.7 10.6 18.1 9.8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-          <path d="M10 20L7 17L10 14" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M13 4.5C15.8 5.5 17.6 7.6 18.5 10.5L14 15L9 10L13 4.5Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+          <path d="M9 10L6.2 11.2L5.2 14.8L9.6 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M14 15L13.2 19.5L16.8 18.5L18 15.6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M14.2 8.6H14.21" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+          <path d="M6 20L8.2 17.8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
       );
   }
@@ -227,7 +238,7 @@ const productEngineeringCoverageItems = [
   {
     title: "MVP development",
     description:
-      "A real, launchable first version — not a prototype  — that you can put in front of users and investors.",
+      "A real, launchable first version — not a prototype — that you can put in front of users and investors.",
     href: "/services/product-engineering",
     icon: <ProductCoverageIcon variant="mvp" />,
   },
@@ -262,11 +273,43 @@ const productEngineeringCoverageItems = [
   {
     title: "Launch engineering",
     description:
-      "Auth, payments, infrastructure, and monitoring —  the real-world plumbing a product needs to go  live.",
+      "Auth, payments, infrastructure, and monitoring — the real-world plumbing a product needs to go live.",
     href: "/services/product-engineering",
     icon: <ProductCoverageIcon variant="launch" />,
   },
 ];
+
+
+
+
+const customApplicationFaqs = [
+  {
+    question: "Isn't an AI-built product just a throwaway prototype?",
+    answer:
+      "Not the way we build. We use AI for speed but engineer real architecture, auth, payments, and infrastructure underneath — so what you launch is a genuine product that survives real users and scales, not a demo that breaks.",
+  },
+  {
+    question: "Will it pass investor or acquirer due diligence?",
+    answer:
+      "Yes. You get clean, documented, fully-owned code with security and data handling done properly. It holds up when someone technical looks under the hood.",
+  },
+  {
+    question: "How is this different from your Custom App Development service?",
+    answer:
+      "Product Engineering is for net-new products and ventures going from idea to launch — including the launch plumbing (auth, payments, infra). Custom App Development is for building tools and apps on top of your existing operations and SaaS.",
+  },
+  {
+    question: "Can you keep building after launch?",
+    answer:
+      "Yes — most clients keep a forward-deployed engineer on to iterate toward product-market fit after the initial launch.",
+  },
+  {
+    question: "Do we own everything?",
+    answer:
+      "Fully. All code, in your repos and infrastructure. No lock-in to a tool or to us.",
+  },
+];
+
 
 
 
@@ -320,51 +363,51 @@ export default function ProductEngineeringPage() {
         image="/from-idea.avif"
         cards={[
           {
-            title: "Find the work",
+            title: "Shape the idea",
             icon: <ProductDeliverIcon variant="scope" />,
             description:
-              "We sit with your team and identify  the repetitive, high-volume work  AI can take over.",
+              "We turn your concept into a scoped, buildable v1 — the smallest thing that's genuinely useful and launchable.",
           },
           {
-            title: "Train on your data",
+            title: "Build the product",
             icon: <ProductDeliverIcon variant="build" />,
             description:
-              "We build the agent or automation,  grounded in your knowledge base  and connected to your tools.",
+              "AI-native build with real architecture. Working software in week one, shaped with you daily.",
           },
           {
-            title: "Deploy guardrails",
+            title: "Launch-engineer",
             icon: <ProductDeliverIcon variant="launch" />,
             description:
-              "Human-in-the-loop, logging, and  safety checks. Live in production,  not a sandbox.",
+              "Auth, payments, infrastructure, monitoring, security — the plumbing that turns a build into a product.",
           },
           {
-            title: "Tune & expand",
+            title: "Launch & iterate",
             icon: <ProductDeliverIcon variant="iterate" />,
             description:
-              "We measure what it removes,  tune accuracy, and widen  autonomy as trust grows.",
+              "Go live with real users. Keep an FDE on to iterate toward product-market fit.",
           },
         ]}
       />
       <TrustedAiSection
         eyebrow="BUILT TO BE TRUSTED"
-        title="AI you can actually let loose safely."
-        description="The reason most AI projects stall isn't capability. It's trust."
+        title="Built fast but not throwaway."
+        description="AI speed is only an advantage if what you ship survives contact with real users. We engineer for that from day one."
         secondaryDescription="We build automation that earns it."
         items={[
           {
-            title: "Human-in-the-loop by default",
+            title: "Real architecture, not demo glue",
             description:
               "AI drafts and proposes; your team approves before anything goes out or changes. You decide how much autonomy to grant, and dial it up as trust builds.",
           },
           {
-            title: "Grounded in your data",
+            title: "Survives real load",
             description:
-              "Answers come from your knowledge base, docs, and records — not the open internet. Less hallucination, more accuracy, every source traceable.",
+              "Built and deployed on production infrastructure, right- sized to your expected usage. It won't fall over when the tenth — or ten-thousandth — user shows up.",
           },
           {
-            title: "Audited and owned",
+            title: "Passes due diligence",
             description:
-              "Every AI action is logged and reviewable. The system runs in your infrastructure, on your accounts — your data never leaves your control.",
+              "Clean, owned, documented code with security and data handling done properly — so it holds up when investors or acquirers look under the hood.",
           },
         ]}
       />
@@ -378,15 +421,96 @@ export default function ProductEngineeringPage() {
         sectionClassName="pb-[50px] sm:pb-[70px] lg:pb-[80px]"
       />
       <WorkShowcaseSection
-                eyebrow="CASE STUDIES"
-                title="Real interfaces, built on real SaaS"
-                description="A selection of digital products and platforms designed around real business workflows."
-                projects={caseStudies}
-                showFilters={false}
-                showFinalCta={false}
-                limit={2}
-                className="!pt-0"
-              />
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="!pt-0"
+      />
+
+      <BuiltWithOnSection
+        eyebrow="BUILT WITH & BUILT ON"
+        title="Built with & Built on your SaaS"
+        description="So your people tab-switch between tools, export to spreadsheets, and work around software that doesn’t quite fit."
+        paddingClassName="pt-[50px] sm:pt-[50px] lg:pt-[80px]"
+        leftGroup={{
+          title: "Built with",
+          description:
+            "Frontier models and the right framework for the job.",
+          items: [
+            {
+              label: "Claude",
+              icon: <span className="text-[#df7045]">✳</span>,
+            },
+            {
+              label: "n8n",
+              image: "/n8n.svg",
+              icon: <span className="text-[#ff4f64]">⌁</span>,
+            },
+            {
+              label: "Open AI",
+              image: "/open-ai.svg",
+              icon: <span className="text-black">◉</span>,
+            },
+            {
+              label: "RAG/Vector DBs",
+              image: "/rag.svg",
+              icon: <span>🗄️</span>,
+            },
+            {
+              label: "Custom Agent",
+              icon: <span className="text-[#ff5708]">⚙</span>,
+            },
+          ],
+        }}
+        rightGroup={{
+          title: "Built on",
+          description:
+            "Connected to where your work and knowledge already live.",
+          items: [
+            {
+              label: "Intercom",
+              image: "/itercom.png",
+              icon: <span className="text-[#12253f]">▥</span>,
+            },
+            {
+              label: "HubSpot",
+              image: "/hubspot.svg",
+              icon: <span className="text-[#ff5c35]">⌯</span>,
+            },
+            {
+              label: "Notion",
+              image: "/notion.svg",
+              icon: <span className="text-black">N</span>,
+            },
+            {
+              label: "Slack",
+              image: "/slack.svg",
+              icon: <span>✣</span>,
+            },
+            {
+              label: "Your Docs",
+              image: "/doc.svg",
+              icon: <span className="text-[#4285f4]">▤</span>,
+            },
+          ],
+        }}
+        moreLabel="+more"
+      />
+      <FaqSection
+        eyebrow="FAQ"
+        title={
+          <> Common <br /> Questions. </>
+        }
+        description="Specific to product engineering."
+        ctaLabel="Contact Sales"
+        ctaHref="/contact"
+        faqs={customApplicationFaqs}
+        sectionClassName="py-[50px] sm:py-[50px] lg:py-[80px] "
+      />
     </>
   );
 }
