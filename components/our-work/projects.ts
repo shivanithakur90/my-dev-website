@@ -9,11 +9,11 @@ export const projects = [
     href: "/our-work/speed-csm-engagement-platform",
   },
   {
-    title: "Bank Deposit Guardian",
+    title: "Employee Hub — One Place for Your Entire Team",
     description:
-      "Real-time monitoring, alerting & analytics for bank virtual-account deposits.",
-    tags: ["Speed", "Fintech"],
-    image: "/AI CRM.avif",
+      "Manage employee information, internal workflows, documents, approvals, and day-to-day team operations from one connected workspace.",
+    tags: ["Employee Portal", "Internal Tools"],
+    image: "/erp-1.png",
     imageBackground: "bg-[#9d92ff]",
     href: "/our-work/bank-deposit-guardian",
   },

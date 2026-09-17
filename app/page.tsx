@@ -180,7 +180,7 @@ const comparisonColumns = [
 export default function Home() {
   return (
     <main >
-      <div data-aos="fade-up">
+      <div>
         <HeroBanner />
       </div>
       <div data-aos="fade-up">
