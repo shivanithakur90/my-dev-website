@@ -10,6 +10,7 @@ import WhatWeBuildSection from "@/components/common/WhatWeBuildSection";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 import TrustedAiSection from "@/components/common/TrustedAiSection";
 import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
+import StackCtaSection from "@/components/home/StackCtaSection";
 
 export const metadata: Metadata = {
   title: "System Integration & API Development",
@@ -961,6 +962,18 @@ export default function ApiDevelopmentPage() {
         faqs={customApplicationFaqs}
         sectionClassName="py-[50px] sm:py-[50px] lg:py-[80px]"
       />
+      <StackCtaSection
+        heading="Tired of data living in silos?"
+        description="Tell us which systems need to talk. We'll map your stack on a 30-minute call and send a fixed-price quote within 48 hours."
+        buttonText="Start a conversation"
+        buttonHref="/contact"
+        backgroundColor="#040d20"
+        leftGlowColor="#e8772c"
+        centerGlowColor="#ff5708"
+        rightGlowColor="#e95d25"
+        paddingClassName="pt-[0px] pb-[50px] sm:pt-[0px] sm:pb-[50px] lg:pt-[0px] lg:pb-[80px]"
+        headingColor="#fff"
+        descriptionColor="#fff" buttonIcon={undefined} />
     </>
   );
 }

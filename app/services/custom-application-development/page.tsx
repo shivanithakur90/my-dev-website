@@ -17,6 +17,7 @@ import ProblemSection from "@/components/common/ProblemSection";
 import WhatWeBuildSection from "@/components/common/WhatWeBuildSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import FaqSection from "@/components/home/FaqSection";
+import StackCtaSection from "@/components/home/StackCtaSection";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 import type { Metadata } from "next";
 
@@ -189,97 +190,81 @@ const customApplicationCoverageItems = [
 export default function CustomApplicationDevelopmentPage() {
   return (
     <div>
-        <PageHeroBanner
-           eyebrow="custom software development"
-            title="Custom web & mobile apps, built around how your team works."
-            description="Web apps, internal tools, portals, and dashboards — designed for your specific workflows and built on top of the SaaS you already use. Delivered by AI-native forward-deployed engineers, with working software in weeks."
-            primaryButtonText="Request a quote"
-            primaryButtonHref="/contact"
-            secondaryButtonText="See what we built"
-            secondaryButtonHref="/our-work"
-          />
-        <ProblemSection
-          eyebrow="THE PROBLEM"
-          title="Off-the-shelf SaaS is built for the median customer. Not your team."
-          description="So your people tab-switch between tools, export to spreadsheets, and work around software that doesn’t quite fit. Hiring an engineering team to fix it was too slow and too expensive — until now."
-          image="/the-problem.webp"
-          imageAlt="Financial internal tools illustration"
-        />
-        <CustomApplicationCoverageSection
-          eyebrow="WHAT'S INCLUDED"
-          title="What custom application development covers."
-          items={customApplicationCoverageItems}
-          ctaLabel="Explore service"
-        />
-        <ComparisonSection
-          eyebrow="HOW WE'RE DIFFERENT"
-          eyebrowIcon="⑂"
-          title="Why OpenXcell for custom app development."
-          description="An AI-native, forward-deployed, results-driven approach — versus the three other options most mid-market companies consider."
-          columns={comparisonColumns}
-          rows={comparisonRows}
-          sectionClassName="pt-0 pb-[50px] md:pb-[50px]"
-        />
-        <WorkShowcaseSection
-          eyebrow="CASE STUDIES"
-          title="Real interfaces, built on real SaaS"
-          description="A selection of digital products and platforms designed around real business workflows."
-          projects={caseStudies}
-          showFilters={false}
-          showFinalCta={false}
-          limit={2}
-          className="!pt-0"
-        />
-        <HowWeDeliverSection
-          eyebrow="HOW WE DELIVER"
-          title="Built fast. Deployed right. Scales with you."
-          description="AI-native delivery is the speed. Proper engineering is the reason it lasts."
-          image="/how-we-delivery.avif"
-          cards={[
-            {
-              title: "Discover & Assess",
-              icon: <DiscoverIcon />,
-              description:
-                "An FDE embeds, maps your SaaS, and finds the friction. Build plan and fixed quote by the end of week one.",
-            },
-            {
-              title: "Build & Integrate",
-              icon: <BuildIntegrateIcon />,
-              description:
-                "AI-native build, picking the right tools, wired into your existing stack and data. Working software in week one.",
-            },
-            {
-              title: "Deploy & Scale",
-              icon: <DeployScaleIcon />,
-              description:
-                "Production infrastructure, security, and monitoring. Engineered to scale — not a prototype that breaks under real load.",
-            },
-            {
-              title: "Hand Over & Own",
-              icon: <HandOverIcon />,
-              description:
-                "Full code ownership, documented, in your accounts. Run it yourself or keep an FDE on retainer.",
-            },
-          ]}
-        />
+      <PageHeroBanner
+        eyebrow="custom software development"
+        title="Custom web & mobile apps, built around how your team works."
+        description="Web apps, internal tools, portals, and dashboards — designed for your specific workflows and built on top of the SaaS you already use. Delivered by AI-native forward-deployed engineers, with working software in weeks."
+        primaryButtonText="Request a quote"
+        primaryButtonHref="/contact"
+        secondaryButtonText="See what we built"
+        secondaryButtonHref="/our-work"
+      />
+      <ProblemSection
+        eyebrow="THE PROBLEM"
+        title="Off-the-shelf SaaS is built for the median customer. Not your team."
+        description="So your people tab-switch between tools, export to spreadsheets, and work around software that doesn’t quite fit. Hiring an engineering team to fix it was too slow and too expensive — until now."
+        image="/the-problem.webp"
+        imageAlt="Financial internal tools illustration"
+      />
+      <CustomApplicationCoverageSection
+        eyebrow="WHAT'S INCLUDED"
+        title="What custom application development covers."
+        items={customApplicationCoverageItems}
+        ctaLabel="Explore service"
+      />
+      <ComparisonSection
+        eyebrow="HOW WE'RE DIFFERENT"
+        eyebrowIcon="⑂"
+        title="Why OpenXcell for custom app development."
+        description="An AI-native, forward-deployed, results-driven approach — versus the three other options most mid-market companies consider."
+        columns={comparisonColumns}
+        rows={comparisonRows}
+        sectionClassName="pt-0 pb-[50px] md:pb-[50px]"
+      />
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="!pt-0"
+      />
+      <HowWeDeliverSection
+        eyebrow="HOW WE DELIVER"
+        title="Built fast. Deployed right. Scales with you."
+        description="AI-native delivery is the speed. Proper engineering is the reason it lasts."
+        image="/how-we-delivery.avif"
+        cards={[
+          {
+            title: "Discover & Assess",
+            icon: <DiscoverIcon />,
+            description:
+              "An FDE embeds, maps your SaaS, and finds the friction. Build plan and fixed quote by the end of week one.",
+          },
+          {
+            title: "Build & Integrate",
+            icon: <BuildIntegrateIcon />,
+            description:
+              "AI-native build, picking the right tools, wired into your existing stack and data. Working software in week one.",
+          },
+          {
+            title: "Deploy & Scale",
+            icon: <DeployScaleIcon />,
+            description:
+              "Production infrastructure, security, and monitoring. Engineered to scale — not a prototype that breaks under real load.",
+          },
+          {
+            title: "Hand Over & Own",
+            icon: <HandOverIcon />,
+            description:
+              "Full code ownership, documented, in your accounts. Run it yourself or keep an FDE on retainer.",
+          },
+        ]}
+      />
 
-        <FaqSection
-          eyebrow="FAQ"
-          title={
-            <>
-              Common
-              <br />
-              Questions.
-            </>
-          }
-          description="The things mid-market buyers ask before booking a call."
-          ctaLabel="Contact Sales"
-          ctaHref="/contact"
-          faqs={customApplicationFaqs}
-          sectionClassName="pb-[50px] sm:pb-[50px] lg:pb  -[80px] "
-        />
-
-        <WhatWeBuildSection
+      <WhatWeBuildSection
         eyebrow="WHAT WE BUILD"
         title="What we build for you."
         items={[
@@ -297,6 +282,36 @@ export default function CustomApplicationDevelopmentPage() {
         buttonText="Browse all solutions"
         buttonHref="/our-work"
       />
+
+      <FaqSection
+        eyebrow="FAQ"
+        title={
+          <>
+            Common
+            <br />
+            Questions.
+          </>
+        }
+        description="The things mid-market buyers ask before booking a call."
+        ctaLabel="Contact Sales"
+        ctaHref="/contact"
+        faqs={customApplicationFaqs}
+        sectionClassName="pt-[50px] sm:pt-[50px] lg:pt-[80px] "
+      />
+
+      
+      <StackCtaSection
+        heading="Business apps built around how your team works."
+        description="Tell us what your team uses and what you're trying to solve. We'll send back a tailored example walkthrough and a custom quote within 48 hours."
+        buttonText="Start a conversation"
+        buttonHref="/contact"
+        backgroundColor="#040d20"
+        leftGlowColor="#e8772c"
+        centerGlowColor="#ff5708"
+        rightGlowColor="#e95d25"
+        paddingClassName="pt-[50px] pb-[50px] sm:pt-[50px] sm:pb-[50px] lg:pt-[80px] lg:pb-[80px]"
+        headingColor="#fff"
+        descriptionColor="#fff" buttonIcon={undefined} />
     </div>
   );
 }

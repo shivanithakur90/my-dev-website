@@ -10,6 +10,7 @@ import ComparisonSection from "@/components/home/ComparisonSection";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuiltWithOnSection from "@/components/common/BuiltWithOnSection";
 import FaqSection from "@/components/home/FaqSection";
+import StackCtaSection from "@/components/home/StackCtaSection";
 
 export const metadata: Metadata = {
   title: "Cloud, DevOps & Security Services",
@@ -921,6 +922,18 @@ export default function CloudDevopsSecurityPage() {
         faqs={customApplicationFaqs}
         sectionClassName="py-[50px] sm:py-[50px] lg:py-[80px] "
       />
+      <StackCtaSection
+        heading="Need it deployed and secured properly?"
+        description="Whether we built it or you did — tell us what needs to scale and staysafe. We'll assess it on a 30-minute call and send a quote within 48hours."
+        buttonText="Start a conversation"
+        buttonHref="/contact"
+        backgroundColor="#040d20"
+        leftGlowColor="#e8772c"
+        centerGlowColor="#ff5708"
+        rightGlowColor="#e95d25"
+        paddingClassName="pt-[0px] pb-[50px] sm:pt-[0px] sm:pb-[50px] lg:pt-[0px] lg:pb-[80px]"
+        headingColor="#fff"
+        descriptionColor="#fff" buttonIcon={undefined} />
     </main>
   );
 }

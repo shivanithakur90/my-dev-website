@@ -1,10 +1,10 @@
 export const projects = [
   {
-    title: "Speed CSM & Engagement Platform",
+    title: "Smart Restaurant",
     description:
-      "Internal CS console plus wallet-native engagement games that pay real sats to eligible users.",
-    tags: ["Speed", "Customer Success"],
-    image: "/recnet-build-imae.webp",
+      "Your team gets a faster way to serve customers while managers get real-time visibility into daily operations.",
+    tags: ["POS System", "Reservations"],
+    image: "/erp-5.png",
     imageBackground: "bg-[#8da9ff]",
     href: "/our-work/speed-csm-engagement-platform",
   },

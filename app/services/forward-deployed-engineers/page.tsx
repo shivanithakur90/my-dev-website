@@ -6,6 +6,7 @@ import ProblemSection from "@/components/common/ProblemSection";
 import WhatWeBuildSection from "@/components/common/WhatWeBuildSection";
 import ComparisonSection from "@/components/home/ComparisonSection";
 import FaqSection from "@/components/home/FaqSection";
+import StackCtaSection from "@/components/home/StackCtaSection";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 import type { Metadata } from "next";
 
@@ -180,29 +181,34 @@ const caseStudies = [
 
 const customApplicationFaqs = [
   {
-    question: "Which tool will you use to build our app?",
+    question: "How is an FDE different from a contractor?",
     answer:
-      "We pick per build, not per preference. Depending on the workflow that means a no-code or low-code platform, a headless SaaS layer, custom code, or a combination. Your forward-deployed engineer chooses what fits the problem and explains why before anything gets built.",
+      "A contractor works the tickets you write, in one stack, and needs managing. An FDE understands your business, finds the work, picks the right tools, ships whole solutions, and owns the outcome — backed by our methodology and AI-augmented so one person does what a team used to. You're buying capability, not a seat.",
   },
   {
-    question: "Do we own the code at the end?",
+    question: "Can we hire a whole team of them?",
     answer:
-      "Yes — fully. All code is delivered in your repos, on your infrastructure, in your accounts. When the engagement ends, your team can extend, maintain, or migrate it without us. No vendor lock-in.",
+      "You can add multiple FDEs, but our model is deliberately quality-over-quantity — senior, AI-augmented engineers, not a bench of junior bodies. For most teams, one or two FDEs replace what used to take a larger group.",
   },
   {
-    question: "What if our SaaS vendor changes its API?",
+    question: "What stacks and tools do they work in?",
     answer:
-      "Integrations are built as their own layer, separate from your app's core logic, so a vendor's API change stays a contained fix rather than a rebuild. And because the code lives in your repos and runs in your accounts, your team can make that fix with or without us.",
+      "FDEs are fluent across the modern app-building stack — Softr, Lovable, Retool, Supabase, Cursor, custom code — and choose the right one per build, rather than being locked to a single technology.",
   },
   {
-    question: "How is this different from a contractor or dev shop?",
+    question: "How do we work with them day to day?",
     answer:
-      "A dev shop takes the spec you write and bills the hours. We embed a senior, AI-augmented forward-deployed engineer who learns your business, picks the right tools, and owns the outcome end to end. One call with an engineer gets you a fixed-price quote within 48 hours.",
+      "They embed: your Slack, your standups, your sprints. You assign work the way you would to a team member, and they ship continuously.",
   },
   {
-    question: "What's the smallest engagement you take?",
+    question: "What's the commitment?",
     answer:
-      "A single build — one internal tool, portal, or dashboard. Scoping is a 30-minute call and delivery is typically four to eight weeks, with no minimum retainer to start. Many clients begin with one build, then retain the same engineer for the next ones.",
+      "3, 6, or 12-month engagements, fractional or full-time, on a monthly retainer. You can scale capacity up or down as your needs change.",
+  },
+  {
+    question: "How does pricing work?",
+    answer:
+      "Embedded engagements run on a monthly retainer at a fixed FDE rate, so the cost is predictable and shifting priorities don’t trigger a new quote — you scale capacity up or down instead. Bounded, fully-specified builds work differently: a fixed price, quoted within 48 hours of the scoping call.",
   },
 ];
 
@@ -211,154 +217,164 @@ export default function ForwardDeployedEngineersPage() {
   return (
     <div>
       <PageHeroBanner
-          eyebrow="FORWARD-DEPLOYED ENGINEERS"
-          title="Embed a forward-deployed engineer with your team."
-          description="Not a contractor by the stack. Not a ticket-taker. A senior, AI-augmented builder who learns your business, picks the right tools, ships whole solutions, and is accountable for the outcome. One FDE does what used to take a team."
-          primaryButtonText="Request a quote"
-          primaryButtonHref="/contact"
-          secondaryButtonText="See what we built"
-          secondaryButtonHref="/our-work"
-        />
-        <ProblemSection
-          eyebrow="THE PROBLEM"
-          title="You have continuous build needs. Hiring is slow. Contractors are a gamble."
-          description="Full-time engineers take months to hire and are hard to justify for variable work. Staff-aug contractors need managing, work in narrow stacks, and produce tickets, not outcomes. You want capacity — without the overhead of either."
-          image="/you-have.avif"
-          imageAlt="Financial internal tools illustration"
-        />
-        <FdeComparisonSection
-          eyebrow="WHAT AN FDE IS"
-          title="What is a forward-deployed engineer?"
-          description="A forward-deployed engineer is a senior engineer who embeds in your team and owns an outcome, instead of working tickets from a spec. Palantir invented the model because its customers couldn't fully explain what they needed — someone had to sit in the room and build. The unit of work is a solved problem, not an hour."
-          secondaryDescription="OpenAI, Ramp, and other frontier AI companies now run the same play. Until recently you could only get an FDE by buying the platform it came with. That is what has changed."
-          leftColumn={{
-            title: "A staff-aug contractor",
-            type: "negative",
-            items: [
-              "Works the ticket you write",
-              "One narrow stack",
-              "Needs managing and specs",
-              "Rented by the hour, by the seat",
-              "Produces code; you own the outcome",
-              "Swappable, interchangeable",
-            ],
-          }}
-          rightColumn={{
-            title: "An OpenXcell FDE",
-            type: "positive",
-            items: [
-              "Understands your business and finds the work",
-              "Fluent across the modern app-building stack",
-              "Self-directs; embeds in your team",
-              "Capacity, backed by our methodology",
-              "Owns the outcome, end to end",
-              "AI-augmented — one does what a team did",
-            ],
-          }}
-        />
-        <EmbeddingBenefitsSection
-          eyebrow="WHAT'S INCLUDED"
-          title="Why embedding beats a project or a hire."
-          cards={[
-            {
-              title: "Knows your business",
-              description:
-                "An embedded FDE learns your workflows, data, and stack — so every build is informed by context a contractor never gets.",
-            },
-            {
-              title: "Capacity without hiring",
-              description:
-                "Continuous build capacity, scaled up or down, without recruiting, onboarding, or carrying full-time overhead.",
-            },
-            {
-              title: "Backed by the firm",
-              description:
-                "Not a lone freelancer. Your FDE is backed by OpenXcell's methodology, pattern library, and senior oversight.",
-            },
-          ]}
-        />
-         {/* WHO IT'S FOR */}
-        <AudienceSection
-            eyebrow="WHO IT'S FOR"
-            title="Built for businesses managing complex daily operations."
-            autoPlaySpeed={2000}
-            cards={[
-              {
-                number: "01",
-                title: "Operations teams",
-                description:
-                  "Manage jobs, staff, customers, workflows, inventory, and day-to-day business activity from one connected platform.",
-                },
-                {
-                  number: "02",
-                  title: "Service businesses",
-                  description:
-                    "Track customers, bookings, jobs, technicians, service history, invoices, and payments without relying on disconnected tools.",
-                },
-                {
-                  number: "03",
-                  title: "Management teams",
-                  description:
-                    "Get real-time dashboards, reports, performance metrics, and operational visibility for faster and better decisions.",
-                },
-                {
-                  number: "04",
-                  title: "Growing businesses",
-                  description:
-                  "Replace spreadsheets and multiple systems with scalable software designed around the way your business actually operates.",
-                },
-            ]}
-        />
+        eyebrow="FORWARD-DEPLOYED ENGINEERS"
+        title="Embed a forward-deployed engineer with your team."
+        description="Not a contractor by the stack. Not a ticket-taker. A senior, AI-augmented builder who learns your business, picks the right tools, ships whole solutions, and is accountable for the outcome. One FDE does what used to take a team."
+        primaryButtonText="Request a quote"
+        primaryButtonHref="/contact"
+        secondaryButtonText="See what we built"
+        secondaryButtonHref="/our-work"
+      />
+      <ProblemSection
+        eyebrow="THE PROBLEM"
+        title="You have continuous build needs. Hiring is slow. Contractors are a gamble."
+        description="Full-time engineers take months to hire and are hard to justify for variable work. Staff-aug contractors need managing, work in narrow stacks, and produce tickets, not outcomes. You want capacity — without the overhead of either."
+        image="/you-have.avif"
+        imageAlt="Financial internal tools illustration"
+      />
+      <FdeComparisonSection
+        eyebrow="WHAT AN FDE IS"
+        title="What is a forward-deployed engineer?"
+        description="A forward-deployed engineer is a senior engineer who embeds in your team and owns an outcome, instead of working tickets from a spec. Palantir invented the model because its customers couldn't fully explain what they needed — someone had to sit in the room and build. The unit of work is a solved problem, not an hour."
+        secondaryDescription="OpenAI, Ramp, and other frontier AI companies now run the same play. Until recently you could only get an FDE by buying the platform it came with. That is what has changed."
+        leftColumn={{
+          title: "A staff-aug contractor",
+          type: "negative",
+          items: [
+            "Works the ticket you write",
+            "One narrow stack",
+            "Needs managing and specs",
+            "Rented by the hour, by the seat",
+            "Produces code; you own the outcome",
+            "Swappable, interchangeable",
+          ],
+        }}
+        rightColumn={{
+          title: "An OpenXcell FDE",
+          type: "positive",
+          items: [
+            "Understands your business and finds the work",
+            "Fluent across the modern app-building stack",
+            "Self-directs; embeds in your team",
+            "Capacity, backed by our methodology",
+            "Owns the outcome, end to end",
+            "AI-augmented — one does what a team did",
+          ],
+        }}
+      />
+      <EmbeddingBenefitsSection
+        eyebrow="WHAT'S INCLUDED"
+        title="Why embedding beats a project or a hire."
+        cards={[
+          {
+            title: "Knows your business",
+            description:
+              "An embedded FDE learns your workflows, data, and stack — so every build is informed by context a contractor never gets.",
+          },
+          {
+            title: "Capacity without hiring",
+            description:
+              "Continuous build capacity, scaled up or down, without recruiting, onboarding, or carrying full-time overhead.",
+          },
+          {
+            title: "Backed by the firm",
+            description:
+              "Not a lone freelancer. Your FDE is backed by OpenXcell's methodology, pattern library, and senior oversight.",
+          },
+        ]}
+      />
+      {/* WHO IT'S FOR */}
+      <AudienceSection
+        eyebrow="WHO IT'S FOR"
+        title="Built for businesses managing complex daily operations."
+        autoPlaySpeed={2000}
+        cards={[
+          {
+            number: "01",
+            title: "Operations teams",
+            description:
+              "Manage jobs, staff, customers, workflows, inventory, and day-to-day business activity from one connected platform.",
+          },
+          {
+            number: "02",
+            title: "Service businesses",
+            description:
+              "Track customers, bookings, jobs, technicians, service history, invoices, and payments without relying on disconnected tools.",
+          },
+          {
+            number: "03",
+            title: "Management teams",
+            description:
+              "Get real-time dashboards, reports, performance metrics, and operational visibility for faster and better decisions.",
+          },
+          {
+            number: "04",
+            title: "Growing businesses",
+            description:
+              "Replace spreadsheets and multiple systems with scalable software designed around the way your business actually operates.",
+          },
+        ]}
+      />
 
-        <ComparisonSection
-          eyebrow="HOW WE'RE DIFFERENT"
-          eyebrowIcon="⑂"
-          title="Why OpenXcell for forward-deployed engineering."
-          description="Set against the three alternatives most mid-market companies weigh: a full-time hire, a staff-aug contractor, or a traditional dev shop. What you get here is an embedded engineer plus the methodology behind them — a pattern library from every prior build, and senior oversight on architecture. Capability, not a seat."
-          columns={comparisonColumns}
-          rows={comparisonRows}
-          sectionClassName="py-[50px] sm:py-[70px] lg:py-[80px]"
-        />
+      <ComparisonSection
+        eyebrow="HOW WE'RE DIFFERENT"
+        eyebrowIcon="⑂"
+        title="Why OpenXcell for forward-deployed engineering."
+        description="Set against the three alternatives most mid-market companies weigh: a full-time hire, a staff-aug contractor, or a traditional dev shop. What you get here is an embedded engineer plus the methodology behind them — a pattern library from every prior build, and senior oversight on architecture. Capability, not a seat."
+        columns={comparisonColumns}
+        rows={comparisonRows}
+        sectionClassName="py-[50px] sm:py-[70px] lg:py-[80px]"
+      />
 
-        <WorkShowcaseSection
-          eyebrow="CASE STUDIES"
-          title="Real interfaces, built on real SaaS"
-          description="A selection of digital products and platforms designed around real business workflows."
-          projects={caseStudies}
-          showFilters={false}
-          showFinalCta={false}
-          limit={2}
-          className="!pt-0"
-        />
-
-        <FaqSection
-          eyebrow="FAQ"
-          title={
-            <> Common <br /> Questions. </>
-          }
-          description="The things mid-market buyers ask before booking a call."
-          ctaLabel="Contact Sales"
-          ctaHref="/contact"
-          faqs={customApplicationFaqs}
-          sectionClassName="py-[50px] sm:py-[50px] lg:py-[80px] "
-        />
-
-        <WhatWeBuildSection
-          eyebrow="WHAT THAY BUILD"
-          title="What an embedded FDE builds for you."
-          items={[
-            "Internal tools & apps",
-            "AI agents & automation",
-            "SaaS integrations",
-            "Dashboards",
-            "New product features",
-            "Workflow automation",
-            "Data pipelines",
-            "Iterations on prior builds",
-          ]}
-          buttonText="Browse all solutions"
-          buttonHref="/our-work"
-        />
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="!pt-0 pb-[50px] sm:pb-[50px] lg:pb-[80px]"
+      />
+      <WhatWeBuildSection
+        eyebrow="WHAT THAY BUILD"
+        title="What an embedded FDE builds for you."
+        items={[
+          "Internal tools & apps",
+          "AI agents & automation",
+          "SaaS integrations",
+          "Dashboards",
+          "New product features",
+          "Workflow automation",
+          "Data pipelines",
+          "Iterations on prior builds",
+        ]}
+        buttonText="Browse all solutions"
+        buttonHref="/our-work"
+      />
+      <FaqSection
+        eyebrow="FAQ"
+        title={
+          <> Common <br /> Questions. </>
+        }
+        description="Specific to forward-deployed engineers."
+        ctaLabel="Contact Sales"
+        ctaHref="/contact"
+        faqs={customApplicationFaqs}
+        sectionClassName="py-[50px] sm:py-[50px] lg:py-[80px] "
+      />
+      <StackCtaSection
+        heading="Need build capacity, not a hire?"
+        description="Tell us what your team needs to build. We'll match you with an FDE and send a retainer quote within 48 hours."
+        buttonText="Start a conversation"
+        buttonHref="/contact"
+        backgroundColor="#040d20"
+        leftGlowColor="#e8772c"
+        centerGlowColor="#ff5708"
+        rightGlowColor="#e95d25"
+        paddingClassName="pt-[0px] pb-[50px] sm:pt-[0px] sm:pb-[50px] lg:pt-[0px] lg:pb-[80px]"
+        headingColor="#fff"
+        descriptionColor="#fff" buttonIcon={undefined} />
     </div>
   );
 }
