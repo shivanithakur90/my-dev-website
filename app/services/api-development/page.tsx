@@ -6,6 +6,10 @@ import ComparisonSection from "@/components/home/ComparisonSection";
 import ProblemSection from "@/components/common/ProblemSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import CustomApplicationCoverageSection from "@/components/common/CustomApplicationCoverageSection";
+import WhatWeBuildSection from "@/components/common/WhatWeBuildSection";
+import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
+import TrustedAiSection from "@/components/common/TrustedAiSection";
+import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
 
 export const metadata: Metadata = {
   title: "System Integration & API Development",
@@ -473,6 +477,225 @@ const productEngineeringCoverageItems = [
   },
 ];
 
+
+
+
+/* =========================================================
+   HOW WE DELIVER ICONS
+========================================================= */
+
+/* Assess */
+function AssessIcon() {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect
+        x="4"
+        y="3"
+        width="12"
+        height="17"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M8 7H12.5M8 10.5H11"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <circle
+        cx="16.5"
+        cy="16"
+        r="3.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M19 18.5L21 20.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+/* Prioritize */
+function PrioritizeIcon() {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M8 6H20"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M8 12H17"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M8 18H14"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M3.5 6L4.5 7L6.5 5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M3.5 12L4.5 13L6.5 11"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M3.5 18L4.5 19L6.5 17"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/* Implement */
+function ImplementIcon() {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="3"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M12 3V6M12 18V21M3 12H6M18 12H21"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M5.6 5.6L7.7 7.7M16.3 16.3L18.4 18.4M18.4 5.6L16.3 7.7M7.7 16.3L5.6 18.4"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+/* Monitor & Maintain */
+function MonitorMaintainIcon() {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect
+        x="3"
+        y="4"
+        width="18"
+        height="14"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M6 13L9 10L12 13L16 8L19 11"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M9 21H15M12 18V21"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+
+
+const caseStudies = [
+  {
+    title: "MealOps Vendor Invoice Management Platform",
+    description:
+      "A streamlined kitchen operations platform for managing vendor invoices, purchase orders, inventory records, and supplier approvals from one centralized workspace.",
+    image: "/erp-6.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/content-management",
+    ctaLabel: "View case study",
+    tags: [
+      "Kitchen Operations",
+      "FoodTech",
+      "Dashboard",
+    ],
+  },
+
+  {
+    title: "Fleet Dispatch Management Platform",
+    description:
+      "A centralized workspace for dispatch orders, fleet tracking, load management, and real-time delivery operations.",
+    image: "/erp-3.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/smart-mlm",
+    ctaLabel: "View case study",
+    tags: [
+      "SaaS",
+      "Dashboard",
+      "Logistics",
+    ],
+  },
+];
+
 /* =========================================================
    PAGE
 ========================================================= */
@@ -514,6 +737,88 @@ export default function ApiDevelopmentPage() {
         ctaLabel="Explore service"
       />
 
+
+      <TrustedAiSection
+        eyebrow="BUILT TO BE TRUSTED"
+        title="We connect your stack without breaking it."
+        description="The fear with integration is always the same: that wiring things together will break what already works. We engineer against exactly that."
+        secondaryDescription="We build automation that earns it."
+        items={[
+          {
+            title: "Isolated integration layer",
+            description:
+              "We build connections in a layer that sits beside your systems, not inside them. If a vendor changes their API, the fix is surgical — your core tools are untouched.",
+          },
+          {
+            title: "No rip-and-replace",
+            description:
+              "We don't ask you to migrate off anything. Your existing tools keep running exactly as they do today — we just make them talk.",
+          },
+          {
+            title: "Monitored & resilient",
+            description:
+              "Built with retries, logging, and alerts. When something upstream fails, the integration degrades gracefully and tells you — it doesn't silently corrupt data.",
+          },
+        ]}
+      />
+
+      {/* =====================================================
+                HOW WE DELIVER
+                ICONS CHANGED ACCORDING TO EACH STEP
+            ===================================================== */}
+      <HowWeDeliverSection
+        eyebrow="HOW WE DELIVER"
+        title="From risk to resilient, in a clear sequence."
+        image="/from-idea.avif"
+        cards={[
+          {
+            title: "Map the stack",
+            icon: <AssessIcon />,
+            description:
+              "We document every system, what data lives where, and where the gaps and manual handoffs are.",
+          },
+          {
+            title: "Design the flows",
+            icon: <PrioritizeIcon />,
+            description:
+              "We define how data should move, which system is the source of truth, and where to sync vs. trigger.",
+          },
+          {
+            title: "Build & connect",
+            icon: <ImplementIcon />,
+            description:
+              "APIs, middleware, and connectors built in an isolated layer, tested against real data.",
+          },
+          {
+            title: "Monitor & own",
+            icon: <MonitorMaintainIcon />,
+            description:
+              "Logging and alerts live. Full ownership handed over. Optional retainer for upkeep as APIs change.",
+          },
+        ]}
+      />
+
+      {/* =====================================================
+                ENGAGEMENTS
+            ===================================================== */}
+      <WhatWeBuildSection
+        eyebrow="WHAT WE BUILD"
+        title="Integration solutions we deliver."
+        items={[
+          "Unified data layer",
+          "CRM ↔ billing ↔ support sync",
+          "Custom APIs & middleware",
+          "Data migration",
+          "Event pipelines",
+          "Third-party connectors",
+          "Real-time dashboards",
+          "Legacy system bridges",
+        ]}
+        buttonText="Browse all solutions"
+        buttonHref="/our-work"
+      />
+
+
       {/* =====================================================
           WHY US
       ===================================================== */}
@@ -525,6 +830,18 @@ export default function ApiDevelopmentPage() {
         columns={comparisonColumns}
         rows={comparisonRows}
         sectionClassName="pb-[50px] sm:pb-[70px] lg:pb-[80px]"
+      />
+
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="!pt-0"
       />
 
       {/* =====================================================
