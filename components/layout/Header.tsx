@@ -3,7 +3,18 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const servicesMenu = [
+type MenuLink = {
+  name: string;
+  description?: string;
+  href: string;
+};
+
+type MobileNavItem = {
+  label: "Services" | "Solutions" | "Industries" | "Company";
+  links: MenuLink[];
+};
+
+const servicesMenu: MenuLink[] = [
   {
     name: "Custom App Development",
     description: "Custom coded application for your special use case",
@@ -36,7 +47,7 @@ const servicesMenu = [
   },
 ];
 
-const solutionsMenu = [
+const solutionsMenu: MenuLink[] = [
 {
   name: "Employee Hub",
   description:
@@ -75,7 +86,7 @@ const solutionsMenu = [
 },
 ];
 
-const industriesMenu = [
+const industriesMenu: MenuLink[] = [
   {
     name: "Fintech & Financial Services",
     description: "Spot risk and fraud before it becomes a problem.",
@@ -98,14 +109,14 @@ const industriesMenu = [
   },
 ];
 
-const companyMenu = [
+const companyMenu: MenuLink[] = [
   {
     name: "About us",
     href: "/company/about",
   },
 ];
 
-const mobileNavItems = [
+const mobileNavItems: MobileNavItem[] = [
   {
     label: "Services",
     links: servicesMenu,
@@ -826,11 +837,11 @@ export default function Header() {
                                   {link.name}
                                 </span>
 
-                                {"description" in link && link.description && (
+                                {link.description ? (
                                   <span className="mt-1 block text-[13px] leading-[1.45] text-[#666666]">
                                     {link.description}
                                   </span>
-                                )}
+                                ) : null}
                               </span>
 
                               <span className="mt-1 shrink-0 text-[#ff4e0a]">
