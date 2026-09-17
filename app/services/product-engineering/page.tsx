@@ -433,68 +433,63 @@ export default function ProductEngineeringPage() {
 
       <BuiltWithOnSection
         eyebrow="BUILT WITH & BUILT ON"
-        title="Built with & Built on your SaaS"
-        description="So your people tab-switch between tools, export to spreadsheets, and work around software that doesn’t quite fit."
+        title="Built with a product stack that can launch."
+        description="From prototype to production, we choose tools that support auth, payments, data, UI, and deployment from day one."
         paddingClassName="pt-[50px] sm:pt-[50px] lg:pt-[80px]"
         leftGroup={{
           title: "Built with",
           description:
-            "Frontier models and the right framework for the job.",
+            "Frameworks and product infrastructure for launchable software.",
           items: [
             {
-              label: "Claude",
-              icon: <span className="text-[#df7045]">✳</span>,
+              label: "Next.js",
+              image: "/next.svg",
+              icon: <span className="font-semibold text-black">N</span>,
             },
             {
-              label: "n8n",
-              image: "/n8n.svg",
-              icon: <span className="text-[#ff4f64]">⌁</span>,
+              label: "React",
+              icon: <span className="font-semibold text-[#149eca]">R</span>,
             },
             {
-              label: "Open AI",
-              image: "/open-ai.svg",
-              icon: <span className="text-black">◉</span>,
+              label: "TypeScript",
+              icon: <span className="font-semibold text-[#3178c6]">TS</span>,
             },
             {
-              label: "RAG/Vector DBs",
-              image: "/rag.svg",
-              icon: <span>🗄️</span>,
+              label: "Tailwind CSS",
+              icon: <span className="font-semibold text-[#38bdf8]">TW</span>,
             },
             {
-              label: "Custom Agent",
-              icon: <span className="text-[#ff5708]">⚙</span>,
+              label: "PostgreSQL",
+              icon: <span className="font-semibold text-[#336791]">DB</span>,
             },
           ],
         }}
         rightGroup={{
           title: "Built on",
           description:
-            "Connected to where your work and knowledge already live.",
+            "Connected to product services your users and teams depend on.",
           items: [
             {
-              label: "Intercom",
-              image: "/itercom.png",
-              icon: <span className="text-[#12253f]">▥</span>,
+              label: "Vercel",
+              image: "/vercel.svg",
+              icon: <span className="text-black">V</span>,
+            },
+            {
+              label: "Stripe",
+              icon: <span className="font-semibold text-[#635bff]">S</span>,
+            },
+            {
+              label: "Auth",
+              icon: <span className="font-semibold text-[#ff5708]">A</span>,
             },
             {
               label: "HubSpot",
               image: "/hubspot.svg",
-              icon: <span className="text-[#ff5c35]">⌯</span>,
+              icon: <span className="text-[#ff5c35]">H</span>,
             },
             {
-              label: "Notion",
-              image: "/notion.svg",
-              icon: <span className="text-black">N</span>,
-            },
-            {
-              label: "Slack",
-              image: "/slack.svg",
-              icon: <span>✣</span>,
-            },
-            {
-              label: "Your Docs",
-              image: "/doc.svg",
-              icon: <span className="text-[#4285f4]">▤</span>,
+              label: "Your APIs",
+              icon: <span className="font-mono text-[#4285f4]">API</span>,
             },
           ],
         }}
