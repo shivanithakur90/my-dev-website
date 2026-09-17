@@ -253,13 +253,13 @@ export default function Home() {
         description="Tell us what needs to talk to what. We'll design the integration layer."
         buttonText="Start a conversation"
         buttonHref="/contact"
-        backgroundColor="#f5f8ff"
-        leftGlowColor="#3c2ce8"
+       backgroundColor="#040d20"
+        leftGlowColor="#e8772c"
         centerGlowColor="#ff5708"
-        rightGlowColor="#253ee9"
+        rightGlowColor="#e95d25"
         paddingClassName="pt-[50px] pb-[50px] sm:pt-[50px] sm:pb-[50px] lg:pt-[80px] lg:pb-[80px]"
-        headingColor="#171717"
-        descriptionColor="#555555" buttonIcon={undefined}/>
+        headingColor="#fff"
+        descriptionColor="#fff" buttonIcon={undefined} />
     </main>
   );
 }
