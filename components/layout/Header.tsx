@@ -565,18 +565,120 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Company */}
-          <Link
-            href="/company"
-            className={`flex items-center gap-2 rounded-[10px] px-3.5 py-2 text-[17px] font-medium transition-all duration-300 ${
-              isScrolled
-                ? "hover:bg-[#e9e9e9]"
-                : "hover:bg-white/90 hover:text-[#111111]"
-            }`}
+{/* Company */}
+<div className="group relative">
+  <button
+    type="button"
+    className={`flex items-center gap-2 rounded-[10px] px-3.5 py-2 text-[17px] font-medium transition-all duration-300 ${
+      isScrolled
+        ? "group-hover:bg-[#e9e9e9]"
+        : "group-hover:bg-white/90 group-hover:text-[#111111]"
+    }`}
+  >
+    Company
+
+    <span className="transition-transform duration-300 group-hover:rotate-180">
+      <ChevronDown />
+    </span>
+  </button>
+
+  <div
+    className="
+      invisible
+      absolute
+      left-1/2
+      top-full
+      z-[999]
+      pointer-events-none
+      -translate-x-1/2
+      translate-y-3
+      pt-5
+      opacity-0
+      transition-all
+      duration-300
+      group-hover:pointer-events-auto
+      group-hover:visible
+      group-hover:translate-y-0
+      group-hover:opacity-100
+    "
+  >
+    <div
+      className="
+        w-[280px]
+        rounded-[18px]
+        border
+        border-black/5
+        bg-white
+        p-3
+        text-[#111111]
+        shadow-[0_25px_70px_rgba(0,0,0,0.16)]
+      "
+    >
+      <Link
+        href="/company/about"
+        className="
+          group/item
+          flex
+          items-center
+          gap-3
+          rounded-[12px]
+          p-3
+          transition-all
+          duration-300
+          hover:bg-[#fff7f3]
+        "
+      >
+        <span className="flex h-[42px] w-[42px] items-center justify-center rounded-[10px] bg-[#ffebe2] text-[#ff4e0a]">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
           >
-            Company
-            <ChevronDown />
-          </Link>
+            <circle
+              cx="9"
+              cy="8"
+              r="3"
+              stroke="currentColor"
+              strokeWidth="1.7"
+            />
+
+            <path
+              d="M3.5 18C4.2 14.8 6.1 13 9 13C11.9 13 13.8 14.8 14.5 18"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+            />
+
+            <circle
+              cx="16.5"
+              cy="8.5"
+              r="2.5"
+              stroke="currentColor"
+              strokeWidth="1.7"
+            />
+
+            <path
+              d="M15 13.5C18 13.5 20 15.2 20.5 18"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+            />
+          </svg>
+        </span>
+
+        <span className="flex flex-1 items-center justify-between">
+          <span className="text-[16px] font-semibold">
+            About us
+          </span>
+
+          <SubMenuArrow />
+        </span>
+      </Link>
+    </div>
+  </div>
+</div>
 
           {/* Our Work */}
           <Link
