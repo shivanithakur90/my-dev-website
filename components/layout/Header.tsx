@@ -98,6 +98,13 @@ const industriesMenu = [
   },
 ];
 
+const companyMenu = [
+  {
+    name: "About us",
+    href: "/company/about",
+  },
+];
+
 const mobileNavItems = [
   {
     label: "Services",
@@ -113,20 +120,7 @@ const mobileNavItems = [
   },
   {
     label: "Company",
-    links: [
-      {
-        name: "About us",
-        href: "/company",
-      },
-      {
-        name: "Careers",
-        href: "/company",
-      },
-      {
-        name: "Contact",
-        href: "/contact",
-      },
-    ],
+    links: companyMenu,
   },
 ];
 
@@ -255,7 +249,7 @@ export default function Header() {
                   shadow-[0_22px_55px_rgba(0,0,0,0.13)]
                 "
               >
-                <div className="grid grid-cols-2 gap-x-10 gap-y-7 px-8 pb-7 pt-8">
+                <div className="grid grid-cols-2 gap-x-10 gap-y-3 px-8 pb-7 pt-8">
                   {servicesMenu.map((item) => (
                     <Link
                       key={item.name}
@@ -363,7 +357,8 @@ export default function Header() {
             >
              <div
                     className="
-                      w-[520px]
+                      w-[900px]
+                      max-w-[calc(100vw-40px)]
                       max-h-[calc(100vh-110px)]
                       overflow-y-auto
                       rounded-[20px]
@@ -375,7 +370,7 @@ export default function Header() {
                       shadow-[0_25px_70px_rgba(0,0,0,0.18)]
                     "
                   >
-                <div className="grid grid-cols-1 gap-3">
+                <div className="grid grid-cols-2 gap-x-5 gap-y-3">
                   {solutionsMenu.map((item) => (
                     <Link
                       key={item.name}
@@ -424,8 +419,8 @@ export default function Header() {
                       </span>
 
                       {/* Content */}
-                      <span className="flex flex-1 items-start justify-between gap-4">
-                        <span>
+                      <span className="flex min-w-0 flex-1 items-start justify-between gap-3">
+                        <span className="min-w-0">
                           <span
                             className="
                               block
@@ -442,7 +437,7 @@ export default function Header() {
                             className="
                               mt-1.5
                               block
-                              max-w-[340px]
+                              max-w-[300px]
                               text-[14px]
                               leading-[1.45]
                               text-[#626262]
@@ -452,7 +447,7 @@ export default function Header() {
                           </span>
                         </span>
 
-                        <SubMenuArrow className="mt-1" />
+                        <SubMenuArrow className="mt-1 shrink-0" />
                       </span>
                     </Link>
                   ))}
@@ -741,12 +736,12 @@ export default function Header() {
       <div
         className={`overflow-hidden transition-all duration-300 lg:hidden ${
           menuOpen
-            ? "max-h-[2000px] opacity-100"
+            ? "max-h-[calc(100vh-68px)] opacity-100"
             : "max-h-0 opacity-0"
         }`}
       >
         <div
-          className={`border-t px-5 pb-7 pt-3 ${
+          className={`max-h-[calc(100vh-68px)] overflow-y-auto border-t px-5 pb-7 pt-3 ${
             isScrolled
               ? "border-black/10 bg-white"
               : "border-white/15 bg-[linear-gradient(110deg,#1736e8_0%,#4129b9_28%,#9b1f57_57%,#d42a1f_78%,#ef3b00_100%)]"
@@ -760,9 +755,7 @@ export default function Header() {
                 <div
                   key={item.label}
                   className={`border-b ${
-                    isScrolled
-                      ? "border-black/10"
-                      : "border-white/15"
+                    isScrolled ? "border-black/10" : "border-white/15"
                   }`}
                 >
                   <button
@@ -770,9 +763,7 @@ export default function Header() {
                     className="flex w-full items-center justify-between py-4 text-left text-[15px] font-medium"
                     aria-expanded={isOpen}
                     onClick={() =>
-                      setOpenAccordion(
-                        isOpen ? null : item.label
-                      )
+                      setOpenAccordion(isOpen ? null : item.label)
                     }
                   >
                     <span>{item.label}</span>
@@ -786,13 +777,13 @@ export default function Header() {
                     </span>
                   </button>
 
-                 <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        isOpen
-                          ? "max-h-[1200px] pb-4 opacity-100"
-                          : "max-h-0 opacity-0"
-                      }`}
-                    >
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isOpen
+                        ? "max-h-[1400px] pb-4 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
                     <div className="flex flex-col gap-2">
                       {item.links.map((link) => (
                         <Link
@@ -802,60 +793,75 @@ export default function Header() {
                             setMenuOpen(false);
                             setOpenAccordion(null);
                           }}
-                          className={`rounded-xl ${
-                            item.label === "Services" ||
-                            item.label === "Solutions" ||
-                            item.label === "Industries"
-                              ? "bg-white p-3 text-[#111111]"
-                              : isScrolled
-                              ? "px-4 py-3 text-black/70 hover:bg-black/5"
-                              : "px-4 py-3 text-white/80 hover:bg-white/10"
-                          }`}
+                          className="group/mobile-item rounded-xl bg-white p-3 text-[#111111] transition-all duration-300 hover:bg-[#fff7f3]"
                         >
-                          {item.label === "Services" ||
-                          item.label === "Solutions" ||
-                          item.label === "Industries" ? (
-                            <span className="flex items-start gap-3">
-                              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-[#ffebe2] text-[#ff4e0a]">
-                                {item.label === "Services" ? (
-                                  <ServiceIcon name={link.name} />
-                                ) : item.label === "Industries" ? (
-                                  <IndustryIcon name={link.name} />
-                                ) : link.name === "Employee Hub" ? (
-                                  <EmployeeHubIcon />
-                                ) : link.name === "Smart Restaurant" ? (
-                                  <SmartRestaurantIcon />
-                                ) : link.name === "Fleet Dispatch" ? (
-                                  <FleetDispatchIcon />
-                                ) : link.name === "Content Management" ? (
-                                  <ContentManagementIcon />
-                                ) : link.name === "Smart MLM" ? (
-                                  <SmartMLMIcon />
-                                ) : link.name === "MealOps Vendory" ? (
-                                  <MealOpsVendoryIcon />
-                                ) : (
-                                  <EmployeeHubIcon />
-                                )}
-                              </span>
+                          <span className="flex items-center gap-3">
+                            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-[#ffebe2] text-[#ff4e0a]">
+                              {item.label === "Services" ? (
+                                <ServiceIcon name={link.name} />
+                              ) : item.label === "Industries" ? (
+                                <IndustryIcon name={link.name} />
+                              ) : item.label === "Company" ? (
+                                <AboutUsIcon />
+                              ) : link.name === "Employee Hub" ? (
+                                <EmployeeHubIcon />
+                              ) : link.name === "Smart Restaurant" ? (
+                                <SmartRestaurantIcon />
+                              ) : link.name === "Fleet Dispatch" ? (
+                                <FleetDispatchIcon />
+                              ) : link.name === "Content Management" ? (
+                                <ContentManagementIcon />
+                              ) : link.name === "Smart MLM" ? (
+                                <SmartMLMIcon />
+                              ) : link.name === "MealOps Vendory" ? (
+                                <MealOpsVendoryIcon />
+                              ) : (
+                                <EmployeeHubIcon />
+                              )}
+                            </span>
 
-                              <span>
-                                <span className="block text-[15px] font-semibold">
+                            <span className="flex min-w-0 flex-1 items-start justify-between gap-3">
+                              <span className="min-w-0">
+                                <span className="block text-[15px] font-semibold leading-[1.25]">
                                   {link.name}
                                 </span>
 
-                                {"description" in link && (
+                                {"description" in link && link.description && (
                                   <span className="mt-1 block text-[13px] leading-[1.45] text-[#666666]">
                                     {link.description}
                                   </span>
                                 )}
                               </span>
+
+                              <span className="mt-1 shrink-0 text-[#ff4e0a]">
+                                <ArrowRight />
+                              </span>
                             </span>
-                          ) : (
-                            link.name
-                          )}
+                          </span>
                         </Link>
                       ))}
                     </div>
+
+                    {item.label === "Services" && (
+                      <div className="mt-3 rounded-[10px] bg-[linear-gradient(90deg,#ff9568_0%,#ff4e0a_100%)] p-3 text-[#111111]">
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="text-[14px] font-semibold leading-[1.3]">
+                            Looking for something else?
+                          </span>
+
+                          <Link
+                            href="/contact"
+                            onClick={() => {
+                              setMenuOpen(false);
+                              setOpenAccordion(null);
+                            }}
+                            className="shrink-0 rounded-[9px] bg-white px-4 py-2.5 text-[13px] font-semibold text-[#111111]"
+                          >
+                            Talk to sales
+                          </Link>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -863,11 +869,12 @@ export default function Header() {
 
             <Link
               href="/our-work"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+                setOpenAccordion(null);
+              }}
               className={`border-b py-4 text-[15px] font-medium ${
-                isScrolled
-                  ? "border-black/10"
-                  : "border-white/15"
+                isScrolled ? "border-black/10" : "border-white/15"
               }`}
             >
               Our work
@@ -875,22 +882,11 @@ export default function Header() {
 
             <Link
               href="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="
-                mt-6
-                flex
-                w-full
-                items-center
-                justify-between
-                rounded-xl
-                bg-[#ff5708]
-                py-2
-                pl-5
-                pr-2
-                text-[15px]
-                font-semibold
-                text-white
-              "
+              onClick={() => {
+                setMenuOpen(false);
+                setOpenAccordion(null);
+              }}
+              className="mt-6 flex w-full items-center justify-between rounded-xl bg-[#ff5708] py-2 pl-5 pr-2 text-[15px] font-semibold text-white"
             >
               Get a quote
 
@@ -986,6 +982,48 @@ function SubMenuArrow({ className = "" }: { className?: string }) {
         />
       </svg>
     </span>
+  );
+}
+
+function AboutUsIcon() {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle
+        cx="9"
+        cy="8"
+        r="3"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M3.5 18C4.2 14.8 6.1 13 9 13C11.9 13 13.8 14.8 14.5 18"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <circle
+        cx="16.5"
+        cy="8.5"
+        r="2.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+
+      <path
+        d="M15 13.5C18 13.5 20 15.2 20.5 18"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
   );
 }
 
