@@ -71,17 +71,17 @@ export default function Footer() {
   const [openColumn, setOpenColumn] = useState<string | null>(null);
 
   return (
-    <footer className="relative overflow-hidden bg-[#080808] text-white">
+    <footer className="relative overflow-hidden border-t border-[#eeeeee] bg-white text-[#171717]">
 
       <div className="hidden">
         <div className="footer-marquee flex w-max whitespace-nowrap">
-          <span className="shrink-0 pr-16 text-[100px] font-semibold uppercase leading-none tracking-[-5px] text-white/[0.12] sm:text-[130px] lg:text-[165px] xl:text-[190px]">
+          <span className="shrink-0 pr-16 text-[100px] font-semibold uppercase leading-none tracking-[-5px] text-black/[0.06] sm:text-[130px] lg:text-[165px] xl:text-[190px]">
             Innovative Company · For · Innovative Company · For ·
           </span>
 
           <span
             aria-hidden="true"
-            className="shrink-0 pr-16 text-[100px] font-semibold uppercase leading-none tracking-[-5px] text-white/[0.12] sm:text-[130px] lg:text-[165px] xl:text-[190px]"
+            className="shrink-0 pr-16 text-[100px] font-semibold uppercase leading-none tracking-[-5px] text-black/[0.06] sm:text-[130px] lg:text-[165px] xl:text-[190px]"
           >
             Innovative Company · For · Innovative Company · For ·
           </span>
@@ -94,7 +94,7 @@ export default function Footer() {
             <div key={column.title}>
               <button
                 type="button"
-                className="flex w-full items-center justify-between border-b border-white/20 py-4 text-left text-[14px] font-semibold uppercase text-[#ff4d00] sm:hidden"
+                className="flex w-full items-center justify-between border-b border-[#e8e8e8] py-4 text-left text-[14px] font-semibold uppercase text-[#ff4d00] sm:hidden"
                 aria-expanded={openColumn === column.title}
                 onClick={() =>
                   setOpenColumn(
@@ -112,7 +112,7 @@ export default function Footer() {
                 </span>
               </button>
 
-              <h3 className="mb-4 hidden border-b border-white/20 pb-3 text-[14px] font-semibold uppercase text-[#ff4d00] sm:block">
+              <h3 className="mb-4 hidden border-b border-[#e8e8e8] pb-3 text-[14px] font-semibold uppercase text-[#ff4d00] sm:block">
                 {column.title}
               </h3>
 
@@ -125,7 +125,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="inline-block text-[14px] leading-[1.45] text-white transition-all duration-300 hover:translate-x-1 hover:text-[#ff4d00]"
+                      className="inline-block text-[14px] leading-[1.45] text-[#555555] transition-all duration-300 hover:translate-x-1 hover:text-[#ff4d00]"
                     >
                       {link.label}
                     </Link>
@@ -136,7 +136,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col gap-5 border-t border-white/15 pt-6 text-[13px] text-white/60 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-5 border-t border-[#e8e8e8] pt-6 text-[13px] text-[#666666] md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} My Dev Website. All rights reserved.
           </p>
@@ -144,21 +144,21 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-6">
             <Link
               href="/privacy-policy"
-              className="transition hover:text-white"
+              className="transition hover:text-[#ff4d00]"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="/terms"
-              className="transition hover:text-white"
+              className="transition hover:text-[#ff4d00]"
             >
               Terms & Conditions
             </Link>
 
             <Link
               href="/contact"
-              className="transition hover:text-white"
+              className="transition hover:text-[#ff4d00]"
             >
               Contact
             </Link>

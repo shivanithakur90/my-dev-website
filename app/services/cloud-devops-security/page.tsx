@@ -722,26 +722,26 @@ export default function CloudDevopsSecurityPage() {
           ICONS CHANGED ACCORDING TO CONTENT
       ===================================================== */}
       <EmbeddingBenefitsSection
-        eyebrow="WHAT'S INCLUDED"
-        title="Security isn’t an add-on. It’s the default."
+        eyebrow="Trust & compliance"
+        title="Built to meet your compliance bar."
         cards={[
           {
-            title: "On everything we build",
-            icon: <BuiltInSecurityIcon />,
-            description:
-              "Every app we ship is deployed on production infrastructure, with security and monitoring built in from day one — not bolted on after launch. You don't pay extra to have it done right.",
-          },
-          {
-            title: "On systems you already have",
-            icon: <ExistingSystemIcon />,
-            description:
-              "Bring us a system we didn't build. Our specialists assess it, harden it, and set up the infrastructure and monitoring it's missing.",
-          },
-          {
-            title: "Your data stays yours",
+            title: "Your environment",
             icon: <DataOwnershipIcon />,
             description:
-              "Everything runs in your cloud accounts and infrastructure. We work inside your environment — your data and customer information never leave your control.",
+              "We build and run inside your cloud accounts. Your data and customer information never leave your control.",
+          },
+          {
+            title: "Scoped & audited",
+            icon: <BuiltInSecurityIcon />,
+            description:
+              "Role-based access, encryption, and audit trails throughout — so the right people see the right data, and every action is logged.",
+          },
+          {
+            title: "Readiness, not theater",
+            icon: <ComplianceIcon />,
+            description:
+              "Readiness, not theater SOC 2-minded delivery and the DPAs/NDAs your compliance team requires. We prepare you for audit; certification is issued by an accredited auditor.",
           },
         ]}
       />
@@ -927,13 +927,13 @@ export default function CloudDevopsSecurityPage() {
         description="Whether we built it or you did — tell us what needs to scale and staysafe. We'll assess it on a 30-minute call and send a quote within 48hours."
         buttonText="Start a conversation"
         buttonHref="/contact"
-        backgroundColor="#040d20"
+        backgroundColor="#f7f7fb"
         leftGlowColor="#e8772c"
         centerGlowColor="#ff5708"
         rightGlowColor="#e95d25"
         paddingClassName="pt-[0px] pb-[50px] sm:pt-[0px] sm:pb-[50px] lg:pt-[0px] lg:pb-[80px]"
-        headingColor="#fff"
-        descriptionColor="#fff" buttonIcon={undefined} />
+        headingColor="#171717"
+        descriptionColor="#555555" buttonIcon={undefined} />
     </main>
   );
 }

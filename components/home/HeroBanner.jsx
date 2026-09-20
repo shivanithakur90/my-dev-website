@@ -112,13 +112,13 @@ export default function HeroBanner() {
             <div className="mx-auto w-full max-w-[1320px]">
               {/* Title */}
               <div className="flex w-full items-center justify-center gap-6 px-3 md:gap-8 lg:gap-10">
-                <div className="hidden h-px w-[220px] bg-black/20 md:block lg:w-[350px]" />
+                <div className="hidden h-px w-[220px] bg-white/30 md:block lg:w-[350px]" />
 
                 <p className="shrink-0 text-center text-[13px] font-medium text-[#555] md:text-[15px]">
                   Trusted by over 250+ high-performing companies
                 </p>
 
-                <div className="hidden h-px w-[220px] bg-black/20 md:block lg:w-[350px]" />
+                <div className="hidden h-px w-[220px] bg-white/30 md:block lg:w-[350px]" />
               </div>
 
               {/* Marquee */}
