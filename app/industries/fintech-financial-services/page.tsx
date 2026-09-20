@@ -457,34 +457,7 @@ export default function FintechFinancialServicesPage() {
         ]}
       />
 
-      {/* =====================================================
-          SERVICES
-      ===================================================== */}
-
-      <IndustryServicesSection
-        eyebrow="SERVICES"
-        title="Services that fit this industry."
-        cards={[
-          {
-            title: "AI & Intelligent Automation",
-            image: "/cloud-dev.avif",
-            href: "/services/ai-automation",
-            ctaLabel: "Explore",
-          },
-          {
-            title: "Systems Integration & API Development",
-            image: "/systems-inte.avif",
-            href: "/services/api-development",
-            ctaLabel: "Explore",
-          },
-          {
-            title: "Cloud, DevOps & Security",
-            image: "/cloud-dev.avif",
-            href: "/services/cloud-devops-security",
-            ctaLabel: "Explore",
-          },
-        ]}
-      />
+     
 
       {/* =====================================================
           HOW WE BUILD IT

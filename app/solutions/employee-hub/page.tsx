@@ -4,6 +4,7 @@ import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
+import StackCtaSection from "@/components/home/StackCtaSection";
 
 export const metadata: Metadata = {
   title: "Employee Hub",
@@ -50,7 +51,7 @@ export default function CustomSoftwarePlatformsPage() {
     <div>
       {/* HERO SECTION */}
       <PageHeroBanner
-       eyebrow="EMPLOYEE HUB"
+        eyebrow="EMPLOYEE HUB"
         title="Run your entire operation from one connected platform."
         description="Replace disconnected tools, spreadsheets, and manual processes with custom business software built around the way your team actually works."
         image="/ERP-1.png"
@@ -185,6 +186,21 @@ export default function CustomSoftwarePlatformsPage() {
               "As your business grows, new modules, users, locations, integrations, and workflows can be added without rebuilding everything.",
           },
         ]}
+      />
+
+      <StackCtaSection
+        heading="Let's connect your stack."
+        description="Tell us what needs to talk to what. We'll design the integration layer."
+        buttonText="Start a conversation"
+        buttonHref="/contact"
+        backgroundColor="#040d20"
+        leftGlowColor="#e8772c"
+        centerGlowColor="#ff5708"
+        rightGlowColor="#e95d25"
+        paddingClassName="pt-[0px] pb-[50px] sm:pt-[0px] sm:pb-[50px] lg:pt-[0px] lg:pb-[80px]"
+        headingColor="#fff"
+        descriptionColor="#fff"
+        buttonIcon={undefined}
       />
     </div>
   );

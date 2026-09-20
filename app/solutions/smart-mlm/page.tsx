@@ -3,6 +3,7 @@ import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
+import StackCtaSection from "@/components/home/StackCtaSection";
 
 export const metadata: Metadata = {
   title: "Smart MLM",
@@ -141,6 +142,20 @@ export default function SmartMLMPage() {
               "Real-time dashboards help you monitor joinings, sales, network growth, balances, credits, debits, commissions, and payout activity as your business scales.",
           },
         ]}
+      />
+      <StackCtaSection
+        heading="Let's connect your stack."
+        description="Tell us what needs to talk to what. We'll design the integration layer."
+        buttonText="Start a conversation"
+        buttonHref="/contact"
+        backgroundColor="#040d20"
+        leftGlowColor="#e8772c"
+        centerGlowColor="#ff5708"
+        rightGlowColor="#e95d25"
+        paddingClassName="pt-[0px] pb-[50px] sm:pt-[0px] sm:pb-[50px] lg:pt-[0px] lg:pb-[80px]"
+        headingColor="#fff"
+        descriptionColor="#fff"
+        buttonIcon={undefined}
       />
     </div>
   );
