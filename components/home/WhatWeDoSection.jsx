@@ -1,6 +1,6 @@
 export default function WhatWeDoSection() {
   return (
-    <section className="w-full bg-white pb-50px pt-[50px] md:py-[50px]">
+    <section className="w-full pb-50px pt-[50px] md:py-[50px]">
       <div className="container">
 
         {/* Top Content */}

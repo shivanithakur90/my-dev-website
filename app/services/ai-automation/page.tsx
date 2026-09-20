@@ -322,13 +322,13 @@ export default function AiAutomationPage() {
         description="Tell us where your team is spending time on repetitive work. We'll scope an automation on a 30-minute call and send a fixed-price quote within 48 hours."
         buttonText="Start a conversation"
         buttonHref="/contact"
-        backgroundColor="#f7f7fb"
+        backgroundColor="#040d20"
         leftGlowColor="#e8772c"
         centerGlowColor="#ff5708"
         rightGlowColor="#e95d25"
         paddingClassName="pt-[0px] pb-[50px] sm:pt-[0px] sm:pb-[50px] lg:pt-[0px] lg:pb-[80px]"
-        headingColor="#171717"
-        descriptionColor="#555555" buttonIcon={undefined} />
+        headingColor="#fff"
+        descriptionColor="#fff" buttonIcon={undefined} />
     </div>
   );
 }

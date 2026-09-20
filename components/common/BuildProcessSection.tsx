@@ -53,21 +53,21 @@ export default function BuildProcessSection({
   return (
     <div className="container">
     <section className={`bg-[#fff] py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px] ${className}`}>
-      <div className="relative mx-auto max-w-full overflow-hidden rounded-[30px] border border-[#e8e8e8] bg-[#f7f7fb] px-5 py-[70px] sm:px-8 md:px-12 md:py-[85px] lg:px-12">
+      <div className="relative mx-auto max-w-full overflow-hidden rounded-[30px] bg-[#0e0e11] px-5 py-[70px] sm:px-8 md:px-12 md:py-[85px] lg:px-12">
         
         {/* Grid Background */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.12]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(23,23,23,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(23,23,23,0.06) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
             backgroundSize: "48px 48px",
             transform: "rotate(-18deg) scale(1.35)",
           }}
         />
 
         {/* Soft Glow */}
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[700px] -translate-x-1/2 rounded-full bg-[#ffe3d6] blur-[100px]" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[700px] -translate-x-1/2 rounded-full bg-white/[0.03] blur-[100px]" />
 
         <div className="relative z-10">
           {/* Heading Area */}
@@ -88,14 +88,14 @@ export default function BuildProcessSection({
 
             {/* Title */}
             {title && (
-              <h2 className="max-w-[950px] text-[34px] font-semibold leading-[1.08] tracking-[-0.045em] text-[#171717] sm:text-[40px] md:text-[48px] lg:text-[52px]">
+              <h2 className="max-w-[950px] text-[34px] font-semibold leading-[1.08] tracking-[-0.045em] text-white sm:text-[40px] md:text-[48px] lg:text-[52px]">
                 {title}
               </h2>
             )}
 
             {/* Description */}
             {description && (
-              <p className="mt-7 max-w-[950px] text-[15px] font-medium leading-[1.65] text-[#5f5f5f] sm:text-[17px] md:text-[18px]">
+              <p className="mt-7 max-w-[950px] text-[15px] font-medium leading-[1.65] text-white/70 sm:text-[17px] md:text-[18px]">
                 {description}
               </p>
             )}
@@ -107,7 +107,7 @@ export default function BuildProcessSection({
               {cards.map((card, index) => (
                 <article
                   key={`${card.title}-${index}`}
-                  className="min-h-[180px] rounded-[16px] border border-[#e1e1e1] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#ff5200]/60 hover:bg-[#fff8f5] sm:p-7"
+                  className="min-h-[180px] rounded-[16px] border border-white/[0.14] bg-[#19191f]/95 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#ff5200]/60 hover:bg-[#1d1d23] sm:p-7"
                 >
                   {card.title && (
                     <h3 className="text-[18px] font-semibold leading-[1.3] text-[#ff5200] sm:text-[19px]">
@@ -116,7 +116,7 @@ export default function BuildProcessSection({
                   )}
 
                   {card.description && (
-                    <p className="mt-4 text-[15px] font-medium leading-[1.55] text-[#5f5f5f] sm:text-[16px]">
+                    <p className="mt-4 text-[15px] font-medium leading-[1.55] text-white/85 sm:text-[16px]">
                       {card.description}
                     </p>
                   )}

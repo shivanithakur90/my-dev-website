@@ -305,13 +305,13 @@ export default function CustomApplicationDevelopmentPage() {
         description="Tell us what your team uses and what you're trying to solve. We'll send back a tailored example walkthrough and a custom quote within 48 hours."
         buttonText="Start a conversation"
         buttonHref="/contact"
-        backgroundColor="#f7f7fb"
+        backgroundColor="#040d20"
         leftGlowColor="#e8772c"
         centerGlowColor="#ff5708"
         rightGlowColor="#e95d25"
         paddingClassName="pt-[50px] pb-[50px] sm:pt-[50px] sm:pb-[50px] lg:pt-[80px] lg:pb-[80px]"
-        headingColor="#171717"
-        descriptionColor="#555555" buttonIcon={undefined} />
+        headingColor="#fff"
+        descriptionColor="#fff" buttonIcon={undefined} />
     </div>
   );
 }
