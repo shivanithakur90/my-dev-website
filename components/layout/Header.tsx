@@ -172,7 +172,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2.5">
           <span
             className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 ${
-              isScrolled ? "bg-[#ff5708]" : "bg-white"
+              isScrolled ? "bg-black" : "bg-white"
             }`}
           >
             <svg

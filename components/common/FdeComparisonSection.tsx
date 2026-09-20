@@ -38,13 +38,13 @@ export default function FdeComparisonSection({
   return (
     <section className={`bg-[#eef8ff] px-4 py-[50px] sm:px-6 sm:py-[70px] lg:py-[80px] ${className}`}>
         <div className="container">
-            <div className="relative mx-auto max-w-full overflow-hidden rounded-[30px] border border-[#e8e8e8] bg-white px-5 py-[60px] text-[#171717] sm:px-8 sm:py-[70px] lg:px-[44px] lg:py-[65px]">
+            <div className="relative mx-auto max-w-full overflow-hidden rounded-[30px] bg-[#0e0e11] px-5 py-[60px] text-white sm:px-8 sm:py-[70px] lg:px-[44px] lg:py-[65px]">
                 {/* GRID BACKGROUND */}
                 <div className=" pointer-events-none absolute inset-0 opacity-100"
                 style={{
                     backgroundImage: `
-                    linear-gradient(rgba(23,23,23,0.055) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(23,23,23,0.055) 1px, transparent 1px)
+                    linear-gradient(rgba(255,255,255,0.055) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px)
                     `,
                     backgroundSize: "180px 142px",
                 }}
@@ -77,7 +77,7 @@ export default function FdeComparisonSection({
                         font-semibold
                         leading-[1.06]
                         tracking-[-0.045em]
-                        text-[#171717]
+                        text-white
                         sm:text-[42px]
                         md:text-[48px]
                         lg:text-[50px]
@@ -95,7 +95,7 @@ export default function FdeComparisonSection({
                         max-w-[720px]
                         text-[15px]
                         leading-[1.65]
-                        text-[#5f5f5f]
+                        text-white/75
                         sm:text-[17px]
                         "
                     >
@@ -112,7 +112,7 @@ export default function FdeComparisonSection({
                         max-w-[720px]
                         text-[15px]
                         leading-[1.65]
-                        text-[#5f5f5f]
+                        text-white/75
                         sm:text-[17px]
                         "
                     >
@@ -161,12 +161,12 @@ function ComparisonCard({
         sm:py-8
         ${
           isPositive
-            ? "border-[#9ddfba] bg-[#f0fff6]"
-            : "border-[#f4b8b3] bg-[#fff7f6]"
+            ? "border-[#076b34] bg-[#042e18]"
+            : "border-[#35353d] bg-[#202025]"
         }
       `}
     >
-      <h3 className="text-[18px] font-semibold leading-[1.25] text-[#171717] sm:text-[20px]">
+      <h3 className="text-[18px] font-semibold leading-[1.25] text-white sm:text-[20px]">
         {column.title}
       </h3>
 
@@ -190,7 +190,7 @@ function ComparisonCard({
               )}
             </span>
 
-            <span className="text-[14px] leading-[1.45] text-[#4f4f4f] sm:text-[15px]">
+            <span className="text-[14px] leading-[1.45] text-white sm:text-[15px]">
               {item}
             </span>
           </div>
