@@ -388,25 +388,25 @@ const manufacturingTabs: SolutionTab[] = [
   {
     id: "inventory",
     label: "Content Management",
-    image: "/images/inventory-dashboard.png",
+    image: "/erp-4.png",
     Icon: "inventory",
   },
   {
     id: "vendor",
     label: "Network Marketing",
-    image: "/images/vendor-dashboard.png",
+    image: "/erp-7.png",
     Icon: "vendor",
   },
   {
     id: "erp",
-    label: "Reservations",
-    image: "/images/erp-dashboard.png",
+    label: "Kitchen Operations",
+    image: "/erp-6.png",
     Icon: "erp",
   },
   {
     id: "project",
-    label: "Project Management",
-    image: "/images/project-dashboard.png",
+    label: "Reservations",
+    image: "/erp-5.png",
     Icon: "project",
   },
 ];
@@ -476,11 +476,10 @@ export default function ManufacturingDistributionPage() {
         ]}
       />
 
-       <SolutionsTabs
+      <SolutionsTabs
         heading="Solutions for manufacturing."
         description="The operations apps we build most often for manufacturers and distributors."
         tabs={manufacturingTabs}
-        defaultTab="project"
       />
       
 
