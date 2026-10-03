@@ -12,7 +12,7 @@ type HowWeDeliverSectionProps = {
   title: string;
   description?: string;
 
-  image: string;
+  image?: string;
   imageAlt?: string;
 
   cards: DeliverCard[];
@@ -38,6 +38,7 @@ export default function HowWeDeliverSection({
   className = "",
   imageClassName = "",
 }: HowWeDeliverSectionProps) {
+  const imageSrc = image?.trim();
   const defaultCardIcons = [
     <DiscoverIcon key="discover" />,
     <BuildIntegrateIcon key="build" />,
@@ -79,10 +80,11 @@ export default function HowWeDeliverSection({
         </div>
 
         {/* LARGE IMAGE */}
+        {imageSrc && (
         <div className="mx-auto mt-[55px] max-w-full overflow-hidden rounded-[22px] border border-[#f0d0c3] bg-[#fffaf8]">
           <div className="relative aspect-[2.5/1] w-full sm:aspect-[2.8/1] lg:aspect-[3.15/1]">
             <Image
-              src={image}
+              src={imageSrc}
               alt={imageAlt}
               fill
               sizes="(max-width: 768px) 100vw, 1080px"
@@ -90,6 +92,7 @@ export default function HowWeDeliverSection({
             />
           </div>
         </div>
+        )}
 
         {/* CARDS */}
         <div className="mx-auto mt-7 grid max-w-full grid-cols-1 gap-4 md:grid-cols-2">

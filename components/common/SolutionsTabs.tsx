@@ -21,6 +21,8 @@ type SolutionsTabsProps = {
   description: string;
   tabs: SolutionTab[];
   defaultTab?: string;
+  className?: string;
+  paddingClassName?: string;
 };
 
 function InventoryIcon({ className }: IconProps) {
@@ -114,6 +116,8 @@ export default function SolutionsTabs({
   description,
   tabs,
   defaultTab,
+  className = "",
+  paddingClassName = "py-[90px] max-md:py-[55px]",
 }: SolutionsTabsProps) {
   const initialTab = defaultTab || tabs[0]?.id || "";
 
@@ -125,11 +129,11 @@ export default function SolutionsTabs({
   if (!activeItem) return null;
 
   return (
-    <section className="w-full bg-white py-[90px] max-md:py-[55px]">
+    <section className={`w-full bg-white ${paddingClassName} ${className}`}>
       <div className="mx-auto w-full max-w-[1450px] px-5 max-md:px-4">
 
         {/* Heading */}
-        <div className="mb-[58px] text-center max-md:mb-9">
+        <div className="mb-[38px] text-center max-md:mb-9">
           <h2 className="text-[52px] font-semibold leading-[1.05] tracking-[-2px] text-[#1d1d1f] max-lg:text-[44px] max-md:text-[34px] max-md:tracking-[-1px]">
             {heading}
           </h2>
@@ -163,7 +167,7 @@ export default function SolutionsTabs({
                   text-center
                   transition-all
                   duration-300
-
+                  cursor-pointer
                   max-md:min-h-[88px]
                   max-md:min-w-[220px]
 

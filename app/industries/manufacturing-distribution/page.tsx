@@ -480,6 +480,7 @@ export default function ManufacturingDistributionPage() {
         heading="Solutions for manufacturing."
         description="The operations apps we build most often for manufacturers and distributors."
         tabs={manufacturingTabs}
+        paddingClassName="py-[0px] max-md:py-[0px]"
       />
       
 

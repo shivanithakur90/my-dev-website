@@ -5,6 +5,26 @@ export type BuildProcessCard = {
   description: string;
 };
 
+const defaultClassNames = {
+  container: "container",
+  panel: "relative mx-auto max-w-full overflow-hidden rounded-[30px] bg-[#0e0e11] px-5 py-[70px] sm:px-8 md:px-12 md:py-[85px] lg:px-12",
+  gridBackground: "pointer-events-none absolute inset-0 opacity-[0.12]",
+  glow: "pointer-events-none absolute left-1/2 top-0 h-[300px] w-[700px] -translate-x-1/2 rounded-full bg-white/[0.03] blur-[100px]",
+  content: "relative z-10",
+  header: "mx-auto flex max-w-[1000px] flex-col items-center text-center",
+  eyebrow: "mb-7 inline-flex items-center gap-2.5 rounded-[9px] bg-white px-4 py-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.2)]",
+  icon: "flex items-center justify-center text-[#ff5200]",
+  eyebrowText: "text-[12px] font-semibold uppercase tracking-[0.08em] text-[#29272b] sm:text-[13px]",
+  title: "max-w-[950px] text-[34px] font-semibold leading-[1.08] tracking-[-0.045em] text-white sm:text-[40px] md:text-[48px] lg:text-[52px]",
+  description: "mt-7 max-w-[950px] text-[15px] font-medium leading-[1.65] text-white/70 sm:text-[17px] md:text-[18px]",
+  cards: "mt-14 grid grid-cols-1 gap-5 md:mt-[65px] md:grid-cols-3 md:gap-7",
+  card: "min-h-[180px] rounded-[16px] border border-white/[0.14] bg-[#19191f]/95 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#ff5200]/60 hover:bg-[#1d1d23] sm:p-7",
+  cardTitle: "text-[18px] font-semibold leading-[1.3] text-[#ff5200] sm:text-[19px]",
+  cardDescription: "mt-4 text-[15px] font-medium leading-[1.55] text-white/85 sm:text-[16px]",
+};
+
+export type BuildProcessClassNames = Partial<typeof defaultClassNames>;
+
 type BuildProcessSectionProps = {
   eyebrow?: string;
   title?: string;
@@ -12,6 +32,10 @@ type BuildProcessSectionProps = {
   icon?: ReactNode;
   cards?: BuildProcessCard[];
   className?: string;
+  paddingClassName?: string;
+  sectionClassName?: string;
+  /** Supplied slot classes replace that slot’s defaults. */
+  classNames?: BuildProcessClassNames;
 };
 
 function DefaultBuildIcon() {
@@ -49,15 +73,20 @@ export default function BuildProcessSection({
   icon,
   cards = [],
   className = "",
+  paddingClassName = "py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]",
+  sectionClassName = "bg-[#fff]",
+  classNames,
 }: BuildProcessSectionProps) {
+  const styles = { ...defaultClassNames, ...classNames };
+
   return (
-    <div className="container">
-    <section className={`bg-[#fff] py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px] ${className}`}>
-      <div className="relative mx-auto max-w-full overflow-hidden rounded-[30px] bg-[#0e0e11] px-5 py-[70px] sm:px-8 md:px-12 md:py-[85px] lg:px-12">
+    <div className={styles.container}>
+    <section className={`${sectionClassName} ${paddingClassName} ${className}`}>
+      <div className={styles.panel}>
         
         {/* Grid Background */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.12]"
+          className={styles.gridBackground}
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
@@ -67,20 +96,20 @@ export default function BuildProcessSection({
         />
 
         {/* Soft Glow */}
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[700px] -translate-x-1/2 rounded-full bg-white/[0.03] blur-[100px]" />
+        <div className={styles.glow} />
 
-        <div className="relative z-10">
+        <div className={styles.content}>
           {/* Heading Area */}
-          <div className="mx-auto flex max-w-[1000px] flex-col items-center text-center">
+          <div className={styles.header}>
             
             {/* Eyebrow */}
             {eyebrow && (
-              <div className="mb-7 inline-flex items-center gap-2.5 rounded-[9px] bg-white px-4 py-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
-                <span className="flex items-center justify-center text-[#ff5200]">
+              <div className={styles.eyebrow}>
+                <span className={styles.icon}>
                   {icon ?? <DefaultBuildIcon />}
                 </span>
 
-                <span className="text-[12px] font-semibold uppercase tracking-[0.08em] text-[#29272b] sm:text-[13px]">
+                <span className={styles.eyebrowText}>
                   {eyebrow}
                 </span>
               </div>
@@ -88,14 +117,14 @@ export default function BuildProcessSection({
 
             {/* Title */}
             {title && (
-              <h2 className="max-w-[950px] text-[34px] font-semibold leading-[1.08] tracking-[-0.045em] text-white sm:text-[40px] md:text-[48px] lg:text-[52px]">
+              <h2 className={styles.title}>
                 {title}
               </h2>
             )}
 
             {/* Description */}
             {description && (
-              <p className="mt-7 max-w-[950px] text-[15px] font-medium leading-[1.65] text-white/70 sm:text-[17px] md:text-[18px]">
+              <p className={styles.description}>
                 {description}
               </p>
             )}
@@ -103,20 +132,20 @@ export default function BuildProcessSection({
 
           {/* Cards */}
           {cards.length > 0 && (
-            <div className="mt-14 grid grid-cols-1 gap-5 md:mt-[65px] md:grid-cols-3 md:gap-7">
+            <div className={styles.cards}>
               {cards.map((card, index) => (
                 <article
                   key={`${card.title}-${index}`}
-                  className="min-h-[180px] rounded-[16px] border border-white/[0.14] bg-[#19191f]/95 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#ff5200]/60 hover:bg-[#1d1d23] sm:p-7"
+                  className={styles.card}
                 >
                   {card.title && (
-                    <h3 className="text-[18px] font-semibold leading-[1.3] text-[#ff5200] sm:text-[19px]">
+                    <h3 className={styles.cardTitle}>
                       {card.title}
                     </h3>
                   )}
 
                   {card.description && (
-                    <p className="mt-4 text-[15px] font-medium leading-[1.55] text-white/85 sm:text-[16px]">
+                    <p className={styles.cardDescription}>
                       {card.description}
                     </p>
                   )}
