@@ -2532,63 +2532,113 @@ export const blogs: ResourceItem[] = [
 
         text:
 
-          "Starting an Amazon business involves choosing products, understanding marketplace fees, creating listings and building a reliable fulfilment process.",
+          "Today, Amazon is one of the biggest online marketplace in the whole world. Believe it or not, it is super easy to sell on Amazon and you can do it anytime (yes, you!). To start your online business with Amazon you do not require a lot of money. Actually, you don't even need to maintain any inventory! If you really want to know how to start an Amazon business, all you will need is...determination... a little bit of time... and grit.  Earlier selling products online was an expensive and time consuming task. Nowadays, you can start selling online with just a Smartphone and sometimes a Laptop. The question is what is the very best way to begin with? For many budding entrepreneurs, the answer is simple “Amazon”. All you have to do is understand how to start an Amazon business. With millions of users worldwide and a popularity that no one can question about, Amazon is the best platform to start selling products online.",
 
       },
 
       {
 
         type: "heading",
+        text: "Amazon Business Statistics",
 
-        text: "Basic Steps to Start Selling",
-
       },
 
       {
         type: "paragraph",
-        text: "Research potential products.",
+        text: "Not merely is Amazon a favorite place to buy products today given its ease and its reach; it's an amazing place to sell your products. Here are a number of statistics that show how vast the Amazon marketplace actually is.",
       },
       {
         type: "paragraph",
-        text: "Understand marketplace fees.",
+        text: " - Amazon has a market share of around 31.2% in India.",
       },
       {
         type: "paragraph",
-        text: "Create a seller account.",
+        text: " - Amazon already has an access to over 95% pin codes in India.",
       },
       {
         type: "paragraph",
-        text: "Prepare product information.",
+        text: " - A report says Amazon has nearly 10 million users in India",
       },
       {
         type: "paragraph",
-        text: "Create optimized listings.",
+        text: " - 40% of all users of Amazon pay for their membership.",
       },
       {
         type: "paragraph",
-        text: "Choose a fulfilment approach.",
+        text: " - India is likely to contribute up to 20% of Amazon’s growth in next 5 years.",
       },
-      {
-        type: "paragraph",
-        text: "Manage inventory and customer service.",
-      },
+
 
       {
 
         type: "heading",
-
-        text: "Product Research Matters",
+        text: "How to Start an Amazon Business:",
 
       },
 
       {
-
         type: "paragraph",
+        text: "Starting selling your products on Amazon requires only a few steps.",
+      },
+      {
+        type: "paragraph",
+        text: " - To begin with, you will need to know the basics of Ecommerce.",
+      },
+      {
+        type: "paragraph",
+        text: " - Second, you will need to choose what to sell on Amazon and find a good supplier of your products.",
+      },
+      {
+        type: "paragraph",
+        text: " - Finally, get the setup done for your shop on Amazon and start selling. When you're finished, you will be well on your way to achieve your Amazon success.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're ready to learn how to start an Amazon business, Lets begin with knowing Ecommerce. If you've done research into promoting goods online, You must have come across many websites telling you about ecommerce.",
+      },
+      {
+        type: "paragraph",
+        text: "Here's how it works:",
+      },
+      {
+        type: "paragraph",
+        text: " - Initially, you pick merchandise to sell.",
+      },
+      {
+        type: "paragraph",
+        text: " - Next, you find a provider for all those items.",
+      },
+      {
+        type: "paragraph",
+        text: " - Then, you sell them through your own ecommerce website or by opening a shop on other ecommerce platforms such as Amazon.",
+      },
 
-        text:
 
-          "Demand alone is not enough. Sellers should also evaluate competition, margins, shipping costs, return rates and supplier reliability.",
+      {
+        type: "heading",
+        text: "What's Fulfilment From Amazon (FBA) Service?",
+      },
+      {
+        type: "paragraph",
+        text: "There are several techniques to do ecommerce using Amazon. Among the most well-known techniques is to leverage their own Fulfillment By Amazon (FBA) services. With this service, Amazon will stock your products at their warehouse and fulfil orders on your behalf. They will even provide customer support and handle returns for you. All you have to do is provide your products to the Amazon’s warehouse. Using this service means you don&#39;t need to worry about finding a warehouse for your goods or packing and shipping out orders. This simplifies nearly all of the problems of selling goods online lie delivery and warehousing, letting you focus on growing and expanding your business. FBA is also attractive because it provides Amazon benefits (like free shipping and Prime perks) on your products. Many entrepreneurs around the world have made their careers by selling through Amazon’s FBA program and you could also do it with a little help.",
+      },
 
+      {
+        type: "heading",
+        text: "Here’s all you Will Need to get started:",
+      },
+      {
+        type: "paragraph",
+        text: "A Smartphone/Computer- you do not need anything fancy to start your business on Amazon, just a device to connect you with internet and someone like Company to teach you how to do it.",
+      },
+
+      {
+        type: "heading",
+        text: "Startup Costs",
+      },
+      {
+        type: "paragraph",
+        text: "Despite the fact that you do not require a very big amount of investment to begin, you should be prepared to make some investments. Specifically, you will need to pay to your suppliers for the products you want to sell on your store. See? It is possible to start a business with just a small investment.",
       },
 
     ],
@@ -2629,59 +2679,79 @@ export const blogs: ResourceItem[] = [
 
         text:
 
-          "Digital marketing often combines SEO, paid advertising, analytics, content, email and social media. Managing every channel internally can require significant time and specialist knowledge.",
+          "Well, now, when you have finally decided to invest over the tools for your business to grow online. We have shortlisted some marketing options for you to start from; you&#39;ve got SEO, EMAIL, PPC, SOCIAL MEDIA, BLOGGING, and so on.  Confused about where to start from, right? Don't Worry, That's Normal. You know, Digital Marketing is a very wide term that represents a wide range of online methods of marketing and growing your business. So, it can be difficult for you as a person with no or very less knowledge of digital marketing to run large-scale campaigns if your company lacks the resources, time, and expertise required for running and optimizing the campaign. Because of that reason, it is smart to outsource your marketing work to a Digital Marketing Agency to provide its expertise to you. In this post, we will give you the reasons why you should hire a Digital Marketing Agency. Let's get started",
 
       },
 
       {
 
         type: "heading",
+        text: "Run Your Business With Complete Focus: ",
 
-        text: "Reasons Businesses Work With Agencies",
-
-      },
-
-      {
-        type: "paragraph",
-        text: "Access to specialists.",
       },
       {
         type: "paragraph",
-        text: "Campaign planning.",
+        text: "In general, online marketing refers to hiring a team of talented marketers to run your marketing campaigns. But that's not it; it will require a lot of your attention to managing an in-house team. Don't ignore that it will require many resources to just set up the team and the campaign. Hiring a complete in-house team can be a time consuming task, and a digital marketing agency can help take your burden off your shoulder. You wouldn't like to waste your time wasting your time organizing and training your in-house team. That time can be utilized in the other way round for growing your business from the inside. It would help if you simply shared your goal and their timeframe to a digital marketing",
       },
       {
         type: "paragraph",
-        text: "Marketing technology support.",
+        text: "agency. Isn't that great?",
       },
       {
         type: "paragraph",
-        text: "Performance reporting.",
+        text: "The agency's in-house team will do all the required works for your Brand's marketing, and you will be free to pay attention to other important tasks you need to do to grow your business.",
       },
-      {
-        type: "paragraph",
-        text: "Content production.",
-      },
-      {
-        type: "paragraph",
-        text: "Cross-channel strategy.",
-      },
+      
 
       {
-
         type: "heading",
-
-        text: "An Agency Should Still Be Accountable",
-
+        text: "Cost-Effective Approach ",
       },
-
       {
-
         type: "paragraph",
-
         text:
+          "While deciding to hire a digital marketing agency, many brands usually compare the cost of hiring an agency to the cost of hiring an in-house team. Do you know what the surprise is?  Hiring an agency can be more cost-effective than setting up a complete in-house team. As agencies are independent contractors, you eliminate the amount of payroll taxes. You also cut your recurring expenses of hiring employees of your own such as healthcare costs, salaries, and other benefits. The tools you are required to purchase in order to equip your in-house team with good weapons to fight for you in this competitive world of online marketing also come at a heavy one-time payment or subscription. ",
+      },
 
-          "Businesses should define measurable goals and maintain visibility into campaign data rather than outsourcing decision-making completely.",
+      {
+        type: "heading",
+        text: "Work With The Industry Experts ",
+      },
+      {
+        type: "paragraph",
+        text:
+          "As a small business or even as a big brand, it&#39;s not always very easy to hire digital marketing experts at the beginning of your campaigns. This is something that takes time and proper consideration. Plus, it can be very time taking for your newly hired team to understand digital marketing techniques like SEO strategies and Social Media Marketing. Instead of wasting your time and resources in hiring a team of your own, you can easily hire a team of qualified experts by working with a digital marketing agency. Some big companies even pay a handsome amount of money to hire and retain their companies top talents. This proves that the cost of hiring digital marketing experts for your Brand can cost you a",
+      },
 
+
+      {
+        type: "heading",
+        text: "Relevancy to Your Industry",
+      },
+      {
+        type: "paragraph",
+        text:
+          "By now, you must have understood that how important it is to do proper research before launching any campaign for your Brand. You need to do proper research about your industry, competitors and their strategies, and the latest marketing practices in your industry. When you hire an agency to work for you, it&#39;s their duty to do the research for you to give you expected results. Along with that, they need to follow the latest developments in digital marketing to deliver the results to maintain their relationship with you as a client. They will also research your audience to learn your audience&#39;s behavior, preferences, and interest-based on their online activity. They do this to prepare a perfect marketing strategy that is best for you and analyze it later to optimize your campaign properly.  ",
+      },
+
+      {
+        type: "heading",
+        text: ".You Can Get New Ideas ",
+      },
+      {
+        type: "paragraph",
+        text:
+          "In the world of digital marketing, you cannot expect every campaign to be successful. Sometimes they can be a huge success, and sometimes the results can be really disappointing. A good agency will always give you great ideas that can be of your profit as they are working in the industry with different clients like you. For example, in terms of Social Media Marketing, your agency will help you to find out where your target audience really is and target them at the right place where they will engage with your Brand.",
+      },
+
+      {
+        type: "heading",
+        text: "Grow Your Business with a Digital Marketing Agency",
+      },
+      {
+        type: "paragraph",
+        text:
+          "One proven fact is that a digital marketing agency has the power to take your business from Base to Brand. Hiring a digital marketing agency will allow you to start your marketing campaign in no time without wasting any time. While going to hire an agency, always start by understanding what you want from the agency and explaining to them the same. Digital Marketing is done in the best way when both parties involved are on the same page. Along with that, the agency you hire should enjoy the leverage of making decisions for your Brand that are suitable for the best implementation of the strategies for your Brand.  ",
       },
 
     ],
@@ -2726,62 +2796,110 @@ export const blogs: ResourceItem[] = [
 
         text:
 
-          "SEO and PPC are both search marketing approaches, but they differ in cost structure, speed, control and long-term value.",
+          "It had been mentioned before, but it bears repeating: Traffic is the lifeblood of any online business. The success of an online business largely depends on the number of visitors it can generate for its web pages. This really is an undoubtable fact.  The topic for a lot of debates these days, however, is that the subject of SEO vs. PPC is two of the most effective and powerful traffic generating techniques. Even though their end goal is the same, they are different concepts that require different strategies and methods.  Both are effective methods of driving traffic to a website. Still, one strategy can work very well for certain circumstances; while using the other, you might encounter problems generating visitors in the same situation.  To succeed with one method, or with both of them, marketers should understand their limitations and strengths in order to implement them correctly under optimal conditions.",
 
       },
 
       {
 
         type: "heading",
-
-        text: "SEO",
-
+        text: "When to use SEO?",
       },
-
       {
-
         type: "paragraph",
-
         text:
-
-          "SEO focuses on improving organic visibility through technical optimization, content, authority and user experience.",
-
+          "SEO refers to a group of activities aimed at moving a website to the first page of the major search engines. Search Engine Optimization is essential for online businesses, as data show that 80 % of the traffic coming on any website will come from the various search engines. The greatest search engine is unquestionably Google, which garners over 3.5 billion searches per day; therefore, most SEO campaigns target this particular search engine. So, when to use SEO methods over PPC? Following are a few conditions when SEO would prove highly beneficial for an online company. ",
       },
 
       {
-
         type: "heading",
-
-        text: "PPC",
-
+        text: " - When consistent outcomes are required:",
       },
-
       {
-
         type: "paragraph",
-
         text:
-
-          "PPC allows advertisers to pay for targeted visibility and can generate traffic quickly when campaigns are configured effectively.",
-
+          " SEO has a relatively long maturation period in comparison to PPC. Reaching the very first page of search engine results won't occur overnight or even in a week. Reaching the top of the SERPs will require time. However, after your website gets there through SEO. You will enjoy constant traffic. Also, if you keep up with your search engine optimization (SEO) campaign, working to maintain and enhance outcomes, you can remain at the top for quite a while and reap long term benefits.", 
       },
 
       {
-
         type: "heading",
-
-        text: "When to Use Both",
-
+        text: " - When you wish to build an authority website:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "An authority website is an established resource center for a particular niche. It's the 'go-to' website when members of the niche need a piece of detailed information. When it goes, an authority website will be able to create plenty of traffic based on URL recall alone The best method to set up an authority website is by continuously bringing visitors to your pages, eventually building up a reputation until it will become popular enough to control its market. The only way to sustainably generate the traffic required is through creative content powered by clever SEO planning.",
       },
 
       {
-
+        type: "heading",
+        text: "- When you wish to boost the value of your website:",
+      },
+      {
         type: "paragraph",
-
         text:
+          "Websites are virtual real estate. If you plan to offer your website for a top price, you need to boost its worth. There are lots of things that may contribute to raising its worth. One of them is several monthly visitors on the website, consistency of traffic generated, page rank, search engine positions over a while, link popularity, etc. All of these fall in the realm of SEO. Bear in mind that SEO is not 'Free clicks' It's an enormous effort to create and promote content that takes a lot of time and money.",
+      },
 
-          "SEO can build sustainable organic traffic while PPC can support launches, promotions and high-intent campaigns that require immediate visibility.",
+      {
+        type: "heading",
+        text: "When to Use PPC?",
+      },
+      {
+        type: "paragraph",
+        text:
+          "We proceed to another side Of the SEO vs. PPC debate. Pay-per-click marketing is a procedure of advertising on search engine results pages. Fundamentally, you bid to have your ads appear in the sponsored results when a person types in a question, including your targeted keywords. Why is it called 'pay per click'? As you have to pay for every single user that clicks on the advertisement you are promoting. Popular PPC advertisements platforms comprise Google Advertising (AdWords), Bing Ads, and Facebook's advertisement platform. So, when should you use PPC Advertising? Below are some situations where PPC would prove highly beneficial for any online business.",
+      },
 
+      {
+        type: "heading",
+        text: " - When instant results are required:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "PPC will provide results quickly. Very quickly! You can count the moments prior to a rush of traffic come to your web pages. This is because the second your PPC campaign is approved (provided your bids are high enough to merit priority placement), your advertisements will immediately be displayed for countless people to see. The traffic will nearly be instantaneous. Hence, PPC works incredibly well with product launches, squeeze webpages, CPA marketing, and affiliate marketing involving top converting offers, joint venture (JV) jobs, seasonal promotions, event-focused advertising, and corresponding internet business campaigns.",
+      },
+
+
+      {
+        type: "heading",
+        text: " - When highly targeted traffic is sought:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Contrary to SEO, PPC marketing will permit you to limit your prospects based on their demographic information. Most PPC platforms, like social media websites, permit you to market into the age range, gender, income bracket, education level, as well as marital status of the people to whom your ads will be sown. Popular social networking sites like Facebook also let you target people based on their hobbies. This makes PPC a highly effective method of attaining the narrow group of people your business needs and directing them to your web pages.",
+      },
+
+      {
+        type: "heading",
+        text: " - When promoting a time-sensitive offer:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Marketing products, services, or events with an expiration date is always a race with time. Many times, the long gestation period of search engine optimization campaigns would produce belated results.For these time-sensitive events, the experience of PPC marketing will be perfect. Promoting an offer which will expire in 2 days? No problem. PPC can provide the traffic that you need in a couple of minutes.",
+      },
+
+      {
+        type: "heading",
+        text: " - When the website isn't intended for SEO,",
+      },
+      {
+        type: "paragraph",
+        text:
+          "SEO requires content-rich sites which are regularly updated. This is the only approach to notify the search engines that your website is relevant and remind the search engines to keep your website near the top of the pile. Some sites aren't designed for this. For websites like this, traffic can be generated through PPC campaigns.",
+      },
+
+      {
+        type: "heading",
+        text: " - If you want to dominate search results on your keyword group:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "PPC results are displayed over the organic search results. This prominent position usually means that as much as 50 percent of the search traffic goes to the top 3 sponsored links in many situations. We believe one shouldn't be thinking in terms of SEO vs. PPC - but instead, both SEO and PPC are significant and complementary elements of an online marketing strategy. By not using PPC in your marketing campaigns, you can lose all those clicks to your competitors. If you're serious about optimizing your click-share of available searches for keywords relevant to your company, you definitely must engage in PPC!",
       },
 
     ],
@@ -2826,67 +2944,118 @@ export const blogs: ResourceItem[] = [
 
         text:
 
-          "Shopify provides a hosted ecommerce environment where merchants can manage storefronts, products, orders and many integrations through one platform.",
+          "E-commerce has completely transformed the business universe, with businesses showcasing their products online rather than investing over physical stores. Magento, Woo Commerce, Presta Shop, Open Cart, and Big Commerce are a few of the favorite e-commerce platforms. Apart from them, Shopify is a platform preferred by those sellers who want quality and efficiency together with the simplicity and rich features. What is Shopify good for? Shopify is suitable for businesses that sell goods or services that require a minimum amount of configuration. According to their business requirement, businesses can sell a single product or a small number of products using an advanced Shopify homepage. This ultimately raises your ROI and boost your business revenue. Wondering is Shopify the best ecommerce platform? Read the complete blog to clarify your thoughts. Below listed are some benefits of Shopify ecommerce for your business.",
 
       },
 
       {
-
         type: "heading",
-
-        text: "Key Shopify Benefits",
-
-      },
-
-      {
-        type: "paragraph",
-        text: "Managed hosting.",
+        text: "1. Easy To Setup And Use",
       },
       {
         type: "paragraph",
-        text: "Responsive themes.",
-      },
-      {
-        type: "paragraph",
-        text: "Integrated checkout.",
-      },
-      {
-        type: "paragraph",
-        text: "Product and inventory tools.",
-      },
-      {
-        type: "paragraph",
-        text: "Application ecosystem.",
-      },
-      {
-        type: "paragraph",
-        text: "Payment integrations.",
-      },
-      {
-        type: "paragraph",
-        text: "Analytics and reporting.",
-      },
-      {
-        type: "paragraph",
-        text: "Scalable infrastructure.",
+        text: "Shopify is a no-fuss platform, which is n&#39;t hard to set up and use. It is the ideal alternative for those who desire a complete solution without any technicalities related to hosting and developing the online store. The platform itself provides the software and hosting which is required for launch the website. The admin interface is also very creative and user-friendly, while the user interface is persuasive too.",
       },
 
       {
-
         type: "heading",
-
-        text: "Customization",
-
+        text: "2. Visually Appealing Ecommerce Store",
       },
 
       {
-
         type: "paragraph",
-
         text:
+          " Shopify ecommerce bundles up a variety of professional templates that facilitate the creation of unique and visually attractive online stores. It offers a bare minimum of themes, but designers and developers may work to make a shop with rich UI and unique UX.",
+      },
 
-          "Shopify themes can be extended with Liquid, JavaScript, CSS, sections, blocks, metafields and applications to support more advanced business requirements.",
+      {
+        type: "heading",
+        text: "3. App Integrations",
+      },
 
+      {
+        type: "paragraph",
+        text:
+          "The platform includes excellent customization abilities as it is easily integrated with apps. This usually means that the vendor can simply add some additional features and functionalities to his shop and increase its value manifold.",
+      },
+
+      {
+        type: "heading",
+        text: "4. Security and Dependability",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          " Another benefit of Shopify ecommerce is the reliability and security it offers. Security is vital for an online business because it deals with the customers&#39; private persona and financial information. In the same way, it has to remain available on the internet. These two attributes are taken care of with Shopify hosting option that manages upgrades and maintenance.",
+      },
+
+      {
+        type: "heading",
+        text: "5. Lightning Fast Loading Speed",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          " Being a globally hosted platform, Shopify has a reliable infrastructure together with optimized hardware and software. This provides the platform with a super-fast loading speed, and the e-commerce created on it load within seconds.",
+      },
+
+
+      {
+        type: "heading",
+        text: "6. Get Powerful Marketing Tools",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "As a complete platform, Shopify ecommerce includes the marketing edge as well. The basic plan offers SEO features in addition to advanced e-commerce analytics. Besides these, it offers more marketing tools such as custom gift cards, discount coupons, store statistics, targeted email marketing, and much more.",
+      },
+
+      {
+        type: "heading",
+        text: "7. Mobile Responsiveness",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "Mobile responsiveness plays a vital role in the success of an e-commerce store since mobile shoppers are increasing day by day. The Shopify ecommerce themes are mobile responsive, meaning that they can be utilized to get mobile-optimized shops. There are even free iPhone and Android apps which could be used to manage the store.",
+      },
+
+
+      {
+        type: "heading",
+        text: "8. Outstanding Customer Care",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "By choosing Shopify ecommerce, online sellers can avail dependable, round-the-clock customer care. Shopify specialists provide their support 24/7 via email, live chat, or phone to resolve any issues and keep the website running flawlessly constantly.",
+      },
+
+      {
+        type: "heading",
+        text: "9. Hassle-free Payments",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "A huge challenge for online businesses is to incorporate a secure and reliable payment gateway. The payment service you&#39;ve got should permit buyers to pay via different payment options. Shopify makes it easy for businesses to set up the payment gateway. The platform supports the Stripe payment option, giving buyers the liberty to make transactions with no extra fees.",
+      },
+
+      {
+        type: "heading",
+        text: "10. SEO Friendly",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "As soon as your store is set up, it is critical to ensure it is search engine friendly. Search Engine Optimization(SEO) is essential for ensuring that the website is readily accessible by shoppers doing a search for your products. Shopify enhances the capability to design landing pages for your campaigns, which is a huge differentiating factor from other E-commerce platforms. We know you still have any questions about Shopify Ecommerce, so we have gathered some frequently asked questions (listed below) about Shopify from our customers, which may help you decide what&#39;s best for you.",
       },
 
     ],
@@ -2932,59 +3101,73 @@ export const blogs: ResourceItem[] = [
       },
 
       {
-
         type: "heading",
-
-        text: "What Is UI?",
-
+        text: "- INTRODUCTION:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "User interface or UI on its most basic means the series of screens, pages, and visual elements. These include buttons and icons. This helps a person and enables him to interact with a service or product.  On the other hand, if discussed user experience or UX; it is simply the internal experience that a person may have as they interact with every aspect of a company’s product and services.  Now, we know the basic meaning of these two terms. It is now essential to discuss the mistake which the majority of people do on this topic.  They use these terms interchangeably! This is a matter of concern as it was incorrect and can lead to lots of confusion. So, today we will discuss the same but before that let us gather some more information about these topics. BUT FIRSTLY LET US DISCUSS THE BASICS OF THE TOPICS.",
       },
 
       {
+        type: "heading",
+        text: "- WHAT IS UI AND ITS BASICS?",
+      },
 
+      {
         type: "paragraph",
 
         text:
 
-          "User interface design focuses on the visual and interactive elements people use, including typography, buttons, spacing, icons, colors and component states.",
+          "As discussed above, User interface or UI on its most basic means the series of screens, pages, and visual elements. These include buttons and icons. This helps a person and enables him to interact with a service or product. So, with the technological advancements and as any other growing technology; the user interface roles and duties have also emerged and thereby evolved. It has evolved on the grounds of systems, preferences, and even accessibilities. Now, the UI designers, just not only work on a computer interface but mobiles and virtual reality too. This is also used in invisible or screen-less interfaces such as light, voice, and gestures.  No doubt the people working in this field have had limitless opportunities. They can find to work on mobiles, wearable technology, these are few of them! Unless and until we are using computers as a part of our life, the need and demand for this are not going to shatter.",
 
       },
 
       {
-
         type: "heading",
-
-        text: "What Is UX?",
-
+        text: "- WHAT IS UX AND ITS BASICS?",
       },
-
       {
-
         type: "paragraph",
-
         text:
-
-          "User experience design focuses on how the overall product works for the user, including flows, information architecture, usability and task completion.",
-
+          "As discussed above, User experience or UX; is simply the internal experience that a person may have as they interact with every aspect of a company’s product and services.  With the improvements in UI, there was the emergence of a new term UX. Now there was something with users to interact. No matter it was bad, good, positive, negative, or neutral! In the 1990s a cognitive scientist; Don Norman is given the credit to find and coin this term. He worked at apple! Peter Moreville developed Usability Honeycomb. This has become a foundation for the most exemplary practice for the people working in the field of user experience.",
       },
 
       {
-
         type: "heading",
-
-        text: "UI and UX Work Together",
-
+        text: "- DIFFERENCE BETWEEN UI AND UX?",
+      },
+      {
+        type: "paragraph",
+        text:
+          "On the grounds, there are four major differences between UI and UX.  1. So, the UI deal with the quality of the interaction that is associated with the end-to-end user has with the products.  On the other hand, UX deals with the purpose and the functionality of the product.  So, this is the primary difference that is to be kept while discussing both the terms.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "2. The second difference is that the user interface is an artistic component as it is associated with the design and interface with the product.  It is to affect what the end-to-end user is going to hear, see and feel. But based on comparison on the other hand; user experience or UX is associated much with the social component for the market research.  It is also associated with communicating with the clients. This is done to understand the needs and the requirements. Thus this is the second difference which we need to keep in mind while we are using these terms.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "3. Thirdly; the UX is associated with the project management and the work of the analysis.  Whereas UI is more of technical work. If explained in detail; user experience had to focus on the fact that it is associated with the work of analysis where the decision is made based on the data.  On the other hand user interface is more of the technical work. As it is concerned with the development of the design components of the finished product. So, this was the third and most significant difference between the user interface and the user experience.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "4. Even the difference can be made on the grounds of the key responsibilities which they follow. Customer strategy, competitor analysis, prototyping, planning, wire firing, analysis, and iteration, tracking goals and integration These are some of the basic duties or responsibilities to be done by the UX professional! Whereas if discussed the UI designer, the major responsibilities are Branding, user guide analysis, customer analysis, design research, interactivity and animation, UI prototyping is amongst the responsibilities to be performed by the UI  professionals. These were the major differences between these two terms UI and UX.",
       },
 
       {
-
-        type: "paragraph",
-
-        text:
-
-          "A product can look attractive but still be difficult to use, or it can be logically structured but visually unclear. Strong digital products consider both.",
-
+        type: "heading",
+        text: "- CONCLUSION:",
       },
-
+      {
+        type: "paragraph",
+        text:
+          "So, people use these terms interchangeably but these two terms user interface and the user experience are very different from each other.  On the ground level, user experience is associated with the project management and the analysis of the work. Whereas the user interface is to do more with the technical aspects.  There is no doubt in the fact that the coming time is of such UI and UX professionals. But at the same time, it is also important to understand the basic difference between the two terms. So, that we may not use it interchangeably.",
+      },
     ],
 
   },
@@ -3031,55 +3214,126 @@ export const blogs: ResourceItem[] = [
 
         type: "heading",
 
-        text: "Ways to Improve Engagement",
+        text: "INTRODUCTION:",
 
       },
 
       {
         type: "paragraph",
-        text: "Publish consistently.",
+        text: "Social media is the real boss today. One can easily get fame here and can surely have a wonderful career made by Instagram. A person goes viral and within the night he reaches the heights of popularity.  But many people all around the globe want to get famous. Many people want to increase their engagements on the social media platform Instagram. But the majority of people fail in this as they don’t have the correct knowledge about this.  In the past few years, Instagram has become the most famous social media platform. It is correct to say that it has become the first choice of the majority of individuals. But the issue is the same. How to increase Instagram engagement? Don’t worry here are 10 points which will help you!",
       },
-      {
-        type: "paragraph",
-        text: "Use stronger visual hooks.",
-      },
-      {
-        type: "paragraph",
-        text: "Create useful carousel posts.",
-      },
-      {
-        type: "paragraph",
-        text: "Use Reels where appropriate.",
-      },
-      {
-        type: "paragraph",
-        text: "Respond to comments.",
-      },
-      {
-        type: "paragraph",
-        text: "Encourage saves and shares.",
-      },
-      {
-        type: "paragraph",
-        text: "Review analytics regularly.",
-      },
+      
 
       {
-
         type: "heading",
-
-        text: "Focus on Audience Value",
-
+        text: "POST TIMINGS:",
       },
-
       {
-
         type: "paragraph",
-
         text:
 
-          "Content should be created for the audience's interests and problems rather than simply increasing posting frequency.",
+          "Well, let me tell you that; the post on the wrong timings can cause a loss regarding the engagement. Sometimes you do everything correct but then also you are not able to reach the peak of the engagement. The reason here is posting the content at the wrong time.  Let me tell you that there are few ways to increase your Instagram engagement and posting when your audience is most active is the best. It is the key!  This is because the Instagram algorithm works in this way. It appreciates those posts which generate huge engagement in a short period. So, keep this advice in your mind next time!  ",
+      },
 
+
+      {
+        type: "heading",
+        text: "REGULAR ANALYSIS AND TEST WITH THE CONTENT:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "Believe me, experimentation is the key! The best of the best comes from the fact of the experimentation. Keep experimenting with new forms of content to make your viewers happier and let them enjoy the content.  But there is a warning; if everything is going well, in this case experimenting with your content can lead to a loss in your viewers. So, don’t over-experiment but innovate and try new things and ideas to remain consistent and fresher in terms of what you post!",
+      },
+
+      {
+        type: "heading",
+        text: "TIME TO START COMMUNICATION:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "Well, human is a social being which loves to share and listen. This principle can be applied to the world of social media also. Statistics suggest; over 500 million Instagram accounts use the feature of Instagram stickers every single day.  For sure this is a progressive data analysis that depicts that this number is going to increase shortly for sure.  So, there are many ways, like you may post Instagram stickers in your stories, go live and communicate with your followers, use polls or questions to engage your viewer or follower. This will help you to maintain a high engagement of Instagram.",
+      },
+
+      {
+        type: "heading",
+        text: "CREATION OF SAVABLE CONTENT:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "Creating savable content can help you a lot in generating good Instagram engagement. Now the question is what is the savable content? The answer is very simple. The content your viewer or follower needs to visit again. Simply it is anything that your viewer would like to view again.  Such posts or the post of such type of nature is good as they fulfill the Instagram algorithms.  So, keep this tip in your mind when you make a post or decide your content. ",
+      },
+
+      {
+        type: "heading",
+        text: "SHARE WHAT PEOPLE LOVE:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "This is another legitimate piece of advice. Using this tip can help you to increase your Instagram engagement. So, what you need to do?  You just need to create what your viewers like to watch. In this way, they will come on the board and will help you to make your engagement high.  Don’t just post for the sake of you need to post. You should remember that what you post is for the sake of the viewer. So, post what your viewer want to see or watch!",
+      },
+
+      {
+        type: "heading",
+        text: "TIME FOR LONG CAPTIONS:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "Let me tell you the one more interesting fact that you can write 2200 words in your caption. There is one most interesting thing about the way your Instagram algorithm work. It also considers the amount of time spent on the post. Higher the time spent higher will be the engagement. Well, this is the algorithm. So, the best way to increase your Instagram engagement is simply not to write long captions and spent more time on your posts. ",
+      },
+
+      {
+        type: "heading",
+        text: "TELL ABOUT YOUR BUSINESS AND BRAND:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "Work on the authenticity of your brand. Let the true side of your brand prevail on social media. Believe me, it going to help you and your business in the best possible way possible.   It’s a general fact that a high level of authenticity can make your relationship with the viewers more content. If you present yourself with authenticity, surely the viewers will not leave you alone.  So, just be authentic and tell everyone about your brand and how it operates!",
+      },
+
+      {
+        type: "heading",
+        text: "MAKE IT A BIT FUNNY:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "In today’s world, there are so many tensions, disturbing circumstances, and also this pandemic. So, everyone around the globe is finding a way to escape this negativity.  No doubt it takes serious efforts to make a post and to make it perfect to all algorithms. But this doesn’t mean to miss the element of the humor from the post. On the other hand, if the meme or the comedy effect does not suits your brand or the theme of the post. Just leave it. Do not make it your compulsion.  ",
+      },
+
+
+      {
+        type: "heading",
+        text: "SELECTION OF THE HASHTAGS:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "If you know to learn to use the hashtags in the proper manner you are the most powerful person on Instagram.  Believe me, it can help you to improve and seriously increase your Instagram engagement.",
+      },
+
+      {
+        type: "heading",
+        text: "CONCLUSION:",
+      },
+      {
+        type: "paragraph",
+        text:
+
+          "It is not too difficult to increase Instagram engagement. It all depends upon how you make it happen. If you keep all the above-mentioned advice in your head, believe your engagement will be soon on the peak.  ",
       },
 
     ],
@@ -3128,51 +3382,126 @@ export const blogs: ResourceItem[] = [
 
         type: "heading",
 
-        text: "Ways to Differentiate a Website",
+        text: "INTRODUCTION:",
 
       },
 
       {
         type: "paragraph",
-        text: "Clear brand positioning.",
+        text: "In the world of high competition, companies are no doubt taking advantage of the new ways and methods to share their ideas and to increase their market share. Ever we may use various methods and ways to bring the customer and the viewer to the website but if the website is not unique and interesting to them, they are not going to stay there. After all, customers are the king.  So, the main question is how to make the website more unique and more memorable so that the person comes back again views it. There is also another challenge of making the viewers stay on the website for a long time.  So, simply saying in today’s competitive world, the spirit of uniqueness is most important. The reason behind this is that there are many websites. The majority of them offer a similar type of things. This is a challenge to increase the sense of originality. Now, another question is that how to achieve this? This blog is all about answering this question!",
       },
-      {
-        type: "paragraph",
-        text: "Original visual identity.",
-      },
-      {
-        type: "paragraph",
-        text: "Useful content.",
-      },
-      {
-        type: "paragraph",
-        text: "Strong product or service presentation.",
-      },
-      {
-        type: "paragraph",
-        text: "Custom interactions where they add value.",
-      },
-      {
-        type: "paragraph",
-        text: "Fast and accessible user experience.",
-      },
+      
 
       {
-
         type: "heading",
-
-        text: "Avoid Design for Design's Sake",
-
+        text: "WHAT IS A WEBSITE?",
       },
 
       {
 
         type: "paragraph",
-
         text:
+          "Before we move forward, it is very important to know that what a website is. In simple words, a website development may be referred to as the collection of web pages and the related content that is identified by a common domain name and published on at least one web server. If we talk about the examples, Wikipedia.org, amazom.com are prominent examples.",
+      },
 
-          "Animations and visual effects should support the message and user journey instead of making navigation or content harder to understand.",
+      {
+        type: "heading",
+        text: "GO WITH CREATIVE BIOS:",
+      },
+      {
 
+        type: "paragraph",
+        text:
+          "It is a fact that the prospective clients of yours want to know about you before they start working with you. This helps to create a sense of belongings and ultimately helps to build trust in the relation of a Clint and a service provider. Now the question is how to achieve it? Go with the creative bios as mentioned above. Also, attach the creative bios of your employees with their creative photographs. This will help to present a true and a bonafide image of the organization. This will also help you to present yourself and the organization in a unique manner.",
+      },
+
+      {
+        type: "heading",
+        text: "FIND A UNIQUE STAND:",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "There is another way to make your website unique. This way is finding a unique stand. You may go with the content that is unique in its stand.  Well, it doesn't have to be controversial rather it needed to be unique. This can also be the information that is not available anywhere else. The information which you have collected using good researches can also be beneficial.  There can be unique points of view that need to come with lots of supportive information. So, don’t just copy-paste, find a unique and a different stand.",
+      },
+
+
+      {
+        type: "heading",
+        text: "TIME TO SHOW LIKABLE AND RELATED VIDEOS:",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "So, what is another way? The most simple and effective way is to go with the related videos and also the related videos. Indeed a quick video for the introduction can help a lot in improving the website progress.  If you attach a minute video giving a brief explanation about your organization, employees, and the USP, this will help to increase the engagement of your website and also the time spent by the viewer on the website too!",
+      },
+
+      {
+        type: "heading",
+        text: "WRITE WHAT PROVIDE INSIGHT AND INSPIRATION:",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "Let everyone know what are the beliefs of your organization through your website. Use sentences our mantras, we believe, monthly mantras, and more. These will help to maintain a certain image of the organization. People tend to read the sentences more starting with such words. This will surely help to increase the efficiency of your website.",
+      },
+
+      {
+        type: "heading",
+        text: "ALWAYS LET YOUR WEBSITE BE FRESH:",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "Believe me, this idea is a masterstroke. Always keep on posting the content on your website. This may be in the form of pictures, in the form of blogs, in the form of reviews, in the form of video content. The motive is to always keep your website fresh so that whenever the viewer comes on the website he does not feel the boredom of the old content!",
+      },
+
+      {
+        type: "heading",
+        text: "ARE YOU USING STOCK PHOTOS?",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "This is a legitimate question. Are you using stock photos? Let the camera come into the scene and try to take fresh and original photos. This will help to maintain the originality and also the uniqueness in the website of your organization. So, get over the stock photos and give the original one’s a try!",
+      },
+
+      {
+        type: "heading",
+        text: "ADJUSTING THE MENUS AND THE NAVIGATION TITLES:",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "Find what type of trend is going on all around. Try to fix your website as per the changes and the trends in the market.  This will help your customer understand the real value of your brand. The constant and consistent changes will help you to maintain a market place and the trust of the viewers will also be maintained positively!  So, try to adjust the menus and the navigation bars and tittles of your website with the recent trends keeping in mind the originality and the unique theme of your website and the organization.",
+      },
+
+      {
+        type: "heading",
+        text: " LET IT BE ABOUT THEM:",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "This is a very important and useful strategy to make your website all about the consumers and the consumers. Make a separate column for their reviews and also answer the question they ask. Use various real-life case studies to make your website more consumers friendly and also try to make it user-centric. Because eat the end of the day they are the ones who are going to use it. ",
+      },
+
+      {
+        type: "heading",
+        text: "CONCLUSION:",
+      },
+      {
+
+        type: "paragraph",
+        text:
+          "In today’s world of high competition, you need to maintain originality and uniqueness. The cut copy paste culture will not help you to grow your website in a long run. So, try to keep in mind the above-mentioned things to make your website well and more engaging. ",
       },
 
     ],
@@ -3221,51 +3550,105 @@ export const blogs: ResourceItem[] = [
 
         type: "heading",
 
-        text: "Six SEO Clean-Up Steps",
+        text: "INTRODUCTION:",
 
       },
 
       {
         type: "paragraph",
-        text: "Crawl the website.",
+        text: "Talking of a successful business; you would have realized that the website of the brand or the business is growing at a similar pace to your business. How does it happen? With consistency in posting the blogs, product pages, eCommerce listings, and also the contact pages. These all things help the website to grow and grow!  With the increase in the number of pages to keep a check upon and manage, it sometimes becomes difficult. Things go out of the hands very easily and speedily! With the increased number of pages, the bad links can remain unnoticed. Sometimes the structure of the website gets messed up due to the increased number of pages. Also sometimes the content immediately gets de-optimized!  All these things can impact the performance of the website and the positive results can decrease. This is because the inefficiencies in these systems can lead to a bad user experience leading to a bounce-back of the ratings. Well, these are the legitimate reasons that why it is needed to maintain a periodical site clean-up schedule. These are the reasons that explain to us the importance of maintaining website coherence, relevance, and usability.",
       },
-      {
-        type: "paragraph",
-        text: "Identify broken URLs.",
-      },
-      {
-        type: "paragraph",
-        text: "Review duplicate and thin content.",
-      },
-      {
-        type: "paragraph",
-        text: "Audit redirects.",
-      },
-      {
-        type: "paragraph",
-        text: "Improve internal linking.",
-      },
-      {
-        type: "paragraph",
-        text: "Recheck indexing and technical signals.",
-      },
+      
 
       {
-
         type: "heading",
+        text: "WHAT IS SEO?",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Well, in simple words it is both the science as well as the art of getting the pages to rank higher in search engines; for example Google. The reason behind using SEO is that the main way in which people discover things is through search. So, if the search engine is optimized as per us, it is the most beneficial thing.",
+      },
 
-        text: "Do Not Delete Pages Without a Plan",
-
+       {
+        type: "heading",
+        text: "6 STEPS TO EXECUTE THE SEO CLEAN-UP STRATEGY FOR YOUR WEBSITE:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Now, when we know that what is SEO? And also why do we need to maintain a clean-up strategy; it becomes essential to know that how can it be executed in a real way. Now let us look at the 6 steps to execute your SEO clean-up strategy. This can also be seen in terms of the best SEO strategy.",
       },
 
       {
-
+        type: "heading",
+        text: "TIME TO CLEAN UP YOUR SITE STRUCTURE:",
+      },
+      {
         type: "paragraph",
-
         text:
+          "Believe me; the structure of your website can make a huge difference. Not only this but a better structure of the website can make a positive impact on search engine optimization. Also, it positively differs the way that how the customers interact with your website. The first thing you should do is to go with the improvement of the site menu. The reason for this is that the customer is first going to interact with this. Now how to do this? Let it be simple. Don’t make a mess on the top of the screen. Let there be a small number of important links and navigation bars. Because we need not do show off with a complex and complicated welcome area! Another point to keep in the mind is the content of the website.  Let it be consumer-friendly. The major content should be topical means majorly related to the workings of the brand. To make the view more simple and easy for the usage of your consumers you may go with different patterns in which the majority of the content gets hidden and accumulated very easily. Also, keep the things that are of real relevance to the website and the business. Don’t overcrowd your space with unnecessary and unwanted things. This is also the best SEO strategy.",
+      },
 
-          "Pages with links, rankings or relevant replacements should be evaluated carefully before removal, consolidation or redirection.",
+      {
+        type: "heading",
+        text: "NEED TO IDENTIFY AND REMOVE BAD LINKS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "A bad link is a link that simply violates the guidelines of Google. There are few things that Google doesn’t like. And the bad links on your website are one amongst them. How can it affect me? As it is not a thing liked by Google, it may lead to penalties and other consequences. You need to search for such bad links and need to remove them from your areas and should always try to go with the good links which are liked by Google. ",
+      },
 
+
+      {
+        type: "heading",
+        text: "REMOVE OR REDIRECT THE BROKEN LINKS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "A broken link is a link that takes you to a page that doesn’t exist. In other words, the link that can lead to error 404 is a broken link. It can be easily identified by the site audit. Well, this broken link can emerge due to many reasons, but the reason does not matter at all. If you had a broken link it is bad news for you! You may unlink the text from that very broken link. But make sure you go away from this!",
+      },
+
+      {
+        type: "heading",
+        text: "NEED TO OPTIMIZE IMAGES:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Experts suggest that the images are one of the best strategies for the SEO of your site. The most important thing is to improve your load speed. This can be easily done with the help of compressing your images. You need to understand that if the page will take a longer time to just come up with an image it is going to impact you negatively.",
+      },
+
+      {
+        type: "heading",
+        text: "ELIMINATING DUPLICATE METADATA:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Keep in mind that every title tag and meta description needs to be unique in its way. This point arises from the fact that as we keep on adding more and more pages to the website sometimes things start repeating. During the process of cleaning, getting rid of the duplicate Metadata is going to help you positively. Even it can be avoided by maintaining a proper record!",
+      },
+
+      {
+        type: "heading",
+        text: "TIME TO CHECK THAT IT ALL WORKS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "It is quite a normal thing to verify that everything that goes to work properly. This is important because it assures that the customers or the people visiting have had a good and better experience. This will help to increase the engagement and also help you to come up with the desired results! So, this is also a simple and best SEO strategy.",
+      },
+
+      {
+        type: "heading",
+        text: "CONCLUSION:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "So, it is very important to maintain a proper schedule and also to use the above-discussed strategies. Believe me that these are surely going to impact in a better way also make our SEO optimized. ",
       },
 
     ],
@@ -3314,53 +3697,141 @@ export const blogs: ResourceItem[] = [
 
         type: "heading",
 
-        text: "Engagement Tactics",
+        text: "INTRODUCTION:",
 
       },
 
       {
         type: "paragraph",
-        text: "Publish concise useful insights.",
+        text: "It is a well-known fact that; to get followers on social media is not an easy task. It requires lots of mindful tactics and also good strategies to get to the goal of getting a good amount of followers. Well, it is a challenge to make the viewer engaged and motivate him to click on your links. So, here we are with the 10 best tactics for Twitter business engagement in 2025. But before it; let me tell you why it is important to have a good Twitter engagement. The major benefit is that you get over your competitors.  If you have a good level of engagement you can easily get a high number of consumers and leading to upliftment of your business. Also, you get to know about the other people who are there in the same industry. The third is that you come to know about the other organizations which are there in the market. This can easily be done with the help of social media management agency. Well, now let us look at the strategies:",
       },
-      {
-        type: "paragraph",
-        text: "Respond to relevant discussions.",
-      },
-      {
-        type: "paragraph",
-        text: "Use visual content when helpful.",
-      },
-      {
-        type: "paragraph",
-        text: "Share original research or examples.",
-      },
-      {
-        type: "paragraph",
-        text: "Engage with customers and industry peers.",
-      },
-      {
-        type: "paragraph",
-        text: "Review which topics generate meaningful conversations.",
-      },
+      
 
       {
-
         type: "heading",
-
-        text: "Consistency Matters",
-
+        text: "SHOW YOUR PRESENCE WITH OTHERS CONTENT:",
       },
 
       {
-
         type: "paragraph",
-
         text:
-
-          "Sustainable engagement usually comes from consistent participation and useful content rather than isolated viral posts.",
-
+          "Well, this is a good strategy to increase engagement. You should show your presence with the content of other people. You may like it. You may leave comments on the post or the views what you feel. This is going to strengthen the relationship of your with your followers and other people on social media.",
       },
 
+      {
+        type: "heading",
+        text: "SHARING THE LINKS:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "The best way to get the clicks on the link is just to get it attached to the website or social media like Twitter. This is not about sharing just your content or your links. You may share what you like even if it is someone other’s content. This will lead to show the positivity and strength of the relationships. This method is going to increase engagement on Twitter. ",
+      },
+
+      {
+        type: "heading",
+        text: "GIVE ANSWERS, RESPONSE TO THE TWEETS:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "The best way to increase engagement on Twitter is simply to give answers and responses to the tweets. A response becomes more powerful if you share or answer the tweets in which you are tagged.",
+      },
+
+      {
+        type: "heading",
+        text: "WHAT ARE YOUR PEAK HOURS:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "Activities done during peak hours are of great benefit. Peak time is that time in which people are majorly active. This is a simple method to get a high level of engagement. Brands use this type of tool to do some new launches or some new announcements. Experts suggest that posting or doing activities in these times helps to get a good engagement.",
+      },
+
+       {
+        type: "heading",
+        text: "USE HASHTAGS:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "Hashtags used on Twitter can increase engagement hugely. You should use only the relevant hashtags. This will impact your engagement in a positive way. The way to get more audience is to use trending hashtags. This will bring huge traffic.",
+      },
+
+
+      {
+        type: "heading",
+        text: "GO WITH SHARING IMAGES:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "You would have listened to images speak. The best way to get high engagement is to go with the posting of the images. You may share the graphs or the photos. This will be impacting your audience positively and will ultimately lead to an increase in engagement. You may go with many images in a tweet or a single tweet is also sufficient. ",
+      },
+
+
+      {
+        type: "heading",
+        text: "TIME TO POST VIDEOS:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "Well, posting a video is even better than posting photos or words. Posting videos attract more audience than simple photos or tweets. Statistics suggest that posting a video gets you 80% more audience as compared to a simple video or just a tweet. Many brands offer coupons for tweets or re-tweets. ",
+      },
+
+      {
+        type: "heading",
+        text: "GO FOR STRAIGHTFORWARD LANGUAGE:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "Using straightforward language can help in improving your performance on Twitter. Don’t complicate things. Let it be simple and sober. Explain your content in 280 words. This explanation needs to be in such a way that it attracts the masses. This is the best way to get your Twitter more engaged.",
+      },
+
+
+      {
+        type: "heading",
+        text: "DO YOU ASK QUESTIONS?",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "The best way to improve your engagement is to interact more and more with your audience. The best way is to ask questions from them and do as much conversation as possible. People may leave comments or their views on what you have shared. Believe me; if you use this platform properly, it is going to give you a huge community that is going to help you in achieving the goal of high engagement.  People love to share their reviews and opinions. So, it’s good to take the benefit of this aspect of human personality. ",
+      },
+
+
+      {
+        type: "heading",
+        text: "USING TWITTER ADS:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "If you want to increase the engagement and your reach within a short period the best way is to use Twitter ads. This option becomes more efficient when you don’t have enough followers even to maintain a minimum level of engagement. This is true that everything comes with a disadvantage. This is a bit expensive way. Indeed this can help you to improve your engagement.  ",
+      },
+
+
+      {
+        type: "heading",
+        text: "CONCLUSION:",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "Well, with increased engagement you can easily get to your goal of getting a better Twitter engagement. Certain simple steps can lead to increased engagement. The basic step is to maintain a genuine interaction with your audience. This is the core step.",
+      },
     ],
 
   },
@@ -3407,55 +3878,128 @@ export const blogs: ResourceItem[] = [
 
         type: "heading",
 
-        text: "Core Areas to Improve",
+        text: "INTRODUCTION:",
 
       },
 
       {
         type: "paragraph",
-        text: "Website quality.",
+        text: "Every business wants to improve or enhance its digital presence. There are many reasons for this as it helps the business to get more reach and get to their targeted audience and much more. But do you know what exactly the meaning of digital presence is? What does it mean for the brand? Well, digital presence in simple words means to present or show your business online. Now, what does this means? There is no doubt in the fact that digital presence is needed by all the brands to maintain them in this highly dynamic market. The world has revolutionized in this aspect. The internet had penetrated widely in the world. Especially in this pandemic time, the digital world had become the new normal. So, the digital presence is very necessary to be maintained by the company or a brand.  If one has the correct tools the process to maintain your digital presence and to enhance it is not a very difficult task. It can be done very proficiently with the paid advertisements and much more. Just what one needs to know is the correct way and the time to use these tools. Well in this the social media platforms are also the important tools because of the reason that it is there in every hand probably now. From the young child to the old man all have smartphones and the reach to the social media platforms. ",
       },
-      {
-        type: "paragraph",
-        text: "Search visibility.",
-      },
-      {
-        type: "paragraph",
-        text: "Social media presence.",
-      },
-      {
-        type: "paragraph",
-        text: "Business directory information.",
-      },
-      {
-        type: "paragraph",
-        text: "Content quality.",
-      },
-      {
-        type: "paragraph",
-        text: "Reviews and reputation.",
-      },
-      {
-        type: "paragraph",
-        text: "Email communication.",
-      },
+      
 
       {
-
         type: "heading",
-
-        text: "Create a Consistent Brand Experience",
-
+        text: "WHAT IS SOCIAL MEDIA MARKETING?",
+      },
+      {
+        type: "paragraph",
+        text:
+          "When we say that that social media is one of the best ways to maintain and enhance the social media presence. This gives rise to a new term SOCIAL MEDIA MARKETING. The simple meaning of this is that when social media platforms are used for the process of enhancing the presence of the brand in the digital space the whole process is known as social media marketing. This marketing is on the boosts today. The experts believe the internet is the main reason behind it. The Internet has penetrated the world so largely. This has also given rise to the budget smartphones and also the affordability of internet services. Believe me; this pandemic has entirely shifted the traditional way of marketing to a new concept of the social media marketing. We need to understand the reason for this also. First of all the invention of the budget mobiles is to be given the credit. It had made it easier for all to access the social media. Now how it is being done? This is the most legitimate question to be answered. This is done first of all by creating the pages or the accounts of the brand. This is followed by running the paid campaigns which help the brand to increase its presence all around the targeted audience. Well, what experts believe the main advantage of this is that it can target any sort of audience which you want to. This means while sitting in India you can easily manage the social media marketing to the targeted audience in the United States Of America or say Australia. This is the merit here. There are also other certain ways on the social media platforms that can help you to enhance your engagement. Well contracting with the influencers is the other option here. This is a bit long and a costly process but it also works well in this case. In simple words, it is a type of the strategy of using the posts which are free and at the same time using the paid advertisement system to set a connection with your targeted audience.",
       },
 
       {
-
+        type: "heading",
+        text: "STRATEGIES TO IMPROVE YOUR PRESENCE:",
+      },
+      {
         type: "paragraph",
-
         text:
+          "Well, there are certain things that you need to keep in mind while you work on the goal of social media marketing or the goal of improving and enhancing your digital presence. This is surely going to help you in making the brand look more familiar to the people. These are the strategies that I believe are surely going to help you a lot while you run the campaigns. Let’s have a look at a few of these strategies. ",
+      },
 
-          "Messaging, visual identity and business information should remain consistent across the website, social platforms and other customer touchpoints.",
+      {
+        type: "heading",
+        text: "INTEGRATE YOUR PROFESSIONAL AND PERSONAL ACCOUNTS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "This is the first and the most effective strategy or you may consider it a suggestion to improve the digital presence. Well, let me tell you how it works. The people who are going to be the future consumers or the potential buyer of your product or services are the humans with the feeling. It may sound to you like a funny remark but believe me, it really helps a lot. Because they are not just the mere buyers or the money-generating machines. They are the being with the emotional quotient. This means when you integrate your accounts with that of the professional one this gives you a mere level of comparability and also the more loyal consumers. Well, let me make it this way!  The world has approximately 2.77 billion social media users. What does this data suggest? It simply suggests that these all can be your potential buyers or the consumers if you have the proper strategy to access them. Whereas on the other hand it also means that there will be lots of competition in the market which you need to face to maintain the standards of the world. This also means you need to maintain the level of the originality in your work and the stuff you do for social media marketing.  How can you do so; simply by showcasing the life yours. Simply attaching or integrating the personal account with that of the professional is going to do the job for you. You will agree with me for sure that the world has completely been changed or say revolutionized with the very penetration of social media. So, it is a good option to join both the personal and the professional accounts together to come up with a positive and comparable idea. So, the key here is to erase the traditional lines of marketing and maintain a new state. ",
+      },
 
+
+      {
+        type: "heading",
+        text: "OPTIMIZE THE WEBSITE FOR THR MOBILES:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "If you are the one who regularly reads the blogs published on this website, you know that how important it is to make a website or optimize it in a way that is mobile friendly. For every aspect of social media marketing, it is important to make your website or the platform in such a way that it can be easily be used on a mobile phone. You may be thinking about why it is important to have a mobile-friendly website? The reason is simple; you may come across the people around you who may have the mobile phones but not the laptops or the computer because the reason is simply that they are costly and not everyone can afford it. Whereas if you have good information about the mobile market it may be easy for you to conclude that the mobiles are the gadgets which are available easily and also affordable. So, for sure the people are going to get it.  So, these all arguments state that if you don’t have a website that is mobile friendly you should work on it and should optimize it as per the mobile requirements. You may also work on making the website more attractive because it going to mark a good impact on your consumers or the viewers. Well, don’t forget that having a website that is optimized for mobile use is more important than making it more attractive or anything else. This is also a long-term best strategy to make your digital presence more powerful and to penetrate your brand in this digital world. So, mark it!",
+      },
+
+
+      {
+        type: "heading",
+        text: "FOCUSING ON NETWORKING:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "No one can deny the fact that to run the business effectively the most important thing is networking. You may ask the question why? But let me tell you that good networking can be the best thing which you can do to mark the digital presence of your brand and improving the state of the business. Well, many people expert in this field believes that it can help you to make the business more widespread and also increases the probability of the high success. This also helps to improve the communication of the person and the business which in return is going to help you positively while running a business. Well, let me make it this way the social media has changed the traditional definition of communication. Now there are numerous ways of communication. It can be said that it has taken communication to the next level. This means now there are no old typical barrios while someone makes some statement in the market. Now if you want to meet your prospective buyer or the potential consumer you need not wait for the hours for the train to reach the destination. It can be done in seconds now. There are many alternatives now all thanks to social media and the deep penetration of the internet.  Well, you may be thinking that how it is going to mark or increase the digital presence of the brand? Well, let me make it this way when you are going to make a positive conversation with the people around your website or the social media platforms it is going to improve the status of your social media and the digital marketing. Well, this method had also reduced the expenses which were incurred while the people were sending out to make the conversation with the people in the traditional ways. Well, it is a good strategy and you should give it a try, and believe me it is going to make your business and the digital penetration both rise up. ",
+      },
+
+      {
+        type: "heading",
+        text: "WHAT ARE THE PAID ADS?",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Well, going by the definition; it simply means the advertisements for which you have to make the payments or you have to pay. Technically, the one who wants the ads to run pays a certain amount of the money to the one who is lending the space to make the ads live on their platforms. Well, there are several categories for this but let’s not go into it. Especially in the context of the social media platforms, this is a great and the most effective method to make your digital presence not only marked but also increased. You see there are approximately 2.77 billion social media accounts. These all are the people who are going to help you to make your digital presence being marked. You just need to know the way how you need to use this number. Well, the people expert in this field believes that the social media paid advertisements are the best way to improve the status of your business and to increase the brand image and the reputation of your brand. So, give this idea a try! Well, there are many merits of having a paid social media advertising campaign. These advantages or the merits are discussed below. ",
+      },
+
+
+      {
+        type: "heading",
+        text: "ADVANTAGES OF DOING PAID ADS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Well, there is no doubt that the advertising on the social media is of the great benefit. It can easily and instantly make your business or the brand being visible to the people. Well, let me also mention the fact that the posts or the content you are using needs to be the one that satisfies the algorithms. Well talking of the organic stuff, it may get you the views or the presence. But it is not going to fulfill the needs you have for the social media or the digital presence. This means that the best option is to go with the paid one because it the guarantee that you are definitely going to be reached to the targeted audience. So, this is the greatest merit.",
+      },
+
+      {
+        type: "heading",
+        text: "FOR ANY BUDGET:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The majority of the people find the task of the social media paid advertisement a big investment. But believe me if you all practically, it is a budget process. The merit of this is that you can have it from small as well as large budgets. This gives you the freedom to maintain and enhance your digital presence while you are in the pocket of your budget.  Well, each social media platform has had its payment mechanism. You should gather the proper information before you begin with it. Use your analysis skills and make the smart decision for your business. This is the advantage that you can enhance the image while remaining within the budget. ",
+      },
+
+      {
+        type: "heading",
+        text: "BETTER TARGETING: ",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Well, are you the one who wants to have the complete control over the aspect who can see your ads, the paid advertisements are your friend. Every platform offers the way and the method of targeting the levels of the consumers you want to. You may upload a list of the contacts to the sites which you want to target. Well, the old-time has gone when you send the mere salesman to the house of the people for the process of the advertising, let’s be a bit innovative ads use the paid campaigns for your brand. This is surely the merit that you can in a way customize whom you want to make your ads visible to. ",
+      },
+
+      {
+        type: "heading",
+        text: "BOOSTS THE AWARENESS ABOUT THE BRAND:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Well, when you talk about the most effective and the efficient way to manage the brand and to increase its exposure, believe me, the paid advertisements are the best option. It gives your brand good exposure to the existing area of the business. Well, let me put this to you in another way. Just think of a situation where your content or the posts appear in every new feed, what is this going to do? Simply the user or the viewer is going to become more friendly with your brand increasing brand loyalty and brand awareness which ultimately is going to fulfill your goal of enhancing your digital presence. People will now start to recognize you! So, this is the advantage that you can make a reason for using this method.  ",
+      },
+
+
+      {
+        type: "heading",
+        text: "CONCLUSION:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "For any business to grow proficiently, it is important to mark your digital presence in the digital space. You may use different strategies for this as mentioned in the starting also you make take the advantage of such a huge mobile using population of the world which is on the social media platforms. Believe me, if you know the correct way to make use of the complete human resource or the social media sites it is very easy for the brand to mark its digital presence. Well, the brands these days go with the social media paid advertisements which helps the business to thrive well and also mark the new dimensions of the social media place. Already the advantages of the paid advertisements are discussed in great detail above. So, don’t forget to give this a try. Well, in the end let me also mention the point that the world is looking at the century as the digital age. So, make the smart decisions which will make your brand a top brand in the field by increasing and enhancing its presence in the digital space!",
       },
 
     ],
@@ -3505,60 +4049,96 @@ export const blogs: ResourceItem[] = [
       },
 
       {
-
         type: "heading",
-
-        text: "Areas That Can Improve Advertising Performance",
-
-      },
-
-      {
-        type: "paragraph",
-        text: "More relevant audience targeting.",
+        text: "INTRODUCTION:",
       },
       {
         type: "paragraph",
-        text: "Stronger ad headlines.",
+        text: "Experts in the field of digital marketing and people who have good experience in running the paid advertisement campaigns have suggested that the majority of the advertisements running on the internet are simply a waste of money. What did it mean? It means the majority of the paid advertisements running on the internet are insufficient to get the results out because they are not made as per the algorithms or the basic rules of the paid advertising campaign are also overlooked.  Well, the experts strongly believe that if you are the one who is running the paid advertisement campaigns; you need to bring creativity in the way you function and make the campaign work. There is a reason for this. The market in which you are making your paid advertisements run is quite dynamic. This means that you can go with the same formula or the technique even the next time. You need to innovate and bring some creativity to the content which you are publishing and the paid advertisement campaigns too. Let me make it clear even if you have the creativity but lack the very important aspect of the strategy; believe me, your hard work will go to waste. You need to have a strategy that is going to get you a high level of return on your paid advertisement campaign. The strategy formulation can’t be learned overnight. There are a lot of things which one needs to keep in mind while one thinks or creates the strategy of the paid advertisement campaigns. Well, people all around this field believe that the process of making or creating a paid advertising campaign is both a science as well as an art. There are reasons behind this statement. As a science, there are a set of principles and rules which have to be followed while the paid advertising campaign is set up. But as mentioned above, the market in which we are working is highly dynamic.  What did it mean? It means that the old set of rules and the regulations can help you to make a paid advertisement campaign but believe me it is never going to work and is never going to give you the results you want. The reason is that this set of rules are with everyone. Everyone uses this set of principles to make their paid advertisements campaign work.  Well, the same strategy and the same rules and policies can never give you the desired results in this field. So, here comes the point of creativity. The whole process of making the paid advertising campaign is also an art as it involves the mere and the major level of creativity. Your creativity can make the paid advertisement campaign a great success. Because everyone searches for something new. And this creativity does not come in a single day. It requires a lot of experience and a good knowledge of the fact that how the paid advertisement campaign work and how to enhance the results.  There is another point to be mentioned that there is always a potential chance to maintain a good return on investment and CTR by just having the right ad copy optimization. Google ads have been seen as a better and a good deal by many people all around the globe for the paid ad campaigns. The reason is the widespread usage of Google in the world. Well, if you know some important and wonderful hacks, it becomes very easy and stress-removing to create a paid ad campaign which is going to yield you a good profit and the review from a customer who got satisfied with your work. But before we share some important hacks with you, there are certain basics you need to know about the paid ad campaign. There are two terms which we are going to use every widely now. If you will be knowing the meaning of the terms then it will become more interesting and worthy for you to learn about the hacks and also to implement them in the real life. ",
       },
-      {
-        type: "paragraph",
-        text: "Clear creative.",
-      },
-      {
-        type: "paragraph",
-        text: "Better offer positioning.",
-      },
-      {
-        type: "paragraph",
-        text: "Message consistency between ad and landing page.",
-      },
-      {
-        type: "paragraph",
-        text: "Faster landing pages.",
-      },
-      {
-        type: "paragraph",
-        text: "Reliable conversion tracking.",
-      },
+      
 
       {
-
         type: "heading",
-
-        text: "Measure Beyond CTR",
-
+        text: "WHAT IS ROI?",
+      },
+      {
+        type: "paragraph",
+        text: "We have been using the term ROI quite largely since you have started reading our today’s blog. Don’t get confused. Let me explain to you what does it mean. Well, it stands for the return on the investment. What does it measure? Well, it measures the return which you have yielded on a certain amount of the investment which you have done. It is a percentage that shows and describes how much profit you have received if you have invested a certain amount of the money. Well, in the field of the paid ad campaign it depicts how much we have created or generated wealth by making a particular paid advertising campaign on air. It depicts that how many more consumers of the product or the service have been added with the help of the paid ad campaign which we have created. Well, this is the percentage which comes up after the deduction of all sorts of the expenses which have been incurred on the paid ad campaign and other expenses too. This percentage can also be seen as the percentage which depicts the profitability and the success of the organization and the paid ad campaigns. Well, this is also true that the organization with a good ROI has better goodwill. This will again be helpful to attract more consumers. ",
       },
 
       {
-
+        type: "heading",
+        text: "WHAT IS CTR?",
+      },
+      {
         type: "paragraph",
-
-        text:
-
-          "A high click-through rate can still produce poor returns if visitors do not convert or customer acquisition costs exceed the value generated.",
-
+        text: "It is very important to know the correct meaning and the aspect of this term. This is because it is going to make the business sustain and flourish. Let me explain it to you. The term CTR stands for the full form click-through ratio. This ratio depicts, how many people have clicked on the link which you have provided out of the people who have received the advertisement or the mail or have viewed the page. Look this is very important to make sure that the paid advertisement campaign has a good click-through ratio. The reason is that it is the main purpose behind making a paid ad campaign right? Why do we do the paid ad campaign so that; a large number of people view our page or the website and add up to the customer list?  But if you don’t have a good click-through ratio; believe me, you are not going to sustain it in a long run. This is the measure of the fact that how successful was the online paid ad campaign was. A good ratio directly says and gives you the signal to continue with the way you are going with the very few changes whereas the poor ratio is the direct depiction of the fact you need to make sure that the strategy you were using earlier is changed as soon as possible. The reason is that the poor ratio directly shows that the paid ad campaign has failed and if you do not think once again about the strategy you may not be able to prevent the losses. Well, what are the ways, how can you increase the click-through ratio? We will discuss all these things in a short while!",
       },
 
+      {
+        type: "heading",
+        text: "WHY IS IT IMPORTANT TO HAVE HIGHER ROI AND GOOD CTR?",
+      },
+      {
+        type: "paragraph",
+        text: "Let me talk about the reasons behind having the higher CTR or the click-through ratio. If your paid ad campaign has a good or high click-through ratio it means that you have got many clicks on the link which you have provided with your advertisement. Now, if there are more clicks this means more amounts of people are going to come to your website or whatever is the end location which you have selected by giving the links. More people in the desired area mean more probability and the chances of getting the chance of making the potential consumer the actual consumer. Simply there is a direct relation between the fact of having higher click-through ratios and the higher sales and the higher purchases. The business with the higher click-through ratio easily gets the investments from the people as the investor knows that the good click-through ratio sooner or later is going to get him a good amount of profit. Well, there is another point which you need to know. If you want to have a good ranking of your ad then the best and the most straightforward way is to get a high click-through ratio. Because the platform has an algorithm that works on the fact that the higher the click-through ratio the higher the ad ranking.  Well, now let me tell you that why you’re paid ad campaign needs to have a higher ROI or the return on the investment? Well, if for a while we put away the aspect of the paid ad campaign; it becomes easy to know that why do we calculate the return on the investment. The first reason behind it is that it shows and gives a better measure of productivity. This means that if you have a higher or good return on investment ratio, it means you are moving towards the state of profitability and if you have a poor or bad ratio it is the indication of the fact that you need to make sure that you change your plan and the strategies. Well, it helps to measure the fact that what we the goal and how much we have achieved so far. Moving on it also helps to analyze the fact that how much we have spent on a particular thing and how much is it going to return us. Well, as mentioned above, if the organization has a good return on investment the investors are attracted like the honey bees to the honey.  If we now specially compare it to the fact of the paid ad campaigns, if there is a good or higher return on the investment, it is a sign that the campaign is running on its best front. There is again like click-through ratio is the direct relation with the better campaign with the better ratio of return on the investment. Also, it gives a base to make a comparative study that is the campaign going well as compared to the campaigns run previously or run by the competitors. It helps to make a comparative study and come with the possible changes which can be done to make the campaign more successful and more worthy. And as mentioned above if the campaigns have a high rate of returns on the investment, it is a good symbol and is going to enhance the goodwill of the organization and will in the future help you to get the investors for your future campaigns. So, these were the most important reasons that why you need to have a high rate of return on the investment and also higher click-through ratios.  ",
+      },
+
+
+      {
+        type: "heading",
+        text: "HOW CAN YOU ACHIEVE THE GOAL OF HIGHER ROI AND DOUBLE YOUR CTR?",
+      },
+      {
+        type: "paragraph",
+        text: "Now, when we know the basics and the reasons behind the fact of having a good click-through ratio and a high rate of return on the investment, it is very essential to know the ways which will help you to achieve this goal. Here we go!",
+      },
+
+      {
+        type: "heading",
+        text: "SCAN YOUR ACTUAL COMPETITOR:",
+      },
+      {
+        type: "paragraph",
+        text: "The majority of the people running or making these ad campaigns fail to get to the point that who is the actual competitor of the brand. They get confused with the brand selling the same type of goods or services. But let me tell you that it is not always the one who is selling the same type of goods and the services. There are certainly many other things too which can change or reflect this assumption. For example, for the brand making the shirts, the biggest competitor is going to be the brand that makes the shirts, but believe me, there is a twist here. There may be a chance that your biggest competitor here is the discount sites. So, you need to make sure you have a good mind to study the market and find out the correct competitor of your paid ad campaign and make it a successful one!",
+      },
+
+      {
+        type: "heading",
+        text: "ARE YOU USING THE OBSESSIVELY TEST HEADLINES?",
+      },
+      {
+        type: "paragraph",
+        text: "Well, people who have expertise in this field and also have a good experience of making a paid ad campaign, believe the fact if you go with the obsessive test headlines they can either be a successful one they may become a reason for the unseen losses. Well, they use the term that they can either make or destroy the ad campaign. Well, this notion rises on the fact that if you are the one who is simply just copying what others are doing while making an ad campaign, believe me, you are going to not even sustain for a day. You need to come with the originality. But it does not mean that this originality leads to such obsessive headlines which make you down. You need to be mindful while you select the heading because if chosen correctly, can help you to generate a huge view. So, keep this hack in the mind. ",
+      },
+
+      {
+        type: "heading",
+        text: "DON’T FORGET TO INCLUDE THE SOCIAL PROOF IN THE AD:",
+      },
+      {
+        type: "paragraph",
+        text: "Don’t forget to include the proofs of the things. Especially the social proofs. The reason behind this is that consumer is more likely to trust the one who is a consumer. Because there is psychology that says that the consumer is not going to give wrong feedback. So, this is the reason that why the companies and the brands spent a lot while making a relative study. They approach the influencer and many other types of the mean which will help them to make the consumers believe that the ad is true. Well, this is an old technique, but believe me, this is one of the most effective ways to increase the rate on the investment and also to increase the click-through ratios. ",
+      },
+
+      {
+        type: "heading",
+        text: "USING THE QUESTION-ANSWER TECHNIQUE:",
+      },
+      {
+        type: "paragraph",
+        text: "Well, when we talk about how to increase the click-through ratio the best way here is to make the questions the essential part of your paid ad campaign. This is the best way to force the viewer to stop and just think and also to click on the link to search more. This is not only a good way to increase the click-through ratio but is also a good way to increase the time spent by the consumers on the website.  Well, you should trigger the emotions of the consumers and should try to work accordingly. If you are successful in appeasing the consumers believe you have won the game. You will be the one who will make the most successful paid ad campaign. Because at the end of the day it all about knows how your viewer or the consumer is going to act in a certain situation. ",
+      },
+
+      {
+        type: "heading",
+        text: "CONCLUSION:",
+      },
+      {
+        type: "paragraph",
+        text: "So, it was a long blog, but what is the crux here? The simple way to enhance the rate of return on the investment and the click-through ratio is to make your way out of that of the competitors. Think about the originality of the things you are doing. You also need to know who your actual competitor is. You may consider the similar brands your competitors but the reality may change the state of your paid campaign soon. So, make sure you do the correct study of the emotional content of the viewer and let him view what he wants to view! There is always a hope to make a successful paid ad campaign. ",
+      },
     ],
 
   },
@@ -3602,58 +4182,124 @@ export const blogs: ResourceItem[] = [
       },
 
       {
-
         type: "heading",
-
-        text: "What Customers Expect From Ecommerce",
-
-      },
-
-      {
-        type: "paragraph",
-        text: "Clear product information.",
+        text: "INTRODUCTION:",
       },
       {
         type: "paragraph",
-        text: "Accurate pricing.",
+        text: "E-commerce companies like Shopify, Amazon, Flipkart and many more are earning billions. This directly means that e-commerce shopping and e-commerce are very famous these days. The success of these companies represents consumer reliability on the e-commerce platforms.  Well, if we see especially in the time of the covid-19 pandemic, the traditional shopping markets have faced a lot of problems. They were forced to shut down. But if you study the statistics of these e-commerce shopping companies you may conclude that these companies have managed to somehow cover the mere cost of the business. And as the cases are declining at a higher pace people are placing more orders and the shopping websites are managing to make good profits.  Many people think the reason for the widespread of e-commerce shopping platforms. The basic reason here is the availability of budget mobile phones and the deep penetration and affordability of the internet. Well, we should not forget that we live in India which is the second-largest market in the world. This is also another reason. Well, this is the age of technology. Everyone in this world is leaving life at a faster pace. They want to save time and spend some more time in the office working overtime to meet their expenses or they want to spend time with their families. Hence this is the best-suited way to place orders online and enjoy the process.  ",
       },
-      {
-        type: "paragraph",
-        text: "Fast websites.",
-      },
-      {
-        type: "paragraph",
-        text: "Easy navigation.",
-      },
-      {
-        type: "paragraph",
-        text: "Secure checkout.",
-      },
-      {
-        type: "paragraph",
-        text: "Reliable delivery information.",
-      },
-      {
-        type: "paragraph",
-        text: "Straightforward returns.",
-      },
+      
 
       {
-
         type: "heading",
-
-        text: "Trust Is Essential",
-
+        text: "WHAT IS E-COMMERCE SHOPPING AND ITS FUTURE?",
       },
-
       {
-
         type: "paragraph",
-
         text:
+          "Going with the definition, e-commerce shopping means buying and selling things online. It is also called electronic commerce as this type of shopping is generally done online using the gadgets such as mobile phones or laptops. Well, as per the statistics and the experts the e-commerce marketing is projected to be about $27 trillion in the year 2020. This data is enough to show the future of e-commerce in India and the world. This data shows us that buyers all around the world are becoming more interested in online shopping. Well, let me present it this way. People all around the world found it easy and comfortable to buy and sell things online. This saves time and effort and you need not search markets in the scoring heat.  Well, the factors showing the bright future of e-commerce are infinite. The age is directly is of e-commerce! Yes; without a doubt, there will be upgrades and also new platforms will emerge but the basic structure is going to remain the same. ",
+      },
 
-          "Customers cannot physically inspect products before buying online, so imagery, descriptions, reviews, policies and customer support all contribute to purchase confidence.",
+      {
+        type: "heading",
+        text: "BENEFITS OF E-COMMERCE SHOPPING FOR CONSUMERS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Now the question is why do people choose it? Well, the simple answer is the type of facilities and the advantages they have. This is the straightforward reason that why people all around the world are choosing it these days. Well, without any doubt; in this covid-19 time, people are still restricting themselves to go out. Let’s have a look at the advantages!",
+      },
 
+      {
+        type: "heading",
+        text: "A WIDE RANGE OF PRODUCTS AND SERVICES:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Here comes the first advantage! A wide range of products. Let me explain this with an example. Just consider that you have to buy a pair of the t-shirt. If traditionally we see, you will be going to the market and searching for the shops which are selling t-shirts. Well, if you want to have a t-shirt of good quality and a unique design believe me you will have to spend the complete day u So, what I want to take out from this? The simple idea is that one shop can’t have all the varieties you want to have. So, this is the main reason that why people these days go online for shopping. They get all the brands and all the types of clothes in a single click. So, here comes the point that the online market offers a huge range of products and services. So, this is the first advantage!",
+      },
+
+      {
+        type: "heading",
+        text: "COMFORT ZONE:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Come on! Just confess it! You also don’t want to step out of your comfort zone, especially in this covid-19 times. Believe me, the majority of the people these days just want to sit at their place and enjoy the process.  The consumer today is the king of the market. The consumer wants everything on their doorstep today. Gone are the days when people use to go outside in the scorching heat and grab the deals from the sales. The time has changed now. People sit at their homes in the air conditioners and take the buy everything they want online. Well, everyone has smartphones in their hands giving them the power to buy whatever they want whenever they want at their home in the air conditioners. ",
+      },
+
+      {
+        type: "heading",
+        text: "TIME TO SAVE MONEY AND TIME:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Who doesn’t want to save money? Everyone! But many times is what we call money. As mentioned and discussed in the beginning, people all around the world are so busy with work that to give the family the time becomes a bit difficult. Thus there arises another benefit of e-shopping or e-commerce shopping. The advantage of saving time as well as money.  Now, in this age of technology, you need not spend a lot of time shopping. Simply grab up your phone, go to the app and simply decide what you want and the time is here to place the order. This way you are going to save a lot of time.  There are plenty of offers there on these shopping sites. They provide huge discounts and huge offers. These offers are going to help you to save a lot of money on your hand. There is sometimes a 50% discount and sometimes there are even 80% discounts available on these platforms. So, this is how one can save both money and time. And even for some people, time is what we call the financial resource!  ",
+      },
+
+      {
+        type: "heading",
+        text: "COMPLETE INFORMATION:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "This advantage is the one which is liked by everyone! The information; what happens sometimes, the people all around the market hide the information which may prove as a disadvantage to the consumer. In this case, the consumer gets befooled leading to the post issues which may prove to be dangerous. So, in e-commerce shopping, there is always a protocol that states that the information should be given to the consumers prior they buy the product so, that they know what they are buying or what they are going to buy. There is another benefit of this to the consumer that it comes to know about the reviews that many people have left in the reviews section of the product. Believe me, this is going to do the half work for you! So, this is another merit that is making e-commerce shopping a more famous and easier thing for the people. Even we can make the claims if we find something is going unwell. We can seek the help of the consumer support team which is ready to help the consumers 24 hours.  Well, the government has also given the right to the consumer which gives power to the consumer to seek complete information of the product and if the company fails to provide the consumers with complete knowledge and also it leads to some issue with the consumer, he can surely go to the consumer court and seek the redressal. This is another merit of e-commerce shopping websites. ",
+      },
+
+      {
+        type: "heading",
+        text: "BENEFITS OF E-COMMERCE TO SELLERS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Well, we have discussed the benefit of e-commerce shopping to the consumers in great detail. But what if you are a seller? Do you have any benefit in this case? Well, the answer is yes! There are many benefits of e-commerce shopping to the seller too.Let’s look what are the benefits to the sellers of this:",
+      },
+
+      {
+        type: "heading",
+        text: "LOWER SET UP AND RUNNING COSTS COMPARED TO OFFLINE ONE:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "This is true. If you are going to compare the statistics you are going to conclude that the people who are running the online business have to bear fewer setup costs as compared to the traditional markets. People generally afraid of the fact the cost of setting up an online business. But the reality is that the people who set up their online business have to pay very little in the context of the money and they make decent profits out of this.   If we compare this to the traditional old style of setting up the business, believe me, setting up a shop in offline mode requires a lot of fixed capital whereas you need very few financial resources to set it up.  Let me tell you one more thing. The cost of running this type of business is also quite less. As you need not employ a lot of staff. You can simply make the system work in this case to guide the consumer and even to seek the orders. ",
+      },
+
+
+      {
+        type: "heading",
+        text: "COMFORT IN OPERATIONS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "We have recently discussed the comfort of the consumers. But there is another point here that is essential to make that the consumer, as well as the sellers both, have the privilege to remain in their comfort zone and do the things they want to do. The business owner can operate a nationwide market simply by sitting at their home. You need not maintain a huge office to maintain the business. This is what we call comfort in the operations. The business can be started easily in the pajamas and taken to good heights while sitting in the pajamas. And also in this covid-19 time, no one wants to get out of the home and want to risk their lives. This is the reason that why it is also a transaction that is beneficial for both the consumer and the seller. There is one more thing that is essential to mention, the online business gives you the freedom to simply sit at your home open your laptops and enjoy the process. Believe me, this is what you have dreamt of someday. ",
+      },
+
+      {
+        type: "heading",
+        text: "NO MORE TIME RESTRICTIONS:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "There are 24 hours in a day. But the most legitimate question is that how much a human can work? One may say 10 hours, the other may say 15 hours, and the person sitting in the last may say 18 hours. This is the point that we want to raise. Humans have their limitations. They can’t sit in the shop the whole day. They need to close their shop at some time to maintain the store to rest. Well, here comes the next point of no more time restrictions. You can enjoy getting orders a day and the night and that even without the staff to handle the consumers because you have the website to do this for you. Well, let me explain this in more detail. The restriction or the limitations of the time is overlooked in the online sale and purchase process. Just consider the example of the person who comes at home at midnight in the night and doesn’t have the time to go to the market; what will he do? Simply he will grab up the mobile phone and place the order in which the benefit of the seller is shown. The seller may be sleeping at that time but the app or the website is simply taking the orders. This is the beauty and the advantage of the online business. Even if you are sleeping at the night the device is working taking orders and letting you earn profits even if you are asleep.  So, these were the benefits of e-commerce shopping to the seller. Now more time and money constraints. This is the method of how both the consumer and the seller earn and saves in one and the other form. ",
+      },
+
+      {
+        type: "heading",
+        text: "CONCLUSION:",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Well, let me bring out the crux of the big blog which you have just read. This going time is of e-commerce shopping without any doubt and also giving the fact the second thought, we can say that the near and the far, both the future is bright for the e-commerce companies and the e-commerce shopping because of the comfort they provide to the buyer, the variety the discounts and the time. Because for many people all around the time is what they consider as the money. Well, the crux is one should surely invest in e-commerce shopping and the people who run the business offline should fatly come online before it gets too crowded! ",
       },
 
     ],
@@ -3698,112 +4344,146 @@ export const blogs: ResourceItem[] = [
 
         text:
 
-          "Technical SEO focuses on helping search engines efficiently crawl, understand and index a website while maintaining a strong experience for users.",
+          "Technology has driven us to move out from the conventional ways of marketing and shift into the modern and advanced ways of marketing. Yes, it is time to market digitally and leave the old ways of marketing forever. Digital technology is the new technical term that is being used primarily by businesses to market their products and services. Digital marketing contains many other marketing terms including social media marketing, PPC, SEO, on-page SEO, off-page SEO, technical SEO, etc. To rank a business website on Google’s first page, it must be optimized for technical SEO along with on-page and off-page SEO. We primarily covered here all aspects and related terms of technical SEO. Read them thoroughly and learn how important it is for increasing brand awareness. ",
 
       },
 
       {
-
         type: "heading",
-
-        text: "Important Technical SEO Areas",
-
-      },
-
-      {
-        type: "paragraph",
-        text: "Crawlability.",
+        text: "Why is Digital marketing worthwhile to businesses?",
       },
       {
         type: "paragraph",
-        text: "Indexability.",
-      },
-      {
-        type: "paragraph",
-        text: "Site architecture.",
-      },
-      {
-        type: "paragraph",
-        text: "Canonical URLs.",
-      },
-      {
-        type: "paragraph",
-        text: "Redirects.",
-      },
-      {
-        type: "paragraph",
-        text: "Structured data.",
-      },
-      {
-        type: "paragraph",
-        text: "Mobile usability.",
-      },
-      {
-        type: "paragraph",
-        text: "Page performance.",
-      },
-      {
-        type: "paragraph",
-        text: "Internal linking.",
-      },
-      {
-        type: "paragraph",
-        text: "XML sitemaps.",
+        text: "Through digital marketing, businesses are able to attract customers' attention with a single click. This technology is accessing the brands to reach their customers and transform them into clients. Digital marketing is useful for businesses in all aspects. In addition, it provides information about the online reputation of the business competitors and their marketing strategies. Now businesses have full leverage to sell their product and services through online stores. It means digital marketing is a profit-making solution for new and old business holders..",
       },
 
       {
-
         type: "heading",
-
-        text: "Crawlability and Indexing",
-
+        text: "Role of SEO in Digital marketing ",
       },
-
       {
-
         type: "paragraph",
-
-        text:
-
-          "Search engines need to discover important URLs and understand which pages should appear in search results. Incorrect robots directives, duplicate URLs or weak internal linking can interfere with this process.",
-
+        text: "The purpose of SEO is to optimize and develop websites in order to make them attractive to buyers of a particular service or product. SEO stands for search engine optimization, it means optimizing websites through different aspects of SEOs A website with good SEO scores top on google for particular keyword searches. In business prospects, keyword searches may be regarding a product, service, and brand name. A brief understanding of Technical SEO and importance of technical SEO is given below. SEO is further divided into three parts and every part is important for a website to rank on google ",
       },
 
       {
-
         type: "heading",
-
-        text: "Performance and User Experience",
-
+        text: "What is Technical SEO?",
       },
-
       {
-
         type: "paragraph",
-
-        text:
-
-          "Technical improvements such as optimized assets, efficient code and responsive layouts can improve both usability and the overall quality of a website.",
-
+        text: "Importance of technical SEO should not be ignored if someone wants to implement the other two types of SEO effectively. It is all about optimizing a website for all technical aspects.  A fast and easier to crawl website is an example of a technically strong website. Many people ignore the importance of all aspects of technical SEO and fail to rank their website on the top position of Google search results. Technical SEO includes a series of website optimization elements that should be executed brilliantly.",
       },
 
       {
-
         type: "heading",
-
-        text: "Final Thoughts",
-
+        text: "The importance of technical SEO optimization for websites",
+      },
+      {
+        type: "paragraph",
+        text: "The importance of technical SEO is for all types of websites because it makes a website’s presence technically strong after following Google’s algorithms.  Crawling and indexing a website helps Google to rank it, provided the website is packed with quality content too. Technical SEO ensures that you are confident to leave your website to Google for a better ranking of its pages.You may have chosen the best quality keywords for your website, but the keywords would help you to rank on google if the technical SEO was done intelligently.",
       },
 
       {
-
-        type: "paragraph",
-
-        text:
-
-          "Technical SEO works best when it supports high-quality content and a clear site structure rather than being treated as a standalone ranking tactic.",
-
+        type: "heading",
+        text: "Three attributes of Technical SEO",
       },
+      {
+        type: "paragraph",
+        text: "The technical SEO checklist has three attributes. All the other aspects of technical SEO revolve around these three terms. ",
+      },
+
+      {
+        type: "heading",
+        text: "Influencing things to Crawlability and Indexing",
+      },
+      {
+        type: "paragraph",
+        text: "As crawlability and indexing are the prominent attributes of technical SEO. They are affected by many related things. There are many things that make both of them either strong or weak. A website should have good crawlability and indexing as well. Weakness in one of them affects the other’s performance. ",
+      },
+
+      {
+        type: "heading",
+        text: "Quality of Internal Links",
+      },
+      {
+        type: "paragraph",
+        text: "Google’s bots crawl to internally linked pages of the website. A good internal linking of the website pages ensures the quality and number of links, hence Google offers good crawl ability to that website.  Link internal pages of the website by choosing perfect anchors and avoid forceful internal linking. ",
+      },
+
+      {
+        type: "heading",
+        text: "Keep site away from duplicate content",
+      },
+      {
+        type: "paragraph",
+        text: "Pages in a website that contain the same information and content do not rank and affect the website’s reputation in Google’s perception. In addition, duplicate content in the website lowers the visits of the number of web crawlers and crawling bots. Always keep removing duplicate content from your website for increasing crawlability and indexing of the content. ",
+      },
+
+      {
+        type: "heading",
+        text: "Sitemap Submission",
+      },
+      {
+        type: "paragraph",
+        text: "Sitemap submission is helpful to let google know about the content of your website and also about any update in the existing content. ",
+      },
+
+      {
+        type: "heading",
+        text: "Website Structure",
+      },
+      {
+        type: "paragraph",
+        text: "A good website structure is impactful for improving crawlability and indexing process. Grouped your website content including posts, pages, and topics. A site structure also ensures the presentation quality of the website to the viewers. ",
+      },
+
+      {
+        type: "heading",
+        text: "Update and publish new content",
+      },
+      {
+        type: "paragraph",
+        text: "The new and updated content in the website is also worthwhile to enhance the crawlability of the website content. Keep on adding new and quality content to the website, and update the existing content if required. Viewers stay for a long time on quality content and it is the best way to convert viewers into clients.",
+      },
+
+      {
+        type: "heading",
+        text: "Server errors",
+      },
+      {
+        type: "paragraph",
+        text: "The website content crawlability is also very affected by server errors. Errors in the server prevent Google from accessing the entire website content. ",
+      },
+
+
+      {
+        type: "heading",
+        text: "Increase page load time",
+      },
+      {
+        type: "paragraph",
+        text: "The page loading speed needs to be faster for better crawling and indexing on the website. Web crawlers visit websites for a very quick interval of time, at that time your website page should load more quickly to welcome the web crawlers. ",
+      },
+
+      {
+        type: "heading",
+        text: "Properties of technically sound website",
+      },
+      {
+        type: "paragraph",
+        text: "After on-page and off-page SEO, technical SEO of the websites is mandatory to experience a better rank and high traffic. Technical mistakes in a website cost a lot including a blockage from search engines and difficulty to crawl website content. A technically sound website must include Technical SEO Factors discussed above and others given below.",
+      },
+
+      {
+        type: "heading",
+        text: "Fast in loading ",
+      },
+      {
+        type: "paragraph",
+        text: "Website pages should open within three seconds otherwise the visitors would move on to other websites.More than 50% of the users of a website check in to another website if it does not open within three seconds. If the website is technically optimized for fast speed then users can be transformed into clients. ",
+      },
+  
 
     ],
 
