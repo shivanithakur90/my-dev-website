@@ -13,55 +13,55 @@ const footerColumns = [
       { label: "Product Engineering", href: "/services/product-engineering" },
       { label: "Forward-Deployed Engineers", href: "/services/forward-deployed-engineers" },
       { label: "Cloud, DevOps & Security", href: "/services/cloud-devops-security" },
-      { label: "Web Development Company", href: "/services/web-development" },
-      { label: "Mobile App Development", href: "/services/mobile-app-development" },
-      { label: "AI Solutions", href: "/services/ai-solutions" },
+      { label: "Web Development Company", href: "/services/custom-application-development" },
+      { label: "Mobile App Development", href: "/services/product-engineering" },
+      { label: "AI Solutions", href: "/services/ai-automation" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { label: "Applicant Tracker", href: "/solutions/applicant-tracker" },
-      { label: "Client Portal", href: "/solutions/client-portal" },
-      { label: "Custom CRM", href: "/solutions/custom-crm" },
-      { label: "Dashboards & Reporting", href: "/solutions/dashboards-reporting" },
-      { label: "Employee Portal", href: "/solutions/employee-portal" },
-      { label: "ERP", href: "/solutions/erp" },
-      { label: "Inventory Management", href: "/solutions/inventory-management" },
-      { label: "Knowledge Base", href: "/solutions/knowledge-base" },
-      { label: "LMS", href: "/solutions/lms" },
+      { label: "Applicant Tracker", href: null },
+      { label: "Client Portal", href: null },
+      { label: "Custom CRM", href: null },
+      { label: "Dashboards & Reporting", href: null },
+      { label: "Employee Portal", href: "/solutions/employee-hub" },
+      { label: "ERP", href: null },
+      { label: "Inventory Management", href: null },
+      { label: "Knowledge Base", href: null },
+      { label: "LMS", href: null },
     ],
   },
   {
     title: "Industry",
     links: [
       { label: "Healthcare", href: "/industries/healthcare" },
-      { label: "Fintech", href: "/industries/fintech" },
-      { label: "SaaS Technology", href: "/industries/saas" },
-      { label: "Real Estate", href: "/industries/real-estate" },
-      { label: "Ecommerce", href: "/industries/ecommerce" },
-      { label: "Professional Services", href: "/industries/professional-services" },
-      { label: "Manufacturing Services", href: "/industries/manufacturing" },
+      { label: "Fintech", href: "/industries/fintech-financial-services" },
+      { label: "SaaS Technology", href: null },
+      { label: "Real Estate", href: null },
+      { label: "Ecommerce", href: "/industries/e-commerce-retail" },
+      { label: "Professional Services", href: null },
+      { label: "Manufacturing Services", href: "/industries/manufacturing-distribution" },
     ],
   },
   {
     title: "Insights",
     links: [
-      { label: "Blog", href: "/blog" },
+      { label: "Blog", href: null },
       { label: "Our Work", href: "/our-work" },
-      { label: "Library", href: "/library" },
+      { label: "Library", href: null },
     ],
   },
   {
     title: "Company",
     links: [
       { label: "About us", href: "/company" },
-      { label: "Career", href: "/career" },
-      { label: "Confidentiality", href: "/confidentiality" },
-      { label: "Our Team", href: "/team" },
-      { label: "Security", href: "/security" },
-      { label: "Testimonials", href: "/testimonials" },
-      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Career", href: null },
+      { label: "Confidentiality", href: null },
+      { label: "Our Team", href: null },
+      { label: "Security", href: null },
+      { label: "Testimonials", href: null },
+      { label: "Privacy Policy", href: null },
       { label: "Contact us", href: "/contact" },
     ],
   },
@@ -123,12 +123,18 @@ export default function Footer() {
               >
                 {column.links.map((link) => (
                   <li key={link.label}>
+                    {link.href ? (
                     <Link
                       href={link.href}
                       className="inline-block text-[14px] leading-[1.45] text-white transition-all duration-300 hover:translate-x-1 hover:text-[#ff4d00]"
                     >
                       {link.label}
                     </Link>
+                    ) : (
+                      <span aria-disabled="true" className="inline-block text-[14px] leading-[1.45] text-white/50">
+                        {link.label}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -142,19 +148,9 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap items-center gap-6">
-            <Link
-              href="/privacy-policy"
-              className="transition hover:text-white"
-            >
-              Privacy Policy
-            </Link>
+            <span aria-disabled="true">Privacy Policy</span>
 
-            <Link
-              href="/terms"
-              className="transition hover:text-white"
-            >
-              Terms & Conditions
-            </Link>
+            <span aria-disabled="true">Terms & Conditions</span>
 
             <Link
               href="/contact"

@@ -239,7 +239,7 @@ const caseStudies = [
     image: "/erp-5.png",
     imageAlt: "ContentFlow Studio dashboard",
     imageBackground: "bg-[#3b2116]",
-    href: "/solutions/content-management",
+    href: "/solutions/smart-restaurant",
     ctaLabel: "View case study",
     tags: [
       "POS System",
@@ -255,7 +255,7 @@ const caseStudies = [
     image: "/erp-6.png",
     imageAlt: "Finance operations dashboard",
     imageBackground: "bg-[#fff3eb]",
-    href: "/solutions/smart-mlm",
+    href: "/solutions/mealops-vendory",
     ctaLabel: "View case study",
     tags: [
       "Kitchen Operations",
@@ -278,7 +278,7 @@ export default function HealthcarePage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
 
@@ -290,7 +290,7 @@ export default function HealthcarePage() {
         eyebrow="THE PROBLEM"
         title="Care is complex. The admin around it shouldn’t be."
         description="Patient intake on paper or clunky forms. Scheduling across disconnected systems. Provider and referral information scattered. Staff spending time on admin that software should handle — while privacy requirements make teams wary of building anything new. Off-the-shelf tools rarely fit the operational reality of a practice or health organization."
-        image="/manufacturing-distribution.webp"
+        image="/customer-dashborad-original-image.png"
         imageAlt="Financial internal tools illustration"
       />
 

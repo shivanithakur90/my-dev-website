@@ -5,6 +5,7 @@ import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
+import SolutionsTabs, { type SolutionTab } from "@/components/common/SolutionsTabs";
 
 export const metadata: Metadata = {
   title: "Fleet Dispatch",
@@ -18,7 +19,7 @@ const caseStudies = [
     title: "SST Employee Hub",
     description:
       "A self-service employee portal for attendance, leave management, payslips, company policies, and internal announcements in one dashboard.",
-    image: "/erp-1.png",
+    image: "/ERP-1.png",
     imageAlt: "ContentFlow Studio dashboard",
     imageBackground: "bg-[#3b2116]",
     href: "/solutions/employee-hub",
@@ -48,6 +49,35 @@ const caseStudies = [
 ];
 
 
+const manufacturingTabs: SolutionTab[] = [
+  {
+    id: "inventory",
+    label: "Content Management",
+    image: "/erp-4.png",
+    Icon: "inventory",
+  },
+  {
+    id: "vendor",
+    label: "Network Marketing",
+    image: "/erp-7.png",
+    Icon: "vendor",
+  },
+  {
+    id: "erp",
+    label: "Kitchen Operations",
+    image: "/erp-6.png",
+    Icon: "erp",
+  },
+  {
+    id: "project",
+    label: "Reservations",
+    image: "/erp-5.png",
+    Icon: "project",
+  },
+];
+
+
+
 export default function FleetDispatchPage() {
   return (
     <div>
@@ -60,7 +90,7 @@ export default function FleetDispatchPage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* INTRO */}
@@ -142,19 +172,17 @@ export default function FleetDispatchPage() {
         ]}
       />
 
-      <WorkShowcaseSection
-        eyebrow="CASE STUDIES"
-        title="Real interfaces, built on real SaaS"
-        description="A selection of digital products and platforms designed around real business workflows."
-        projects={caseStudies}
-        showFilters={false}
-        showFinalCta={false}
-        limit={2}
-        className="pb-0"
+      <SolutionsTabs
+        heading="Solutions for fintech."
+        description="The apps we build most often for teams like yours."
+        tabs={manufacturingTabs}
+        paddingClassName="pt-[50px] md:pt-[80px]"
       />
+
 
       {/* HOW WE BUILD IT */}
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD IT"
         title="Fleet management software built around real dispatch operations."
         description="We understand how your dispatchers, drivers, trucks, customers, routes, and loads work together, then build one connected system that gives your team the visibility and control needed to keep every shipment moving."
@@ -176,6 +204,19 @@ export default function FleetDispatchPage() {
           },
         ]}
       />
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pt-0! sm:pb-[50px] md:pb-[70px] lg:pb-[80px]"
+      />
+
+
       <StackCtaSection
         heading="Let's connect your stack."
         description="Tell us what needs to talk to what. We'll design the integration layer."

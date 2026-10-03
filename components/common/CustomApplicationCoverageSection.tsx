@@ -22,42 +22,42 @@ const defaultCoverageItems: CoverageItem[] = [
     title: "Web applications",
     description:
       "Full custom web apps — internal or customer-facing — built around your workflows.",
-    href: "/services/web-applications",
+    href: "/services/custom-application-development",
     icon: <WebAppIcon />,
   },
   {
     title: "Dashboards & reporting",
     description:
       "Live operational dashboards pulling data from across your stack.",
-    href: "/services/dashboards-reporting",
+    href: "/services/custom-application-development",
     icon: <DashboardIcon />,
   },
   {
     title: "Client & customer portals",
     description:
       "Secure, branded portals connected to your CRM, storage, and billing.",
-    href: "/services/customer-portals",
+    href: "/services/custom-application-development",
     icon: <PortalIcon />,
   },
   {
     title: "Internal tools & admin panels",
     description:
       "Ops consoles, approval flows, and admin interfaces that run your business in one screen.",
-    href: "/services/internal-tools",
+    href: "/services/custom-application-development",
     icon: <AdminIcon />,
   },
   {
     title: "Mobile applications",
     description:
       "iOS and Android apps, including companion apps connected to your web platforms.",
-    href: "/services/mobile-applications",
+    href: "/services/custom-application-development",
     icon: <MobileIcon />,
   },
   {
     title: "Workflow applications",
     description:
       "Apps that automate and manage multi-step business processes from start to finish.",
-    href: "/services/workflow-applications",
+    href: "/services/custom-application-development",
     icon: <WorkflowIcon />,
   },
 ];

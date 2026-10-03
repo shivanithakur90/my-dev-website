@@ -5,7 +5,9 @@ import FaqSection from "@/components/home/FaqSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import ProblemSection from "@/components/common/ProblemSection";
 import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
-import SolutionsTabs from "@/components/common/SolutionsTabs";
+import SolutionsTabs, { type SolutionTab } from "@/components/common/SolutionsTabs";
+import IntegrationsSection, { IntegrationItem } from "@/components/common/IntegrationsSection";
+import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 
 export const metadata: Metadata = {
   title: "E-commerce & Retail",
@@ -227,6 +229,77 @@ const manufacturingTabs: SolutionTab[] = [
   },
 ];
 
+
+const integrations: IntegrationItem[] = [
+  {
+    name: "Shopify",
+    logo: "/shopify.avif",
+  },
+  {
+    name: "Stripe",
+    logo: "/stirpe.avif",
+  },
+  {
+    name: "QuickBooks",
+    logo: "/quick-books.avif",
+  },
+  {
+    name: "Twilio",
+    logo: "/twilio.avif",
+  },
+  {
+    name: "SendGrid",
+    logo: "/sendgrid.avif",
+  },
+  {
+    name: "WooCommerce",
+    logo: "/woocomerce.avif",
+  },
+  {
+    name: "Klaviyo",
+    logo: "/klaviyo.avif",
+  },
+  {
+    name: "+Your stack",
+    logo: "/your-stack.avif",
+  },
+];
+
+
+const caseStudies = [
+  {
+    title: "Smart MLM & Commission Management Platform",
+    description:
+      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
+    image: "/erp-7.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/smart-mlm",
+    ctaLabel: "View case study",
+    tags: [
+      "Network Marketing",
+      "Affiliate Management",
+    ],
+  },
+
+  {
+    title: "MealOps Vendor Invoice Management Platform",
+    description:
+      "A streamlined kitchen operations platform for managing vendor invoices, purchase orders, inventory records, and supplier approvals from one centralized workspace.",
+    image: "/erp-6.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/mealops-vendory",
+    ctaLabel: "View case study",
+    tags: [
+      "Kitchen Operations",
+      "FoodTech",
+    ],
+  },
+];
+
+
+
 export default function EcommerceRetailPage() {
   return (
     <main className="overflow-hidden bg-white">
@@ -238,7 +311,7 @@ export default function EcommerceRetailPage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* =====================================================
@@ -302,6 +375,7 @@ export default function EcommerceRetailPage() {
             ===================================================== */}
 
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="How we build it"
         title="Built for you, on your stack."
         description="We don't hand you a tool to configure. A forward-deployed engineer builds around your workflow, connects your systems, deploys it securely, and hands it over."
@@ -323,6 +397,70 @@ export default function EcommerceRetailPage() {
           },
         ]}
       />
+
+
+
+      <IntegrationsSection
+        badge="BUILT ON YOUR STACK"
+        heading="Connected to the tools e-commerce & retail teams run on."
+        buttonText="View all Integrations"
+        buttonHref="/services/api-development"
+        integrations={integrations}
+        classNames={{
+          section: "w-full bg-white pb-[50px] sm:pb-[50px] lg:pb-[80px]",
+          container: "mx-auto container px-5",
+
+          badgeWrapper: "flex justify-center",
+
+          badge:
+            "inline-flex items-center gap-2 rounded-[8px] border border-[#e8e8e8] px-4 py-2",
+
+          badgeIcon: "text-[#ff5200]",
+
+          badgeText:
+            "text-[13px] font-medium uppercase text-[#242424]",
+
+          headerWrapper:
+            "mx-auto mt-6 max-w-[750px] text-center",
+
+          heading:
+            "text-[48px] font-semibold leading-[1.08] tracking-[-2px] text-[#202020]",
+
+          buttonWrapper:
+            "mt-9 flex justify-center",
+
+          button:
+            "rounded-[10px] border border-black px-5 py-3 text-[14px] font-semibold",
+
+          grid:
+            "mt-[58px] grid grid-cols-4 gap-[14px] max-lg:grid-cols-2 max-sm:grid-cols-1",
+
+          card:
+            "flex min-h-[165px] flex-col items-center justify-center rounded-[15px] bg-[#f6f6f6] p-6",
+
+          logoWrapper:
+            "flex h-[58px] w-[58px] rounded-[10px] items-center justify-center",
+
+          logo:
+            "h-[58px] w-[58px] object-contain rounded-[10px]",
+
+          title:
+            "mt-4 text-[17px] font-medium text-[#262626]",
+        }}
+      />
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description=""
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pt-0! pb-0!"
+      />
+
+
 
       {/* =====================================================
                 FAQ

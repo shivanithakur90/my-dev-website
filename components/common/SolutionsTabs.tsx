@@ -130,7 +130,7 @@ export default function SolutionsTabs({
 
   return (
     <section className={`w-full bg-white ${paddingClassName} ${className}`}>
-      <div className="mx-auto w-full max-w-[1450px] px-5 max-md:px-4">
+      <div className="mx-auto w-full container px-5 max-md:px-4">
 
         {/* Heading */}
         <div className="mb-[38px] text-center max-md:mb-9">
@@ -147,12 +147,13 @@ export default function SolutionsTabs({
         <div className="mb-[42px] grid grid-cols-4 gap-[20px] max-md:flex max-md:overflow-x-auto max-md:pb-2 max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden">
           {tabs.map((tab) => {
             const Icon = getTabIcon(tab.Icon);
-            const isActive = activeTab === tab.id;
+            const isActive = activeItem.id === tab.id;
 
             return (
               <button
                 key={tab.id}
                 type="button"
+                aria-pressed={isActive}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
                   group

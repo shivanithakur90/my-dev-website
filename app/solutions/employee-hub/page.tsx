@@ -5,6 +5,7 @@ import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
+import SolutionsTabs, { type SolutionTab } from "@/components/common/SolutionsTabs";
 
 export const metadata: Metadata = {
   title: "Employee Hub",
@@ -45,6 +46,37 @@ const caseStudies = [
     ],
   },
 ];
+
+
+
+const manufacturingTabs: SolutionTab[] = [
+  {
+    id: "inventory",
+    label: "Content Management",
+    image: "/erp-4.png",
+    Icon: "inventory",
+  },
+  {
+    id: "vendor",
+    label: "Network Marketing",
+    image: "/erp-7.png",
+    Icon: "vendor",
+  },
+  {
+    id: "erp",
+    label: "Kitchen Operations",
+    image: "/erp-6.png",
+    Icon: "erp",
+  },
+  {
+    id: "project",
+    label: "Reservations",
+    image: "/erp-5.png",
+    Icon: "project",
+  },
+];
+
+
 
 export default function CustomSoftwarePlatformsPage() {
   return (
@@ -120,6 +152,7 @@ export default function CustomSoftwarePlatformsPage() {
         }
       />
 
+
       {/* WHO IT'S FOR */}
       <AudienceSection
         eyebrow="WHO IT'S FOR"
@@ -153,19 +186,18 @@ export default function CustomSoftwarePlatformsPage() {
         ]}
       />
 
-      <WorkShowcaseSection
-        eyebrow="CASE STUDIES"
-        title="Real interfaces, built on real SaaS"
-        description="A selection of digital products and platforms designed around real business workflows."
-        projects={caseStudies}
-        showFilters={false}
-        showFinalCta={false}
-        limit={2}
-        className="pb-0"
+      <SolutionsTabs
+        heading="Solutions for fintech."
+        description="The apps we build most often for teams like yours."
+        tabs={manufacturingTabs}
+        paddingClassName="pt-[50px] md:pt-[80px]"
       />
+
+      
 
       {/* BUILD PROCESS */}
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD IT"
         title="Business software designed around your actual operations."
         description="We understand your workflows, users, data, and operational challenges, then build one connected platform that makes everyday work simpler, faster, and easier to manage."
@@ -186,6 +218,17 @@ export default function CustomSoftwarePlatformsPage() {
               "As your business grows, new modules, users, locations, integrations, and workflows can be added without rebuilding everything.",
           },
         ]}
+      />
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pt-0! sm:pb-[50px] md:pb-[70px] lg:pb-[80px]"
       />
 
       <StackCtaSection

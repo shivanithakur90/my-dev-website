@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import AudienceSection from "@/components/common/AudienceSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
-import OverviewPage from "@/components/common/OverviewPage";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 
 export const metadata: Metadata = {
@@ -23,7 +22,7 @@ export default function SolutionsPage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
       <IntroContentSection
         eyebrow="CONTENT WORKSPACE"
@@ -81,6 +80,7 @@ export default function SolutionsPage() {
       />
 
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD IT"
         title="Built around the way your content team actually works."
         description="Instead of forcing your team into disconnected tools, we build one streamlined workspace around your editorial process — connecting content, activity, drafts, portfolios, and publishing workflows in one production-ready system."

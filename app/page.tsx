@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import HeroBanner from "@/components/home/HeroBanner";
 import WhatWeDoSection from "@/components/home/WhatWeDoSection";
-import WhyNowSection from "@/components/home/WhyNowSection";
 import WorkedOnSection from "@/components/home/WorkedOnSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
 import RecentBuilds from "@/components/home/RecentBuilds";
@@ -11,8 +10,6 @@ import ComparisonSection from "@/components/home/ComparisonSection";
 import FaqSection from "@/components/home/FaqSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import ToolsSection from "@/components/home/ToolsSection";
-import CommitmentsSection from "@/components/home/CommitmentsSection";
 
 export const metadata: Metadata = {
   title: "Custom Business Apps & AI Automation",

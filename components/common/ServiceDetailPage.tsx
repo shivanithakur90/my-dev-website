@@ -104,6 +104,7 @@ export default function ServiceDetailPage({
       </section>
 
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD"
         title={processTitle}
         description={processDescription}

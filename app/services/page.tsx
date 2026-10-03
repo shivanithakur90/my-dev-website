@@ -167,7 +167,7 @@ export default function ServicesPage() {
           title="Websites I've Worked On"
           description="A selection of live projects I've worked on using Shopify, Liquid and modern frontend development."
           ctaLabel="View All Projects"
-          ctaHref="/portfolio"
+          ctaHref="/our-work"
           projects={projects}
         />
       </div>

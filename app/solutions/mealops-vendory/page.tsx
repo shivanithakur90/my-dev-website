@@ -4,12 +4,77 @@ import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import StackCtaSection from "@/components/home/StackCtaSection";
+import SolutionsTabs, { type SolutionTab } from "@/components/common/SolutionsTabs";
+import WorkShowcaseSection from "@/components/our-work/AllWork";
 
 export const metadata: Metadata = {
   title: "MealOps Vendory",
   description:
     "Manage food vendors, purchasing, ingredients, inventory, recipes, purchase orders, invoices, and food operations from one platform.",
 };
+
+
+const manufacturingTabs: SolutionTab[] = [
+  {
+    id: "inventory",
+    label: "Content Management",
+    image: "/erp-4.png",
+    Icon: "inventory",
+  },
+  {
+    id: "vendor",
+    label: "Network Marketing",
+    image: "/erp-7.png",
+    Icon: "vendor",
+  },
+  {
+    id: "erp",
+    label: "Kitchen Operations",
+    image: "/erp-6.png",
+    Icon: "erp",
+  },
+  {
+    id: "project",
+    label: "Reservations",
+    image: "/erp-5.png",
+    Icon: "project",
+  },
+];
+
+const caseStudies = [
+  {
+    title: "ContentFlow Studio",
+    description:
+      "A centralized editorial workspace for managing articles, insights, portfolios, case studies, drafts, and team activity.",
+    image: "/erp-4.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/content-management",
+    ctaLabel: "View case study",
+    tags: [
+      "SaaS",
+      "Content Management",
+      "Dashboard",
+    ],
+  },
+
+  {
+    title: "Smart MLM & Commission Management Platform",
+    description:
+      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
+    image: "/erp-7.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/smart-mlm",
+    ctaLabel: "View case study",
+    tags: [
+      "Network Marketing",
+      "Dashboard",
+      "Affiliate Management",
+    ],
+  },
+];
+
 
 export default function MealOpsVendoryPage() {
   return (
@@ -23,7 +88,7 @@ export default function MealOpsVendoryPage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* INTRO */}
@@ -108,8 +173,16 @@ export default function MealOpsVendoryPage() {
         ]}
       />
 
+      <SolutionsTabs
+        heading="Solutions for fintech."
+        description="The apps we build most often for teams like yours."
+        tabs={manufacturingTabs}
+        paddingClassName="pt-[50px] md:pt-[80px]"
+      />
+
       {/* HOW WE BUILD IT */}
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD IT"
         title="Food operations software built around real purchasing and inventory workflows."
         description="We understand how your team orders ingredients, receives stock, manages suppliers, verifies invoices, and tracks inventory, then build a connected platform that keeps every step organized."
@@ -131,6 +204,18 @@ export default function MealOpsVendoryPage() {
           },
         ]}
       />
+
+       <WorkShowcaseSection
+              eyebrow="CASE STUDIES"
+              title="Real interfaces, built on real SaaS"
+              description="A selection of digital products and platforms designed around real business workflows."
+              projects={caseStudies}
+              showFilters={false}
+              showFinalCta={false}
+              limit={2}
+              className="pt-0! sm:pb-[50px] md:pb-[70px] lg:pb-[80px]"
+            />
+            
       <StackCtaSection
         heading="Let's connect your stack."
         description="Tell us what needs to talk to what. We'll design the integration layer."

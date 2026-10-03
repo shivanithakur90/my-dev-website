@@ -99,7 +99,7 @@ export default function HeroBanner() {
               </Link>
 
               <Link
-                href="/work"
+                href="/our-work"
                 className="hidden min-h-[50px] w-full max-w-[280px] items-center justify-center rounded-xl bg-white px-5 text-sm font-semibold text-[#171717] transition duration-300 hover:-translate-y-0.5 hover:bg-[#f4f4f4] sm:flex sm:w-auto"
               >
                 See what we built

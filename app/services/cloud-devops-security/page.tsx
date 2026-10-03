@@ -263,49 +263,6 @@ function BuiltInSecurityIcon() {
 }
 
 /* On systems you already have */
-function ExistingSystemIcon() {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="4"
-        width="18"
-        height="13"
-        rx="2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-
-      <path
-        d="M8 21H16M12 17V21"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-
-      <circle
-        cx="16.5"
-        cy="10.5"
-        r="2.5"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-
-      <path
-        d="M16.5 6.5V8M16.5 13V14.5M12.5 10.5H14M19 10.5H20.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
 /* Your data stays yours */
 function DataOwnershipIcon() {

@@ -5,6 +5,7 @@ import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import WorkShowcaseSection from "@/components/our-work/WorkShowcaseSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
+import SolutionsTabs, { type SolutionTab } from "@/components/common/SolutionsTabs";
 
 export const metadata: Metadata = {
   title: "Smart Restaurant",
@@ -47,6 +48,34 @@ const caseStudies = [
   },
 ];
 
+
+const manufacturingTabs: SolutionTab[] = [
+  {
+    id: "inventory",
+    label: "Content Management",
+    image: "/erp-4.png",
+    Icon: "inventory",
+  },
+  {
+    id: "vendor",
+    label: "Network Marketing",
+    image: "/erp-7.png",
+    Icon: "vendor",
+  },
+  {
+    id: "erp",
+    label: "Kitchen Operations",
+    image: "/erp-6.png",
+    Icon: "erp",
+  },
+  {
+    id: "project",
+    label: "Reservations",
+    image: "/erp-5.png",
+    Icon: "project",
+  },
+];
+
 export default function SmartRestaurantPage() {
   return (
     <div>
@@ -59,7 +88,7 @@ export default function SmartRestaurantPage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* INTRO */}
@@ -140,19 +169,17 @@ export default function SmartRestaurantPage() {
         ]}
       />
 
-      <WorkShowcaseSection
-        eyebrow="CASE STUDIES"
-        title="Real interfaces, built on real SaaS"
-        description="A selection of digital products and platforms designed around real business workflows."
-        projects={caseStudies}
-        showFilters={false}
-        showFinalCta={false}
-        limit={2}
-        className="pb-0"
+      <SolutionsTabs
+        heading="Solutions for fintech."
+        description="The apps we build most often for teams like yours."
+        tabs={manufacturingTabs}
+        paddingClassName="pt-[50px] md:pt-[80px]"
       />
+
 
       {/* HOW WE BUILD IT */}
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD IT"
         title="Restaurant software designed around the way your team actually works."
         description="We understand how your restaurant handles customers, tables, orders, menu items, payments, reservations, and delivery, then build a connected platform that makes every part of the operation easier to manage."
@@ -173,6 +200,17 @@ export default function SmartRestaurantPage() {
               "Real-time dashboards and reports help you monitor sales, popular menu items, restaurant activity, and operational performance as your business grows.",
           },
         ]}
+      />
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pt-0! sm:pb-[50px] md:pb-[70px] lg:pb-[80px]"
       />
 
       <StackCtaSection

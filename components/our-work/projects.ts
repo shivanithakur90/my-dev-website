@@ -6,16 +6,16 @@ export const projects = [
     tags: ["POS System", "Reservations"],
     image: "/erp-5.png",
     imageBackground: "bg-[#8da9ff]",
-    href: "/our-work/speed-csm-engagement-platform",
+    href: "/solutions/smart-restaurant",
   },
   {
     title: "Employee Hub — One Place for Your Entire Team",
     description:
       "Manage employee information, internal workflows, documents, approvals, and day-to-day team operations from one connected workspace.",
     tags: ["Employee Portal", "Internal Tools"],
-    image: "/erp-1.png",
+    image: "/ERP-1.png",
     imageBackground: "bg-[#9d92ff]",
-    href: "/our-work/bank-deposit-guardian",
+    href: "/solutions/employee-hub",
   },
   {
     title: "Fleet Dispatch Management Platform",
@@ -24,7 +24,7 @@ export const projects = [
     tags: ["SaaS", "Logistics"],
     image: "/erp-3.png",
     imageBackground: "bg-[#bcebd4]",
-    href: "/our-work/coverage-intelligence",
+    href: "/solutions/fleet-dispatch",
   },
   {
     title: "Content Management Studio Dashboard",
@@ -33,7 +33,7 @@ export const projects = [
     tags: ["Content Management"],
     image: "/erp-4.png",
     imageBackground: "bg-[#ddd]",
-    href: "/our-work/case-operations-console",
+    href: "/solutions/content-management",
   },
   {
     title: "Smart MLM & Commission Management Platform",
@@ -42,7 +42,7 @@ export const projects = [
     tags: ["Network Marketing","Affiliate Management"],
     image: "/erp-7.png",
     imageBackground: "bg-[#0060D2]",
-    href: "/our-work/case-operations-console",
+    href: "/solutions/smart-mlm",
   },
   {
     title: "MealOps Vendor Invoice Management Platform",
@@ -51,6 +51,6 @@ export const projects = [
     tags: ["Kitchen Operations", "FoodTech"],
     image: "/erp-6.png",
     imageBackground: "bg-[#ff5708]",
-    href: "/our-work/case-operations-console",
+    href: "/solutions/mealops-vendory",
   },
 ];

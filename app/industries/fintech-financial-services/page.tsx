@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import ProblemSection from "@/components/common/ProblemSection";
-import FeatureHelpSection from "@/components/common/FeatureHelpSection";
 import BuildProcessSection from "@/components/common/BuildProcessSection";
-import IndustryServicesSection from "@/components/common/IndustryServicesSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
 import FaqSection from "@/components/home/FaqSection";
 import EmbeddingBenefitsSection from "@/components/common/EmbeddingBenefitsSection";
 import HowWeDeliverSection from "@/components/common/HowWeDeliverSection";
+import SolutionsTabs, { type SolutionTab } from "@/components/common/SolutionsTabs";
+import IntegrationsSection, { type IntegrationItem } from "@/components/common/IntegrationsSection";
+import WorkShowcaseSection from "@/components/our-work/AllWork";
 
 export const metadata: Metadata = {
   title: "Fintech & Financial Services",
@@ -357,6 +358,104 @@ function MonitorMaintainIcon() {
 }
 
 
+const manufacturingTabs: SolutionTab[] = [
+  {
+    id: "inventory",
+    label: "Content Management",
+    image: "/erp-4.png",
+    Icon: "inventory",
+  },
+  {
+    id: "vendor",
+    label: "Network Marketing",
+    image: "/erp-7.png",
+    Icon: "vendor",
+  },
+  {
+    id: "erp",
+    label: "Kitchen Operations",
+    image: "/erp-6.png",
+    Icon: "erp",
+  },
+  {
+    id: "project",
+    label: "Reservations",
+    image: "/erp-5.png",
+    Icon: "project",
+  },
+];
+
+
+const integrations: IntegrationItem[] = [
+  {
+    name: "Intercom",
+    logo: "/intercom.avif",
+  },
+  {
+    name: "Sumsub",
+    logo: "/sumsub.avif",
+  },
+  {
+    name: "QuickBooks",
+    logo: "/quick-books.avif",
+  },
+  {
+    name: "Twilio",
+    logo: "/twilio.avif",
+  },
+  {
+    name: "SendGrid",
+    logo: "/sendgrid.avif",
+  },
+  {
+    name: "Saleforce",
+    logo: "/saleforce.avif",
+  },
+  {
+    name: "Persona",
+    logo: "/persona.avif",
+  },
+  {
+    name: "+Your stack",
+    logo: "/your-stack.avif",
+  },
+];
+
+
+
+const caseStudies = [
+  {
+    title: "Smart MLM & Commission Management Platform",
+    description:
+      "A centralized platform for managing members, sales, payouts, commissions, affiliate networks, and business performance from one dashboard.",
+    image: "/erp-7.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/smart-mlm",
+    ctaLabel: "View case study",
+    tags: [
+      "Network Marketing",
+      "Affiliate Management",
+    ],
+  },
+
+  {
+    title: "Fleet Dispatch Management Platform",
+    description:
+      "A centralized workspace for dispatch orders, fleet tracking, load management, and real-time delivery operations.",
+    image: "/erp-3.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/fleet-dispatch",
+    ctaLabel: "View case study",
+    tags: [
+      "SaaS",
+      "Logistics",
+    ],
+  },
+];
+
+
 
 /* =========================================================
    PAGE
@@ -373,11 +472,11 @@ export default function FintechFinancialServicesPage() {
         eyebrow="Fintech & Financial Services"
         title="Software for fintech, built for you."
         description="Custom apps, AI automation, and integrations built for payments, lending, and financial platforms — on top of the SaaS and compliance tools you already run. Delivered by forward-deployed engineers, production-grade in weeks."
-        image="/erp-4.png"
+        image="/erp-5.png"
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* =====================================================
@@ -388,9 +487,82 @@ export default function FintechFinancialServicesPage() {
         eyebrow="THE PROBLEM"
         title="Financial products move fast. Your internal tools don’t."
         description="Support teams tab-switch between six systems to answer one customer. KYC drop-offs pile up. Fraud signals live in one tool, customer data in another, and compliance reporting is a manual scramble. Off-the-shelf software isn't built for how a modern financial platform actually operates — and hiring an engineering team to fix it is slow and expensive."
-        image="/fasts-products.png"
+        image="/UrbanBite POS Table Service Dashboard.png"
         imageAlt="Financial internal tools illustration"
       />
+
+
+      {/* =====================================================
+                HOW WE DELIVER
+                ICONS CHANGED ACCORDING TO EACH STEP
+            ===================================================== */}
+      <HowWeDeliverSection
+        eyebrow="How we help"
+        title="What we build for fintech teams."
+        image=""
+        cards={[
+          {
+            title: "Faster support",
+            icon: <AssessIcon />,
+            description:
+              "Unified support cockpits with customer 360 and AI-drafted replies — agents stop tab-switching and handling time drops.",
+          },
+          {
+            title: "Higher KYC conversion",
+            icon: <PrioritizeIcon />,
+            description:
+              "Onboarding ops that segment users by stage, nudge drop-offs, and raise approval rates.",
+          },
+          {
+            title: "Connected compliance",
+            icon: <ImplementIcon />,
+            description:
+              "Fraud, transaction, and KYC data pulled into one view, with audit trails and reporting built in.",
+          },
+          {
+            title: "Live financial ops",
+            icon: <MonitorMaintainIcon />,
+            description:
+              "Real-time dashboards for cash position, reconciliation, and the metrics your leadership tracks.",
+          },
+        ]}
+      />
+
+      <SolutionsTabs
+        heading="Solutions for fintech."
+        description="The apps we build most often for teams like yours."
+        tabs={manufacturingTabs}
+        paddingClassName="py-[0px] max-md:py-[0px]"
+      />
+
+      {/* =====================================================
+          HOW WE BUILD IT
+      ===================================================== */}
+
+      <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
+        eyebrow="Trust & compliance"
+        title="Built to meet your compliance bar."
+        description="KYC/AML-aware · secure by default · your data stays in your environment. We discuss your specific requirements during scoping — and sign the agreements your team needs."
+        cards={[
+          {
+            title: "Built around your content workflow",
+            description:
+              "Articles, insights, categories, portfolios, case studies, and drafts are organized around how your team already creates and manages content.",
+          },
+          {
+            title: "Everything connected in one workspace",
+            description:
+              "Content updates, team activity, publishing actions, and editorial resources stay connected so your team always works from the same source of truth.",
+          },
+          {
+            title: "Scalable, production-ready & owned",
+            description:
+              "A secure content management experience designed to grow with your team, your content library, and your publishing needs.",
+          },
+        ]}
+      />
+
 
       {/* =====================================================
           SECURITY IS DEFAULT
@@ -421,70 +593,69 @@ export default function FintechFinancialServicesPage() {
         ]}
       />
 
-      {/* =====================================================
-                HOW WE DELIVER
-                ICONS CHANGED ACCORDING TO EACH STEP
-            ===================================================== */}
-      <HowWeDeliverSection
-        eyebrow="How we help"
-        title="What we build for fintech teams."
-        image="/from-idea.avif"
-        cards={[
-          {
-            title: "Assess",
-            icon: <AssessIcon />,
-            description:
-              "We review your infrastructure, deployment, and security posture, and document the gaps and risks.",
-          },
-          {
-            title: "Prioritize",
-            icon: <PrioritizeIcon />,
-            description:
-              "A clear, ranked plan — what to fix first, what scales, and what protects you in a review.",
-          },
-          {
-            title: "Implement",
-            icon: <ImplementIcon />,
-            description:
-              "Infrastructure, pipelines, monitoring, and hardening — built as code, in your environment.",
-          },
-          {
-            title: "Monitor & Maintain",
-            icon: <MonitorMaintainIcon />,
-            description:
-              "Ongoing monitoring and upkeep, or a clean handover to your team. Your choice.",
-          },
-        ]}
+
+
+      <IntegrationsSection
+        badge="BUILT ON YOUR STACK"
+        heading="Connected to the tools fintech teams run on."
+        buttonText="View all Integrations"
+        buttonHref="/services/api-development"
+        integrations={integrations}
+        classNames={{
+          section: "w-full bg-white pb-[50px] sm:pb-[50px] lg:pb-[80px]",
+          container: "mx-auto container px-5",
+
+          badgeWrapper: "flex justify-center",
+
+          badge:
+            "inline-flex items-center gap-2 rounded-[8px] border border-[#e8e8e8] px-4 py-2",
+
+          badgeIcon: "text-[#ff5200]",
+
+          badgeText:
+            "text-[13px] font-medium uppercase text-[#242424]",
+
+          headerWrapper:
+            "mx-auto mt-6 max-w-[750px] text-center",
+
+          heading:
+            "text-[48px] font-semibold leading-[1.08] tracking-[-2px] text-[#202020]",
+
+          buttonWrapper:
+            "mt-9 flex justify-center",
+
+          button:
+            "rounded-[10px] border border-black px-5 py-3 text-[14px] font-semibold",
+
+          grid:
+            "mt-[58px] grid grid-cols-4 gap-[14px] max-lg:grid-cols-2 max-sm:grid-cols-1",
+
+          card:
+            "flex min-h-[165px] flex-col items-center justify-center rounded-[15px] bg-[#f6f6f6] p-6",
+
+          logoWrapper:
+            "flex h-[58px] w-[58px] rounded-[10px] items-center justify-center",
+
+          logo:
+            "h-[58px] w-[58px] object-contain rounded-[10px]",
+
+          title:
+            "mt-4 text-[17px] font-medium text-[#262626]",
+        }}
       />
 
-     
 
-      {/* =====================================================
-          HOW WE BUILD IT
-      ===================================================== */}
-
-      <BuildProcessSection
-        eyebrow="Trust & compliance"
-        title="Built to meet your compliance bar."
-        description="KYC/AML-aware · secure by default · your data stays in your environment. We discuss your specific requirements during scoping — and sign the agreements your team needs."
-        cards={[
-          {
-            title: "Built around your content workflow",
-            description:
-              "Articles, insights, categories, portfolios, case studies, and drafts are organized around how your team already creates and manages content.",
-          },
-          {
-            title: "Everything connected in one workspace",
-            description:
-              "Content updates, team activity, publishing actions, and editorial resources stay connected so your team always works from the same source of truth.",
-          },
-          {
-            title: "Scalable, production-ready & owned",
-            description:
-              "A secure content management experience designed to grow with your team, your content library, and your publishing needs.",
-          },
-        ]}
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description=""
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pt-0! pb-0!"
       />
+
 
 
       {/* =====================================================

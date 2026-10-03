@@ -4,12 +4,74 @@ import BuildProcessSection from "@/components/common/BuildProcessSection";
 import IntroContentSection from "@/components/common/IntroContentSection";
 import PageHeroBanner from "@/components/common/PageHeroBanner";
 import StackCtaSection from "@/components/home/StackCtaSection";
+import SolutionsTabs, { type SolutionTab } from "@/components/common/SolutionsTabs";
+import WorkShowcaseSection from "@/components/our-work/AllWork";
 
 export const metadata: Metadata = {
   title: "Content Management",
   description:
     "Build a custom content management platform for articles, insights, categories, portfolios, case studies, drafts, and publishing workflows.",
 };
+
+const manufacturingTabs: SolutionTab[] = [
+  {
+    id: "inventory",
+    label: "Content Management",
+    image: "/erp-4.png",
+    Icon: "inventory",
+  },
+  {
+    id: "vendor",
+    label: "Network Marketing",
+    image: "/erp-7.png",
+    Icon: "vendor",
+  },
+  {
+    id: "erp",
+    label: "Kitchen Operations",
+    image: "/erp-6.png",
+    Icon: "erp",
+  },
+  {
+    id: "project",
+    label: "Reservations",
+    image: "/erp-5.png",
+    Icon: "project",
+  },
+];
+
+const caseStudies = [
+  {
+    title: "MealOps Vendor Invoice Management Platform",
+    description:
+      "A streamlined kitchen operations platform for managing vendor invoices, purchase orders, inventory records, and supplier approvals from one centralized workspace.",
+    image: "/erp-6.png",
+    imageAlt: "ContentFlow Studio dashboard",
+    imageBackground: "bg-[#3b2116]",
+    href: "/solutions/mealops-vendory",
+    ctaLabel: "View case study",
+    tags: [
+      "Kitchen Operations",
+      "FoodTech",
+    ],
+  },
+
+  {
+    title: "Smart Restaurant",
+    description:
+      "Your team gets a faster way to serve customers while managers get real-time visibility into daily operations.",
+    image: "/erp-5.png",
+    imageAlt: "Finance operations dashboard",
+    imageBackground: "bg-[#fff3eb]",
+    href: "/solutions/smart-restaurant",
+    ctaLabel: "View case study",
+    tags: [
+      "POS System",
+      "Dashboard",
+      "Reservations",
+    ],
+  },
+];
 
 export default function ContentManagementPage() {
   return (
@@ -23,7 +85,7 @@ export default function ContentManagementPage() {
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* INTRO */}
@@ -114,8 +176,16 @@ export default function ContentManagementPage() {
         ]}
       />
 
+      <SolutionsTabs
+        heading="Solutions for fintech."
+        description="The apps we build most often for teams like yours."
+        tabs={manufacturingTabs}
+        paddingClassName="pt-[50px] md:pt-[80px]"
+      />
+
       {/* HOW WE BUILD IT */}
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD IT"
         title="Content platforms designed around the way your team actually publishes."
         description="We understand how your content moves from idea to draft, review, approval, and publishing, then build a flexible system that keeps your team organized and your content easy to manage."
@@ -137,6 +207,18 @@ export default function ContentManagementPage() {
           },
         ]}
       />
+
+      <WorkShowcaseSection
+        eyebrow="CASE STUDIES"
+        title="Real interfaces, built on real SaaS"
+        description="A selection of digital products and platforms designed around real business workflows."
+        projects={caseStudies}
+        showFilters={false}
+        showFinalCta={false}
+        limit={2}
+        className="pt-0! sm:pb-[50px] md:pb-[70px] lg:pb-[80px]"
+      />
+
       <StackCtaSection
         heading="Let's connect your stack."
         description="Tell us what needs to talk to what. We'll design the integration layer."

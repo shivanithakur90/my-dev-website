@@ -235,154 +235,10 @@ function MonitorMaintainIcon() {
 
 
 
-type IconProps = {
-  className?: string;
-};
 
-function InventoryIcon({ className }: IconProps) {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      className={className}
-    >
-      <rect
-        x="4"
-        y="4"
-        width="16"
-        height="16"
-        rx="2"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
 
-      <path
-        d="M8 8H16"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
 
-      <path
-        d="M8 12H16"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
-function VendorIcon({ className }: IconProps) {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      className={className}
-    >
-      <circle
-        cx="12"
-        cy="12"
-        r="7"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-
-      <path
-        d="M12 8V12L15 14"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function ErpIcon({ className }: IconProps) {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      className={className}
-    >
-      <rect
-        x="4"
-        y="5"
-        width="16"
-        height="12"
-        rx="2"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-
-      <path
-        d="M8 14V11"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-
-      <path
-        d="M12 14V8"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-
-      <path
-        d="M16 14V10"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-    </svg>
-  );
-}
-
-function ProjectIcon({ className }: IconProps) {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      className={className}
-    >
-      <rect
-        x="4"
-        y="5"
-        width="6"
-        height="6"
-        rx="1"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-
-      <rect
-        x="14"
-        y="5"
-        width="6"
-        height="6"
-        rx="1"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-
-      <rect
-        x="9"
-        y="14"
-        width="6"
-        height="6"
-        rx="1"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-    </svg>
-  );
-}
 
 const manufacturingTabs: SolutionTab[] = [
   {
@@ -421,11 +277,11 @@ export default function ManufacturingDistributionPage() {
         eyebrow="Manufacturing & Distribution"
         title="Software for manufacturing & distribution, built for you."
         description="Inventory, vendor portals, order management, and lightweight ERP built for manufacturers, wholesalers, and distributors — on top of the systems you already run. Delivered by forward-deployed engineers, production-grade in weeks."
-        image="/new-erp.png"
+        image="/new-erp-1.png"
         primaryButtonText="Request a quote"
         primaryButtonHref="/contact"
         secondaryButtonText="See what we built"
-        secondaryButtonHref="/work"
+        secondaryButtonHref="/our-work"
       />
 
       {/* =====================================================
@@ -436,7 +292,7 @@ export default function ManufacturingDistributionPage() {
         eyebrow="THE PROBLEM"
         title="Your operation is complex. Your software is a patchwork."
         description="Materials, orders, and stock tracked across spreadsheets, an aging ERP, and a few disconnected tools. Suppliers managed over email. No single view of what's on hand, on order, or overdue. Enterprise ERP is too expensive and rigid; spreadsheets don't scale. You need systems that fit how your operation actually runs."
-        image="/manufacturing-distribution.webp"
+        image="/Sunny Thakur Articles Dashboard.png"
         imageAlt="Financial internal tools illustration"
       />
 
@@ -447,7 +303,7 @@ export default function ManufacturingDistributionPage() {
       <HowWeDeliverSection
         eyebrow="How we help"
         title="What we build for manufacturing teams."
-        image="/from-idea.avif"
+        image=""
         cards={[
           {
             title: "Inventory visibility",
@@ -488,6 +344,7 @@ export default function ManufacturingDistributionPage() {
 
       {/* BUILD PROCESS */}
       <BuildProcessSection
+        paddingClassName="py-[50px] sm:py-[50px] md:py-[70px] lg:py-[80px]"
         eyebrow="HOW WE BUILD IT"
         title="Built for you, on your stack."
         description="We don't hand you a tool to configure. A forward-deployed engineer builds around your workflow, connects your systems, deploys it securely, and hands it over."
