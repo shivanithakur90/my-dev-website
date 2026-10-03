@@ -227,7 +227,7 @@ const companyMenu: MenuLink[] = [
   },
   {
     name: "Resource",
-    href: "/company/resources",
+    href: "/company/blogs",
   },
 ];
 
