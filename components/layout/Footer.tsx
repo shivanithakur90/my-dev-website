@@ -7,61 +7,50 @@ const footerColumns = [
   {
     title: "Services",
     links: [
+      { label: "All Services", href: "/services" },
       { label: "Custom Application Development", href: "/services/custom-application-development" },
       { label: "AI & Intelligent Automation", href: "/services/ai-automation" },
       { label: "Systems Integration & API Development", href: "/services/api-development" },
       { label: "Product Engineering", href: "/services/product-engineering" },
       { label: "Forward-Deployed Engineers", href: "/services/forward-deployed-engineers" },
       { label: "Cloud, DevOps & Security", href: "/services/cloud-devops-security" },
-      { label: "Web Development Company", href: "/services/custom-application-development" },
-      { label: "Mobile App Development", href: "/services/product-engineering" },
-      { label: "AI Solutions", href: "/services/ai-automation" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { label: "Applicant Tracker", href: null },
-      { label: "Client Portal", href: null },
-      { label: "Custom CRM", href: null },
-      { label: "Dashboards & Reporting", href: null },
-      { label: "Employee Portal", href: "/solutions/employee-hub" },
-      { label: "ERP", href: null },
-      { label: "Inventory Management", href: null },
-      { label: "Knowledge Base", href: null },
-      { label: "LMS", href: null },
+      { label: "All Solutions", href: "/solutions" },
+      { label: "Employee Hub", href: "/solutions/employee-hub" },
+      { label: "Smart Restaurant", href: "/solutions/smart-restaurant" },
+      { label: "Fleet Dispatch", href: "/solutions/fleet-dispatch" },
+      { label: "Content Management", href: "/solutions/content-management" },
+      { label: "Smart MLM", href: "/solutions/smart-mlm" },
+      { label: "MealOps Vendory", href: "/solutions/mealops-vendory" },
     ],
   },
   {
-    title: "Industry",
+    title: "Industries",
     links: [
+      { label: "All Industries", href: "/industries" },
       { label: "Healthcare", href: "/industries/healthcare" },
-      { label: "Fintech", href: "/industries/fintech-financial-services" },
-      { label: "SaaS Technology", href: null },
-      { label: "Real Estate", href: null },
-      { label: "Ecommerce", href: "/industries/e-commerce-retail" },
-      { label: "Professional Services", href: null },
-      { label: "Manufacturing Services", href: "/industries/manufacturing-distribution" },
+      { label: "Fintech & Financial Services", href: "/industries/fintech-financial-services" },
+      { label: "E-commerce & Retail", href: "/industries/e-commerce-retail" },
+      { label: "Manufacturing & Distribution", href: "/industries/manufacturing-distribution" },
     ],
   },
   {
     title: "Insights",
     links: [
-      { label: "Blog", href: null },
+      { label: "Blogs", href: "/company/blogs" },
       { label: "Our Work", href: "/our-work" },
-      { label: "Library", href: null },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About us", href: "/company" },
-      { label: "Career", href: null },
-      { label: "Confidentiality", href: null },
-      { label: "Our Team", href: null },
-      { label: "Security", href: null },
-      { label: "Testimonials", href: null },
-      { label: "Privacy Policy", href: null },
+      { label: "Home", href: "/" },
+      { label: "Company", href: "/company" },
+      { label: "About Us", href: "/company/about" },
       { label: "Contact us", href: "/contact" },
     ],
   },
@@ -123,18 +112,12 @@ export default function Footer() {
               >
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    {link.href ? (
                     <Link
                       href={link.href}
                       className="inline-block text-[14px] leading-[1.45] text-white transition-all duration-300 hover:translate-x-1 hover:text-[#ff4d00]"
                     >
                       {link.label}
                     </Link>
-                    ) : (
-                      <span aria-disabled="true" className="inline-block text-[14px] leading-[1.45] text-white/50">
-                        {link.label}
-                      </span>
-                    )}
                   </li>
                 ))}
               </ul>
@@ -148,9 +131,13 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap items-center gap-6">
-            <span aria-disabled="true">Privacy Policy</span>
+            <Link href="/company/about" className="transition hover:text-white">
+              About Us
+            </Link>
 
-            <span aria-disabled="true">Terms & Conditions</span>
+            <Link href="/company/blogs" className="transition hover:text-white">
+              Blogs
+            </Link>
 
             <Link
               href="/contact"
