@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import BlogInner from "@/components/common/BlogInner";
-import { blogs } from "../page";
+import { blogs } from "../data";
 
 type PageProps = {
   params: Promise<{

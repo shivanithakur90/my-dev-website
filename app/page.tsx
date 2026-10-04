@@ -10,6 +10,8 @@ import ComparisonSection from "@/components/home/ComparisonSection";
 import FaqSection from "@/components/home/FaqSection";
 import StackCtaSection from "@/components/home/StackCtaSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import BlogResourcesSection from "@/components/home/BlogResourcesSection";
+import { blogs } from "@/app/company/blogs/data";
 
 export const metadata: Metadata = {
   title: "Custom Business Apps & AI Automation",
@@ -199,9 +201,9 @@ export default function Home() {
       <div data-aos="fade-up">
         <HowItWorksSection />
       </div>
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <RecentBuilds />
-      </div>
+      </div> */}
       <div data-aos="fade-up">
         <TestimonialsSection />
       </div>
@@ -226,6 +228,16 @@ export default function Home() {
           columns={comparisonColumns}
           rows={comparisonRows}
           sectionClassName="pb-0 pt-[50px] md:py-[50px]"
+        />
+      </div>
+      <div data-aos="fade-up">
+        <BlogResourcesSection
+          className=""
+          paddingClassName="py-[20px] md:py-[20px] lg:py-[20px]"
+          resources={blogs}
+          limit={3}
+          ctaLabel="View more resources"
+          ctaHref="/company/blogs"
         />
       </div>
       <div data-aos="fade-up">
